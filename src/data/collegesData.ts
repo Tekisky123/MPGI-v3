@@ -7,7 +7,7 @@ import managementDean from "../assets/principalImages/DeanSadanand R. Shinde Sch
 import civilHodEngineering from "../assets/hodImages/P. D. Pople Civil Engineering.png";
 import polyComputerHod from "../assets/hodImages/Mrs MORE M.K.png";
 import polyCivilHod from "../assets/hodImages/Ms. Goud P.O Hod.png";
-import mechanicalHodPoly from "../assets/principalImages/Prof. Shahaji Deshmukh Vishwabharati polytechnic.jpg"
+import mechanicalHodPoly from "../assets/principalImages/Prof. Shahaji Deshmukh Vishwabharati polytechnic.jpg";
 
 export interface Department {
   id: string;
@@ -24,6 +24,7 @@ export interface Department {
     labName: string;
     area: string;
     incharge: string;
+    majorEquipment?: string;
   }[];
   hod: {
     name: string;
@@ -76,9 +77,108 @@ We offer a comprehensive Diploma in Mechanical Engineering, designed to equip st
         facultyCount: 15,
         gallery: ["/images/mech-1.jpg", "/images/mech-2.jpg"],
         labs: [
-          // { srNo: 1, labName: "Automotive Workshop", area: "2000+ sq.ft", incharge: "Mr. Ramesh Patil" },
-          // { srNo: 2, labName: "CAD/CAM Lab", area: "1000 sq.ft", incharge: "Dr. Anil Deshmukh" },
-          // { srNo: 3, labName: "Mechatronics Lab", area: "800 sq.ft", incharge: "Prof. Neha Singh" },
+          {
+            srNo: 1,
+            labName: "Theory of Machines Lab",
+            area: "800 Sq. ft",
+            incharge: "Sayyad Shafik",
+            majorEquipment:
+              "Rope brake dynamometer, four bar chain mechanism, Crank slider mechanism, Synchromesh gear box, differential gear box, brake liner test rig, Industrial gear box, watts mechanism",
+          },
+          {
+            srNo: 2,
+            labName: "Engineering Metallurgy Material Science",
+            area: "820 Sq. ft.",
+            incharge: "C. S. Gill",
+            majorEquipment: "", // Not specified
+          },
+          {
+            srNo: 3,
+            labName: "Basic Mechanical Engineering Lab",
+            area: "800 Sq. ft.",
+            incharge: "Sagar Patil",
+            majorEquipment:
+              "Models, Charts & cut sections of various mechanical equipment",
+          },
+          {
+            srNo: 4,
+            labName: "Manufacturing & Machining Workshop",
+            area: "2000 Sq. ft.",
+            incharge: "Shaikh Burhan",
+            majorEquipment:
+              "Lathe Machine, Milling Machine, Grinding Machine, Slotting Machine, Welding machine, Carpentry, Sheet Metal",
+          },
+          {
+            srNo: 5,
+            labName: "Heat Transfer Lab",
+            area: "900 Sq. ft",
+            incharge: "C. S. Gill",
+            majorEquipment:
+              "Stefan Boltzman's Apparatus, Conduction through composite wall, convection of Test Pipe, Pin fin apparatus, Parallel & counter flow heat exchanger, Domestic refrigeration test rig, VCC/Vapor compression test rig, Air conditioning test rig",
+          },
+          {
+            srNo: 6,
+            labName: "Engineering Graphics Lab",
+            area: "1500 Sq. ft.",
+            incharge: "Sagar Patil",
+            majorEquipment:
+              "Drawing tables (Adjustable), Height Adjustable Stools, Models, Charts",
+          },
+          {
+            srNo: 7,
+            labName: "Mechatronics Lab",
+            area: "800 Sq. ft.",
+            incharge: "Shirse Ankush",
+            majorEquipment:
+              "Study of different switches and relays, Vane pump test rig, Flow measurement trainer, Gear pump test rig, PLC Programming trainer kit",
+          },
+          {
+            srNo: 8,
+            labName: "CAD CAM Lab",
+            area: "900 Sq.ft",
+            incharge: "Sayyad Shafik",
+            majorEquipment:
+              "Auto CAD 2024, UG NX 6, CATIA V5-6, Master CAM X9, ANSYS 2024 R2, Latest Configuration Desktops 20 Nos., MATLAB, Creo -11",
+          },
+          {
+            srNo: 9,
+            labName: "Mechanical Measurement and Metallurgy Lab",
+            area: "800 Sq. ft.",
+            incharge: "Sagar Patil",
+            majorEquipment:
+              "Profile projector, Auto collimator, Tool Maker Microscope, Vernier Caliper Micrometer, Slip gauges, Optical Flat",
+          },
+          {
+            srNo: 10,
+            labName: "Steam and Gas Turbine Lab",
+            area: "800 Sq. ft.",
+            incharge: "C. S. Gill",
+            majorEquipment: "", // Not specified
+          },
+          {
+            srNo: 11,
+            labName: "Fluid Mechanics Lab",
+            area: "1000 Sq.ft.",
+            incharge: "Sagar Patil",
+            majorEquipment:
+              "Verification of Bernoulli’s Theorem, Venturi Orifice Calibration Setup, Losses in Pipes",
+          },
+          {
+            srNo: 12,
+            labName: "Automobile Engineering Lab",
+            area: "800 Sq. ft.",
+            incharge: "Sagar Patil",
+            majorEquipment:
+              "Cut Section model of SKODA petrol and Diesel Engine, Cut section model of diesel engine, carburetor, Synchromesh gear box, Hydraulic and Mechanical brake, Vehicle lighting system, Fuel supply system, Differential gear box, Gear box, Suspension system, Steering system, Ignition system etc.",
+          },
+          {
+            srNo: 13,
+            labName: "Manufacturing Engineering Lab",
+            area: "-", // Area not specified in list
+            incharge: "-", // Incharge not mentioned
+            majorEquipment:
+              "Lathe Machine, Milling Machine, Drilling Machine, Shaping Machine, sand casting, flame/plasma cutting, and basic sheet metal operations like shearing, blanking, and drawing",
+          },
         ],
 
         hod: {
@@ -95,7 +195,8 @@ We believe in holistic development — not just academic excellence but also per
 `,
           profileImage: mechanicalHodPoly,
         },
-        vision: "To be a leading polytechnic institute recognized for producing skilled, innovative, and ethical professionals who contribute meaningfully to societal progress and global development.",
+        vision:
+          "To be a leading polytechnic institute recognized for producing skilled, innovative, and ethical professionals who contribute meaningfully to societal progress and global development.",
         mission: `To deliver industry-relevant technical education that integrates knowledge, practical skills, and strong moral values.
 
 To foster a learning environment that encourages innovation, creativity, and critical thinking.
@@ -514,7 +615,111 @@ With a focus on academic excellence, hands-on experience, and professional growt
         ],
         facultyCount: 16,
         gallery: ["/images/mech-engg-1.jpg", "/images/mech-engg-2.jpg"],
-        labs: [],
+        labs: [
+          {
+            srNo: 1,
+            labName: "Theory of Machines Lab",
+            area: "800 Sq. ft",
+            incharge: "Sayyad Shafik",
+            majorEquipment:
+              "Rope brake dynamometer, four bar chain mechanism, Crank slider mechanism, Synchromesh gear box, differential gear box, brake liner test rig, Industrial gear box, watts mechanism",
+          },
+          {
+            srNo: 2,
+            labName: "Engineering Metallurgy Material Science",
+            area: "820 Sq. ft.",
+            incharge: "C. S. Gill",
+            majorEquipment: "", // Not specified
+          },
+          {
+            srNo: 3,
+            labName: "Basic Mechanical Engineering Lab",
+            area: "800 Sq. ft.",
+            incharge: "Sagar Patil",
+            majorEquipment:
+              "Models, Charts & cut sections of various mechanical equipment",
+          },
+          {
+            srNo: 4,
+            labName: "Manufacturing & Machining Workshop",
+            area: "2000 Sq. ft.",
+            incharge: "Shaikh Burhan",
+            majorEquipment:
+              "Lathe Machine, Milling Machine, Grinding Machine, Slotting Machine, Welding machine, Carpentry, Sheet Metal",
+          },
+          {
+            srNo: 5,
+            labName: "Heat Transfer Lab",
+            area: "900 Sq. ft",
+            incharge: "C. S. Gill",
+            majorEquipment:
+              "Stefan Boltzman's Apparatus, Conduction through composite wall, convection of Test Pipe, Pin fin apparatus, Parallel & counter flow heat exchanger, Domestic refrigeration test rig, VCC/Vapor compression test rig, Air conditioning test rig",
+          },
+          {
+            srNo: 6,
+            labName: "Engineering Graphics Lab",
+            area: "1500 Sq. ft.",
+            incharge: "Sagar Patil",
+            majorEquipment:
+              "Drawing tables (Adjustable), Height Adjustable Stools, Models, Charts",
+          },
+          {
+            srNo: 7,
+            labName: "Mechatronics Lab",
+            area: "800 Sq. ft.",
+            incharge: "Shirse Ankush",
+            majorEquipment:
+              "Study of different switches and relays, Vane pump test rig, Flow measurement trainer, Gear pump test rig, PLC Programming trainer kit",
+          },
+          {
+            srNo: 8,
+            labName: "CAD CAM Lab",
+            area: "900 Sq.ft",
+            incharge: "Sayyad Shafik",
+            majorEquipment:
+              "Auto CAD 2024, UG NX 6, CATIA V5-6, Master CAM X9, ANSYS 2024 R2, Latest Configuration Desktops 20 Nos., MATLAB, Creo -11",
+          },
+          {
+            srNo: 9,
+            labName: "Mechanical Measurement and Metallurgy Lab",
+            area: "800 Sq. ft.",
+            incharge: "Sagar Patil",
+            majorEquipment:
+              "Profile projector, Auto collimator, Tool Maker Microscope, Vernier Caliper Micrometer, Slip gauges, Optical Flat",
+          },
+          {
+            srNo: 10,
+            labName: "Steam and Gas Turbine Lab",
+            area: "800 Sq. ft.",
+            incharge: "C. S. Gill",
+            majorEquipment: "", // Not specified
+          },
+          {
+            srNo: 11,
+            labName: "Fluid Mechanics Lab",
+            area: "1000 Sq.ft.",
+            incharge: "Sagar Patil",
+            majorEquipment:
+              "Verification of Bernoulli’s Theorem, Venturi Orifice Calibration Setup, Losses in Pipes",
+          },
+          {
+            srNo: 12,
+            labName: "Automobile Engineering Lab",
+            area: "800 Sq. ft.",
+            incharge: "Sagar Patil",
+            majorEquipment:
+              "Cut Section model of SKODA petrol and Diesel Engine, Cut section model of diesel engine, carburetor, Synchromesh gear box, Hydraulic and Mechanical brake, Vehicle lighting system, Fuel supply system, Differential gear box, Gear box, Suspension system, Steering system, Ignition system etc.",
+          },
+          {
+            srNo: 13,
+            labName: "Manufacturing Engineering Lab",
+            area: "-", // Area not specified in list
+            incharge: "-", // Incharge not mentioned
+            majorEquipment:
+              "Lathe Machine, Milling Machine, Drilling Machine, Shaping Machine, sand casting, flame/plasma cutting, and basic sheet metal operations like shearing, blanking, and drawing",
+          },
+        ],
+
         hod: {
           name: "Sayyad Shafik R",
           designation:
@@ -743,23 +948,15 @@ The goal of department is to prepare executes destined for a successful manageme
         hod: {
           name: "Sadanand R. Shinde",
           designation: "Head of Department - Mechanical Engineering",
-          message: `Welcome to the School of Management at Matoshri Pratishthan Group of Institutions — a place where ambition meets opportunity and innovation drives education. We are committed to shaping a new generation of business professionals who are not only highly skilled but also socially conscious and ethically grounded.
+          message: `The new economic policy—globalization, privatization, and liberalization—has widened the horizon of business. The information technology revolution has transformed this planet into a global village. Hi-tech systems and the supersonic speed of communication have introduced new cross-cultural interactions in the global business scenario. This has also increased the demand for a strong ethical value foundation in a harmonic form.
 
-As the Dean, I take immense pride in leading an institution that blends academic excellence with real-world relevance. Our mission is to empower students to become visionary leaders, strategic thinkers, and impactful entrepreneurs who can navigate the complexities of the global economy with confidence and integrity.
-
-The new economic policies of globalization, privatization, and liberalization have significantly broadened the horizons of business. The revolution in information technology has transformed the world into a global village, enabling rapid communication and cross-cultural business interactions. This dynamic landscape has elevated the importance of strong ethical foundations and cultural understanding in management education.
-
-It is our responsibility at the School of Management to develop holistic leaders — individuals equipped not only with business acumen but also with a strong sense of ethics, purpose, and global perspective. We are fully committed to this vision and strive to create an environment that fosters excellence, innovation, and social responsibility.
-
-We believe in nurturing not just professionals, but future-ready entrepreneurs, ethical managers, and socially responsible leaders who are prepared to meet the demands of a rapidly changing world.
-
-Thank you for being a part of this exciting journey toward knowledge, growth, and leadership.`,
+It is the responsibility of the School of Management to develop holistic leadership with a global vision and a mission of excellence. The School of Management at Matoshri Pratishthan’s Group of Institutes is fully committed to this task.`,
           profileImage: managementDean,
         },
         vision:
-          "To be a globally recognized center of excellence in mechanical engineering education and research.",
+          "Shaping future leaders with knowledge, innovation, and ethical business practices to create a lasting impact on society.",
         mission:
-          "To produce skilled professionals who contribute effectively to industrial development and technological innovation.",
+          "Educating students for career success, we make every decision to support the career and personal development of our learners. Our curriculum, teaching, and services demonstrate that we value the diverse profiles of our learners.",
       },
     ],
   },

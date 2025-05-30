@@ -26,7 +26,7 @@ export const navItems = [
   { label: "NIRF", id: "nirf" },
   { label: "Mandatory Disclosure", id: "mandatory-disclosure" },
   { label: "IQAC", id: "iqac" },
-  { label: "Vision & Mission", id: "vision-mission" }
+  { label: "Vision & Mission", id: "vision-mission" },
 ];
 
 export const profiles: ProfileData[] = [
@@ -37,26 +37,11 @@ export const profiles: ProfileData[] = [
     image: managementPrincipal,
     content: `
 
-Welcome to the School of Management at Matoshri Pratishthan Group of Institutions — a place where ambition meets opportunity and innovation drives education. We are committed to shaping a new generation of business professionals who are not only highly skilled but also socially conscious and ethically grounded.
-
-As the Dean, I take immense pride in leading an institution that blends academic excellence with real-world relevance. Our mission is to empower students to become visionary leaders, strategic thinkers, and impactful entrepreneurs who can navigate the complexities of the global economy with confidence and integrity.
-
-The new economic policies of globalization, privatization, and liberalization have significantly broadened the horizons of business. The revolution in information technology has transformed the world into a global village, enabling rapid communication and cross-cultural business interactions. This dynamic landscape has elevated the importance of strong ethical foundations and cultural understanding in management education.
-
-It is our responsibility at the School of Management to develop holistic leaders — individuals equipped not only with business acumen but also with a strong sense of ethics, purpose, and global perspective. We are fully committed to this vision and strive to create an environment that fosters excellence, innovation, and social responsibility.
-
-
-
-
-
-We believe in nurturing not just professionals, but future-ready entrepreneurs, ethical managers, and socially responsible leaders who are prepared to meet the demands of a rapidly changing world.
-
-Thank you for being a part of this exciting journey toward knowledge, growth, and leadership.
+The new economic policy—globalization, privatization, and liberalization—has widened the horizon of business. The information technology revolution has transformed this planet into a global village. Hi-tech systems and the supersonic speed of communication have introduced new cross-cultural interactions in the global business scenario. This has also increased the demand for a strong ethical value foundation in a harmonic form. It is the responsibility of the School of Management to develop holistic leadership with a global vision and a mission of excellence. The School of Management at Matoshri Pratishthan’s Group of Institutes is fully committed to this task.
 
 *— Sadanand R. Shinde*
-`
-  }
-
+`,
+  },
 ];
 
 export const placementData = {
@@ -121,24 +106,22 @@ We offer continuous support through our dedicated **Career Development Office**,
 - Company-specific training programs  
 
 *— School of Management, MPGI*
-`
+`,
 };
 export const achievementData = {
   title: "Institutional Achievements",
   content: `
 
 
-`
+`,
 };
-
-
 
 export const mandatoryDisclosureData = {
   title: "Mandatory Disclosure",
   content: `
 
 
-`
+`,
 };
 
 export const nirfData = {
@@ -146,18 +129,43 @@ export const nirfData = {
   content: `
 
 
-`
+`,
 };
 
 const iqacCommitteeData = [
-  { post: "Chairperson (Head of the Institution)", member: "Dr. L.M. Waghmare, Principal, MPGISOEN" },
+  {
+    post: "Chairperson (Head of the Institution)",
+    member: "Dr. L.M. Waghmare, Principal, MPGISOEN",
+  },
   { post: "Senior Administrative Officers", member: "Mr. P.J. Kinikar" },
-  { post: "Teacher Coordinators", member: "1. Mr. B.A. Khansole, 2. Mr. Hashmi S.A, 3. Dr. Syeda Rukhsana, 4. Mr. Syed Shafiq R., 5. Mr. Rathod L.V., 6. Dr. Abdullah M.K, 7. Mr. Sadanand Shinde" },
-  { post: "Member from the Management", member: "Hon. Mr. Venkat V. Chari (Secretary of MPGIN), Hon. Mr. Arvind S. Patil (Managing Director MPGIN)" },
-  { post: "Nominees from Alumni", member: "1. Mr. Pravin Jadhav, 2. Mr. Mayur Chavan" },
-  { post: "Nominees from Student Council Member", member: "1. Mr. Vedant A.U., 2. Mr. Jeevan Rathod, 3. Mr. Aditya Bhagat, 4. Mr. Nikhil Paikrao" },
-  { post: "Nominees from Employers Industrialists/stakeholders (External members)", member: "1. Dr. A.B. Gonde, Dean (Academics), SGGS IE&TN, Nanded, 2. Mr. Millar Khandare (CEO 3idea Company), 3. Mr. Tayyab Aalam (Parent representative)" },
-  { post: "Coordinator/Head of the IQAC", member: "Mr. S. Asad Hashmi (HOD, EED, MPGISEN)" }
+  {
+    post: "Teacher Coordinators",
+    member:
+      "1. Mr. B.A. Khansole, 2. Mr. Hashmi S.A, 3. Dr. Syeda Rukhsana, 4. Mr. Syed Shafiq R., 5. Mr. Rathod L.V., 6. Dr. Abdullah M.K, 7. Mr. Sadanand Shinde",
+  },
+  {
+    post: "Member from the Management",
+    member:
+      "Hon. Mr. Venkat V. Chari (Secretary of MPGIN), Hon. Mr. Arvind S. Patil (Managing Director MPGIN)",
+  },
+  {
+    post: "Nominees from Alumni",
+    member: "1. Mr. Pravin Jadhav, 2. Mr. Mayur Chavan",
+  },
+  {
+    post: "Nominees from Student Council Member",
+    member:
+      "1. Mr. Vedant A.U., 2. Mr. Jeevan Rathod, 3. Mr. Aditya Bhagat, 4. Mr. Nikhil Paikrao",
+  },
+  {
+    post: "Nominees from Employers Industrialists/stakeholders (External members)",
+    member:
+      "1. Dr. A.B. Gonde, Dean (Academics), SGGS IE&TN, Nanded, 2. Mr. Millar Khandare (CEO 3idea Company), 3. Mr. Tayyab Aalam (Parent representative)",
+  },
+  {
+    post: "Coordinator/Head of the IQAC",
+    member: "Mr. S. Asad Hashmi (HOD, EED, MPGISEN)",
+  },
 ];
 
 export const iqacData = {
@@ -215,39 +223,25 @@ The institution has established an Internal Quality Assurance Cell (IQAC) on 25.
 
 ### Revised IQAC Committee
 `,
-  tableData: iqacCommitteeData
+  tableData: iqacCommitteeData,
 };
 
 export const visionMissionData = {
   title: "Vision & Mission",
   content: `
 
-At the School of Management, our guiding principles define who we are and what we stand for. We are driven by a deep commitment to academic excellence, innovation, and the development of socially responsible business leaders.
 
 ## Vision:
-"To be a globally recognized center of excellence in management education that nurtures ethical leaders and innovative entrepreneurs."
-
 "Shaping future leaders with knowledge, innovation, and ethical business practices to create a lasting impact on society."
 
 Our vision is twofold: to earn a reputation on the global stage as a pioneer in management education, and to cultivate a generation of leaders whose actions are rooted in ethics, driven by innovation, and guided by a desire to bring meaningful change to the world.
 
 ## Mission:
-- M1: To provide transformative management education through innovative pedagogy.
-- M2: To foster research and consultancy for business solutions.
-- M3: To develop socially responsible business leaders.
-- M4: To strengthen industry-academia collaboration.
-- M5: To promote an entrepreneurial mindset.
-
-“Educating students for career success — we make every decision to support the career and personal development of our learners. Our curriculum, teaching, and services demonstrate that we value the diverse profiles and aspirations of our learners.”
-
-Our mission reflects a deep-seated belief in student-centric education. We are committed to equipping learners with the skills, knowledge, and values needed to succeed in their careers and contribute to society. By blending industry-driven curriculum, cutting-edge infrastructure, and experienced faculty, we ensure that every student emerges future-ready.
 
 
-## Quality Policy:
-"Committed to deliver quality management education through experienced faculty, industry-relevant curriculum, and state-of-the-art infrastructure to develop competent professionals."
+“Educating students for career success, we make every decision to support the career and personal development of our learners. Our curriculum, teaching, and services demonstrate that we value the diverse profiles of our learners.”
 
-Our quality policy reflects our dedication to holistic development. Every policy, initiative, and program at the School of Management is carefully crafted to uphold these foundational values and deliver an education that goes beyond textbooks — preparing students for real-world leadership.
 
 *— Management Team, MPGI*
-`
+`,
 };

@@ -29,7 +29,7 @@ const DepartmentLabs = () => {
             <tr>
               <th className="py-3 px-4 border-b">Sr. No.</th>
               <th className="py-3 px-4 border-b">Laboratory Name</th>
-              {/* <th className="py-3 px-4 border-b">Area</th> */}
+              <th className="py-3 px-4 border-b">Area</th>
               <th className="py-3 px-4 border-b">Laboratory Incharge</th>
             </tr>
           </thead>
@@ -38,7 +38,7 @@ const DepartmentLabs = () => {
               <tr key={lab.srNo} className="hover:bg-gray-50 transition">
                 <td className="py-3 px-4 border-b">{lab.srNo}</td>
                 <td className="py-3 px-4 border-b font-medium">{lab.labName}</td>
-                {/* <td className="py-3 px-4 border-b">{lab.area}</td> */}
+                <td className="py-3 px-4 border-b">{lab.area}</td>
                 <td className="py-3 px-4 border-b">{lab.incharge}</td>
               </tr>
             ))}
