@@ -1,25 +1,36 @@
 import { useState, useEffect, useRef } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import { facilitiesData, Facility, CollegeFacilityGroup } from "../data/facilities";
+import {
+  facilitiesData,
+  Facility,
+  CollegeFacilityGroup,
+} from "../data/facilities";
 
 const Facilities = () => {
-  const { collegeId, facilityPath } = useParams<{ collegeId: string; facilityPath: string }>();
+  const { collegeId, facilityPath } = useParams<{
+    collegeId: string;
+    facilityPath: string;
+  }>();
+  const navigate = useNavigate();
   const [activeFacility, setActiveFacility] = useState<Facility | null>(null);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const sidebarRef = useRef<HTMLDivElement>(null);
   const menuButtonRef = useRef<HTMLButtonElement>(null);
 
-  const college = facilitiesData.find((c: CollegeFacilityGroup) => c.id === collegeId);
+  const college = facilitiesData.find(
+    (c: CollegeFacilityGroup) => c.id === collegeId
+  );
 
   useEffect(() => {
     if (!college) return;
 
+    // Find the facility that matches the current path
     const matchedFacility = college.facilities.find(
       (f: Facility) => f.path === `/facilities/${facilityPath}`
     );
-    setActiveFacility(matchedFacility || null);
+    setActiveFacility(matchedFacility || college.facilities[0]);
   }, [college, facilityPath]);
 
   useEffect(() => {
@@ -44,6 +55,14 @@ const Facilities = () => {
     return () => document.removeEventListener("keydown", handleEsc);
   }, []);
 
+  const handleFacilityClick = (facility: Facility) => {
+    // Extract the last part of the path (e.g., "classrooms" from "/facilities/classrooms")
+    const pathSegment = facility.path.split("/").pop();
+    navigate(`/${collegeId}/facilities/${pathSegment}`);
+    setActiveFacility(facility);
+    setIsSidebarOpen(false);
+  };
+
   const renderContent = (content?: string[]) => {
     if (!content) return null;
     return content.map((paragraph, index) => (
@@ -61,7 +80,6 @@ const Facilities = () => {
         <table className="min-w-full border-collapse border border-gray-300">
           <tbody>
             {tableData.map((row, idx) => {
-              // Skip empty rows
               if (row.label === "" && row.value === "") return null;
               return (
                 <tr key={idx} className="border-b">
@@ -79,7 +97,9 @@ const Facilities = () => {
   };
 
   if (!college) {
-    return <div className="text-center text-red-500 p-8">College not found</div>;
+    return (
+      <div className="text-center text-red-500 p-8">College not found</div>
+    );
   }
 
   return (
@@ -98,8 +118,9 @@ const Facilities = () => {
       <div className="w-full mx-auto flex flex-col lg:flex-row gap-6">
         {/* Sidebar */}
         <aside
-          className={`lg:w-1/4 xl:w-1/5 bg-gray-50 p-4 rounded-lg shadow-md transition-all duration-300 fixed lg:static z-50 lg:z-auto h-full overflow-y-auto ${isSidebarOpen ? "block inset-0" : "hidden lg:block"
-            }`}
+          className={`lg:w-1/4 xl:w-1/5 bg-gray-50 p-4 rounded-lg shadow-md transition-all duration-300 fixed lg:static z-50 lg:z-auto h-full overflow-y-auto ${
+            isSidebarOpen ? "block inset-0" : "hidden lg:block"
+          }`}
           ref={sidebarRef}
         >
           <button
@@ -113,14 +134,12 @@ const Facilities = () => {
               <motion.button
                 key={item.path}
                 whileHover={{ x: 5 }}
-                onClick={() => {
-                  setActiveFacility(item);
-                  setIsSidebarOpen(false);
-                }}
-                className={`block w-full border border-gray-200 text-left py-3 px-4 transition-all duration-200 font-bold text-lg md:text-base ${activeFacility?.path === item.path
-                  ? "bg-mpgin-darkBlue text-mpgin-blue underline"
-                  : "bg-mpgin-blue hover:bg-mpgin-darkBlue hover:text-white text-mpgin-darkBlue"
-                  }`}
+                onClick={() => handleFacilityClick(item)}
+                className={`block w-full border border-gray-200 text-left py-3 px-4 transition-all duration-200 font-bold text-lg md:text-base ${
+                  activeFacility?.path === item.path
+                    ? "bg-mpgin-darkBlue text-mpgin-blue underline"
+                    : "bg-mpgin-blue hover:bg-mpgin-darkBlue hover:text-white text-mpgin-darkBlue"
+                }`}
               >
                 {item.name}
               </motion.button>
@@ -170,111 +189,130 @@ const Facilities = () => {
                 </motion.ul>
               )}
 
-              {/* AICTE & NAAC Info */}
-              {activeFacility.aicteNaac && (
-                <div className="overflow-x-auto mt-6">
-                  <table className="min-w-full border-collapse border border-gray-300">
-                    <tbody>
-                      {activeFacility.aicteNaac.map((row, idx) => (
-                        <tr key={idx} className="border-b">
-                          <td className="font-semibold border-r border-gray-300 px-4 py-2 bg-gray-100 w-1/3">
-                            {row.label}
-                          </td>
-                          <td className="px-4 py-2">{row.value}</td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
-              )}
+              {activeFacility.aicteNaac &&
+                renderTable(activeFacility.aicteNaac)}
 
-              {/* Key Contacts Table */}
-              {activeFacility.keyContacts && activeFacility.keyContacts.length > 0 && (
-                <div className="overflow-x-auto mt-8">
-                  <h3 className="text-xl font-bold text-mpgin-darkBlue mb-3">Key Contacts</h3>
-                  <table className="min-w-full border-collapse border border-gray-300">
-                    <thead>
-                      <tr className="bg-gray-100">
-                        <th className="border border-gray-300 px-4 py-2 text-left">Post</th>
-                        <th className="border border-gray-300 px-4 py-2 text-left">Name</th>
-                        <th className="border border-gray-300 px-4 py-2 text-left">Branch</th>
-                        <th className="border border-gray-300 px-4 py-2 text-left">Email</th>
-                        <th className="border border-gray-300 px-4 py-2 text-left">Mobile</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {activeFacility.keyContacts.map((contact, idx) => (
-                        <tr key={idx} className="border-b">
-                          <td className="border border-gray-300 px-4 py-2">{contact.post}</td>
-                          <td className="border border-gray-300 px-4 py-2">{contact.name}</td>
-                          <td className="border border-gray-300 px-4 py-2">{contact.branch}</td>
-                          <td className="border border-gray-300 px-4 py-2">
-                            <a
-                              href={`mailto:${contact.email}`}
-                              className="text-blue-600 underline"
-                              aria-label={`Email to ${contact.email}`}
-                            >
-                              {contact.email}
-                            </a>
-                          </td>
-                          <td className="border border-gray-300 px-4 py-2">
-                            <a
-                              href={`tel:${contact.mobile}`}
-                              className="text-blue-600 underline"
-                              aria-label={`Call ${contact.mobile}`}
-                            >
-                              +91 {contact.mobile}
-                            </a>
-                          </td>
+              {activeFacility.keyContacts &&
+                activeFacility.keyContacts.length > 0 && (
+                  <div className="overflow-x-auto mt-8">
+                    <h3 className="text-xl font-bold text-mpgin-darkBlue mb-3">
+                      Key Contacts
+                    </h3>
+                    <table className="min-w-full border-collapse border border-gray-300">
+                      <thead>
+                        <tr className="bg-gray-100">
+                          <th className="border border-gray-300 px-4 py-2 text-left">
+                            Post
+                          </th>
+                          <th className="border border-gray-300 px-4 py-2 text-left">
+                            Name
+                          </th>
+                          <th className="border border-gray-300 px-4 py-2 text-left">
+                            Branch
+                          </th>
+                          <th className="border border-gray-300 px-4 py-2 text-left">
+                            Email
+                          </th>
+                          <th className="border border-gray-300 px-4 py-2 text-left">
+                            Mobile
+                          </th>
                         </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
-              )}
+                      </thead>
+                      <tbody>
+                        {activeFacility.keyContacts.map((contact, idx) => (
+                          <tr key={idx} className="border-b">
+                            <td className="border border-gray-300 px-4 py-2">
+                              {contact.post}
+                            </td>
+                            <td className="border border-gray-300 px-4 py-2">
+                              {contact.name}
+                            </td>
+                            <td className="border border-gray-300 px-4 py-2">
+                              {contact.branch}
+                            </td>
+                            <td className="border border-gray-300 px-4 py-2">
+                              <a
+                                href={`mailto:${contact.email}`}
+                                className="text-blue-600 underline"
+                                aria-label={`Email to ${contact.email}`}
+                              >
+                                {contact.email}
+                              </a>
+                            </td>
+                            <td className="border border-gray-300 px-4 py-2">
+                              <a
+                                href={`tel:${contact.mobile}`}
+                                className="text-blue-600 underline"
+                                aria-label={`Call ${contact.mobile}`}
+                              >
+                                +91 {contact.mobile}
+                              </a>
+                            </td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                )}
 
-              {/* Departmental Coordinators Table */}
-              {activeFacility.departmentalCoordinators && activeFacility.departmentalCoordinators.length > 0 && (
-                <div className="overflow-x-auto mt-8">
-                  <h3 className="text-xl font-bold text-mpgin-darkBlue mb-3">Departmental Coordinators</h3>
-                  <table className="min-w-full border-collapse border border-gray-300">
-                    <thead>
-                      <tr className="bg-gray-100">
-                        <th className="border border-gray-300 px-4 py-2 text-left">Branch</th>
-                        <th className="border border-gray-300 px-4 py-2 text-left">Name (Year of Exp)</th>
-                        <th className="border border-gray-300 px-4 py-2 text-left">Email</th>
-                        <th className="border border-gray-300 px-4 py-2 text-left">Mobile No</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {activeFacility.departmentalCoordinators.map((coord, idx) => (
-                        <tr key={idx} className="border-b">
-                          <td className="border border-gray-300 px-4 py-2">{coord.branch}</td>
-                          <td className="border border-gray-300 px-4 py-2">{coord.name}</td>
-                          <td className="border border-gray-300 px-4 py-2">
-                            <a
-                              href={`mailto:${coord.email}`}
-                              className="text-blue-600 underline"
-                              aria-label={`Email to ${coord.email}`}
-                            >
-                              {coord.email}
-                            </a>
-                          </td>
-                          <td className="border border-gray-300 px-4 py-2">
-                            <a
-                              href={`tel:${coord.mobile}`}
-                              className="text-blue-600 underline"
-                              aria-label={`Call ${coord.mobile}`}
-                            >
-                              +91 {coord.mobile}
-                            </a>
-                          </td>
+              {activeFacility.departmentalCoordinators &&
+                activeFacility.departmentalCoordinators.length > 0 && (
+                  <div className="overflow-x-auto mt-8">
+                    <h3 className="text-xl font-bold text-mpgin-darkBlue mb-3">
+                      Departmental Coordinators
+                    </h3>
+                    <table className="min-w-full border-collapse border border-gray-300">
+                      <thead>
+                        <tr className="bg-gray-100">
+                          <th className="border border-gray-300 px-4 py-2 text-left">
+                            Branch
+                          </th>
+                          <th className="border border-gray-300 px-4 py-2 text-left">
+                            Name (Year of Exp)
+                          </th>
+                          <th className="border border-gray-300 px-4 py-2 text-left">
+                            Email
+                          </th>
+                          <th className="border border-gray-300 px-4 py-2 text-left">
+                            Mobile No
+                          </th>
                         </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
-              )}
+                      </thead>
+                      <tbody>
+                        {activeFacility.departmentalCoordinators.map(
+                          (coord, idx) => (
+                            <tr key={idx} className="border-b">
+                              <td className="border border-gray-300 px-4 py-2">
+                                {coord.branch}
+                              </td>
+                              <td className="border border-gray-300 px-4 py-2">
+                                {coord.name}
+                              </td>
+                              <td className="border border-gray-300 px-4 py-2">
+                                <a
+                                  href={`mailto:${coord.email}`}
+                                  className="text-blue-600 underline"
+                                  aria-label={`Email to ${coord.email}`}
+                                >
+                                  {coord.email}
+                                </a>
+                              </td>
+                              <td className="border border-gray-300 px-4 py-2">
+                                <a
+                                  href={`tel:${coord.mobile}`}
+                                  className="text-blue-600 underline"
+                                  aria-label={`Call ${coord.mobile}`}
+                                >
+                                  +91 {coord.mobile}
+                                </a>
+                              </td>
+                            </tr>
+                          )
+                        )}
+                      </tbody>
+                    </table>
+                  </div>
+                )}
             </motion.div>
           ) : (
             <motion.div

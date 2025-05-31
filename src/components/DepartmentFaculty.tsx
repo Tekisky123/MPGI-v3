@@ -9,7 +9,7 @@ import {
   CalendarDays,
   Contact2,
   AlertCircle,
-  Loader2
+  Loader2,
 } from "lucide-react";
 
 interface FacultyMember {
@@ -25,7 +25,10 @@ interface FacultyMember {
 }
 
 const DepartmentFaculty = () => {
-  const { collegeId, departmentId } = useParams<{ collegeId: string; departmentId: string }>();
+  const { collegeId, departmentId } = useParams<{
+    collegeId: string;
+    departmentId: string;
+  }>();
   const [faculty, setFaculty] = useState<FacultyMember[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
@@ -38,9 +41,34 @@ const DepartmentFaculty = () => {
         );
 
         if (!response.data) throw new Error("No faculty data available");
-        setFaculty(response.data);
+
+        // Sort faculty members based on priority designations
+        const sortedFaculty = response.data.sort((a, b) => {
+          const priorityDesignations = [
+            "principal",
+            "dean",
+            "hod",
+            "head of department",
+          ];
+          const aPriority = priorityDesignations.findIndex((designation) =>
+            a.designation.toLowerCase().includes(designation)
+          );
+          const bPriority = priorityDesignations.findIndex((designation) =>
+            b.designation.toLowerCase().includes(designation)
+          );
+
+          if (aPriority !== -1 && bPriority === -1) return -1;
+          if (aPriority === -1 && bPriority !== -1) return 1;
+          if (aPriority !== -1 && bPriority !== -1)
+            return aPriority - bPriority;
+          return 0;
+        });
+
+        setFaculty(sortedFaculty);
       } catch (err) {
-        setError(err instanceof Error ? err.message : "Failed to load faculty data");
+        setError(
+          err instanceof Error ? err.message : "Failed to load faculty data"
+        );
       } finally {
         setLoading(false);
       }
@@ -78,7 +106,9 @@ const DepartmentFaculty = () => {
       {faculty.length === 0 ? (
         <div className="text-gray-500 text-center py-12 bg-gray-50 rounded-lg">
           <UserCircle2 className="mx-auto w-12 h-12 mb-4 text-gray-400" />
-          <p className="font-medium">No faculty members found in this department</p>
+          <p className="font-medium">
+            No faculty members found in this department
+          </p>
         </div>
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-2 gap-6">
@@ -106,13 +136,14 @@ const FacultyCard = ({ member }: { member: FacultyMember }) => (
             className="w-20 h-20 rounded-full object-cover border-4 border-gray-100"
             onError={(e) => {
               const target = e.target as HTMLImageElement;
-              target.src = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiM0YjU1NmIiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48Y2lyY2xlIGN4PSIxMiIgY3k9IjEyIiByPSIxMCIvPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTAiIHI9IjMiLz48cGF0aCBkPSJNMTIgMjEuOGE5IDkgMCAwIDAtOS05IDkgOSAwIDAgMSAxOCAwIi8+PC9zdmc+';
+              target.src =
+                "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiM0YjU1NmIiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48Y2lyY2xlIGN4PSIxMiIgY3k9IjEyIiByPSIxMCIvPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTAiIHI9IjMiLz48cGF0aCBkPSJNMTIgMjEuOGE5IDkgMCAwIDAtOS05IDkgOSAwIDAgMSAxOCAwIi8+PC9zdmc+";
             }}
           />
         </div>
 
         <div className="flex-1 min-w-0">
-          <h3 className="text-lg font-semibold text-gray-800 ">{member.name}</h3>
+          <h3 className="text-lg font-semibold text-gray-800">{member.name}</h3>
           <div className="flex items-center gap-2 text-sm text-gray-600 mt-1">
             <Contact2 className="w-4 h-4 text-gray-500 flex-shrink-0" />
             <span className="truncate">{member.designation}</span>
@@ -142,14 +173,13 @@ const FacultyCard = ({ member }: { member: FacultyMember }) => (
           <div className="flex-1">
             <p className="font-medium text-gray-700">Joined Date</p>
             <p>
-              {
-                member.dateOfJoining ? new Date(member.dateOfJoining).toLocaleDateString('en-US', {
-                  year: 'numeric',
-                  month: 'long',
-                  day: 'numeric'
-                }) : "-"
-              }
-
+              {member.dateOfJoining
+                ? new Date(member.dateOfJoining).toLocaleDateString("en-US", {
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric",
+                  })
+                : "-"}
             </p>
           </div>
         </div>

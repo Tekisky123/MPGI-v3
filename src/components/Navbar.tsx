@@ -49,7 +49,6 @@ const DEPARTMENT_MAPPINGS: Record<
   ],
   "school-of-management": [
     { name: "MBA Program", path: "/departments/mba/profile" },
-    
   ],
   "school-of-engineering": [
     {
@@ -76,7 +75,6 @@ const Navbar = () => {
   const [openSubmenu, setOpenSubmenu] = useState<string | null>(null);
   const [headerHeight, setHeaderHeight] = useState(0);
   const [submenuPosition, setSubmenuPosition] = useState<SubmenuPosition>(null);
-
   const headerRef = useRef<HTMLElement>(null);
   const navRef = useRef<HTMLDivElement>(null);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
@@ -101,10 +99,12 @@ const Navbar = () => {
   const getCommitteeItems = useCallback(() => {
     if (!schoolPrefix) return [];
     return (
-      COMMITTEE_MAPPINGS[schoolPrefix as keyof typeof COMMITTEE_MAPPINGS]?.map(committee => ({
-        name: committee.title,
-        path: `/cells-committees?section=${committee.id}`
-      })) || []
+      COMMITTEE_MAPPINGS[schoolPrefix as keyof typeof COMMITTEE_MAPPINGS]?.map(
+        (committee) => ({
+          name: committee.title,
+          path: `/cells-committees?section=${committee.id}`,
+        })
+      ) || []
     );
   }, [schoolPrefix]);
 
@@ -127,17 +127,17 @@ const Navbar = () => {
   }, [schoolPrefix]);
 
   const modifiedNavItems = useMemo(() => {
-    return NAV_ITEMS.map(item => {
+    return NAV_ITEMS.map((item) => {
       if (item.name === "Departments") {
         return {
           ...item,
-          subItems: getDepartmentItems()
+          subItems: getDepartmentItems(),
         };
       }
       if (item.name === "Cells & Committees") {
         return {
           ...item,
-          subItems: getCommitteeItems()
+          subItems: getCommitteeItems(),
         };
       }
       return item;

@@ -1,7 +1,8 @@
 import nptelAcknowledgmentLetter from "../assets/images/nptelAcknowledgmentLetter.png";
-import AlumniPage from "../pages/AlumniPage";
 import Placement from "../pages/schoolOfEngineering/SchoolOfEngineeringPlacement";
-import PrincipelLaxmanEngineer from "../assets/principalImages/PrincipelLaxmanEngineer.jpg"
+import PrincipelLaxmanEngineer from "../assets/principalImages/PrincipelLaxmanEngineer.jpg";
+import principleBriefResume from "../assets/pdf/Dr. L M Waghmare - brief Resume.pdf";
+import principleBioData from "../assets/pdf/Biodata - L M Waghmare  May 2025.pdf";
 
 export interface ProfileData {
   id: string;
@@ -9,6 +10,8 @@ export interface ProfileData {
   title: string;
   image: string;
   content: string;
+  highlights: string[];
+  pdfLinks?: { name: string; url: string }[];
 }
 
 export interface SectionContent {
@@ -47,9 +50,38 @@ export const profiles: ProfileData[] = [
     title: "Principal",
     image: PrincipelLaxmanEngineer,
     content: `
+      Greetings and a very warm welcome to School of Engineering, MPGI, Nanded!!
 
- 
-`,
+      In this era of Globalization of education, the obvious focus is on the quality of education. A good educational institution strives continuously for sustenance and enhancement of quality in every field of its activity.
+
+      As School of Engineering, MPGI, Nanded works diligently to realize its mission of providing the best learning, teaching and research opportunities to students and academicians. The institute always put an effort to give not only technical knowhow but also put continuous efforts to inculcate the good habits and high values among the students.
+
+      The experienced faculty members are dedicated towards their duties. The training provided to our graduate students creates the next generation of scholars well-prepared to advance knowledge and transfer technology. The industrial training taken by the students adds a dimension of experience to the undergraduate education that simply cannot be duplicated in the classroom. Our students are eager to acquire different skills and technical knowhow. They contribute through the innovations which provides a foundation for the next phases of their careers and lives.
+      Amongst students’ creativity, collective work and competition domestically, regionally and internationally thrive. School of Engineering, MPGI, Nanded stands committed to the practice of academic freedom and encourages cultural diversity as it continues to attract students and faculty.
+      I would ask you to take advantage of facility provided by the School of Engineering, MPGI, Nanded and join us in our endeavor to actively contribute to the overall improvement of this increasingly globalized society.
+### —Prof. Laxman M Waghmare
+    `,
+    highlights: [
+      "37+ years of experience in teaching, research, and administration",
+      "Ph.D. from IIT Roorkee; B.E. & M.E. from SGGS Nanded",
+      "120+ research publications, 17 Ph.D. students guided, 1 book, 4 book chapters",
+      "Held key positions: Director (R&D), Dean, HOD, BoM Member",
+      "Recipient of K S Krishnan Award (IETE) and other accolades",
+      "Completed funded research projects (AICTE, NRB)",
+      "International academic collaborations with USA, Singapore, Malaysia, China, Dubai",
+      "Active member in AICTE, NBA, BOS, TEQIP, and MHT-CET",
+      "Organized & participated in several conferences, CEPs, and alumni events",
+    ],
+    pdfLinks: [
+      {
+        name: "Brief Resume",
+        url: principleBriefResume,
+      },
+      {
+        name: "Biodata",
+        url: principleBioData,
+      },
+    ],
   },
 ];
 

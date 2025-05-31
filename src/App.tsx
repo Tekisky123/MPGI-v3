@@ -1,8 +1,4 @@
-import {
-  Routes,
-  Route,
-  useLocation,
-} from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
@@ -37,14 +33,19 @@ import CellsCommittees from "./pages/CellsCommittees";
 import Admission from "./pages/Admission";
 import ContactPage from "./pages/ContactPage";
 import AlumniPage from "./pages/AlumniPage";
-
+import StudentActivities from "./pages/StudentActivities";
 
 export default function App() {
   const location = useLocation();
   return (
-
     <div className="min-h-screen">
-      {location.pathname === "/" || location.pathname === "/login" || location.pathname === "/admin/dashboard" ? <Header /> : <Navbar />}
+      {location.pathname === "/" ||
+      location.pathname === "/login" ||
+      location.pathname === "/admin/dashboard" ? (
+        <Header />
+      ) : (
+        <Navbar />
+      )}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
@@ -53,7 +54,10 @@ export default function App() {
         <Route path="/profile" element={<ProfilePage />} />
         <Route path="/departments" element={<Departments />} />
         <Route path="/features" element={<FeaturesPage />} />
-        <Route path="/:collegeId/facilities/:facilityPath" element={<Facilities />} />
+        <Route
+          path="/:collegeId/facilities/:facilityPath"
+          element={<Facilities />}
+        />
         <Route path="/trainings" element={<TrainingPlacement />} />
         <Route path="/:collegeId/campus" element={<Gallery />} />
         <Route path="/:collegeId/faculty" element={<Faculty />} />
@@ -66,7 +70,10 @@ export default function App() {
         <Route path="/student-portal/*" element={<StudentPortal />} />
         <Route path="/:collegeId/contact" element={<ContactPage />} />
         <Route path="/:college/esteemed-alumni" element={<AlumniPage />} />
-
+        <Route
+          path="/:collegeId/activities/:activityPath"
+          element={<StudentActivities />}
+        />
         <Route
           path="/school-of-engineering/home"
           element={<SchoolOfEngineeringHome />}
@@ -93,8 +100,10 @@ export default function App() {
           path="/vishwabharati-polytechnic-institute/courses"
           element={<VishwabhartiPolytechnicCourses />}
         />
-        <Route path="/:collegeId/cells-committees" element={<CellsCommittees />} />
-
+        <Route
+          path="/:collegeId/cells-committees"
+          element={<CellsCommittees />}
+        />
       </Routes>
       <DepartmentRoutes />
       <Footer />
@@ -108,9 +117,7 @@ export default function App() {
         duration={5000}
         closeButton
         theme="light"
-
       />
     </div>
-
   );
 }

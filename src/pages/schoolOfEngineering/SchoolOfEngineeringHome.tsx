@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import Slider, { Settings, CustomArrowProps } from "react-slick";
 import SchoolOfEngineeringQuickLinks from "./SchoolOfEngineeringQuickLinks";
 
-// Import 4 images for the slider (make sure these are optimized)
+// Import images for the slider
 import img1 from "../../assets/engineering/hero1.jpg";
 import img2 from "../../assets/engineering/hero2.jpg";
 import img3 from "../../assets/engineering/hero3.jpg";
@@ -15,6 +15,7 @@ interface Slide {
   img: string;
 }
 
+// Custom arrow components with responsive sizing
 const NextArrow = ({ onClick }: CustomArrowProps) => (
   <button
     onClick={onClick}
@@ -22,7 +23,7 @@ const NextArrow = ({ onClick }: CustomArrowProps) => (
     aria-label="Next slide"
   >
     <svg
-      className="w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6"
+      className="w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 text-white"
       aria-hidden="true"
       xmlns="http://www.w3.org/2000/svg"
       width="24"
@@ -48,7 +49,7 @@ const PrevArrow = ({ onClick }: CustomArrowProps) => (
     aria-label="Previous slide"
   >
     <svg
-      className="w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6"
+      className="w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 text-white"
       aria-hidden="true"
       xmlns="http://www.w3.org/2000/svg"
       width="24"
@@ -78,11 +79,11 @@ const SchoolOfEngineeringHome = () => {
   const sliderSettings: Settings = {
     dots: true,
     infinite: true,
-    speed: 700, // increased duration for smoother fade
+    speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 4000, // slower autoplay for better UX and perf
+    autoplaySpeed: 3000,
     fade: true,
     arrows: true,
     nextArrow: <NextArrow />,
@@ -113,46 +114,45 @@ const SchoolOfEngineeringHome = () => {
   };
 
   return (
-    <div className="bg-white">
-      {/* Hero Section with Slider */}
-      <div className="relative min-h-[80vh] bg-mpgin-darkBlue text-white">
-        <Slider {...sliderSettings}>
-          {slides.map((slide, index) => (
-            <div key={index} className="h-[80vh] relative">
-              {/* Image with solid overlay for better GPU compositing */}
-              <img
-                src={slide.img}
-                alt={`Slide ${index + 1}`}
-                className="w-full h-full object-cover object-center"
-                loading={index === 0 ? "eager" : "lazy"}
-                style={{ willChange: "transform" }} // hint GPU acceleration
-              />
-              {/* Overlay with dark transparent background instead of image opacity */}
-              <div className="absolute inset-0 bg-black/50"></div>
-            </div>
-          ))}
-        </Slider>
-
-        {/* Overlay Text Content */}
-        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="space-y-8"
-            >
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-white">
-                Welcome to
-                <span className="block mt-4 text-mpgin-blue">
-                  Matoshri Pratishthan School of Engineering
-                </span>
-              </h1>
-            </motion.div>
-          </div>
+    <div className="w-full overflow-hidden bg-white">
+      <div className="w-full">
+        <div className="h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-[80vh] relative">
+          <Slider {...sliderSettings}>
+            {slides.map((slide, index) => (
+              <div
+                key={index}
+                className="relative h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-[80vh]"
+              >
+                <img
+                  src={slide.img}
+                  alt={`Slide ${index + 1}`}
+                  className="w-full h-full object-cover"
+                  loading={index === 0 ? "eager" : "lazy"}
+                />
+                <div className="absolute inset-0 bg-black/60" />
+                {/* Overlay Text Content */}
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                    <motion.div
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.8 }}
+                      className="space-y-4"
+                    >
+                      <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-white">
+                        Welcome to School of Engineering
+                      </h1>
+                      <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight text-mpgin-blue">
+                        Innovating for the Future
+                      </h2>
+                    </motion.div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </Slider>
         </div>
       </div>
-
       <SchoolOfEngineeringQuickLinks />
     </div>
   );

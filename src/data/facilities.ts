@@ -1,11 +1,23 @@
-// facilities.ts
-
 export interface Facility {
   name: string;
   description?: string;
   points?: string[];
   tableData?: { label: string; value: string }[];
   path: string;
+  aicteNaac?: { label: string; value: string }[];
+  keyContacts?: {
+    post: string;
+    name: string;
+    branch: string;
+    email: string;
+    mobile: string;
+  }[];
+  departmentalCoordinators?: {
+    branch: string;
+    name: string;
+    email: string;
+    mobile: string;
+  }[];
 }
 
 export interface CollegeFacilityGroup {
@@ -22,37 +34,47 @@ export const facilitiesData: CollegeFacilityGroup[] = [
       {
         name: "Classrooms",
         description: "Well-equipped, spacious classrooms with modern teaching aids.",
-        path: "/classrooms",
+        path: "/facilities/classrooms",
       },
       {
         name: "Girls and Boys Hostel",
         description: "Separate hostels for boys and girls with basic amenities and security.",
-        path: "/girls-boys-hostel",
+        path: "/facilities/girls-boys-hostel",
       },
       {
         name: "Infrastructure",
         description: "Modern infrastructure supporting technical education and student life.",
-        path: "/infrastructure",
+        path: "/facilities/infrastructure",
       },
       {
         name: "Library",
         description: "Fully equipped library with books, journals, and digital resources.",
-        path: "/library",
+        path: "/facilities/library",
       },
       {
         name: "Sports",
         description: "Facilities for indoor and outdoor sports activities.",
-        path: "/sports",
+        path: "/facilities/sports",
       },
       {
         name: "Bus Facilities",
         description: "Regular transport services connecting major locations.",
-        path: "/bus-facilities",
+        path: "/facilities/bus-facilities",
       },
       {
         name: "WiFi Enable Campus",
         description: "Campus-wide high-speed internet access for students and staff.",
-        path: "/wifi",
+        path: "/facilities/wifi",
+      },
+      {
+        name: "Cafeteria",
+        description: "A spacious cafeteria offering a variety of meals and refreshments.",
+        path: "/facilities/cafeteria",
+      },
+      {
+        name: "Laboratories",
+        description: "Advanced laboratories for practical learning and research.",
+        path: "/facilities/laboratories",
       },
     ],
   },
@@ -63,22 +85,22 @@ export const facilitiesData: CollegeFacilityGroup[] = [
       {
         name: "Classrooms",
         description: "Smart classrooms with projectors, ACs, and interactive learning tools.",
-        path: "/classrooms",
+        path: "/facilities/classrooms",
       },
       {
         name: "Girls and Boys Hostel",
         description: "Secure and comfortable hostel accommodations for both genders.",
-        path: "/girls-boys-hostel",
+        path: "/facilities/girls-boys-hostel",
       },
       {
         name: "Infrastructure",
         description: "State-of-the-art labs, workshops, and research centers.",
-        path: "/infrastructure",
+        path: "/facilities/infrastructure",
       },
       {
         name: "Library",
         description: "A well-stocked library with digital resources and study spaces.",
-        path: "/library",
+        path: "/facilities/library",
       },
       {
         name: "Virtual Labs",
@@ -90,7 +112,6 @@ export const facilitiesData: CollegeFacilityGroup[] = [
           "Data collection, analysis, and visualization tools",
           "Reduces cost and risks associated with physical labs"
         ],
-        // This will be used for non-table content
         instituteInfo: [
           { label: "Institute", value: "Matoshri Pratishthan Group of Institutions School of Engineering, Nanded" },
           { label: "NCID", value: "447" },
@@ -155,7 +176,6 @@ export const facilitiesData: CollegeFacilityGroup[] = [
             email: "mpgimanisha@gmail.com",
             mobile: "8390699111"
           },
-
           {
             branch: "Computer Science and Engineering",
             name: "Ms Jyoti Sarode (6)",
@@ -178,22 +198,32 @@ export const facilitiesData: CollegeFacilityGroup[] = [
       {
         name: "Sports",
         description: "Full-sized playgrounds, gymnasium, and indoor games room.",
-        path: "/sports",
+        path: "/facilities/sports",
       },
       {
         name: "Remote Center",
         description: "Access to remote learning and virtual collaboration platforms.",
-        path: "/remote-center",
+        path: "/facilities/remote-center",
       },
       {
         name: "Bus Facilities",
         description: "Well-maintained buses covering major routes around the campus.",
-        path: "/bus-facilities",
+        path: "/facilities/bus-facilities",
       },
       {
         name: "WiFi Enable Campus",
         description: "High-speed internet connectivity across classrooms, labs, and hostels.",
-        path: "/wifi",
+        path: "/facilities/wifi",
+      },
+      {
+        name: "Cafeteria",
+        description: "A spacious cafeteria offering a variety of meals and refreshments.",
+        path: "/facilities/cafeteria",
+      },
+      {
+        name: "Laboratories",
+        description: "Advanced laboratories for practical learning and research.",
+        path: "/facilities/laboratories",
       },
     ],
   },
@@ -204,32 +234,47 @@ export const facilitiesData: CollegeFacilityGroup[] = [
       {
         name: "Classrooms",
         description: "Spacious, air-conditioned classrooms with multimedia support.",
-        path: "/classrooms",
+        path: "/facilities/classrooms",
+      },
+      {
+        name: "Girls and Boys Hostel",
+        description: "Comfortable and secure hostel facilities for both boys and girls.",
+        path: "/facilities/girls-boys-hostel",
       },
       {
         name: "Infrastructure",
         description: "Well-designed buildings with seminar halls, discussion rooms, and lounges.",
-        path: "/infrastructure",
+        path: "/facilities/infrastructure",
       },
       {
         name: "Library",
         description: "Library with management case studies, journals, and e-resources.",
-        path: "/library",
+        path: "/facilities/library",
       },
       {
         name: "Sports",
         description: "Recreational areas for physical and mental wellness.",
-        path: "/sports",
+        path: "/facilities/sports",
       },
       {
         name: "Bus Facilities",
         description: "Transportation services for commuting students safely.",
-        path: "/bus-facilities",
+        path: "/facilities/bus-facilities",
       },
       {
         name: "WiFi Enable Campus",
         description: "Campus-wide WiFi for seamless online learning and research.",
-        path: "/wifi",
+        path: "/facilities/wifi",
+      },
+      {
+        name: "Cafeteria",
+        description: "A spacious cafeteria offering a variety of meals and refreshments.",
+        path: "/facilities/cafeteria",
+      },
+      {
+        name: "Laboratories",
+        description: "Advanced laboratories for practical learning and research.",
+        path: "/facilities/laboratories",
       },
     ],
   },

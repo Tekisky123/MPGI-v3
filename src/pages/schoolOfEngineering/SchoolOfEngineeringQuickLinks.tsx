@@ -14,10 +14,10 @@ import {
   swayamNptelData,
   innovationIncubation,
 } from "../../data/SchoolOfEngineeringQuickLinkData";
-import lab1 from "../../assets/engineering/lab1.jpg"
-import lab2 from "../../assets/engineering/lab2.jpg"
-import lab3 from "../../assets/engineering/lab3.jpg"
-import lab4 from "../../assets/engineering/lab4.jpg"
+import lab1 from "../../assets/engineering/lab1.jpg";
+import lab2 from "../../assets/engineering/lab2.jpg";
+import lab3 from "../../assets/engineering/lab3.jpg";
+import lab4 from "../../assets/engineering/lab4.jpg";
 
 const renderTable = (data) => {
   return (
@@ -114,8 +114,8 @@ const renderList = (listContent: string) => {
 
 const renderContent = (
   content: string,
-  tableData: Array<Record<string, any>> = [],
-  iqacTableData: Array<{ post: string; member: string }> = []
+  highlights?: string[],
+  pdfLinks?: { name: string; url: string }[]
 ) => {
   const paragraphs = content.split("\n");
 
@@ -142,6 +142,16 @@ const renderContent = (
             <h3
               key={index}
               className="text-xl font-bold text-mpgin-darkBlue mt-6 mb-2"
+            >
+              {paragraph.slice(3)}
+            </h3>
+          );
+        }
+        if (paragraph.startsWith("### ")) {
+          return (
+            <h3
+              key={index}
+              className="text-sm italic font-medium text-mpgin-darkBlue mt-6 mb-2"
             >
               {paragraph.slice(3)}
             </h3>
@@ -178,9 +188,40 @@ const renderContent = (
         );
       })}
 
-      {/* Render Tables */}
-      {tableData.length > 0 && renderTable(tableData)}
-      {iqacTableData.length > 0 && renderTable(iqacTableData)}
+      {/* Render Highlights */}
+      {highlights && highlights.length > 0 && (
+        <div className="my-4">
+          <h3 className="text-xl font-bold text-mpgin-darkBlue mb-2">
+            Highlights
+          </h3>
+          <ul className="list-disc pl-6 space-y-1 text-gray-700 font-semibold">
+            {highlights.map((highlight, index) => (
+              <li key={index}>{highlight}</li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {/* Render PDF Links */}
+      {pdfLinks && pdfLinks.length > 0 && (
+        <div className="my-4">
+          
+          <ul className="list-disc pl-6 space-y-1 text-gray-700 font-semibold">
+            {pdfLinks.map((link, index) => (
+              <li key={index}>
+                <a
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-600 hover:underline"
+                >
+                  {link.name}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
     </>
   );
 };
@@ -188,7 +229,7 @@ const renderContent = (
 const ImageGrid = ({ images }: { images: string[] }) => {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-6">
-      {images.slice(0,4).map((src, idx) => (
+      {images.slice(0, 4).map((src, idx) => (
         <div key={idx} className="rounded overflow-hidden shadow">
           <img
             src={src}
@@ -297,7 +338,12 @@ const SchoolOfEngineeringQuickLinks = () => {
                   transition={{ delay: 0.3 }}
                   className="space-y-4 text-gray-700 leading-relaxed"
                 >
-                  {principal?.content && renderContent(principal.content)}
+                  {principal?.content &&
+                    renderContent(
+                      principal.content,
+                      principal.highlights,
+                      principal.pdfLinks
+                    )}
                 </motion.div>
               </div>
               <div className="lg:w-1/3 p-6 sm:p-8 lg:p-10 border-l border-gray-200 flex flex-col items-center bg-gray-50 order-1 lg:order-2">
@@ -324,6 +370,7 @@ const SchoolOfEngineeringQuickLinks = () => {
             </div>
           </motion.div>
         );
+
       case "placements":
         return (
           <motion.div
