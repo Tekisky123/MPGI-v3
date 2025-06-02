@@ -8,6 +8,7 @@ import civilHodEngineering from "../assets/hodImages/P. D. Pople Civil Engineeri
 import polyComputerHod from "../assets/hodImages/Mrs MORE M.K.png";
 import polyCivilHod from "../assets/hodImages/Ms. Goud P.O Hod.png";
 import mechanicalHodPoly from "../assets/principalImages/Prof. Shahaji Deshmukh Vishwabharati polytechnic.jpg";
+import mrDeshmukhSJElectricalHod from "../assets/hodImages/Mr. DeshmukhpolyElectricalHod.png";
 
 export interface Department {
   id: string;
@@ -283,7 +284,7 @@ disseminate knowledge.`,
           "PLC and Automation",
           "Solar Power Systems",
         ],
-        about: ``,
+        about: `Electrical Engineering is a branch of engineering that studies about the production and uses of Electric power, its generation and distribution and the control of machines. The field first became an identifiable occupation in the late nineteenth century after commercialization of the electric telegraph and electrical power supply. It now covers a range of subtopics including power system, Power electronics, control systems, signal processing and Electrical Machines. All major companies of public and private sector such as Electricity Boards, Large Scale Industries, Manufacturing Plants, Power Corporations, Hydro-Electricity sector are continuously in need of Electrical Engineers for their projects. The main objective of this course is to groom the students in such a way so that they can act as supervisors in the above mentioned industries. A good industry exposure is provided by placement of students in different companies during vacations.`,
 
         facilities: [
           "Smart Grid Simulation Lab",
@@ -294,19 +295,85 @@ disseminate knowledge.`,
         facultyCount: 10,
         gallery: ["/images/electrical-1.jpg", "/images/electrical-2.jpg"],
         labs: [
-          // { srNo: 1, labName: "Automotive Workshop", area: "2000+ sq.ft", incharge: "Mr. Ramesh Patil" },
-          // { srNo: 2, labName: "CAD/CAM Lab", area: "1000 sq.ft", incharge: "Dr. Anil Deshmukh" },
-          // { srNo: 3, labName: "Mechatronics Lab", area: "800 sq.ft", incharge: "Prof. Neha Singh" },
+          {
+            srNo: 1,
+            labName: "DC Machine & Transformer Lab",
+            incharge: "Mr. Deshmukh S.J.",
+            area: "",
+          },
+          {
+            srNo: 2,
+            labName: "Basic Electrical Lab",
+            incharge: "Mr. Deshmukh S.J.",
+            area: "",
+          },
+          {
+            srNo: 3,
+            labName: "Measurement Lab",
+            incharge: "Miss. Kagde R.H.",
+            area: "",
+          },
+          {
+            srNo: 4,
+            labName: "AC Machine Lab",
+            incharge: "Mr. Shingarputale B.G.",
+            area: "",
+          },
+          {
+            srNo: 5,
+            labName: "Switchgear & Protection Lab",
+            incharge: "Miss. Deshmukh S.D.",
+            area: "",
+          },
+          {
+            srNo: 6,
+            labName: "Electrical Circuit & Network Lab",
+            incharge: "Mr. Deshmukh S.J.",
+            area: "",
+          },
+          {
+            srNo: 7,
+            labName: "Testing & Maintenance Electrical Equipment",
+            incharge: "Mr. Shingarputale B.G.",
+            area: "",
+          },
+          {
+            srNo: 8,
+            labName: "Basic Electronics",
+            incharge: "Miss. Deshmukh S.D.",
+            area: "",
+          },
+          {
+            srNo: 9,
+            labName: "Instrumentation Lab",
+            incharge: "Miss. Kagde R.H.",
+            area: "",
+          },
+          {
+            srNo: 10,
+            labName: "Power Electronics Lab",
+            incharge: "Mr. Shingarputale B.G.",
+            area: "",
+          },
         ],
         hod: {
-          name: "Dr. Rajesh Kumar",
+          name: "Mr. Deshmukh S.J.",
           designation: "Head of Department - Electrical Engineering",
-          message: "",
-          profileImage:
-            "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png",
+          message: `The Electrical Engineering course, being constantly growing due to the success of its diploma as highly skilled and professional engineering technologists. We pride in having the well qualified faculty and well groomed multi-dimensional students driven by self motivation and quest to continuously improve and aspiring for higher studies at top universities around the Maharashtra & India .At present, the department offers an undergraduate Diploma (Electrical Engineering). The Electrical Engineering programs are designed to reflect the diverse needs of our students. industry, and the society with academic rigor. We strive to nurture graduates who are ready to accept the changing needs of the society and industry.
+
+Since future is of smart energy management system, the Electrical Engineering Department will continue to fulfill its aim to contribute to the society. I invite you to explore our department web-pages and discover the ample opportunities of academic excellence at our department as a first choice in electrical engineering education.
+
+I believe career opportunities in Electrical Engineering are endless as Diploma Engineer Trainee can work anywhere in government agencies, Power industries, Government PSU, R&D Units, IT industries, Electricity Boards/Utility companies and startup to big tech firms.
+
+On behalf of the Electrical Engineering department, I welcome our new and current students and visitors, an wish them a bright future a-head.`,
+          profileImage: mrDeshmukhSJElectricalHod,
         },
-        vision: "",
-        mission: "",
+        vision:
+          "Creation of academic excellence in the field of Electronics & Telecommunication Engineering through value based universal education system to produce proficient professionals for the welfare of mankind around the globe.",
+        mission: `1. To provide quality education in the field of Electronics Engineering.
+2. To conduct practical training as per industry needs to enhance academic standard of the students.
+3. To empower each & every student by providing them all round personality development with latest emerging technology through expert lectures.
+4. To provide electronics engineers to the society for effective contribution towards societal developments with the sense of discipline and dedication.`,
       },
       {
         id: "computer",

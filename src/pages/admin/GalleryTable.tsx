@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { toast } from 'sonner';
-import { Pencil, Trash, ImagePlus } from 'lucide-react';
+import { Pencil, Trash, ImagePlus, ChevronLeft, ChevronRight } from 'lucide-react';
 import api from '../../data/Api';
 import Button from '../../components/ui/Button';
 import Modal from '../../components/ui/Modal';
@@ -27,10 +27,14 @@ const GalleryTable = ({ collegeType }: Props) => {
   const [editItem, setEditItem] = useState<GalleryItem | null>(null);
   const [formData, setFormData] = useState({
     title: '',
-    department: college?.departments[0]?.slug || '', 
+    department: college?.departments[0]?.slug || '',
     image: null as File | null,
   });
   const [preview, setPreview] = useState('');
+
+  // Pagination state
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 10;
 
   // Fetch gallery data
   useEffect(() => {
@@ -69,7 +73,7 @@ const GalleryTable = ({ collegeType }: Props) => {
     setEditItem(item || null);
     setFormData({
       title: item?.title || '',
-      department: item?.department || college.departments[0].slug, // Default to first department
+      department: item?.department || college.departments[0].slug,
       image: null,
     });
     setPreview(item?.image || '');
@@ -82,7 +86,7 @@ const GalleryTable = ({ collegeType }: Props) => {
     setEditItem(null);
     setFormData({
       title: '',
-      department: college?.departments[0]?.slug || '', // Reset to default department
+      department: college?.departments[0]?.slug || '',
       image: null,
     });
     setPreview('');
@@ -138,6 +142,18 @@ const GalleryTable = ({ collegeType }: Props) => {
     return college?.departments.find((d) => d.slug === slug)?.displayName || slug;
   };
 
+  // Calculate pagination
+  const totalPages = Math.ceil(gallery.length / itemsPerPage);
+  const paginatedGallery = gallery.slice(
+    (currentPage - 1) * itemsPerPage,
+    currentPage * itemsPerPage
+  );
+
+  // Handle page change
+  const goToPage = (page: number) => {
+    setCurrentPage(page);
+  };
+
   // Render the component
   if (!college) {
     return (
@@ -168,7 +184,7 @@ const GalleryTable = ({ collegeType }: Props) => {
           </tr>
         </thead>
         <tbody>
-          {gallery.map((item) => (
+          {paginatedGallery.map((item) => (
             <tr key={item._id} className="border-t border-gray-200 hover:bg-gray-50">
               <td className="px-4 py-3">
                 <img src={item.image} alt={item.title} className="h-16 w-auto rounded-md" />
@@ -197,6 +213,29 @@ const GalleryTable = ({ collegeType }: Props) => {
           ))}
         </tbody>
       </table>
+
+      {/* Pagination Controls */}
+      <div className="flex justify-center items-center mt-6 gap-4">
+        <Button
+          variant="secondary"
+          onClick={() => goToPage(currentPage - 1)}
+          disabled={currentPage === 1}
+          icon={<ChevronLeft className="w-5 h-5" />}
+        >
+          Previous
+        </Button>
+        <span className="text-gray-700">
+          Page {currentPage} of {totalPages}
+        </span>
+        <Button
+          variant="secondary"
+          onClick={() => goToPage(currentPage + 1)}
+          disabled={currentPage === totalPages}
+          icon={<ChevronRight className="w-5 h-5" />}
+        >
+          Next
+        </Button>
+      </div>
 
       {/* Modal for Adding/Editing */}
       <Modal isOpen={isModalOpen} onClose={closeModal} title={`${editItem ? 'Edit' : 'Upload'} Image`}>
