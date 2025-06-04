@@ -12,41 +12,52 @@ export interface CollegeConfig {
 
 export const collegeConfigs: Record<string, CollegeConfig> = {
   engineering: {
-    slug: 'school-of-engineering',
-    displayName: 'School of Engineering',
+    slug: "school-of-engineering",
+    displayName: "School of Engineering",
     departments: [
-      { slug: 'cse', displayName: 'Computer Science & Engineering' },
-      { slug: 'mech', displayName: 'Mechanical Engineering' },
-      { slug: 'eee', displayName: 'Electrical Engineering' },
-      { slug: 'civil', displayName: 'Civil Engineering' },
-      { slug: 'ece', displayName: 'Electronics and Telecommunication Engineering' },
+      { slug: "cse", displayName: "Computer Science & Engineering" },
+      { slug: "mech", displayName: "Mechanical Engineering" },
+      { slug: "eee", displayName: "Electrical Engineering" },
+      { slug: "civil", displayName: "Civil Engineering" },
+      {
+        slug: "ece",
+        displayName: "Electronics and Telecommunication Engineering",
+      },
+      {
+        slug: "bsh",
+        displayName: "Basic Sciences and Humanities",
+      },
     ],
   },
   management: {
-    slug: 'school-of-management',
-    displayName: 'School of Management',
+    slug: "school-of-management",
+    displayName: "School of Management",
     departments: [
-      { slug: 'mba', displayName: 'MBA' },
-      { slug: 'bba', displayName: 'BBA' },
-      { slug: 'finance-management', displayName: 'Financial Management' },
-      { slug: 'marketing-management', displayName: 'Marketing Management' },
+      { slug: "mba", displayName: "MBA" },
+      { slug: "bba", displayName: "BBA" },
+      { slug: "finance-management", displayName: "Financial Management" },
+      { slug: "marketing-management", displayName: "Marketing Management" },
     ],
   },
   polytechnic: {
-    slug: 'vishwabharati-polytechnic-institute',
-    displayName: 'Vishwabharati Polytechnic Institute',
+    slug: "vishwabharati-polytechnic-institute",
+    displayName: "Vishwabharati Polytechnic Institute",
     departments: [
-      { slug: 'civil', displayName: 'Civil Engineering' },
-      { slug: 'computer', displayName: 'Computer Engineering' },
-      { slug: 'electrical', displayName: 'Electrical Engineering' },
-      { slug: 'mechanical', displayName: 'Mechanical Engineering' },
-      { slug: 'it', displayName: 'Information Technology' },
-      { slug: 'ece', displayName: 'Electronics and Telecommunication' },
+      { slug: "civil", displayName: "Civil Engineering" },
+      { slug: "computer", displayName: "Computer Engineering" },
+      { slug: "electrical", displayName: "Electrical Engineering" },
+      { slug: "mechanical", displayName: "Mechanical Engineering" },
+      { slug: "it", displayName: "Information Technology" },
+      { slug: "ece", displayName: "Electronics and Telecommunication" },
+       {
+        slug: "bsh",
+        displayName: "Basic Sciences and Humanities",
+      },
     ],
   },
   mpgin: {
-    slug: 'matoshri-pratishthan-group-of-institutions',
-    displayName: 'Matoshri Pratishthan Group of Institutions',
+    slug: "matoshri-pratishthan-group-of-institutions",
+    displayName: "Matoshri Pratishthan Group of Institutions",
   },
 };
 

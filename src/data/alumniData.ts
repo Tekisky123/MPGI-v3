@@ -50,6 +50,15 @@ import GajananAnandRaoShinde from "../assets/Alumini/engineering/Gajanan Anand R
 import KomalPrakashYerawar from "../assets/Alumini/engineering/Komal Prakash Yerawar.png";
 import PoojaTryambakSuryawanshi from "../assets/Alumini/engineering/Pooja Tryambak Suryawanshi.png";
 
+
+
+// polytechnic Images
+
+import rupaliDattaGaikwad from "../assets/Alumini/poly/Rupali Datta Gaikwad.png"
+import nishaPunjaramShinde from "../assets/Alumini/poly/Nisha Punjaram Shinde.png"
+import rushikeshSJadhao from "../assets/Alumini/poly/Rushikesh S. Jadhao.png"
+import sushilkumarPrakashraoWankhede from "../assets/Alumini/poly/Sushilkumar Prakashrao Wankhede.png"
+import adarshAnilKapure from "../assets/Alumini/poly/Adarsh Anil Kapure.png"
 export interface AlumniData {
   id: string;
   name: string;
@@ -64,8 +73,7 @@ export const navItems = [
   { label: "School of Management Alumni's", id: "management" },
   { label: "Engineering Alumni", id: "engineering" },
   { label: "Polytechnic Alumni", id: "polytechnic" },
-  { label: "Alumni Register", id: "register" },
-  { label: "Alumni Speak", id: "speak" },
+  
 ];
 
 export const managementAlumni: AlumniData[] = [
@@ -759,14 +767,51 @@ export const engineeringAlumni: AlumniData[] = [
 ];
 
 export const polytechnicAlumni: AlumniData[] = [
-  //   {
-  //     id: "1",
-  //     name: "Alice Johnson",
-  //     profile: "Electrical Engineer",
-  //     selectedIn: "General Electric",
-  //     package: "$100,000",
-  //     image: "path/to/image3.jpg",
-  //     content: "Alice Johnson is an electrical engineer at General Electric...",
-  //   },
-  // Add more alumni data as needed
+   {
+    id: "1",
+    name: "Rupali Datta Gaikwad",
+    profile: "",
+    selectedIn: "Mahatransco",
+    package: "",
+    image: rupaliDattaGaikwad,
+    content: "",
+  },
+  {
+    id: "2",
+    name: "Nisha punjaram shinde",
+    profile: "",
+    selectedIn: "India post Government",
+    package: "2 LPA",
+    image: nishaPunjaramShinde,
+    content: "",
+  },
+  {
+    id: "3",
+    name: "Rushikesh S. Jadhao",
+    profile: "",
+    selectedIn: "Ola electric",
+    package: "4.2 LPA",
+    image: rushikeshSJadhao,
+    content: "",
+  },
+  {
+    id: "4",
+    name: "Sushilkumar Prakashrao Wankhede",
+    profile: "",
+    selectedIn: "Accenture",
+    package: "14 LPA",
+    image: sushilkumarPrakashraoWankhede,
+    content: "",
+  },
+  {
+    id: "5",
+    name: "Adarsh Anil Kapure",
+    profile: "",
+    selectedIn: "Mahatransco",
+    package: "",
+    image: adarshAnilKapure,
+    content: "",
+  },
+ 
+
 ];

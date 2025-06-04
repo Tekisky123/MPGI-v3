@@ -9,6 +9,7 @@ import polyComputerHod from "../assets/hodImages/Mrs MORE M.K.png";
 import polyCivilHod from "../assets/hodImages/Ms. Goud P.O Hod.png";
 import mechanicalHodPoly from "../assets/principalImages/Prof. Shahaji Deshmukh Vishwabharati polytechnic.jpg";
 import mrDeshmukhSJElectricalHod from "../assets/hodImages/Mr. DeshmukhpolyElectricalHod.png";
+import rukhsanaHodBasicSciencesAndHumanities from "../assets/hodImages/Dr. Syeda RukhsanaBasicScience.png";
 
 export interface Department {
   id: string;
@@ -1019,7 +1020,7 @@ The Department, established to impart analytical and application skills in vario
         description:
           "Foundation department focusing on engineering fundamentals, mathematics, physics, chemistry, and communication skills.",
         image: "https://www.lpu.in/academics/images/department/physics.jpg",
-        about: ``,
+        about: `The Department of Basic Science and Humanities started from the inception of the college. Knowledge in basic science forms the base of Engineering. Department of Basic Science and Humanities aims to fulfill this function most efficiently. This Department is devoted to foster the fundamental principles and understanding of science to enhance the student’s basic knowledge of Engineering. Its objective is to provide value-based education to the budding scientists and engineers. The Department comprises of different subjects of study namely Mathematics, Physics, Chemistry, Basic Human Rights  and English. The students of this department are highly benefitted by the knowledge and experienced faculty members of the department. Well-experienced and highly qualified faculty members of the department have made consistent and strenuous efforts to improve the students learning and development processes. Besides academics the Department is actively involved in the development of students’ personality, communication and soft skills to boost them in the modern and globally competitive environment. The department has state-of-the-art laboratories and wel- qualified faculty members.`,
         courses: [
           "Engineering Mathematics I & II",
           "Engineering Physics & Lab",
@@ -1035,18 +1036,39 @@ The Department, established to impart analytical and application skills in vario
         ],
         facultyCount: 15,
         gallery: ["/images/bsh-1.jpg", "/images/bsh-2.jpg"],
-        labs: [],
+        labs: [
+          {
+            srNo: 1,
+            labName: "Physics Lab",
+            area: "",
+            incharge: "",
+          },
+          {
+            srNo: 2,
+            labName: "Chemistry Lab",
+            area: "",
+            incharge: "",
+          },
+        ],
         hod: {
-          name: "HOD",
+          name: "Dr. Syeda Rukhsana",
           designation: "Head of Department - Basic Sciences and Humanities",
           message: ` 
-
+Welcome to the Department of Basic Science and Humanities at MATOSHRI PRATISHTHAN GROUP OF INSTITUTIONS SCHOOL OF ENGINEERING NANDED. As the foundational pillar of engineering education, our department plays a crucial role in laying the groundwork for academic journey. On behalf of Basic Science and Humanities Department, I am here to brief you about activities and roll of Basic Science and Humanities Department. BS&H Department is taking care of first year engineering students. The main roll of first year engineering department is to prepare students sound fundamentals in Mathematics, Physics, Chemistry, English, Basic Human Right and Values Along with Basic Technical Subjects Like Mechanics, Programming In C, Basic Electrical and Electronic Engineering, Integrated Personality Development, Health and Wellness and Basic Civil and Mechanical Engineering. Etc We are dedicated to providing students with a strong foundation technical and non-technical subjects that are essential for success in all branches of engineering.
+It is also important that the first-year students are prepared for good soft skills mainly in communication, creativity, problem solving, leadership and team management. We give major focus on their development of communication skill by identical listening and speaking in English. by arranging spoken skill in English and training for stage courage and Personal Interview.  Our language experts are providing variety of challenges and methods to develop their communication skills.
+We also inbuilt good human values in them to become good citizen and human beings.  With good values and ethics, they will be work in the industries and understand challenges of the society and they will become successful in their professional as well as personal life.
+Along with this at first year level we are also giving focus to improve their hand skills. We have Workshop Practice where we give chance to students to prepare products through working by metal joining process, for fabrication process. So, with good gazettes they design and manufacture it and they can innovate and take part in inventions.
+So, at first year engineering department, we see that the platform of first year students will be built their foundation that whenever they will be for higher level of engineering program, they should be easily survive and face the challenges as the requirements of the industries.
     `,
-          profileImage:
-            "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png",
+          profileImage: rukhsanaHodBasicSciencesAndHumanities,
         },
-        vision: "",
-        mission: ``,
+        vision: `To provide students to imbibe best human and professional values.
+To encouraged students of all disciplines and subjects not only in their academic pursuit but also in
+furthering their career prospects and giving impetus to their creative potentiality.`,
+        mission: `To enlarge intellectual perspective and enhance entrepreneurship qualities.
+ Develop technical and communicative skills to make the students industry ready.
+To inculcate ethical values and promote social responsibility through an innovative learning process in basic sciences and humanities.
+To provide students with soft skills and behavioural training programs in order to develop their overall personality and social consciousness.`,
       },
     ],
   },
