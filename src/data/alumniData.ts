@@ -55,7 +55,7 @@ import PoojaTryambakSuryawanshi from "../assets/Alumini/engineering/Pooja Tryamb
 // polytechnic Images
 
 import rupaliDattaGaikwad from "../assets/Alumini/poly/Rupali Datta Gaikwad.png"
-import nishaPunjaramShinde from "../assets/Alumini/poly/Nisha Punjaram Shinde.png"
+import nishaPunjaramShinde from "../assets/Alumini/poly/Nisha punjaram shinde.png"
 import rushikeshSJadhao from "../assets/Alumini/poly/Rushikesh S. Jadhao.png"
 import sushilkumarPrakashraoWankhede from "../assets/Alumini/poly/Sushilkumar Prakashrao Wankhede.png"
 import adarshAnilKapure from "../assets/Alumini/poly/Adarsh Anil Kapure.png"
