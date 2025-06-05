@@ -1050,6 +1050,7 @@ The Department, established to impart analytical and application skills in vario
             incharge: "",
           },
         ],
+
         hod: {
           name: "Dr. Syeda Rukhsana",
           designation: "Head of Department - Basic Sciences and Humanities",
