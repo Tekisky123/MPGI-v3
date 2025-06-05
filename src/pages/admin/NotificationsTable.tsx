@@ -17,7 +17,7 @@ interface Notification {
   linkUrl?: string;
 }
 
-const CATEGORIES = [ 'News & Events'] as const;
+const CATEGORIES = [ 'News & Events', 'Important Notice', 'Notice Board'] as const;
 
 const NotificationsTable = () => {
   const [notifications, setNotifications] = useState<Notification[]>([]);
