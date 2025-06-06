@@ -21,6 +21,8 @@ export interface FacultyMember {
 }
 
 export const navItems = [
+  { label: "Home", id: "home" },
+  { label: "Vision & Mission", id: "vision-mission" },
   { label: "Principal", id: "principal" },
   { label: "Placements", id: "placements" },
   { label: "Achievements", id: "achievements" },
@@ -28,7 +30,6 @@ export const navItems = [
   { label: "Mandatory Disclosure", id: "mandatory-disclosure" },
   { label: "IQAC", id: "iqac" },
   { label: "SWAYAM-NPTEL", id: "swayam-nptel" },
-  { label: "Vision & Mission", id: "vision-mission" },
 ];
 
 export const profiles: ProfileData[] = [
@@ -145,4 +146,39 @@ Every policy and program aligns with these foundational values.
 
 *— Management, Vishwabharti Polytechnic Institute*
 `,
+};
+
+export const homeData = {
+  title: "Welcome to Vishwabharati Polytechnic Institute",
+  content: `
+
+## About Us
+Vishwabharati Polytechnic Institute, a part of MPGI, Nanded, was founded in 2008 with a vision to provide skill-based technical education. It offers AICTE-approved diploma programs focused on hands-on training and employability.
+
+### Key Highlights:
+Approved by: 
+- AICTE New Delhi & Affiliated to MSBTE Mumbai
+Courses Offered: 
+- Diploma in Civil, Mechanical, Electrical, Computer, E&TC
+- Faculty: 50+ qualified instructors
+- Student Strength: 800+
+- Industry Training: Regular industrial visits & internships
+
+## Infrastructure
+Our polytechnic campus includes:
+- Department-wise Workshops & Labs
+- Drawing & AutoCAD Labs
+- Central Computer Lab
+- Library with 10,000+ volumes
+- Hostel & Bus Facility
+- 1 Gbps Wi-Fi Campus
+
+`,
+  highlights: [
+    "800+ Students | 50+ Faculty | 5 Diploma Streams",
+    "Industry-Linked Curriculum | Practical Training Focus",
+    "AutoCAD & Software Labs | Modern Workshops",
+    "AICTE Approved | MSBTE Curriculum",
+    "Library | Hostel | Wi-Fi Campus",
+  ],
 };

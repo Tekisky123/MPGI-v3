@@ -20,13 +20,14 @@ export interface FacultyMember {
 }
 
 export const navItems = [
+  { label: "Home", id: "home" },
+  { label: "Vision & Mission", id: "vision-mission" },
   { label: "Dean", id: "dean" },
   { label: "Placements", id: "placements" },
   { label: "Achievements", id: "achievements" },
   { label: "NIRF", id: "nirf" },
   { label: "Mandatory Disclosure", id: "mandatory-disclosure" },
   { label: "IQAC", id: "iqac" },
-  { label: "Vision & Mission", id: "vision-mission" },
 ];
 
 export const profiles: ProfileData[] = [
@@ -244,4 +245,38 @@ Our vision is twofold: to earn a reputation on the global stage as a pioneer in 
 
 *— Management Team, MPGI*
 `,
+};
+
+export const homeData = {
+  title: "Welcome to School of Management",
+  content: `
+
+## About Us
+The School of Management at Matoshri Pratishthan Group of Institutions (MPGI), Nanded, is a leading business school established in 2010. It offers industry-aligned programs that build leadership, strategic thinking, and entrepreneurial skills among students.
+
+### Key Highlights:
+- Approved by: AICTE, New Delhi & Affiliated to SRTMUN, Nanded
+- NAAC Accreditation: B+ Grade
+- Courses Offered: MBA (Dual Specialization), BBA
+- Faculty: 30+ with academic and industry backgrounds
+- Annual Intake: 180+ students
+- Placement Support: Strong ties with 100+ companies
+
+## Infrastructure
+Our business school provides:
+- Smart Classrooms with audio-visual tech
+- Case Study & Group Discussion Halls
+- Digital Library with access to journals & e-resources
+- Seminar Hall & Conference Facilities
+- Dedicated Career Development Cell
+- Wi-Fi Enabled Campus
+
+`,
+  highlights: [
+    "MBA & BBA Programs | Dual Specializations",
+    "30+ Experienced Faculty | 100+ Recruiters",
+    "Modern Teaching Aids | Digital Library",
+    "Dedicated Career Cell | Personality Development",
+    "NAAC B+ Accredited | AICTE Approved",
+  ],
 };

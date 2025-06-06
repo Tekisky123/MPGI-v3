@@ -1,5 +1,6 @@
-import PresidentImg from "../assets/mpgi/President Jayshree Kamaji Pawar.jpg"
-import arvindPatilImg from "../assets/mpgi/Arvind Patil.jpg"
+import PresidentImg from "../assets/mpgi/President Jayshree Kamaji Pawar.jpg";
+import arvindPatilImg from "../assets/mpgi/Arvind Patil.jpg";
+import secretaryImg from "../assets/mpgi/Venkatchari Bramahachari Verglum.jpg";
 export interface ProfileData {
   id: string;
   name: string;
@@ -13,8 +14,7 @@ export const profiles: ProfileData[] = [
     id: "President",
     name: "Sow. Jayshree Kamaji Pawar",
     title: "President",
-    image:
-      PresidentImg,
+    image: PresidentImg,
     content: `From, President's Desk
 
 It gives me immense pleasure to welcome you to the Matoshri Pratishthan Group of Institutions (MPGI) family. As President, I take great pride in our institution's journey of transforming young minds into competent professionals since our establishment in 2009.
@@ -124,8 +124,7 @@ It is my profound hope that the young student of today would wake up to the hard
     id: "secretary",
     name: "Shri. Venkatchari Bramahachari Verglum",
     title: "Secretary",
-    image:
-      "https://static.vecteezy.com/system/resources/thumbnails/029/271/062/small_2x/avatar-profile-icon-in-flat-style-male-user-profile-illustration-on-isolated-background-man-profile-sign-business-concept-vector.jpg",
+    image: secretaryImg,
     content: `From, Secretary's Desk
 
 As Secretary of MPGI, I oversee the administrative excellence that forms the backbone of our institution. Our key administrative achievements include:
@@ -201,9 +200,8 @@ I am confident that with your continued support, we will continue to make a sign
 
 Sincerely,  
 Mr. Arvind Patil  
-Managing Director`
-  }
-  ,
+Managing Director`,
+  },
   {
     id: "board",
     name: "MPGI Board of Directors",
@@ -241,7 +239,8 @@ We meet quarterly to review institutional performance and set benchmarks for con
     id: "board-directors",
     name: "MPGI Board of Directors",
     title: "Board of Directors",
-    image: "https://media.istockphoto.com/id/1346125184/photo/group-of-successful-multiethnic-business-team.jpg",
+    image:
+      "https://media.istockphoto.com/id/1346125184/photo/group-of-successful-multiethnic-business-team.jpg",
     content: `From the Board of Directors
   
 **Composition (2023-2026 Term):**
@@ -287,14 +286,14 @@ We meet quarterly to review institutional performance and set benchmarks for con
 2. Develop Smart Campus with IoT integration  
 3. Increase industry-sponsored research by 300%  
 4. Launch 5 new emerging technology programs  
-5. Establish endowment fund of ₹500 crores`
-  }
-  ,
+5. Establish endowment fund of ₹500 crores`,
+  },
   {
     id: "managing-director",
     name: "Mr. Arvind Patil",
     title: "Managing Director",
-    image: "https://static.vecteezy.com/system/resources/thumbnails/029/271/062/small_2x/avatar-profile-icon-in-flat-style-male-user-profile-illustration-on-isolated-background-man-profile-sign-business-concept-vector.jpg",
+    image:
+      "https://static.vecteezy.com/system/resources/thumbnails/029/271/062/small_2x/avatar-profile-icon-in-flat-style-male-user-profile-illustration-on-isolated-background-man-profile-sign-business-concept-vector.jpg",
     content: `From the Managing Director's Desk
   
   **Leadership Profile:**
@@ -330,6 +329,6 @@ We meet quarterly to review institutional performance and set benchmarks for con
   • 120+ research publications  
   • 98% student satisfaction score  
   
-  "Our vision is to make MPGI the preferred destination for transformative technical education in India."`
-  }
+  "Our vision is to make MPGI the preferred destination for transformative technical education in India."`,
+  },
 ];

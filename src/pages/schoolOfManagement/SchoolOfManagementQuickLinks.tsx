@@ -1,6 +1,6 @@
-import { motion } from 'framer-motion';
-import { Menu, X } from 'lucide-react';
-import { useState, useEffect, useRef } from 'react';
+import { motion } from "framer-motion";
+import { Menu, X } from "lucide-react";
+import { useState, useEffect, useRef } from "react";
 import NotificationComponent from "../../components/NotificationComponent";
 import {
   achievementData,
@@ -10,8 +10,9 @@ import {
   nirfData,
   mandatoryDisclosureData,
   iqacData,
-  visionMissionData
-} from '../../data/SchoolOfManagementQuickLinkData';
+  visionMissionData,
+  homeData,
+} from "../../data/SchoolOfManagementQuickLinkData";
 
 // Function to render NPTEL table
 const renderNptelTable = (data) => {
@@ -20,19 +21,33 @@ const renderNptelTable = (data) => {
       <table className="min-w-full divide-y divide-gray-200 border border-gray-300">
         <thead>
           <tr>
-            <th className="px-4 py-2 border border-gray-300 bg-gray-100 font-bold">Sr No</th>
-            <th className="px-4 py-2 border border-gray-300 bg-gray-100 font-bold">Department Name</th>
-            <th className="px-4 py-2 border border-gray-300 bg-gray-100 font-bold">No Of Registrations</th>
-            <th className="px-4 py-2 border border-gray-300 bg-gray-100 font-bold">Total Registrations</th>
+            <th className="px-4 py-2 border border-gray-300 bg-gray-100 font-bold">
+              Sr No
+            </th>
+            <th className="px-4 py-2 border border-gray-300 bg-gray-100 font-bold">
+              Department Name
+            </th>
+            <th className="px-4 py-2 border border-gray-300 bg-gray-100 font-bold">
+              No Of Registrations
+            </th>
+            <th className="px-4 py-2 border border-gray-300 bg-gray-100 font-bold">
+              Total Registrations
+            </th>
           </tr>
         </thead>
         <tbody>
           {data.map((row, index) => (
             <tr key={index}>
               <td className="px-4 py-2 border border-gray-300">{row.srNo}</td>
-              <td className="px-4 py-2 border border-gray-300">{row.departmentName}</td>
-              <td className="px-4 py-2 border border-gray-300">{row.noOfRegistrations}</td>
-              <td className="px-4 py-2 border border-gray-300">{row.totalRegistrations}</td>
+              <td className="px-4 py-2 border border-gray-300">
+                {row.departmentName}
+              </td>
+              <td className="px-4 py-2 border border-gray-300">
+                {row.noOfRegistrations}
+              </td>
+              <td className="px-4 py-2 border border-gray-300">
+                {row.totalRegistrations}
+              </td>
             </tr>
           ))}
         </tbody>
@@ -48,8 +63,12 @@ const renderTable = (data) => {
       <table className="min-w-full divide-y divide-gray-200 border border-gray-300">
         <thead>
           <tr>
-            <th className="px-4 py-2 border border-gray-300 bg-gray-100 font-bold">Particulars of the post</th>
-            <th className="px-4 py-2 border border-gray-300 bg-gray-100 font-bold">Name of the Member</th>
+            <th className="px-4 py-2 border border-gray-300 bg-gray-100 font-bold">
+              Particulars of the post
+            </th>
+            <th className="px-4 py-2 border border-gray-300 bg-gray-100 font-bold">
+              Name of the Member
+            </th>
           </tr>
         </thead>
         <tbody>
@@ -66,44 +85,79 @@ const renderTable = (data) => {
 };
 
 // Helper function to render content with line breaks and markdown-like formatting
-const renderContent = (content: string, tableData: Array<{ srNo: number, departmentName: string, noOfRegistrations: number, totalRegistrations: number }> = [], iqacTableData: Array<{ post: string, member: string }> = []) => {
-  const paragraphs = content.split('\n');
+const renderContent = (
+  content: string,
+  tableData: Array<{
+    srNo: number;
+    departmentName: string;
+    noOfRegistrations: number;
+    totalRegistrations: number;
+  }> = [],
+  iqacTableData: Array<{ post: string; member: string }> = []
+) => {
+  const paragraphs = content.split("\n");
 
   return (
     <>
       {paragraphs.map((paragraph, index) => {
-        if (paragraph.startsWith('![')) {
+        if (paragraph.startsWith("![")) {
           // Handle image markdown syntax
-          const imageAlt = paragraph.match(/!\[(.*?)\]/)?.[1] || '';
-          const imageSrc = paragraph.match(/\((.*?)\)/)?.[1] || '';
+          const imageAlt = paragraph.match(/!\[(.*?)\]/)?.[1] || "";
+          const imageSrc = paragraph.match(/\((.*?)\)/)?.[1] || "";
           return (
             <div key={index} className="my-4">
               <img src={imageSrc} alt={imageAlt} className="w-full h-auto" />
             </div>
           );
-        } else if (paragraph.startsWith('-')) {
+        } else if (paragraph.startsWith("-")) {
           return (
-            <ul key={index} className="list-disc pl-6 space-y-1 text-gray-700 font-semibold">
-              {paragraph.slice(1).split(', ').map((item, i) => (
-                <li key={i}>{item.trim()}</li>
-              ))}
+            <ul
+              key={index}
+              className="list-disc pl-6 space-y-1 text-gray-700 font-semibold"
+            >
+              {paragraph
+                .slice(1)
+                .split(", ")
+                .map((item, i) => (
+                  <li key={i}>{item.trim()}</li>
+                ))}
             </ul>
           );
-        } else if (paragraph.startsWith('## ') || paragraph.startsWith('### ')) {
+        } else if (
+          paragraph.startsWith("## ") ||
+          paragraph.startsWith("### ")
+        ) {
           return (
-            <h3 key={index} className="text-xl font-bold text-mpgin-darkBlue mt-4 mb-2">{paragraph.slice(3)}</h3>
+            <h3
+              key={index}
+              className="text-xl font-bold text-mpgin-darkBlue mt-4 mb-2"
+            >
+              {paragraph.slice(3)}
+            </h3>
           );
-        } else if (paragraph.startsWith('# ')) {
+        } else if (paragraph.startsWith("# ")) {
           return (
-            <h2 key={index} className="text-2xl font-bold text-mpgin-darkBlue mt-6 mb-3 border-b pb-2 border-gray-300">{paragraph.slice(2)}</h2>
+            <h2
+              key={index}
+              className="text-2xl font-bold text-mpgin-darkBlue mt-6 mb-3 border-b pb-2 border-gray-300"
+            >
+              {paragraph.slice(2)}
+            </h2>
           );
-        } else if ((paragraph.startsWith('**') && paragraph.endsWith('**')) || (paragraph.startsWith('*') && paragraph.endsWith('*'))) {
+        } else if (
+          (paragraph.startsWith("**") && paragraph.endsWith("**")) ||
+          (paragraph.startsWith("*") && paragraph.endsWith("*"))
+        ) {
           return (
-            <p key={index} className="font-bold text-gray-800">{paragraph.slice(1, -1)}</p>
+            <p key={index} className="font-bold text-gray-800">
+              {paragraph.slice(1, -1)}
+            </p>
           );
         } else {
           return (
-            <p key={index} className="text-gray-700">{paragraph}</p>
+            <p key={index} className="text-gray-700">
+              {paragraph}
+            </p>
           );
         }
       })}
@@ -114,7 +168,7 @@ const renderContent = (content: string, tableData: Array<{ srNo: number, departm
 };
 
 const SchoolOfManagementQuickLinks = () => {
-  const [activeId, setActiveId] = useState('dean');
+  const [activeId, setActiveId] = useState("home");
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const sidebarRef = useRef<HTMLDivElement>(null);
   const menuButtonRef = useRef<HTMLButtonElement>(null);
@@ -130,23 +184,23 @@ const SchoolOfManagementQuickLinks = () => {
       }
     };
 
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
   useEffect(() => {
     const handleEsc = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') setIsSidebarOpen(false);
+      if (e.key === "Escape") setIsSidebarOpen(false);
     };
 
-    document.addEventListener('keydown', handleEsc);
-    return () => document.removeEventListener('keydown', handleEsc);
+    document.addEventListener("keydown", handleEsc);
+    return () => document.removeEventListener("keydown", handleEsc);
   }, []);
 
   const renderMainContent = () => {
     switch (activeId) {
-      case 'dean':
-        const dean = profiles.find((p) => p.id === 'dean');
+      case "dean":
+        const dean = profiles.find((p) => p.id === "dean");
         return (
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -187,7 +241,9 @@ const SchoolOfManagementQuickLinks = () => {
                   />
                 </motion.div>
                 <div className="text-center">
-                  <h2 className="text-2xl font-bold text-mpgin-darkBlue">{dean?.name}</h2>
+                  <h2 className="text-2xl font-bold text-mpgin-darkBlue">
+                    {dean?.name}
+                  </h2>
                   <p className="mt-2 text-lg  text-mpgin-blue">{dean?.title}</p>
                 </div>
               </div>
@@ -195,7 +251,7 @@ const SchoolOfManagementQuickLinks = () => {
           </motion.div>
         );
 
-      case 'placements':
+      case "placements":
         return (
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -221,8 +277,34 @@ const SchoolOfManagementQuickLinks = () => {
             </motion.div>
           </motion.div>
         );
+      case "home":
+        return (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="bg-white shadow-lg rounded-xl overflow-hidden border border-gray-200 p-6 sm:p-8 lg:p-10 w-full"
+          >
+            <motion.h3
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.2 }}
+              className="text-2xl font-bold text-mpgin-darkBlue mb-5 border-b pb-2 border-gray-300"
+            >
+              {homeData.title}
+            </motion.h3>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.3 }}
+              className="prose max-w-none text-gray-700  whitespace-pre-line"
+            >
+              {renderContent(homeData.content)}
+            </motion.div>
+          </motion.div>
+        );
 
-      case 'achievements':
+      case "achievements":
         return (
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -249,7 +331,7 @@ const SchoolOfManagementQuickLinks = () => {
           </motion.div>
         );
 
-      case 'nirf':
+      case "nirf":
         return (
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -276,7 +358,7 @@ const SchoolOfManagementQuickLinks = () => {
           </motion.div>
         );
 
-      case 'mandatory-disclosure':
+      case "mandatory-disclosure":
         return (
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -303,7 +385,7 @@ const SchoolOfManagementQuickLinks = () => {
           </motion.div>
         );
 
-      case 'iqac':
+      case "iqac":
         return (
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -330,7 +412,7 @@ const SchoolOfManagementQuickLinks = () => {
           </motion.div>
         );
 
-      case 'vision-mission':
+      case "vision-mission":
         return (
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -401,7 +483,9 @@ const SchoolOfManagementQuickLinks = () => {
 
       <div className="w-full mx-auto flex flex-col lg:flex-row gap-6">
         <aside
-          className={`lg:w-1/4 xl:w-1/5 bg-gray-50 p-4 rounded-lg shadow-md transition-all duration-300 fixed lg:static z-50 lg:z-auto h-full  overflow-y-auto ${isSidebarOpen ? 'block inset-0' : 'hidden lg:block'}`}
+          className={`lg:w-1/4 xl:w-1/5 bg-gray-50 p-4 rounded-lg shadow-md transition-all duration-300 fixed lg:static z-50 lg:z-auto h-full  overflow-y-auto ${
+            isSidebarOpen ? "block inset-0" : "hidden lg:block"
+          }`}
           ref={sidebarRef}
         >
           <button
@@ -419,10 +503,11 @@ const SchoolOfManagementQuickLinks = () => {
                   setActiveId(item.id);
                   setIsSidebarOpen(false);
                 }}
-                className={`block w-full border border-gray-200 text-left py-3 px-4 transition-all duration-200 font-bold text-lg md:text-base ${activeId === item.id
-                  ? 'bg-mpgin-darkBlue text-mpgin-blue underline'
-                  : 'bg-mpgin-blue hover:bg-mpgin-darkBlue hover:text-white text-mpgin-darkBlue'
-                  }`}
+                className={`block w-full border border-gray-200 text-left py-3 px-4 transition-all duration-200 font-bold text-lg md:text-base ${
+                  activeId === item.id
+                    ? "bg-mpgin-darkBlue text-mpgin-blue underline"
+                    : "bg-mpgin-blue hover:bg-mpgin-darkBlue hover:text-white text-mpgin-darkBlue"
+                }`}
               >
                 {item.label}
               </motion.button>
@@ -430,9 +515,7 @@ const SchoolOfManagementQuickLinks = () => {
           </nav>
         </aside>
 
-        <main className="flex-1 lg:w-2/4 xl:w-3/5">
-          {renderMainContent()}
-        </main>
+        <main className="flex-1 lg:w-2/4 xl:w-3/5">{renderMainContent()}</main>
 
         <aside className="lg:w-1/4 xl:w-1/5">
           <div className="sticky top-44">

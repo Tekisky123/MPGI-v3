@@ -11,18 +11,18 @@ const CONTACT_DATA = {
     contacts: [
       {
         name: "",
-        email: "principal@engineering.mp.edu.in",
-        phones: ["+91 9876543210", "+91 9765432109"],
+        email: "",
+        phones: ["", ""],
       },
       {
         name: "Admissions",
-        email: "admissions@engineering.mp.edu.in",
-        phones: ["+91 9988776655", "+91 9876543210"],
+        email: "",
+        phones: ["", ""],
       },
       {
         name: "Placement Cell",
-        email: "placements@engineering.mp.edu.in",
-        phones: ["+91 9876543210", "+91 9765432109"],
+        email: "",
+        phones: ["", ""],
       },
     ],
   },

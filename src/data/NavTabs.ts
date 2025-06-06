@@ -109,7 +109,7 @@ export const NAV_ITEMS = [
     name: "Alumni",
     subItems: [
       // { name: "Alumni Registration", path: "/alumni/registration" },
-      // { name: "Alumni Speaks", path: "/alumni/speaks" },
+      { name: "Alumni Association", path: "/alumni-association" },
       { name: "Esteemed Alumni", path: "/esteemed-alumni" },
     ],
   },
@@ -125,7 +125,10 @@ export const NAV_ITEMS = [
       { name: "ITSA", path: "/activities/itsa" },
       { name: "CAST Activity", path: "/activities/cast-activity" },
       { name: "Open Source", path: "/activities/open-source" },
-      { name: "English Language Club", path: "/activities/english-language-club" },
+      {
+        name: "English Language Club",
+        path: "/activities/english-language-club",
+      },
       { name: "Indoor Sports Achievements", path: "/activities/indoor" },
       { name: "Outdoor Sports Achievements", path: "/activities/outdoor" },
       { name: "Aarohan", path: "/activities/aarohan" },
@@ -162,6 +165,16 @@ export const NAV_ITEMS = [
       { name: "Current Advertisement", path: "/current-advertisement" },
       { name: "NIRF", path: "/nirf" },
       { name: "Fees Regulatory Authority", path: "/fees" },
+    ],
+  },
+  {
+    name: "Suggestion Box",
+    subItems: [
+      { name: "Alumni Suggestions", path: "/alumni-suggestions" },
+      { name: "Parent Suggestions", path: "/parent-suggestions" },
+      { name: "Student Suggestions", path: "/student-suggestions" },
+      { name: "Staff Suggestions", path: "/staff-suggestions" },
+      { name: "Press Suggestions", path: "/press-suggestions" },
     ],
   },
   { name: "Contact", path: "/contact" },

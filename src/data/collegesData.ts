@@ -27,7 +27,13 @@ export interface Department {
     area: string;
     incharge: string;
     majorEquipment?: string;
-  }[];
+    majorEquipmentDetails?: {
+      name: string;
+      details: string;
+      quantity: number;
+      totalCost: string;
+    }[];
+  };
   hod: {
     name: string;
     designation: string;
@@ -92,7 +98,7 @@ We offer a comprehensive Diploma in Mechanical Engineering, designed to equip st
             labName: "Engineering Metallurgy Material Science",
             area: "820 Sq. ft.",
             incharge: "C. S. Gill",
-            majorEquipment: "", // Not specified
+            majorEquipment: "",
           },
           {
             srNo: 3,
@@ -238,9 +244,48 @@ stewardship.`,
         facultyCount: 12,
         gallery: ["/images/civil-1.jpg", "/images/civil-2.jpg"],
         labs: [
-          // { srNo: 1, labName: "Automotive Workshop", area: "2000+ sq.ft", incharge: "Mr. Ramesh Patil" },
-          // { srNo: 2, labName: "CAD/CAM Lab", area: "1000 sq.ft", incharge: "Dr. Anil Deshmukh" },
-          // { srNo: 3, labName: "Mechatronics Lab", area: "800 sq.ft", incharge: "Prof. Neha Singh" },
+          {
+            srNo: 1,
+            labName: "Strength of Materials",
+            area: "66 m2",
+            incharge: "Mr. D.L. Rathod",
+          },
+          {
+            srNo: 2,
+            labName: "Surveying",
+            area: "66 m2",
+            incharge: "Mrs. Asna Fatima Mohammed Kaleemuddin",
+          },
+          {
+            srNo: 3,
+            labName: "Hydraulics",
+            area: "80 m2",
+            incharge: "Mr. L.V. Rathod",
+          },
+          {
+            srNo: 4,
+            labName: "Concrete Technology",
+            area: "66 m2",
+            incharge: "Mr. D.L. Rathod",
+          },
+          {
+            srNo: 5,
+            labName: "Transportation Engg.",
+            area: "66 m2",
+            incharge: "Mr. D.L. Rathod",
+          },
+          {
+            srNo: 6,
+            labName: "Geotechnical Engg.",
+            area: "66 m2",
+            incharge: "Mr. D.L. Rathod",
+          },
+          {
+            srNo: 7,
+            labName: "Environmental Engg",
+            area: "66 m2",
+            incharge: "Mrs. Asna Fatima Mohammed Kaleemuddin",
+          },
         ],
         hod: {
           name: "Ms. Goud P.O",
@@ -301,60 +346,899 @@ disseminate knowledge.`,
             labName: "DC Machine & Transformer Lab",
             incharge: "Mr. Deshmukh S.J.",
             area: "",
+            majorEquipmentDetails: [
+              {
+                name: "TRANSFORMER",
+                details: "1KVA, 50HZ 230/115V",
+                quantity: 2,
+                totalCost: "18500/-",
+              },
+              {
+                name: "SINGLE PHASE AUTOTRANSFORMER",
+                details:
+                  "0-270V 10 AMP I/P 240V AC PORTABLE CLOSED TYPE SINGLE PHASE AIR COOLED",
+                quantity: 2,
+                totalCost: "11000/-",
+              },
+              {
+                name: "THREE PHASE AUTOTRANSFORMER",
+                details:
+                  "O/P 0-470V AC, 10AMP, I/P 0-415V AC PORTABLE CLOSED TYPE, 3 PH, AIR COOLED",
+                quantity: 1,
+                totalCost: "15000/-",
+              },
+              {
+                name: "WATTMETER",
+                details: "0-300V, 5/10AMP, 625W 1PH",
+                quantity: 2,
+                totalCost: "3500/-",
+              },
+              {
+                name: "LOAD BANK RESISTIVE",
+                details: "5KW/20AMP, 1PH",
+                quantity: 1,
+                totalCost: "22000/-",
+              },
+              {
+                name: "LOAD BANK LAMP",
+                details: "0-12/3KW/1PH",
+                quantity: 1,
+                totalCost: "14500/-",
+              },
+              {
+                name: "LOAD BANK INDUCTIVE",
+                details: "5KW/20AMP/1 PH",
+                quantity: 1,
+                totalCost: "22000/-",
+              },
+              {
+                name: "LOAD BANK CAPACITIVE",
+                details: "5KW/20AMP/1 PH",
+                quantity: 1,
+                totalCost: "21000/-",
+              },
+              {
+                name: "DIGITAL MULTIMETER",
+                details: "MECO MODEL 801 AUTO",
+                quantity: 1,
+                totalCost: "2450/-",
+              },
+              {
+                name: "3PH TRANSFORMER",
+                details: "440/230V, 3KVA, AIR COOLED, COPPER WOUND",
+                quantity: 1,
+                totalCost: "22000/-",
+              },
+              {
+                name: "CUT VIEW SECTION OF DC SHUNT MOTOR",
+                details: "",
+                quantity: 1,
+                totalCost: "9500/-",
+              },
+              {
+                name: "CUT VIEW SECTION OF INDUCTION MOTOR",
+                details: "",
+                quantity: 1,
+                totalCost: "9500/-",
+              },
+              {
+                name: "DC SHUNT MOTOR",
+                details: "ARWA MAKE",
+                quantity: 1,
+                totalCost: "43000/-",
+              },
+              {
+                name: "DC SERIES MOTOR",
+                details: "ARWA MAKE",
+                quantity: 1,
+                totalCost: "43000/-",
+              },
+              {
+                name: "DC SHUNT MOTOR #DC SHUNT GENERATOR",
+                details: "",
+                quantity: 1,
+                totalCost: "45000/-",
+              },
+              {
+                name: "2 POINT STARTER",
+                details: "FOR DC SERIES MOTOR",
+                quantity: 1,
+                totalCost: "2700/-",
+              },
+              {
+                name: "3 POINT STARTER",
+                details: "FOR DC SHUNT MOTOR",
+                quantity: 1,
+                totalCost: "2700/-",
+              },
+              {
+                name: "1 PH TRANSFORMER",
+                details: "",
+                quantity: 1,
+                totalCost: "6200/-",
+              },
+              {
+                name: "3 PH TRANSFORMER",
+                details: "",
+                quantity: 1,
+                totalCost: "17500/-",
+              },
+              {
+                name: "VARIAC/DIMMERS",
+                details: "",
+                quantity: 1,
+                totalCost: "3300/-",
+              },
+              {
+                name: "PORTABLE WATTMETER",
+                details: "ME MAKE",
+                quantity: 10,
+                totalCost: "29000/-",
+              },
+              {
+                name: "PORTABLE AMMETER",
+                details: "ME MAKE",
+                quantity: 15,
+                totalCost: "27000/-",
+              },
+              {
+                name: "PORTABLE VOLTMETER",
+                details: "ME MAKE",
+                quantity: 5,
+                totalCost: "9000/-",
+              },
+              {
+                name: "RHEOSTATS",
+                details: "",
+                quantity: 20,
+                totalCost: "45000/-",
+              },
+              {
+                name: "TRUE RMS METER",
+                details: "",
+                quantity: 2,
+                totalCost: "9600/-",
+              },
+              {
+                name: "CAPACITIVE LOAD BANK",
+                details: "3PH 415V/10A",
+                quantity: 1,
+                totalCost: "14500/-",
+              },
+              {
+                name: "INDUCTIVE LOAD BANK",
+                details: "3 PH 415V/10A",
+                quantity: 1,
+                totalCost: "29500/-",
+              },
+              {
+                name: "DC SERIES MOTOR#DC SHUNT GENERATOR",
+                details: "",
+                quantity: 1,
+                totalCost: "45000/-",
+              },
+            ],
           },
           {
             srNo: 2,
             labName: "Basic Electrical Lab",
             incharge: "Mr. Deshmukh S.J.",
             area: "",
+            majorEquipmentDetails: [
+              {
+                name: "KIRCHHOFFS LAW TRAINER KIT",
+                details: "",
+                quantity: 1,
+                totalCost: "3500/-",
+              },
+              {
+                name: "CAPACITOR CHARGING DISCHARGING KIT",
+                details: "",
+                quantity: 1,
+                totalCost: "3500/-",
+              },
+              {
+                name: "LED ACID BATTERY",
+                details: "12V, 120AH",
+                quantity: 1,
+                totalCost: "12500/-",
+              },
+              {
+                name: "BATTERY CHARGER",
+                details:
+                  "CAPABLE OF CHARGING TWO WHEELER & FOUR WHEELER BATTERY, 6 BATTERIES AT A TIME",
+                quantity: 1,
+                totalCost: "27000/-",
+              },
+              {
+                name: "THERMOMETER",
+                details: "",
+                quantity: 1,
+                totalCost: "180/-",
+              },
+              {
+                name: "DIGITAL STOP WATCH",
+                details: "",
+                quantity: 1,
+                totalCost: "1800/-",
+              },
+              {
+                name: "ELECTROSTATIC CAPACITOR",
+                details: "60UF, 230V 50HZ",
+                quantity: 1,
+                totalCost: "500/-",
+              },
+              {
+                name: "CRO DUAL CHANNEL",
+                details: "20MHZ",
+                quantity: 1,
+                totalCost: "22000/-",
+              },
+              {
+                name: "ELECTRICAL ENGG CHART",
+                details: "",
+                quantity: 1,
+                totalCost: "3500/-",
+              },
+              {
+                name: "SINGLE PHASE ENERGY METER (ELECTROSTATIC TYPE)",
+                details: "230V, 5-10AMP",
+                quantity: 7,
+                totalCost: "900/-",
+              },
+              {
+                name: "SINGLE PHASE ENERGY METER (INDUCTION TYPE)",
+                details: "230V, 5-10AMP",
+                quantity: 1,
+                totalCost: "600/-",
+              },
+              {
+                name: "DIGITAL DUAL POWER SUPPLY",
+                details: "30-0-30V, 2 AMP",
+                quantity: 1,
+                totalCost: "9500/-",
+              },
+              {
+                name: "DIGITAL MULTIMETER",
+                details: "MAKE CE",
+                quantity: 1,
+                totalCost: "2450/-",
+              },
+              {
+                name: "WATTEMETER",
+                details: "0-300V, 5/10AMP, 625W 1PH",
+                quantity: 1,
+                totalCost: "3500/-",
+              },
+              {
+                name: "KCL/KVL KIT",
+                details: "",
+                quantity: 1,
+                totalCost: "4200/-",
+              },
+              {
+                name: "OSCILLOSCOPE",
+                details: "20 MHZ, MAKE APLAB, MODEL 3305S",
+                quantity: 2,
+                totalCost: "22200/-",
+              },
+              {
+                name: "FUNCTION GENERATOR",
+                details: "1 MHZ, APLAB MODEL MSG1M",
+                quantity: 1,
+                totalCost: "7870/-",
+              },
+              {
+                name: "DUAL POWER SUPPLY",
+                details: "0-30V 2AMP",
+                quantity: 1,
+                totalCost: "35100/-",
+              },
+              {
+                name: "WIRING SET UP",
+                details: "",
+                quantity: 1,
+                totalCost: "6000/-",
+              },
+              {
+                name: "DIGITAL MULTIMETER",
+                details: "MAKE MECO MODEL 603",
+                quantity: 2,
+                totalCost: "3600/-",
+              },
+              {
+                name: "MODEL OF THERMAL POWER PLANT",
+                details: "",
+                quantity: 1,
+                totalCost: "18200/-",
+              },
+              {
+                name: "MODEL OF DIESEL POWER PLANT",
+                details: "",
+                quantity: 1,
+                totalCost: "18200/-",
+              },
+              {
+                name: "MODEL OF NUCLEAR POWER PLANT",
+                details: "",
+                quantity: 1,
+                totalCost: "15800/-",
+              },
+              {
+                name: "STANDARD WIRE GAUGE",
+                details: "",
+                quantity: 1,
+                totalCost: "100/-",
+              },
+            ],
           },
           {
             srNo: 3,
             labName: "Measurement Lab",
             incharge: "Miss. Kagde R.H.",
             area: "",
+            majorEquipmentDetails: [
+              {
+                name: "SUPERPOSITION THEOREM KIT",
+                quantity: 1,
+                totalCost: "3500/-",
+              },
+              {
+                name: "THEVENINS THEOREM KIT",
+                quantity: 1,
+                totalCost: "3500/-",
+              },
+              { name: "NORTONS THEOREM KIT", quantity: 1, totalCost: "3500/-" },
+              {
+                name: "MAXIMUM POWER TRANSFER KIT",
+                quantity: 1,
+                totalCost: "3500/-",
+              },
+              {
+                name: "PERFORMANCE OF RLC SERIES CIRCUIT",
+                quantity: 1,
+                totalCost: "8000/-",
+              },
+              {
+                name: "RHEOSTAT: 5 OHM 20AMP",
+                quantity: 1,
+                totalCost: "12500/-",
+              },
+              {
+                name: "RHEOSTAT: 20 OHM 10AMP",
+                quantity: 1,
+                totalCost: "6500/-",
+              },
+              {
+                name: "RHEOSTAT: 110 OHM 2.8AMP",
+                quantity: 1,
+                totalCost: "3500/-",
+              },
+              {
+                name: "RHEOSTAT: 1KOHM, 1AMP",
+                quantity: 1,
+                totalCost: "5500/-",
+              },
+              {
+                name: "RHEOSTAT: 600 OHM, 1.2AMP",
+                quantity: 1,
+                totalCost: "3500/-",
+              },
+              {
+                name: "RHEOSTAT: 750 OHM, 1.2AMP",
+                quantity: 1,
+                totalCost: "3500/-",
+              },
+              {
+                name: "RHEOSTAT: 40 OHM, 5AMP",
+                quantity: 1,
+                totalCost: "3500/-",
+              },
+              {
+                name: "SQUARE AMMETER 0-20AMP",
+                quantity: 2,
+                totalCost: "1000/-",
+              },
+              {
+                name: "SQUARE VOLT METER 0-500V",
+                quantity: 2,
+                totalCost: "1000/-",
+              },
+              {
+                name: "WATTEMETER 1PH 5/10, 600W 500V",
+                quantity: 1,
+                totalCost: "3500/-",
+              },
+              {
+                name: "GALVANOMETER 30-0-30: MINIPORTABLE",
+                quantity: 1,
+                totalCost: "900/-",
+              },
+              {
+                name: "TYPE WITH CENTRE ZERO",
+                quantity: 1,
+                totalCost: "1800/-",
+              },
+              { name: "DIGITAL CLAMP METER", quantity: 1, totalCost: "1450/-" },
+              {
+                name: "LOAD BANK LAMP, 0-12AMP 3KW 1PH",
+                quantity: 1,
+                totalCost: "22000/-",
+              },
+              {
+                name: "LOAD BANK RESISTIVE 1PH, 5KW 20AMP",
+                quantity: 1,
+                totalCost: "47000/-",
+              },
+              {
+                name: "LOAD BANK RESISTIVE 3PH 5KW 20AMP",
+                quantity: 1,
+                totalCost: "22000/-",
+              },
+              {
+                name: "LOAD BANK INDUCTIVE 1PH 5KW 20AMP",
+                quantity: 1,
+                totalCost: "2100/-",
+              },
+              {
+                name: "LOAD BANK CAPACITIVE 1PH 5KW 20AMP",
+                quantity: 1,
+                totalCost: "21000/-",
+              },
+              { name: "DIGITAL MULTIMETER", quantity: 3, totalCost: "1000/-" },
+              {
+                name: "PORTABLE WATTMETER ME MAKE 5/10AMP 0-150-300-600V",
+                quantity: 4,
+                totalCost: "10000/-",
+              },
+              {
+                name: "PORTABLE WATTMETER ME MAKE 1/2AMP 0-150-300-600V",
+                quantity: 3,
+                totalCost: "7500/-",
+              },
+              {
+                name: "PORTABLE VOLTMETER ME MAKE 0-150-300V DC",
+                quantity: 4,
+                totalCost: "6000/-",
+              },
+              {
+                name: "PORTABLE VOLTMETER ME MAKE 0-150-300V AC",
+                quantity: 4,
+                totalCost: "6000/-",
+              },
+              {
+                name: "PORTABLE VOLTMETER ME MAKE 0-300-600V AC",
+                quantity: 4,
+                totalCost: "6000/-",
+              },
+              { name: "CT 25/5AMP", quantity: 1, totalCost: "1700/-" },
+              { name: "PT 400/100V", quantity: 1, totalCost: "3300/-" },
+              {
+                name: "PHASE SEQUENCE INDICATOR",
+                quantity: 1,
+                totalCost: "1450/-",
+              },
+              { name: "TRUE RMS METER", quantity: 1, totalCost: "4500/-" },
+              {
+                name: "MODEL OF MOVING IRON TYPE ANALOG METER V & A",
+                quantity: 2,
+                totalCost: "6200/-",
+              },
+              {
+                name: "MODEL OF COIL TYPE ANALOG METER V & A",
+                quantity: 2,
+                totalCost: "6200/-",
+              },
+              {
+                name: "ANALOG MEGGER WACO MAKE",
+                quantity: 1,
+                totalCost: "5500/-",
+              },
+              {
+                name: "ANALOG EARTH TESTER WITH KIT WACO MAKE",
+                quantity: 1,
+                totalCost: "6200/-",
+              },
+              {
+                name: "STUDY OF LAMP SET: a) SODIUM LAMP, b) METAL HALIDE LAMP",
+                quantity: 2,
+                totalCost: "8300/-",
+              },
+              {
+                name: "WIRING SET UP (SET OF 2)",
+                quantity: 1,
+                totalCost: "6000/-",
+              },
+              {
+                name: "ELECTRICAL WIRING SHOW CASE",
+                quantity: 1,
+                totalCost: "8000/-",
+              },
+              {
+                name: "ELECTRODYNAMIC PORTABLE WATTMETER",
+                quantity: 4,
+                totalCost: "11300/-",
+              },
+              {
+                name: "DIGITAL AC DC CLAMP METER",
+                quantity: 2,
+                totalCost: "9000/-",
+              },
+            ],
           },
           {
             srNo: 4,
             labName: "AC Machine Lab",
             incharge: "Mr. Shingarputale B.G.",
             area: "",
+            majorEquipmentDetails: [
+              {
+                name: "SQUIRREL CAGE INDUCTION MOTOR (3 HP/415V/1500RPM) WITH LOADING ARRANGEMENT WITH PANEL BOARD",
+                quantity: 1,
+                totalCost: "32000/-",
+              },
+              {
+                name: "SLIP RING INDUCTION MOTOR ARWA MAKE (3HP/230V/1500RPM) WITH LOADING ARRANGEMENT CONTROL PANEL",
+                quantity: 1,
+                totalCost: "45500/-",
+              },
+              {
+                name: "STARTER FOR INDUCTION MOTOR: DOL STARTER, ROTOR RESISTANCE, DC SHUNT, STAR DELTA STARTER",
+                quantity: 1,
+                totalCost: "16300/-",
+              },
+              {
+                name: "DC SHUNT MOTOR # AC ALTERNATOR ARWA MAKE (3HP/230V/1500RPM), COUPLED TO 1.8KVA 415V/3PH/1500RPM/50HZ, WITH AC ALTERNATOR CONTROL PANEL FOR MOTOR ALTERNATOR SET",
+                quantity: 1,
+                totalCost: "55500/-",
+              },
+              {
+                name: "SYNCHRONOUS MOTOR ARWA MAKE (3HP/3PH/440V) WITH LOADING ARRANGEMENT AND SYNCHRONOUS MOTOR EXCITATION PANEL",
+                quantity: 1,
+                totalCost: "50000/-",
+              },
+              {
+                name: "CAPACITOR START INDUCTION MOTOR ARWA MAKE (1HP/230V/1500RPM) WITH LOADING ARRANGEMENT CONTROL PANEL FOR MOTOR",
+                quantity: 1,
+                totalCost: "27500/-",
+              },
+              {
+                name: "SQUIRREL CAGE INDUCTION MOTOR COUPLED WITH DC SHUNT GENERATOR WITH CONTROL PANEL",
+                quantity: 1,
+                totalCost: "62000/-",
+              },
+              {
+                name: "3 PHASE SYNCHRONOUS MOTOR COUPLED TO DC SHUNT GENERATOR SET WITH CONTROL PANEL",
+                quantity: 1,
+                totalCost: "66000/-",
+              },
+              {
+                name: "SLIP RING INDUCTION MOTOR COUPLED WITH DC SHUNT GENERATOR WITH CONTROL PANEL",
+                quantity: 1,
+                totalCost: "66500/-",
+              },
+              {
+                name: "STROBOSCOPIC 0-1000RPM",
+                quantity: 1,
+                totalCost: "10500/-",
+              },
+            ],
           },
           {
             srNo: 5,
             labName: "Switchgear & Protection Lab",
             incharge: "Miss. Deshmukh S.D.",
             area: "",
+            majorEquipmentDetails: [
+              {
+                name: "MODELS OF ACB",
+                quantity: 1,
+                totalCost: "20000/-",
+              },
+              {
+                name: "MODELS OF MCB",
+                quantity: 1,
+                totalCost: "3300/-",
+              },
+              {
+                name: "MODELS OF MCCB",
+                quantity: 1,
+                totalCost: "3300/-",
+              },
+              {
+                name: "MODELS OF ELCB",
+                quantity: 1,
+                totalCost: "3300/-",
+              },
+              {
+                name: "MODELS OF RCCB",
+                quantity: 1,
+                totalCost: "3300/-",
+              },
+              {
+                name: "OTHER TYPE OF RELAY",
+                quantity: 1,
+                totalCost: "5300/-",
+              },
+            ],
           },
           {
             srNo: 6,
             labName: "Electrical Circuit & Network Lab",
             incharge: "Mr. Deshmukh S.J.",
             area: "",
+            majorEquipmentDetails: [
+              { name: "RLC SERIES CIRCUIT", quantity: 1, totalCost: "1800/-" },
+              {
+                name: "RLC PARALLEL CIRCUIT",
+                quantity: 1,
+                totalCost: "1800/-",
+              },
+              {
+                name: "LOAD BANK 1 PH 230V/10AMP",
+                quantity: 1,
+                totalCost: "9500/-",
+              },
+              {
+                name: "LOAD BANK 3 PH 415V/10AMP",
+                quantity: 1,
+                totalCost: "14500/-",
+              },
+              { name: "VARIAC 1 PH 10AMP", quantity: 1, totalCost: "3000/-" },
+              { name: "RHEOSTAT", quantity: 8, totalCost: "18200/-" },
+              { name: "DECADE BOX R,L,C", quantity: 3, totalCost: "9800/-" },
+              {
+                name: "DIGITAL LCR METER MAKE WACO MODEL 24",
+                quantity: 1,
+                totalCost: "6000/-",
+              },
+              {
+                name: "PORTABLE AMMETERS ME MAKE 5-10AMP AC",
+                quantity: 4,
+                totalCost: "6000/-",
+              },
+              {
+                name: "PORTABLE WATTMETER MAKE 5-10AMP DC",
+                quantity: 4,
+                totalCost: "6000/-",
+              },
+              {
+                name: "PORTABLE VOLTMETER ME MAKE 0-150-300V DC",
+                quantity: 4,
+                totalCost: "6000/-",
+              },
+              {
+                name: "PORTABLE VOLTMETER ME MAKE 0-150-300V AC",
+                quantity: 4,
+                totalCost: "6000/-",
+              },
+              {
+                name: "PORTABLE VOLTMETERS ME MAKE 0-300-600V DC",
+                quantity: 4,
+                totalCost: "6000/-",
+              },
+              {
+                name: "R-L-C SERIES CIRCUIT KIT",
+                quantity: 1,
+                totalCost: "3250/-",
+              },
+              { name: "R-L-C PARALLEL KIT", quantity: 1, totalCost: "3250/-" },
+              {
+                name: "DIGITAL MULTIMETER MECO MODEL 603",
+                quantity: 1,
+                totalCost: "1800/-",
+              },
+              {
+                name: "PORTABLE AMMETER ME MAKE 05 AMP",
+                quantity: 2,
+                totalCost: "3600/-",
+              },
+            ],
           },
           {
             srNo: 7,
             labName: "Testing & Maintenance Electrical Equipment",
             incharge: "Mr. Shingarputale B.G.",
             area: "",
+            majorEquipmentDetails: [
+              {
+                name: "CAPACITIVE START INDUCTION MOTOR ARWA MAKE:- 230V/1HP WITH LOADING PANEL ARRANGEMENT & CONTROL PANEL",
+                quantity: 1,
+                totalCost: "27500/-",
+              },
+              {
+                name: "PARALLEL OPERATION OF TRANSFORMER:- 415V/415V 2KVA TAPPING ON BOTH SIDE AT 0% 50% 86.6% 100%",
+                quantity: 1,
+                totalCost: "45000/-",
+              },
+              {
+                name: "PARALLEL OPERATION OF ALTERNATOR:- DC SHUNT MOTOR 3 HP COUPLED TO 1 KVA ALTERNATOR (2 NO) WITH BASE PLATE & COUPLING ARWA MAKE CONTROL PANEL FOR AND ALTERNATOR SET",
+                quantity: 1,
+                totalCost: "101500/-",
+              },
+              {
+                name: "DC SERIES MOTOR ARWA MAKE 3 HP 415V 1500RPM WITH BRAKE AND PULLEY ARRANGEMENT CONTROL PANEL FOR MOTOR",
+                quantity: 1,
+                totalCost: "43000/-",
+              },
+              {
+                name: "SQUIRREL CAGE INDUCTION MOTOR ARWA MAKE 3PH 415V WITH BRAKE AND PULLEY ARRANGEMENT CONTROL PANEL FOR MOTOR",
+                quantity: 1,
+                totalCost: "32000/-",
+              },
+              { name: "ELECTRIC MIXER", quantity: 1, totalCost: "1600/-" },
+              { name: "ELECTRIC IRON", quantity: 1, totalCost: "500/-" },
+              { name: "ELECTRIC HEATER", quantity: 1, totalCost: "400/-" },
+            ],
           },
           {
             srNo: 8,
             labName: "Basic Electronics",
             incharge: "Miss. Deshmukh S.D.",
             area: "",
+            majorEquipmentDetails: [
+              { name: "ZENER DIODE KIT", quantity: 2, totalCost: "4800/-" },
+              {
+                name: "HWR AND FWR WITH AND WITHOUT FILTER",
+                quantity: 2,
+                totalCost: "4800/-",
+              },
+              {
+                name: "I/P & O/P CHARACTERISTICS OF TRANSISTOR IN CE MODE KIT",
+                quantity: 2,
+                totalCost: "4800/-",
+              },
+              {
+                name: "FET CHARACTERISTICS KIT",
+                quantity: 2,
+                totalCost: "4800/-",
+              },
+              {
+                name: "UJT CHARACTERISTICS KIT",
+                quantity: 2,
+                totalCost: "4800/-",
+              },
+              {
+                name: "ZENER DIODE AS SHUNT VOLTAGE REGULATOR KIT",
+                quantity: 2,
+                totalCost: "4800/-",
+              },
+              {
+                name: "FREQUENCY RESPONSE OF SINGLE STAGE RC COUPLE AMP",
+                quantity: 2,
+                totalCost: "4800/-",
+              },
+              {
+                name: "LC & RC OSCILLATOR CIRCUIT KIT",
+                quantity: 2,
+                totalCost: "5700/-",
+              },
+              { name: "GP4 PATCH CORDS", quantity: 40, totalCost: "4000/-" },
+              {
+                name: "OSCILLOSCOPE 20 MHZ: MAKE:- AP LAB MODEL:-3305S",
+                quantity: 3,
+                totalCost: "70650/-",
+              },
+              {
+                name: "FUNCTION GENERATOR 1 MHZ: MAKE AP LAB MODEL :MSG1M",
+                quantity: 1,
+                totalCost: "7870/-",
+              },
+              {
+                name: "DUAL POWER SUPPLY 0-30V /2 AMP",
+                quantity: 1,
+                totalCost: "12700/-",
+              },
+              {
+                name: "DIGITAL MULTIMETER: MAKE:MECO MODEL:603",
+                quantity: 1,
+                totalCost: "1800/-",
+              },
+            ],
           },
           {
             srNo: 9,
             labName: "Instrumentation Lab",
             incharge: "Miss. Kagde R.H.",
             area: "",
+            majorEquipmentDetails: [
+              {
+                name: "Measure Output Voltage And Displacement In LVDT",
+                quantity: 1,
+                totalCost: "30000/-",
+              },
+              {
+                name: "Measure Output Voltage And Force In Strain Gauge",
+                quantity: 2,
+                totalCost: "26800/-",
+              },
+              {
+                name: "Verify The Relation Between The Output Voltage And Temperature By Using A RTD (PT 100) And Thermocouple",
+                quantity: 3,
+                totalCost: "32600/-",
+              },
+              {
+                name: "Capacitive Type Level Measurement Trainer",
+                quantity: 4,
+                totalCost: "28000/-",
+              },
+              {
+                name: "Flow Transducer Trainer Using Rotameter, Orifice & Venturi",
+                quantity: 5,
+                totalCost: "44200/-",
+              },
+              {
+                name: "Pressure Transducer Trainer Using Bourdon Tube, Bellow & Diaphragm",
+                quantity: 6,
+                totalCost: "44200/-",
+              },
+              {
+                name: "Measure Angular Velocity Using Inductive Proximity Pickup",
+                quantity: 7,
+                totalCost: "28000/-",
+              },
+              {
+                name: "Verify The Function Of Op-Amp As Inverting / Non Inverting Amplifier",
+                quantity: 8,
+                totalCost: "3200/-",
+              },
+              {
+                name: "Verify The Function Of Op-Amp As Adder / Subtractor",
+                quantity: 9,
+                totalCost: "3200/-",
+              },
+              {
+                name: "Verify The Function Of Op-Amp As Comparator / Schmitt Trigger",
+                quantity: 10,
+                totalCost: "3200/-",
+              },
+              {
+                name: "Characteristics Of LDR",
+                quantity: 11,
+                totalCost: "3200/-",
+              },
+              {
+                name: "Characteristics Of Photo Diode",
+                quantity: 12,
+                totalCost: "3200/-",
+              },
+              {
+                name: "Characteristics Of Photo Transistor",
+                quantity: 13,
+                totalCost: "3200/-",
+              },
+              { name: "CT 25 / 5 A", quantity: 14, totalCost: "5800/-" },
+              { name: "Analog Tachometer", quantity: 15, totalCost: "14000/-" },
+              { name: "Digital Lux meter", quantity: 16, totalCost: "3000/-" },
+            ],
           },
           {
             srNo: 10,
             labName: "Power Electronics Lab",
             incharge: "Mr. Shingarputale B.G.",
             area: "",
+            majorEquipmentDetails: [
+              {
+                name: "SCR Half wave, Full wave, Bridge half wave controlled rectifier/ converter with resistive and inductive load",
+                quantity: 1,
+                totalCost: "7500",
+              },
+              {
+                name: "SCR Series Inverter",
+                quantity: 1,
+                totalCost: "6900",
+              },
+              {
+                name: "Jone's Chopper",
+                quantity: 1,
+                totalCost: "5500",
+              },
+              {
+                name: "Automatic Battery charger with 12v battery",
+                quantity: 1,
+                totalCost: "9900",
+              },
+            ],
           },
         ],
         hod: {
@@ -398,9 +1282,42 @@ On behalf of the Electrical Engineering department, I welcome our new and curren
         facultyCount: 9,
         gallery: ["/images/computer-1.jpg", "/images/computer-2.jpg"],
         labs: [
-          // { srNo: 1, labName: "Automotive Workshop", area: "2000+ sq.ft", incharge: "Mr. Ramesh Patil" },
-          // { srNo: 2, labName: "CAD/CAM Lab", area: "1000 sq.ft", incharge: "Dr. Anil Deshmukh" },
-          // { srNo: 3, labName: "Mechatronics Lab", area: "800 sq.ft", incharge: "Prof. Neha Singh" },
+          {
+            srNo: 1,
+            labName: "Programming Lab",
+            area: "",
+            incharge: "Mr.Surnar A.B",
+          },
+          {
+            srNo: 2,
+            labName: "Data Base Lab",
+            area: "",
+            incharge: "Mr.Unchadkar V.A",
+          },
+          {
+            srNo: 3,
+            labName: "Hardware & Networking Lab",
+            area: "",
+            incharge: "Mrs. Pawar A.K",
+          },
+          {
+            srNo: 4,
+            labName: "Operating System And Linux Lab",
+            area: "",
+            incharge: "Mrs. Dawkore R.A",
+          },
+          {
+            srNo: 5,
+            labName: "Web Application Lab",
+            area: "",
+            incharge: "Ms. Kapale A.B",
+          },
+          {
+            srNo: 6,
+            labName: "Project Lab",
+            area: "",
+            incharge: "Project Lab",
+          },
         ],
         hod: {
           name: "Mrs MORE M.K.",
@@ -420,38 +1337,74 @@ I warmly welcome you all and wish you a bright, fulfilling, and successful caree
         id: "it",
         name: "Information Technology",
         description:
-          "Program focusing on software development, cybersecurity, and data analytics.",
-        image:
-          "https://i0.wp.com/www.gniotgroup.edu.in/blog/wp-content/uploads/2024/04/Information-Technology-1-1024x462-1.webp?resize=640%2C289&ssl=1",
+          "Future-focused program covering embedded systems, web technologies, and cloud computing.",
+        image: "https://grdedu.in/wp-content/uploads/2023/05/cse.png",
         courses: [
-          "Diploma in Information Technology",
-          "Cybersecurity Fundamentals",
-          "Data Analytics",
+          "Diploma in Computer Engineering",
+          "Web Development",
+          "Embedded Systems",
         ],
-        about: ``,
+        about: `The Department of Computer Engineering was established in 2009 with an initial intake of 60 students. Its primary objective was to launch a diploma program in Computer Engineering to develop skilled and professional manpower for the IT industry. Additionally, the college aimed to provide educational opportunities to talented youth from the rural areas of Nanded, Maharashtra. In 2023, the department expanded its intake by 30 seats and also introduced a new Information Technology (IT) department. Computer engineers play a vital role in nation-building by developing innovative technologies, strengthening cybersecurity, automating industries, enhancing digital infrastructure, and contributing to sectors such as healthcare, education, defence, and governance.`,
 
         facilities: [
-          "Advanced Cybersecurity Lab",
-          "Cloud-Based Development Environment",
-          "Industry Collaboration Projects",
-          "Hackathons and Coding Competitions",
+          "Cisco Networking Academy Lab",
+          "Mobile App Development Center",
+          "Cloud Computing Infrastructure",
+          "Annual Hackathon Competition",
         ],
-        facultyCount: 8,
-        gallery: ["/images/it-1.jpg", "/images/it-2.jpg"],
+        facultyCount: 9,
+        gallery: ["/images/computer-1.jpg", "/images/computer-2.jpg"],
         labs: [
-          // { srNo: 1, labName: "Automotive Workshop", area: "2000+ sq.ft", incharge: "Mr. Ramesh Patil" },
-          // { srNo: 2, labName: "CAD/CAM Lab", area: "1000 sq.ft", incharge: "Dr. Anil Deshmukh" },
-          // { srNo: 3, labName: "Mechatronics Lab", area: "800 sq.ft", incharge: "Prof. Neha Singh" },
+          {
+            srNo: 1,
+            labName: "Programming Lab",
+            area: "",
+            incharge: "Mr.Surnar A.B",
+          },
+          {
+            srNo: 2,
+            labName: "Data Base Lab",
+            area: "",
+            incharge: "Mr.Unchadkar V.A",
+          },
+          {
+            srNo: 3,
+            labName: "Hardware & Networking Lab",
+            area: "",
+            incharge: "Mrs. Pawar A.K",
+          },
+          {
+            srNo: 4,
+            labName: "Operating System And Linux Lab",
+            area: "",
+            incharge: "Mrs. Dawkore R.A",
+          },
+          {
+            srNo: 5,
+            labName: "Web Application Lab",
+            area: "",
+            incharge: "Ms. Kapale A.B",
+          },
+          {
+            srNo: 6,
+            labName: "Project Lab",
+            area: "",
+            incharge: "Project Lab",
+          },
         ],
         hod: {
-          name: "HOD",
+          name: "Mrs MORE M.K.",
           designation: "Head of Department - Information Technology",
-          message: "",
-          profileImage:
-            "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png",
+          message: `It is a privilege to introduce the Department of Information Technology at Matoshri Pratishthan’s Vishwabharti Polytechnic Institute, Nanded.
+Our department is dedicated to delivering quality technical education that prepares diploma students to confidently step into the software industry and other technical sectors. We aim to provide industry-sponsored internships and project opportunities to enhance students’ professional readiness and career prospects.
+As diploma holders, many of you will go on to become software developers or IT professionals. Therefore, it's essential to build strong technical as well as interpersonal skills. Opportunities will come your way, but success lies in your ability to recognize and seize them. To achieve your goals, set a clear vision and work consistently and sincerely in the right direction.
+Our department is here to support and guide you in acquiring not only knowledge but also the ethical values necessary for a long and meaningful professional journey. In today’s fast-changing and competitive environment, staying updated with emerging technologies is crucial. As students of Information Technology, programming should become a regular habit—your thoughts should naturally transform into code written in modern programming languages.
+Lastly, remember that professional success is not just about skills, but also about integrity and strong moral values.
+I warmly welcome you all and wish you a bright, fulfilling, and successful career ahead.`,
+          profileImage: polyComputerHod,
         },
-        vision: "",
-        mission: "",
+        vision: `“Computer Engineering Department striving for excellence in providing scientific and technical education, to develop intellectual, innovative and quality computer engineers and prepare them to face challenges of modern society.”`,
+        mission: `“To contribute Institute in providing high quality, affordable and accessible computer science education programmers. To benchmark with the best global standards of quality education in computer science. To engage & motivate students through stimulating & collaborative experiences for computer related solutions. To enhance the commitment of faculty, staff, and students to the centrality of diversity, social justice, and democratic citizenship.”`,
       },
       {
         id: "ece",
@@ -475,9 +1428,36 @@ I warmly welcome you all and wish you a bright, fulfilling, and successful caree
         facultyCount: 10,
         gallery: ["/images/ece-1.jpg", "/images/ece-2.jpg"],
         labs: [
-          // { srNo: 1, labName: "Automotive Workshop", area: "2000+ sq.ft", incharge: "Mr. Ramesh Patil" },
-          // { srNo: 2, labName: "CAD/CAM Lab", area: "1000 sq.ft", incharge: "Dr. Anil Deshmukh" },
-          // { srNo: 3, labName: "Mechatronics Lab", area: "800 sq.ft", incharge: "Prof. Neha Singh" },
+          {
+            srNo: 1,
+            labName: "Basic electronics lab",
+            area: "",
+            incharge: "Mr. Gare O.S.",
+          },
+          {
+            srNo: 2,
+            labName: "Digital and Microprocessor lab",
+            area: "",
+            incharge: "Mr. Gare O.S.",
+          },
+          {
+            srNo: 3,
+            labName: "Communication lab",
+            area: "",
+            incharge: "Ms. Mule A.B.",
+          },
+          {
+            srNo: 4,
+            labName: "Power electronic lab",
+            area: "",
+            incharge: "Ms. Mule A.B.",
+          },
+          {
+            srNo: 5,
+            labName: "Control system lab",
+            area: "",
+            incharge: "Ms. Mule A.B.",
+          },
         ],
         hod: {
           name: "Ms. Mule A.B.",
@@ -935,7 +1915,50 @@ Join us in shaping a dynamic and rewarding career in engineering.`,
         ],
         facultyCount: 12,
         gallery: ["/images/civil-1.jpg", "/images/civil-2.jpg"],
-        labs: [],
+        labs: [
+          {
+            srNo: 1,
+            labName: "Strength of Materials",
+            area: "66 m2",
+            incharge: "Mr. D.L. Rathod",
+          },
+          {
+            srNo: 2,
+            labName: "Surveying",
+            area: "66 m2",
+            incharge: "Mrs. Asna Fatima Mohammed Kaleemuddin",
+          },
+          {
+            srNo: 3,
+            labName: "Hydraulics",
+            area: "80 m2",
+            incharge: "Mr. L.V. Rathod",
+          },
+          {
+            srNo: 4,
+            labName: "Concrete Technology",
+            area: "66 m2",
+            incharge: "Mr. D.L. Rathod",
+          },
+          {
+            srNo: 5,
+            labName: "Transportation Engg.",
+            area: "66 m2",
+            incharge: "Mr. D.L. Rathod",
+          },
+          {
+            srNo: 6,
+            labName: "Geotechnical Engg.",
+            area: "66 m2",
+            incharge: "Mr. D.L. Rathod",
+          },
+          {
+            srNo: 7,
+            labName: "Environmental Engg",
+            area: "66 m2",
+            incharge: "Mrs. Asna Fatima Mohammed Kaleemuddin",
+          },
+        ],
         hod: {
           name: "P. D. Pople",
           designation: "Head of Department - Civil Engineering",
@@ -1110,7 +2133,7 @@ The goal of department is to prepare executes destined for a successful manageme
         labs: [],
         hod: {
           name: "Sadanand R. Shinde",
-          designation: "Head of Department - Mechanical Engineering",
+          designation: "DEAN - School of Management",
           message: `The new economic policy—globalization, privatization, and liberalization—has widened the horizon of business. The information technology revolution has transformed this planet into a global village. Hi-tech systems and the supersonic speed of communication have introduced new cross-cultural interactions in the global business scenario. This has also increased the demand for a strong ethical value foundation in a harmonic form.
 
 It is the responsibility of the School of Management to develop holistic leadership with a global vision and a mission of excellence. The School of Management at Matoshri Pratishthan’s Group of Institutes is fully committed to this task.`,

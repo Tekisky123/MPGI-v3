@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect, useCallback, useMemo } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown, ChevronLeft, ChevronRight } from "lucide-react";
 import ReactDOM from "react-dom";
 import logo from "../assets/images/logo-circle.png";
 import { NAV_ITEMS } from "../data/NavTabs";
@@ -23,49 +23,29 @@ type SubmenuPosition = {
 } | null;
 
 const VALID_SCHOOLS = [
-  "school-of-engineering",
   "school-of-management",
+  "school-of-engineering",
   "vishwabharati-polytechnic-institute",
 ];
 
-const DEPARTMENT_MAPPINGS: Record<
-  string,
-  Array<{ name: string; path: string }>
-> = {
+const DEPARTMENT_MAPPINGS: Record<string, Array<{ name: string; path: string }>> = {
   "vishwabharati-polytechnic-institute": [
     { name: "Mechanical Engineering", path: "/departments/mechanical/profile" },
     { name: "Civil Engineering", path: "/departments/civil/profile" },
     { name: "Electrical Engineering", path: "/departments/electrical/profile" },
     { name: "Computer Engineering", path: "/departments/computer/profile" },
     { name: "Information Technology", path: "/departments/it/profile" },
-    {
-      name: "Electronics and Telecommunication",
-      path: "/departments/ece/profile",
-    },
-    {
-      name: "Basic Sciences and Humanities (FE)",
-      path: "/departments/bsh/profile",
-    },
+    { name: "Electronics and Telecommunication", path: "/departments/ece/profile" },
+    { name: "Basic Sciences and Humanities (FE)", path: "/departments/bsh/profile" },
   ],
-  "school-of-management": [
-    { name: "MBA Program", path: "/departments/mba/profile" },
-  ],
+  "school-of-management": [{ name: "MBA Program", path: "/departments/mba/profile" }],
   "school-of-engineering": [
-    {
-      name: "Computer Science & Engineering",
-      path: "/departments/cse/profile",
-    },
+    { name: "Computer Science & Engineering", path: "/departments/cse/profile" },
     { name: "Mechanical Engineering", path: "/departments/mech/profile" },
     { name: "Electrical Engineering", path: "/departments/eee/profile" },
     { name: "Civil Engineering", path: "/departments/civil/profile" },
-    {
-      name: "Electronics and Telecommunication Engineering",
-      path: "/departments/ece/profile",
-    },
-    {
-      name: "Basic Sciences and Humanities (FE)",
-      path: "/departments/bsh/profile",
-    },
+    { name: "Electronics and Telecommunication Engineering", path: "/departments/ece/profile" },
+    { name: "Basic Sciences and Humanities (FE)", path: "/departments/bsh/profile" },
   ],
 };
 
@@ -75,8 +55,10 @@ const Navbar = () => {
   const [openSubmenu, setOpenSubmenu] = useState<string | null>(null);
   const [headerHeight, setHeaderHeight] = useState(0);
   const [submenuPosition, setSubmenuPosition] = useState<SubmenuPosition>(null);
+  const [scrollPosition, setScrollPosition] = useState(0);
   const headerRef = useRef<HTMLElement>(null);
   const navRef = useRef<HTMLDivElement>(null);
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
   const mobileMenuRef = useRef<HTMLDivElement>(null);
   const resizeObserverRef = useRef<ResizeObserver | null>(null);
@@ -89,9 +71,7 @@ const Navbar = () => {
   const getPrefixedPath = useCallback(
     (originalPath: string, isExternal?: boolean) => {
       if (isExternal || !schoolPrefix) return originalPath;
-      return originalPath === "/"
-        ? `/${schoolPrefix}/home`
-        : `/${schoolPrefix}${originalPath}`;
+      return originalPath === "/" ? `/${schoolPrefix}/home` : `/${schoolPrefix}${originalPath}`;
     },
     [schoolPrefix]
   );
@@ -129,16 +109,10 @@ const Navbar = () => {
   const modifiedNavItems = useMemo(() => {
     return NAV_ITEMS.map((item) => {
       if (item.name === "Departments") {
-        return {
-          ...item,
-          subItems: getDepartmentItems(),
-        };
+        return { ...item, subItems: getDepartmentItems() };
       }
       if (item.name === "Cells & Committees") {
-        return {
-          ...item,
-          subItems: getCommitteeItems(),
-        };
+        return { ...item, subItems: getCommitteeItems() };
       }
       return item;
     });
@@ -176,6 +150,21 @@ const Navbar = () => {
     cleanup();
     timeoutRef.current = setTimeout(() => setSubmenuPosition(null), 200);
   }, [cleanup]);
+
+  const scrollNav = useCallback((direction: "left" | "right") => {
+    if (scrollContainerRef.current) {
+      const scrollAmount = 100;
+      const newScrollPosition =
+        direction === "left"
+          ? scrollPosition - scrollAmount
+          : scrollPosition + scrollAmount;
+      scrollContainerRef.current.scrollTo({
+        left: newScrollPosition,
+        behavior: "smooth",
+      });
+      setScrollPosition(newScrollPosition);
+    }
+  }, [scrollPosition]);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -359,11 +348,11 @@ const Navbar = () => {
             className={`${
               isMobile ? "w-full px-6 py-3 text-sm" : "px-4 py-2.5 text-base"
             } font-medium flex items-center justify-between gap-1 ${
-              (
-                isMobile
-                  ? openSubmenu === item.name
-                  : submenuPosition?.name === item.name
-              )
+              isMobile
+                ? openSubmenu === item.name
+                  ? "text-blue-600 bg-blue-50"
+                  : "text-gray-700 hover:bg-gray-50"
+                : submenuPosition?.name === item.name
                 ? "text-blue-600 bg-blue-50"
                 : "text-gray-700 hover:bg-gray-50"
             }`}
@@ -377,11 +366,11 @@ const Navbar = () => {
             {item.subItems && (
               <ChevronDown
                 className={`w-4 h-4 transition-transform ${
-                  (
-                    isMobile
-                      ? openSubmenu === item.name
-                      : submenuPosition?.name === item.name
-                  )
+                  isMobile
+                    ? openSubmenu === item.name
+                      ? "rotate-180"
+                      : ""
+                    : submenuPosition?.name === item.name
                     ? "rotate-180"
                     : ""
                 }`}
@@ -412,10 +401,7 @@ const Navbar = () => {
 
   return (
     <>
-      <header
-        ref={headerRef}
-        className="fixed w-full top-0 z-50 shadow-lg bg-white"
-      >
+      <header ref={headerRef} className="fixed w-full top-0 z-50 shadow-lg bg-white">
         {/* Top Section - Logo and Institution Name */}
         <div className="py-2 block bg-mpgin-darkBlue border-b">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -448,26 +434,35 @@ const Navbar = () => {
         <nav ref={navRef} className="bg-white">
           <div className="overflow-auto w-full px-4 sm:px-6 lg:px-8 flex justify-end lg:justify-start">
             <div className="flex items-center justify-between h-16">
+            
+
               {/* Desktop Navigation */}
-              <div className="hidden md:block flex-1">
-                <ul className="flex items-center">
-                  {modifiedNavItems.map((item, index) => (
-                    <li
-                      key={item.name}
-                      className={`group relative ${
-                        index !== modifiedNavItems.length - 1
-                          ? "border-r border-gray-200"
-                          : ""
-                      }`}
-                      onMouseEnter={(e) => handleDesktopSubmenuHover(e, item)}
-                      onMouseLeave={handleDesktopSubmenuLeave}
-                    >
-                      {renderNavItem(item, false)}
-                    </li>
-                  ))}
-                </ul>
+              <div className="hidden md:block flex-1 overflow-hidden">
+                <div
+                  ref={scrollContainerRef}
+                  className="flex items-center overflow-x-auto whitespace-nowrap scroll-smooth"
+                  style={{ scrollBehavior: "smooth" }}
+                >
+                  <ul className="flex items-center">
+                    {modifiedNavItems.map((item, index) => (
+                      <li
+                        key={item.name}
+                        className={`group relative ${
+                          index !== modifiedNavItems.length - 1
+                            ? "border-r border-gray-200"
+                            : ""
+                        }`}
+                        onMouseEnter={(e) => handleDesktopSubmenuHover(e, item)}
+                        onMouseLeave={handleDesktopSubmenuLeave}
+                      >
+                        {renderNavItem(item, false)}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
 
+             
               {/* Mobile menu button */}
               <div className="md:hidden flex items-center ml-auto">
                 <button

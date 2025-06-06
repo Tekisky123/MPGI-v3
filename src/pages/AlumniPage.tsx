@@ -1,9 +1,8 @@
-// AlumniPage.tsx
 
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
-import { useLocation, useParams } from "react-router-dom";
+import {  useParams } from "react-router-dom";
 import {
   navItems as allNavItems,
   managementAlumni,

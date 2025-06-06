@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import Slider, { Settings, CustomArrowProps } from "react-slick";
-import polytechnicHero1 from "../../assets/images/polyHero1.png";
-import polytechnicHero2 from "../../assets/images/polyHero2.png";
-import polytechnicHero3 from "../../assets/images/polyHero3.png";
+import polytechnicHero1 from "../../assets/poly/hero1.jpg";
+import polytechnicHero2 from "../../assets/poly/hero2.jpg";
+import polytechnicHero3 from "../../assets/poly/hero3.png";
 import VishwabhartiPolytechnicQuickLinks from "./VishwabhartiPolytechnicQuickLinks";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";

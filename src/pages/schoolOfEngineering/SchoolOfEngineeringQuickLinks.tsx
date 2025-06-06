@@ -13,6 +13,7 @@ import {
   visionMissionData,
   swayamNptelData,
   innovationIncubation,
+  homeData,
 } from "../../data/SchoolOfEngineeringQuickLinkData";
 import lab1 from "../../assets/engineering/lab1.jpg";
 import lab2 from "../../assets/engineering/lab2.jpg";
@@ -280,7 +281,7 @@ const renderInnovationTable = (data) => {
 };
 
 const SchoolOfEngineeringQuickLinks = () => {
-  const [activeId, setActiveId] = useState("principal");
+  const [activeId, setActiveId] = useState("home");
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const sidebarRef = useRef<HTMLDivElement>(null);
   const menuButtonRef = useRef<HTMLButtonElement>(null);
@@ -368,6 +369,33 @@ const SchoolOfEngineeringQuickLinks = () => {
                 </div>
               </div>
             </div>
+          </motion.div>
+        );
+
+         case "home":
+        return (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="bg-white shadow-lg rounded-xl overflow-hidden border border-gray-200 p-6 sm:p-8 lg:p-10 w-full"
+          >
+            <motion.h3
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.2 }}
+              className="text-2xl font-bold text-mpgin-darkBlue mb-5 border-b pb-2 border-gray-300"
+            >
+              {homeData.title}
+            </motion.h3>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.3 }}
+              className="prose max-w-none text-gray-700 whitespace-pre-line"
+            >
+              {renderContent(homeData.content)}
+            </motion.div>
           </motion.div>
         );
 

@@ -32,6 +32,8 @@ export interface FacultyMember {
 }
 
 export const navItems = [
+  { label: "Home", id: "home" },
+  { label: "Vision & Mission", id: "vision-mission" },
   { label: "Principal", id: "principal" },
   { label: "Placements", id: "placements" },
   { label: "Achievements", id: "achievements" },
@@ -40,7 +42,6 @@ export const navItems = [
   { label: "IQAC", id: "iqac" },
   { label: "Innovation & Incubation Centre", id: "innovationIncubation" },
   { label: "SWAYAM-NPTEL", id: "swayam-nptel" },
-  { label: "Vision & Mission", id: "vision-mission" },
 ];
 
 export const profiles: ProfileData[] = [
@@ -84,6 +85,80 @@ export const profiles: ProfileData[] = [
     ],
   },
 ];
+
+export const homeData = {
+  title: "Welcome to School of Engineering",
+  content: `
+
+
+## About Us
+The School of Engineering at Matoshri Pratishthan Group of Institutions (MPGI), Nanded is a premier engineering institute established in 2009. Located on the Nanded-Latur Highway, our sprawling 25-acre campus provides an ideal environment for technical education and research.
+
+### Key Highlights:
+- Approved by: AICTE, New Delhi & Affiliated to SRTMUN, Nanded
+- NAAC Accreditation: B+ Grade
+- ISO Certification: 9001-2015 Certified
+- Total Faculty: 120+ with 25+ PhD holders
+- Student Strength: 1500+ across all programs
+- Placement Record: 85% average placement over last 5 years
+
+## Infrastructure
+Our state-of-the-art infrastructure includes:
+- Academic Blocks: 4 buildings with 60+ classrooms and seminar halls
+- Laboratories: 50+ well-equipped labs across departments
+- Central Library
+- Hostels: Separate facilities for boys and girls
+- Sports Complex: Cricket ground, basketball court, indoor games
+- Wi-Fi Campus: 1 Gbps internet connectivity throughout
+
+
+
+
+`,
+  highlights: [
+    "1500+ Students | 120+ Faculty | 25+ PhDs",
+    "85% Placement Record | 100+ Recruiters",
+    "50+ Well-equipped Labs | 50,000+ Library Resources",
+    "25 Acre Campus | 1 Gbps Wi-Fi",
+    "NAAC B+ Accredited | ISO 9001-2015 Certified",
+  ],
+  quickLinks: [
+    {
+      title: "Academic Calendar",
+      url: "/academic-calendar",
+    },
+    {
+      title: "Syllabus",
+      url: "/syllabus",
+    },
+    {
+      title: "Placement Brochure",
+      url: "/placement-brochure",
+    },
+    {
+      title: "Anti-Ragging",
+      url: "/anti-ragging",
+    },
+  ],
+  stats: [
+    {
+      value: "15+",
+      label: "Years of Excellence",
+    },
+    {
+      value: "2000+",
+      label: "Alumni Network",
+    },
+    {
+      value: "50+",
+      label: "Patents Filed",
+    },
+    {
+      value: "85%",
+      label: "Placement Rate",
+    },
+  ],
+};
 
 export const departments: Department[] = [
   {

@@ -2,31 +2,21 @@ import { useState, useEffect, useRef } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import {
-  facilitiesData,
-  Facility,
-  CollegeFacilityGroup,
-} from "../data/facilities";
+import { facilitiesData, Facility, CollegeFacilityGroup } from "../data/facilities";
 
 const Facilities = () => {
-  const { collegeId, facilityPath } = useParams<{
-    collegeId: string;
-    facilityPath: string;
-  }>();
+  const { collegeId, facilityPath } = useParams<{ collegeId: string; facilityPath: string }>();
   const navigate = useNavigate();
   const [activeFacility, setActiveFacility] = useState<Facility | null>(null);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const sidebarRef = useRef<HTMLDivElement>(null);
   const menuButtonRef = useRef<HTMLButtonElement>(null);
 
-  const college = facilitiesData.find(
-    (c: CollegeFacilityGroup) => c.id === collegeId
-  );
+  const college = facilitiesData.find((c: CollegeFacilityGroup) => c.id === collegeId);
 
   useEffect(() => {
     if (!college) return;
 
-    // Find the facility that matches the current path
     const matchedFacility = college.facilities.find(
       (f: Facility) => f.path === `/facilities/${facilityPath}`
     );
@@ -56,7 +46,6 @@ const Facilities = () => {
   }, []);
 
   const handleFacilityClick = (facility: Facility) => {
-    // Extract the last part of the path (e.g., "classrooms" from "/facilities/classrooms")
     const pathSegment = facility.path.split("/").pop();
     navigate(`/${collegeId}/facilities/${pathSegment}`);
     setActiveFacility(facility);
@@ -79,17 +68,14 @@ const Facilities = () => {
       <div className="overflow-x-auto mt-6">
         <table className="min-w-full border-collapse border border-gray-300">
           <tbody>
-            {tableData.map((row, idx) => {
-              if (row.label === "" && row.value === "") return null;
-              return (
-                <tr key={idx} className="border-b">
-                  <td className="font-semibold border-r border-gray-300 px-4 py-2 bg-gray-100 w-1/3">
-                    {row.label}
-                  </td>
-                  <td className="px-4 py-2">{row.value}</td>
-                </tr>
-              );
-            })}
+            {tableData.map((row, idx) => (
+              <tr key={idx} className="border-b">
+                <td className="font-semibold border-r border-gray-300 px-4 py-2 bg-gray-100 w-1/3">
+                  {row.label}
+                </td>
+                <td className="px-4 py-2">{row.value}</td>
+              </tr>
+            ))}
           </tbody>
         </table>
       </div>
@@ -97,26 +83,19 @@ const Facilities = () => {
   };
 
   if (!college) {
-    return (
-      <div className="text-center text-red-500 p-8">College not found</div>
-    );
+    return <div className="text-center text-red-500 p-8">College not found</div>;
   }
 
   return (
     <section className="py-8 px-4 sm:px-6 lg:px-8 bg-white min-h-screen">
       <div className="md:hidden flex justify-between items-center mb-6">
         <h2 className="text-xl font-bold text-mpgin-darkBlue">Facilities</h2>
-        <button
-          ref={menuButtonRef}
-          onClick={() => setIsSidebarOpen(!isSidebarOpen)}
-          className="text-mpgin-darkBlue"
-        >
+        <button ref={menuButtonRef} onClick={() => setIsSidebarOpen(!isSidebarOpen)} className="text-mpgin-darkBlue">
           {isSidebarOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
       </div>
 
       <div className="w-full mx-auto flex flex-col lg:flex-row gap-6">
-        {/* Sidebar */}
         <aside
           className={`lg:w-1/4 xl:w-1/5 bg-gray-50 p-4 rounded-lg shadow-md transition-all duration-300 fixed lg:static z-50 lg:z-auto h-full overflow-y-auto ${
             isSidebarOpen ? "block inset-0" : "hidden lg:block"
@@ -147,7 +126,6 @@ const Facilities = () => {
           </nav>
         </aside>
 
-        {/* Main Content */}
         <main className="flex-1 lg:w-2/4 xl:w-3/5">
           {activeFacility ? (
             <motion.div
@@ -189,130 +167,65 @@ const Facilities = () => {
                 </motion.ul>
               )}
 
-              {activeFacility.aicteNaac &&
-                renderTable(activeFacility.aicteNaac)}
+              
 
-              {activeFacility.keyContacts &&
-                activeFacility.keyContacts.length > 0 && (
-                  <div className="overflow-x-auto mt-8">
-                    <h3 className="text-xl font-bold text-mpgin-darkBlue mb-3">
-                      Key Contacts
-                    </h3>
-                    <table className="min-w-full border-collapse border border-gray-300">
-                      <thead>
-                        <tr className="bg-gray-100">
-                          <th className="border border-gray-300 px-4 py-2 text-left">
-                            Post
-                          </th>
-                          <th className="border border-gray-300 px-4 py-2 text-left">
-                            Name
-                          </th>
-                          <th className="border border-gray-300 px-4 py-2 text-left">
-                            Branch
-                          </th>
-                          <th className="border border-gray-300 px-4 py-2 text-left">
-                            Email
-                          </th>
-                          <th className="border border-gray-300 px-4 py-2 text-left">
-                            Mobile
-                          </th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        {activeFacility.keyContacts.map((contact, idx) => (
-                          <tr key={idx} className="border-b">
-                            <td className="border border-gray-300 px-4 py-2">
-                              {contact.post}
-                            </td>
-                            <td className="border border-gray-300 px-4 py-2">
-                              {contact.name}
-                            </td>
-                            <td className="border border-gray-300 px-4 py-2">
-                              {contact.branch}
-                            </td>
-                            <td className="border border-gray-300 px-4 py-2">
-                              <a
-                                href={`mailto:${contact.email}`}
-                                className="text-blue-600 underline"
-                                aria-label={`Email to ${contact.email}`}
-                              >
-                                {contact.email}
-                              </a>
-                            </td>
-                            <td className="border border-gray-300 px-4 py-2">
-                              <a
-                                href={`tel:${contact.mobile}`}
-                                className="text-blue-600 underline"
-                                aria-label={`Call ${contact.mobile}`}
-                              >
-                                +91 {contact.mobile}
-                              </a>
-                            </td>
-                          </tr>
-                        ))}
-                      </tbody>
-                    </table>
-                  </div>
-                )}
+              {activeFacility.tableData && renderTable(activeFacility.tableData)}
 
-              {activeFacility.departmentalCoordinators &&
-                activeFacility.departmentalCoordinators.length > 0 && (
-                  <div className="overflow-x-auto mt-8">
-                    <h3 className="text-xl font-bold text-mpgin-darkBlue mb-3">
-                      Departmental Coordinators
-                    </h3>
-                    <table className="min-w-full border-collapse border border-gray-300">
-                      <thead>
-                        <tr className="bg-gray-100">
-                          <th className="border border-gray-300 px-4 py-2 text-left">
-                            Branch
-                          </th>
-                          <th className="border border-gray-300 px-4 py-2 text-left">
-                            Name (Year of Exp)
-                          </th>
-                          <th className="border border-gray-300 px-4 py-2 text-left">
-                            Email
-                          </th>
-                          <th className="border border-gray-300 px-4 py-2 text-left">
-                            Mobile No
-                          </th>
+              {activeFacility.keyContacts && activeFacility.keyContacts.length > 0 && (
+                <div className="overflow-x-auto mt-8">
+                  <h3 className="text-xl font-bold text-mpgin-darkBlue mb-3">Key Contacts</h3>
+                  <table className="min-w-full border-collapse border border-gray-300">
+                    <thead>
+                      <tr className="bg-gray-100">
+                        <th className="border border-gray-300 px-4 py-2 text-left">Post</th>
+                        <th className="border border-gray-300 px-4 py-2 text-left">Name</th>
+                        <th className="border border-gray-300 px-4 py-2 text-left">Branch</th>
+                        <th className="border border-gray-300 px-4 py-2 text-left">Email</th>
+                        <th className="border border-gray-300 px-4 py-2 text-left">Mobile</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {activeFacility.keyContacts.map((contact, idx) => (
+                        <tr key={idx} className="border-b">
+                          <td className="border border-gray-300 px-4 py-2">{contact.post}</td>
+                          <td className="border border-gray-300 px-4 py-2">{contact.name}</td>
+                          <td className="border border-gray-300 px-4 py-2">{contact.branch}</td>
+                          <td className="border border-gray-300 px-4 py-2">
+                            <a href={`mailto:${contact.email}`} className="text-blue-600 underline">
+                              {contact.email}
+                            </a>
+                          </td>
+                          <td className="border border-gray-300 px-4 py-2">
+                            <a href={`tel:${contact.mobile}`} className="text-blue-600 underline">
+                              +91 {contact.mobile}
+                            </a>
+                          </td>
                         </tr>
-                      </thead>
-                      <tbody>
-                        {activeFacility.departmentalCoordinators.map(
-                          (coord, idx) => (
-                            <tr key={idx} className="border-b">
-                              <td className="border border-gray-300 px-4 py-2">
-                                {coord.branch}
-                              </td>
-                              <td className="border border-gray-300 px-4 py-2">
-                                {coord.name}
-                              </td>
-                              <td className="border border-gray-300 px-4 py-2">
-                                <a
-                                  href={`mailto:${coord.email}`}
-                                  className="text-blue-600 underline"
-                                  aria-label={`Email to ${coord.email}`}
-                                >
-                                  {coord.email}
-                                </a>
-                              </td>
-                              <td className="border border-gray-300 px-4 py-2">
-                                <a
-                                  href={`tel:${coord.mobile}`}
-                                  className="text-blue-600 underline"
-                                  aria-label={`Call ${coord.mobile}`}
-                                >
-                                  +91 {coord.mobile}
-                                </a>
-                              </td>
-                            </tr>
-                          )
-                        )}
-                      </tbody>
-                    </table>
-                  </div>
-                )}
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              )}
+
+              {activeFacility?.images && activeFacility.images.length > 0 && (
+  <motion.div
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    transition={{ delay: 0.4 }}
+    className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6"
+  >
+    <h3 className="text-xl font-bold text-mpgin-darkBlue col-span-full">Gallery</h3>
+    {activeFacility.images.map((imgUrl, idx) => (
+      <div key={idx} className="border border-gray-200 rounded-lg overflow-hidden shadow-sm">
+        <img
+          src={imgUrl}
+          alt={`Bus Facility ${idx + 1}`}
+          className="w-full h-auto object-cover"
+        />
+      </div>
+    ))}
+  </motion.div>
+)}
             </motion.div>
           ) : (
             <motion.div

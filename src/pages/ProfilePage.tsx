@@ -61,7 +61,7 @@ const ProfilePage = ({ id }: { id: string }) => {
             <img
               src={profile.image}
               alt={profile.name}
-              className="w-full h-auto object-cover transition-transform duration-300 hover:scale-105"
+              className="w-full h-[40vh] object-cover transition-transform duration-300 hover:scale-105"
               loading="lazy"
             />
           </motion.div>

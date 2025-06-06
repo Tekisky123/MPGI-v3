@@ -1,6 +1,6 @@
-import { motion } from 'framer-motion';
-import { Menu, X } from 'lucide-react';
-import { useState, useEffect, useRef } from 'react';
+import { motion } from "framer-motion";
+import { Menu, X } from "lucide-react";
+import { useState, useEffect, useRef } from "react";
 import {
   achievementData,
   navItems,
@@ -10,37 +10,46 @@ import {
   mandatoryDisclosureData,
   iqacData,
   swayamNptelData,
-  visionMissionData
-} from '../../data/VishwabhartiPolytechnicQuickLinkData';
+  visionMissionData,
+  homeData,
+} from "../../data/VishwabhartiPolytechnicQuickLinkData";
 import NotificationComponent from "../../components/NotificationComponent";
 
 const renderContent = (content: string) => {
-  return content.split('\n').map((paragraph, index) => (
+  return content.split("\n").map((paragraph, index) => (
     <div key={index} className="mb-4">
-      {paragraph.startsWith('-') ? (
+      {paragraph.startsWith("-") ? (
         <ul className="list-disc pl-6 space-y-1 text-gray-700 font-semibold">
-          {paragraph.slice(1).split(', ').map((item, i) => (
-            <li key={i}>{item.trim()}</li>
-          ))}
+          {paragraph
+            .slice(1)
+            .split(", ")
+            .map((item, i) => (
+              <li key={i}>{item.trim()}</li>
+            ))}
         </ul>
-      ) : paragraph.startsWith('## ') || paragraph.startsWith('### ') ? (
-        <h3 className="text-xl font-bold text-mpgin-darkBlue mt-4 mb-2">{paragraph.slice(3)}</h3>
-      ) : paragraph.startsWith('# ') ? (
-        <h2 className="text-2xl font-bold text-mpgin-darkBlue mt-6 mb-3 border-b pb-2 border-gray-300">{paragraph.slice(2)}</h2>
-      ) : paragraph.startsWith('**') && paragraph.endsWith('**') ? (
+      ) : paragraph.startsWith("## ") || paragraph.startsWith("### ") ? (
+        <h3 className="text-xl font-bold text-mpgin-darkBlue mt-4 mb-2">
+          {paragraph.slice(3)}
+        </h3>
+      ) : paragraph.startsWith("# ") ? (
+        <h2 className="text-2xl font-bold text-mpgin-darkBlue mt-6 mb-3 border-b pb-2 border-gray-300">
+          {paragraph.slice(2)}
+        </h2>
+      ) : paragraph.startsWith("**") && paragraph.endsWith("**") ? (
         <p className="font-bold text-gray-800">{paragraph.slice(2, -2)}</p>
-      ) :
-        paragraph.startsWith('*') || paragraph.endsWith('*') ? (
-          <p className="font-bold text-gray-800 italic">{paragraph.slice(1, -1)}</p>
-        ) : (
-          <p className="text-gray-700 ">{paragraph}</p>
-        )}
+      ) : paragraph.startsWith("*") || paragraph.endsWith("*") ? (
+        <p className="font-bold text-gray-800 italic">
+          {paragraph.slice(1, -1)}
+        </p>
+      ) : (
+        <p className="text-gray-700 ">{paragraph}</p>
+      )}
     </div>
   ));
 };
 
 const VishwabhartiPolytechnicQuickLinks = () => {
-  const [activeId, setActiveId] = useState('principal');
+  const [activeId, setActiveId] = useState("home");
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const sidebarRef = useRef<HTMLDivElement>(null);
   const menuButtonRef = useRef<HTMLButtonElement>(null);
@@ -56,23 +65,23 @@ const VishwabhartiPolytechnicQuickLinks = () => {
       }
     };
 
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
   useEffect(() => {
     const handleEsc = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') setIsSidebarOpen(false);
+      if (e.key === "Escape") setIsSidebarOpen(false);
     };
 
-    document.addEventListener('keydown', handleEsc);
-    return () => document.removeEventListener('keydown', handleEsc);
+    document.addEventListener("keydown", handleEsc);
+    return () => document.removeEventListener("keydown", handleEsc);
   }, []);
 
   const renderMainContent = () => {
     switch (activeId) {
-      case 'principal':
-        const principal = profiles.find((p) => p.id === 'principal');
+      case "principal":
+        const principal = profiles.find((p) => p.id === "principal");
         return (
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -113,15 +122,19 @@ const VishwabhartiPolytechnicQuickLinks = () => {
                   />
                 </motion.div>
                 <div className="text-center">
-                  <h2 className="text-2xl font-bold text-mpgin-darkBlue">{principal?.name}</h2>
-                  <p className="mt-2 text-lg  text-mpgin-blue">{principal?.title}</p>
+                  <h2 className="text-2xl font-bold text-mpgin-darkBlue">
+                    {principal?.name}
+                  </h2>
+                  <p className="mt-2 text-lg  text-mpgin-blue">
+                    {principal?.title}
+                  </p>
                 </div>
               </div>
             </div>
           </motion.div>
         );
 
-      case 'placements':
+      case "placements":
         return (
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -147,8 +160,34 @@ const VishwabhartiPolytechnicQuickLinks = () => {
             </motion.div>
           </motion.div>
         );
+      case "home":
+        return (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="bg-white shadow-lg rounded-xl overflow-hidden border border-gray-200 p-6 sm:p-8 lg:p-10 w-full"
+          >
+            <motion.h3
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.2 }}
+              className="text-2xl font-bold text-mpgin-darkBlue mb-5 border-b pb-2 border-gray-300"
+            >
+              {homeData.title}
+            </motion.h3>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.3 }}
+              className="prose max-w-none text-gray-700  whitespace-pre-line"
+            >
+              {renderContent(homeData.content)}
+            </motion.div>
+          </motion.div>
+        );
 
-      case 'achievements':
+      case "achievements":
         return (
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -175,7 +214,7 @@ const VishwabhartiPolytechnicQuickLinks = () => {
           </motion.div>
         );
 
-      case 'nirf':
+      case "nirf":
         return (
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -202,7 +241,7 @@ const VishwabhartiPolytechnicQuickLinks = () => {
           </motion.div>
         );
 
-      case 'mandatory-disclosure':
+      case "mandatory-disclosure":
         return (
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -229,7 +268,7 @@ const VishwabhartiPolytechnicQuickLinks = () => {
           </motion.div>
         );
 
-      case 'iqac':
+      case "iqac":
         return (
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -256,7 +295,7 @@ const VishwabhartiPolytechnicQuickLinks = () => {
           </motion.div>
         );
 
-      case 'swayam-nptel':
+      case "swayam-nptel":
         return (
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -283,7 +322,7 @@ const VishwabhartiPolytechnicQuickLinks = () => {
           </motion.div>
         );
 
-      case 'vision-mission':
+      case "vision-mission":
         return (
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -354,7 +393,9 @@ const VishwabhartiPolytechnicQuickLinks = () => {
 
       <div className="w-full mx-auto flex flex-col lg:flex-row gap-6">
         <aside
-          className={`lg:w-1/4 xl:w-1/5 bg-gray-50 p-4 rounded-lg shadow-md transition-all duration-300 fixed lg:static z-50 lg:z-auto h-full overflow-y-auto ${isSidebarOpen ? 'block inset-0' : 'hidden lg:block'}`}
+          className={`lg:w-1/4 xl:w-1/5 bg-gray-50 p-4 rounded-lg shadow-md transition-all duration-300 fixed lg:static z-50 lg:z-auto h-full overflow-y-auto ${
+            isSidebarOpen ? "block inset-0" : "hidden lg:block"
+          }`}
           ref={sidebarRef}
         >
           <button
@@ -372,10 +413,11 @@ const VishwabhartiPolytechnicQuickLinks = () => {
                   setActiveId(item.id);
                   setIsSidebarOpen(false);
                 }}
-                className={`block w-full border border-gray-200 text-left py-3 px-4 transition-all duration-200 font-bold text-lg md:text-base ${activeId === item.id
-                  ? 'bg-mpgin-darkBlue text-mpgin-blue underline'
-                  : 'bg-mpgin-blue hover:bg-mpgin-darkBlue hover:text-white text-mpgin-darkBlue'
-                  }`}
+                className={`block w-full border border-gray-200 text-left py-3 px-4 transition-all duration-200 font-bold text-lg md:text-base ${
+                  activeId === item.id
+                    ? "bg-mpgin-darkBlue text-mpgin-blue underline"
+                    : "bg-mpgin-blue hover:bg-mpgin-darkBlue hover:text-white text-mpgin-darkBlue"
+                }`}
               >
                 {item.label}
               </motion.button>
@@ -383,9 +425,7 @@ const VishwabhartiPolytechnicQuickLinks = () => {
           </nav>
         </aside>
 
-        <main className="flex-1 lg:w-2/4 xl:w-3/5">
-          {renderMainContent()}
-        </main>
+        <main className="flex-1 lg:w-2/4 xl:w-3/5">{renderMainContent()}</main>
 
         <aside className="lg:w-1/4 xl:w-1/5">
           <div className="sticky top-44">
