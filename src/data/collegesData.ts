@@ -6,7 +6,7 @@ import cseHod from "../assets/hodImages/Mr B.A Khansole Computer Science & Engin
 import managementDean from "../assets/principalImages/DeanSadanand R. Shinde School of Management.png";
 import civilHodEngineering from "../assets/hodImages/P. D. Pople Civil Engineering.png";
 import polyComputerHod from "../assets/hodImages/Mrs MORE M.K.png";
-import polyCivilHod from "../assets/hodImages/Ms. Goud P.O Hod.png";
+import polyCivilHod from "../assets/hodImages/Ms. Goud P.O Hod.jpg";
 import mechanicalHodPoly from "../assets/principalImages/Prof. Shahaji Deshmukh Vishwabharati polytechnic.jpg";
 import mrDeshmukhSJElectricalHod from "../assets/hodImages/Mr. DeshmukhpolyElectricalHod.png";
 import rukhsanaHodBasicSciencesAndHumanities from "../assets/hodImages/Dr. Syeda RukhsanaBasicScience.png";
