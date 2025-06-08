@@ -109,45 +109,26 @@ const renderContent = (
               <img src={imageSrc} alt={imageAlt} className="w-full h-auto" />
             </div>
           );
-        } else if (paragraph.startsWith("-")) {
+        } else if (paragraph.startsWith("- ")) {
+          // Handle list items
           return (
-            <ul
-              key={index}
-              className="list-disc pl-6 space-y-1 text-gray-700 font-semibold"
-            >
-              {paragraph
-                .slice(1)
-                .split(", ")
-                .map((item, i) => (
-                  <li key={i}>{item.trim()}</li>
-                ))}
+            <ul key={index} className="list-disc pl-6 space-y-1 text-gray-700 font-semibold">
+              <li>{paragraph.slice(2)}</li>
             </ul>
           );
-        } else if (
-          paragraph.startsWith("## ") ||
-          paragraph.startsWith("### ")
-        ) {
+        } else if (paragraph.startsWith("## ") || paragraph.startsWith("### ")) {
           return (
-            <h3
-              key={index}
-              className="text-xl font-bold text-mpgin-darkBlue mt-4 mb-2"
-            >
+            <h3 key={index} className="text-xl font-bold text-mpgin-darkBlue mt-4 mb-2">
               {paragraph.slice(3)}
             </h3>
           );
         } else if (paragraph.startsWith("# ")) {
           return (
-            <h2
-              key={index}
-              className="text-2xl font-bold text-mpgin-darkBlue mt-6 mb-3 border-b pb-2 border-gray-300"
-            >
+            <h2 key={index} className="text-2xl font-bold text-mpgin-darkBlue mt-6 mb-3 border-b pb-2 border-gray-300">
               {paragraph.slice(2)}
             </h2>
           );
-        } else if (
-          (paragraph.startsWith("**") && paragraph.endsWith("**")) ||
-          (paragraph.startsWith("*") && paragraph.endsWith("*"))
-        ) {
+        } else if ((paragraph.startsWith("**") && paragraph.endsWith("**")) || (paragraph.startsWith("*") && paragraph.endsWith("*"))) {
           return (
             <p key={index} className="font-bold text-gray-800">
               {paragraph.slice(1, -1)}
@@ -166,6 +147,7 @@ const renderContent = (
     </>
   );
 };
+
 
 const SchoolOfManagementQuickLinks = () => {
   const [activeId, setActiveId] = useState("home");
