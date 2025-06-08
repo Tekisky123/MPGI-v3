@@ -153,48 +153,45 @@ export const homeData = {
   content: `
 
 ## About Us
-Vishwabharati Polytechnic Institute (MPVPI), a part of Matoshri Pratishthan Group of Institutions (MPGI), Nanded, is a premier polytechnic institute established in 2009. It provides an ideal environment for skill-based technical education, aiming to equip students with "technical wings to the brain."
+The Vishwabharati Polytechnic Institute (MPVPI) at Matoshri Pratishthan Group of Institutions (MPGI), Nanded, is a premier polytechnic institute established in 2009 to provide an ideal environment for technical education and to give "technical wings to the brain."
 
-The institute is a vibrant and innovative center for education focused on producing socially responsive technocrats, entrepreneurs, and professionals. MPVPI is approved by the All India Council for Technical Education (AICTE), New Delhi, and affiliated with the Maharashtra State Board of Technical Education (MSBTE), Mumbai.
+MPVPI is a vibrant and innovative centre for education focused on developing a cadre of socially responsive managers, technocrats, entrepreneurs, and professionals. The institute is approved by the All India Council for Technical Education (AICTE), New Delhi, and affiliated to the Maharashtra State Board of Technical Education (MSBTE), Mumbai.
 
-With over a thousand proud alumni serving in various sectors globally, MPVPI continues to shape future-ready engineers with practical and value-based education.
+MPVPI takes pride in its thriving alumni community of over 1000 MPVPIians who are making significant contributions worldwide through industry and academia.
 
 ### Key Highlights:
-- Approved by AICTE, New Delhi & Directorate of Technical Education (DTE)
-- Affiliated to MSBTE, Mumbai
-- NAAC & ISO 9001:2008 Certified
-- Student Strength: 800+ | Faculty: 50+ Qualified & Dynamic Members
-- Courses Offered: Diploma in Civil, Mechanical, Electrical, Computer, and E&TC
-- Regular Industrial Visits, Internships & Expert Seminars
-- Active Training & Placement Cell and Career Guidance Support
-- MoUs with Industries & Academic Institutions
-- Strong Alumni Network
-
-## Infrastructure
-MPVPI boasts a clean and green 25-acre campus with independent buildings and modern facilities:
-
-- Department-wise Workshops & State-of-the-Art Labs
-- Drawing & AutoCAD Labs
-- Digital Classrooms and Virtual Labs (in coordination with IIT Mumbai)
-- Central Computer Lab & Advanced Language Lab
-- Central Library: 18,000+ books, reference material & e-journals
+- Recognized by AICTE, New Delhi and Directorate of Technical Education (DTE)
+- Affiliated to Maharashtra State Board of Technical Education (MSBTE), Mumbai
+- ISO 9001:2008 Certified Institution
+- 25-acre Clean and Green Campus
+- Independent Buildings for Each Institute
+- State-of-the-Art Laboratories with the Latest Equipment
+- Digital Classrooms with Virtual Laboratory Integration
 - NPTEL Nodal Centre
-- AC Auditorium with 700+ seating capacity
-- Personality Development & Career Guidance Cell
+- Virtual Laboratory in Collaboration with IIT Mumbai
+- MoUs with Renowned Industries and Academic Institutions
+- Advanced Language Lab to Enhance Communication Skills
+- Active Training and Placement Cell
+- Regular Industrial Visits, Parent Meets, and Alumni Meets
+- Young, Dynamic, Qualified, and Experienced Faculty and Staff
+- Expert Lecture Series and Seminars on Emerging Technologies
 - Internal Quality Assurance Cell (IQAC)
-- Separate Hostels for Boys and Girls
-- 1 Gbps Wi-Fi Enabled Campus
+- Central Library with 18,000+ Reference and Text Books, and E-Journals
+- Personality Development and Career Guidance Cell
+- Fully Equipped Air-Conditioned Auditorium (700+ Seating Capacity)
+- Broadband Internet and Wi-Fi Enabled Campus
+- Separate Hostel Facilities for Boys and Girls
 - First Aid, Canteen, and Transportation Facilities
-- Playground for Outdoor Games & Indoor Games Facilities
+- Playground for Outdoor Sports and Indoor Game Facilities
 
 `,
   highlights: [
-    "800+ Students | 50+ Faculty | 5 Diploma Streams",
-    "Industry-Linked Curriculum | Practical Training Focus",
-    "AutoCAD & Software Labs | Modern Workshops",
-    "AICTE & DTE Approved | MSBTE Affiliated",
-    "ISO 9001:2008 Certified | NAAC Quality Standards",
-    "Central Library with 18,000+ Books | NPTEL Centre",
-    "Separate Hostel & Transport | 25 Acre Green Campus",
+    "AICTE & DTE Recognized | MSBTE Affiliated",
+    "ISO 9001:2008 Certified | NPTEL Nodal Centre",
+    "25 Acre Campus | Green & Wi-Fi Enabled",
+    "1000+ Proud Alumni | Strong Industry Connections",
+    "700+ Capacity AC Auditorium | Digital & Virtual Classrooms",
+    "State-of-the-Art Labs | IIT Mumbai Collaboration",
+    "Separate Hostel | Transport | Career Guidance Cell",
   ],
 };
