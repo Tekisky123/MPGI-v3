@@ -1334,79 +1334,89 @@ I warmly welcome you all and wish you a bright, fulfilling, and successful caree
         vision: `“Computer Engineering Department striving for excellence in providing scientific and technical education, to develop intellectual, innovative and quality computer engineers and prepare them to face challenges of modern society.”`,
         mission: `“To contribute Institute in providing high quality, affordable and accessible computer science education programmers. To benchmark with the best global standards of quality education in computer science. To engage & motivate students through stimulating & collaborative experiences for computer related solutions. To enhance the commitment of faculty, staff, and students to the centrality of diversity, social justice, and democratic citizenship.”`,
       },
-      {
-        id: "it",
-        name: "Information Technology",
-        description:
-          "Future-focused program covering embedded systems, web technologies, and cloud computing.",
-        image: "https://grdedu.in/wp-content/uploads/2023/05/cse.png",
-        courses: [
-          "Diploma in Computer Engineering",
-          "Web Development",
-          "Embedded Systems",
-        ],
-        about: `The Department of Computer Engineering was established in 2009 with an initial intake of 60 students. Its primary objective was to launch a diploma program in Computer Engineering to develop skilled and professional manpower for the IT industry. Additionally, the college aimed to provide educational opportunities to talented youth from the rural areas of Nanded, Maharashtra. In 2023, the department expanded its intake by 30 seats and also introduced a new Information Technology (IT) department. Computer engineers play a vital role in nation-building by developing innovative technologies, strengthening cybersecurity, automating industries, enhancing digital infrastructure, and contributing to sectors such as healthcare, education, defence, and governance.`,
+    {
+  id: "it",
+  name: "Information Technology",
+  description:
+    "Future-focused program covering embedded systems, web technologies, and cloud computing.",
+  image: "https://grdedu.in/wp-content/uploads/2023/05/cse.png",
+  courses: [
+    "Diploma in Information Technology",
+    "Web Development",
+    "Embedded Systems",
+  ],
+  about: `The Department of Information Technology vision to develop technically skilled professionals equipped to meet the evolving demands of the IT industry. The department is committed to offering quality diploma programs aimed at enhancing the employability and practical skills of students, especially from the rural areas of Nanded, Maharashtra.
 
-        facilities: [
-          "Cisco Networking Academy Lab",
-          "Mobile App Development Center",
-          "Cloud Computing Infrastructure",
-          "Annual Hackathon Competition",
-        ],
-        facultyCount: 9,
-        gallery: ["/images/computer-1.jpg", "/images/computer-2.jpg"],
-        labs: [
-          {
-            srNo: 1,
-            labName: "Programming Lab",
-            area: "",
-            incharge: "Mr.Surnar A.B",
-          },
-          {
-            srNo: 2,
-            labName: "Data Base Lab",
-            area: "",
-            incharge: "Mr.Unchadkar V.A",
-          },
-          {
-            srNo: 3,
-            labName: "Hardware & Networking Lab",
-            area: "",
-            incharge: "Mrs. Pawar A.K",
-          },
-          {
-            srNo: 4,
-            labName: "Operating System And Linux Lab",
-            area: "",
-            incharge: "Mrs. Dawkore R.A",
-          },
-          {
-            srNo: 5,
-            labName: "Web Application Lab",
-            area: "",
-            incharge: "Ms. Kapale A.B",
-          },
-          {
-            srNo: 6,
-            labName: "Project Lab",
-            area: "",
-            incharge: "Project Lab",
-          },
-        ],
-        hod: {
-          name: "Mrs MORE M.K.",
-          designation: "Head of Department - Information Technology",
-          message: `It is a privilege to introduce the Department of Information Technology at Matoshri Pratishthan’s Vishwabharti Polytechnic Institute, Nanded.
+Information Technology engineers play a vital role in nation-building by developing innovative digital solutions, enhancing cybersecurity, automating processes, and strengthening IT infrastructure across key sectors such as healthcare, education, defence, and governance.`,
+  facilities: [
+    "Cisco Networking Academy Lab",
+    "Mobile App Development Center",
+    "Cloud Computing Infrastructure",
+    "Annual Hackathon Competition",
+  ],
+  facultyCount: 9,
+  gallery: ["/images/computer-1.jpg", "/images/computer-2.jpg"],
+  labs: [
+    {
+      srNo: 1,
+      labName: "Programming Lab",
+      area: "",
+      incharge: "Mr. Surnar A.B",
+    },
+    {
+      srNo: 2,
+      labName: "Database Lab",
+      area: "",
+      incharge: "Mr. Unchadkar V.A",
+    },
+    {
+      srNo: 3,
+      labName: "Hardware & Networking Lab",
+      area: "",
+      incharge: "Mrs. Pawar A.K",
+    },
+    {
+      srNo: 4,
+      labName: "Operating System & Linux Lab",
+      area: "",
+      incharge: "Mrs. Dawkore R.A",
+    },
+    {
+      srNo: 5,
+      labName: "Web Application Lab",
+      area: "",
+      incharge: "Ms. Kapale A.B",
+    },
+    {
+      srNo: 6,
+      labName: "Project Lab",
+      area: "",
+      incharge: "Project Lab",
+    },
+  ],
+  hod: {
+    name: "Mrs. More M.K.",
+    designation: "Head of Department - Information Technology",
+    message: `It is a privilege to introduce the Department of Information Technology at Matoshri Pratishthan’s Vishwabharti Polytechnic Institute, Nanded.
+
 Our department is dedicated to delivering quality technical education that prepares diploma students to confidently step into the software industry and other technical sectors. We aim to provide industry-sponsored internships and project opportunities to enhance students’ professional readiness and career prospects.
+
 As diploma holders, many of you will go on to become software developers or IT professionals. Therefore, it's essential to build strong technical as well as interpersonal skills. Opportunities will come your way, but success lies in your ability to recognize and seize them. To achieve your goals, set a clear vision and work consistently and sincerely in the right direction.
+
 Our department is here to support and guide you in acquiring not only knowledge but also the ethical values necessary for a long and meaningful professional journey. In today’s fast-changing and competitive environment, staying updated with emerging technologies is crucial. As students of Information Technology, programming should become a regular habit—your thoughts should naturally transform into code written in modern programming languages.
+
 Lastly, remember that professional success is not just about skills, but also about integrity and strong moral values.
+
 I warmly welcome you all and wish you a bright, fulfilling, and successful career ahead.`,
-          profileImage: polyComputerHod,
-        },
-        vision: `“Computer Engineering Department striving for excellence in providing scientific and technical education, to develop intellectual, innovative and quality computer engineers and prepare them to face challenges of modern society.”`,
-        mission: `“To contribute Institute in providing high quality, affordable and accessible computer science education programmers. To benchmark with the best global standards of quality education in computer science. To engage & motivate students through stimulating & collaborative experiences for computer related solutions. To enhance the commitment of faculty, staff, and students to the centrality of diversity, social justice, and democratic citizenship.”`,
-      },
+    profileImage: polyComputerHod, 
+  },
+  vision: `“The Information Technology Department strives for excellence in providing scientific and technical education to develop intellectual, innovative, and quality IT professionals prepared to face the challenges of the modern digital world.”`,
+  mission: `“To provide high-quality, affordable, and accessible IT education programs.
+- To align with global standards in information technology education.
+- To engage and inspire students through collaborative, hands-on learning in IT solutions.
+- To cultivate a culture of diversity, innovation, and social responsibility.”`,
+},
+
       {
         id: "ece",
         name: "Electronics and Telecommunication",

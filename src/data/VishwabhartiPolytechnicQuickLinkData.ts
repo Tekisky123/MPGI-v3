@@ -120,31 +120,14 @@ export const visionMissionData = {
   title: "Vision & Mission",
   content: `
 
-At Vishwabharti Polytechnic Institute, our guiding principles define who we are and what we stand for.
+At Vishwabharti Polytechnic Institute, our mission and vision serve as the foundation for academic excellence and societal contribution.
 
 ## Vision:
-"To emerge as a center of excellence in technical education by nurturing innovation, research, and ethical values to produce globally competent professionals."
+“It will be a national level institute imparting value-based technical education catering to the need of stakeholders, with fully developed professionalism among the students with a feeling of patriotism.”
 
 ## Mission:
-- M1: To provide quality technical education through innovative teaching-learning methods.
-- M2: To foster research culture and industry collaboration.
-- M3: To develop entrepreneurial skills and employability.
-- M4: To promote ethical values and social responsibility.
-- M5: To create state-of-the-art infrastructure for holistic development.
+“To become a top-class role model institute imparting excellent need-based technical education with continuous strive for center of excellence in all programmes under conducive environment beneficial for the society of nation.”
 
-## Core Values:
-- Excellence in Education
-- Innovation and Creativity
-- Integrity and Ethics
-- Social Responsibility
-- Continuous Improvement
-
-## Quality Policy:
-"Committed to provide quality technical education through competent faculty, modern infrastructure, and industry interaction to develop skilled professionals meeting global standards."
-
-Every policy and program aligns with these foundational values.
-
-*— Management, Vishwabharti Polytechnic Institute*
 `,
 };
 
