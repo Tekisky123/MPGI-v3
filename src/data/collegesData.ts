@@ -1633,12 +1633,12 @@ Wishing all our students great success in their academic and professional journe
       },
       {
         id: "mech",
-        name: "Mechanical Engineering",
+        name: "Mechanical and Automation Engineering",
         description:
           "Advanced undergraduate program in robotics, automotive, and thermal systems.",
         image: "https://www.cepathanapuram.ac.in/assets/images/mephoto5.jpg ",
         courses: [
-          "B.Tech in Mechanical Engineering",
+          "B.Tech in Mechanical and Automation Engineering",
           "Robotics",
           "Thermal Systems",
           "Automotive Technology",
@@ -1646,7 +1646,7 @@ Wishing all our students great success in their academic and professional journe
         about: `Department of Mechanical and Automation Engineering
 MPGI, Nanded
 
-The Department of Mechanical and Automation Engineering at Matoshri Pratishthan Group of Institutions (Integrated Campus), Nanded, is dedicated to excellence in teaching, research, and industry engagement. The department offers a robust undergraduate program that integrates the foundational concepts of mechanical engineering with emerging technologies in automation, robotics, and intelligent systems.
+The Department of Mechanical and Automation Engineering at Matoshri Pratishthan Group of Institutions (Integrated Campus), Nanded, is dedicated to excellence in teaching, research, and industry engagement. The department offers a robust undergraduate program that integrates the foundational concepts of Mechanical and Automation Engineering with emerging technologies in automation, robotics, and intelligent systems.
 
 Established with the aim of preparing students for the evolving demands of modern engineering industries, the department is equipped with state-of-the-art laboratories, modern software tools, and advanced equipment. Our curriculum emphasizes practical learning, interdisciplinary knowledge, and industry-relevant skills.
 
