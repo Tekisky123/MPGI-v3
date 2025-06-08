@@ -1,7 +1,7 @@
 import { JSX } from "react";
 import undertakingStudent from "../assets/pdf/UNDERTAKING FOR STUDENT.pdf";
 import undertakingParents from "../assets/pdf/UNDERTAKING FOR PARENTS.pdf";
-import antiRaggingAffidavit from "../assets/pdf/Anti-ragging declaration of students.doc 2020-21.pdf";
+import antiRaggingAffidavit from "../assets/pdf/affidavit format anti ragging.pdf";
 
 // Tab Navigation Items
 export const admissionNavItems = [

@@ -25,7 +25,7 @@ export const navItems = [
   { label: "Vision & Mission", id: "vision-mission" },
   { label: "Principal", id: "principal" },
   { label: "Placements", id: "placements" },
-  { label: "Achievements", id: "achievements" },
+  // { label: "Achievements", id: "achievements" },
   { label: "NIRF", id: "nirf" },
   { label: "Mandatory Disclosure", id: "mandatory-disclosure" },
   { label: "IQAC", id: "iqac" },
@@ -153,32 +153,48 @@ export const homeData = {
   content: `
 
 ## About Us
-Vishwabharati Polytechnic Institute, a part of MPGI, Nanded, was founded in 2008 with a vision to provide skill-based technical education. It offers AICTE-approved diploma programs focused on hands-on training and employability.
+Vishwabharati Polytechnic Institute (MPVPI), a part of Matoshri Pratishthan Group of Institutions (MPGI), Nanded, is a premier polytechnic institute established in 2009. It provides an ideal environment for skill-based technical education, aiming to equip students with "technical wings to the brain."
+
+The institute is a vibrant and innovative center for education focused on producing socially responsive technocrats, entrepreneurs, and professionals. MPVPI is approved by the All India Council for Technical Education (AICTE), New Delhi, and affiliated with the Maharashtra State Board of Technical Education (MSBTE), Mumbai.
+
+With over a thousand proud alumni serving in various sectors globally, MPVPI continues to shape future-ready engineers with practical and value-based education.
 
 ### Key Highlights:
-Approved by: 
-- AICTE New Delhi & Affiliated to MSBTE Mumbai
-Courses Offered: 
-- Diploma in Civil, Mechanical, Electrical, Computer, E&TC
-- Faculty: 50+ qualified instructors
-- Student Strength: 800+
-- Industry Training: Regular industrial visits & internships
+- Approved by AICTE, New Delhi & Directorate of Technical Education (DTE)
+- Affiliated to MSBTE, Mumbai
+- NAAC & ISO 9001:2008 Certified
+- Student Strength: 800+ | Faculty: 50+ Qualified & Dynamic Members
+- Courses Offered: Diploma in Civil, Mechanical, Electrical, Computer, and E&TC
+- Regular Industrial Visits, Internships & Expert Seminars
+- Active Training & Placement Cell and Career Guidance Support
+- MoUs with Industries & Academic Institutions
+- Strong Alumni Network
 
 ## Infrastructure
-Our polytechnic campus includes:
-- Department-wise Workshops & Labs
+MPVPI boasts a clean and green 25-acre campus with independent buildings and modern facilities:
+
+- Department-wise Workshops & State-of-the-Art Labs
 - Drawing & AutoCAD Labs
-- Central Computer Lab
-- Library with 10,000+ volumes
-- Hostel & Bus Facility
-- 1 Gbps Wi-Fi Campus
+- Digital Classrooms and Virtual Labs (in coordination with IIT Mumbai)
+- Central Computer Lab & Advanced Language Lab
+- Central Library: 18,000+ books, reference material & e-journals
+- NPTEL Nodal Centre
+- AC Auditorium with 700+ seating capacity
+- Personality Development & Career Guidance Cell
+- Internal Quality Assurance Cell (IQAC)
+- Separate Hostels for Boys and Girls
+- 1 Gbps Wi-Fi Enabled Campus
+- First Aid, Canteen, and Transportation Facilities
+- Playground for Outdoor Games & Indoor Games Facilities
 
 `,
   highlights: [
     "800+ Students | 50+ Faculty | 5 Diploma Streams",
     "Industry-Linked Curriculum | Practical Training Focus",
     "AutoCAD & Software Labs | Modern Workshops",
-    "AICTE Approved | MSBTE Curriculum",
-    "Library | Hostel | Wi-Fi Campus",
+    "AICTE & DTE Approved | MSBTE Affiliated",
+    "ISO 9001:2008 Certified | NAAC Quality Standards",
+    "Central Library with 18,000+ Books | NPTEL Centre",
+    "Separate Hostel & Transport | 25 Acre Green Campus",
   ],
 };

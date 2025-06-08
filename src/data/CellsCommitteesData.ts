@@ -173,12 +173,12 @@ export const CELLS_COMMITTEES_DATA: CollegeCommittees[] = [
                 title: "Faculty Grievance Redressal Cell",
                 description: "The AICTE Regulation F No 1-1-103/AICTE/GRC/REGULATION/2021 DATED MARCH 22,2021. AICTE regulates the formation if Grievance Redressal committee within institutions to handle such concern.",
                 members: [
-                    // { srNo: 1, name: "Dr.L M Waghmare", designation: "Principal", position: "Chairperson" },
-                    // { srNo: 2, name: "Dr. Syeda Rukhsana", designation: "HOD FE", position: "Member Secretary" },
-                    // { srNo: 3, name: "Mr Hashmi S.A.", designation: "HOD EE Engg", position: "Member" },
-                    // { srNo: 4, name: "Sayyad Shafiq", designation: "HOD Mech Engg", position: "Member" },
-                    // { srNo: 5, name: "Mr. P.J. Kinikar", designation: "Administrative Officer", position: "Member" },
-                    // { srNo: 6, name: "Adv. Muradi S.Y.", designation: "Advocate", position: "Member" }
+                    { srNo: 1, name: "Dr.L M Waghmare", designation: "Principal", position: "Chairperson" },
+                    { srNo: 2, name: "Dr. Syeda Rukhsana", designation: "HOD FE", position: "Member Secretary" },
+                    { srNo: 3, name: "Mr Hashmi S.A.", designation: "HOD EE Engg", position: "Member" },
+                    { srNo: 4, name: "Sayyad Shafiq", designation: "HOD Mech Engg", position: "Member" },
+                    { srNo: 5, name: "Mr. P.J. Kinikar", designation: "Administrative Officer", position: "Member" },
+                    { srNo: 6, name: "Adv. Muradi S.Y.", designation: "Advocate", position: "Member" }
                 ]
             },
             {
@@ -186,13 +186,13 @@ export const CELLS_COMMITTEES_DATA: CollegeCommittees[] = [
                 title: "Student Counselling Cell",
                 description: "AICTE (All India Council for Technical Education) mandates that AICTE-approved institutions establish a Student Counsellor Committee, which aims to provide counselling and support to students in their academic, personal, and career development.",
                 members: [
-                    // { srNo: 1, name: "Dr L M Waghmare", designation: "Principal", position: "Chair person", mobileNumber: "9822663185" },
-                    // { srNo: 2, name: "B A Khansole", designation: "Assist. Prof.& head in CSE", position: "Member", mobileNumber: "9260459865", email: "bakhansole@gmail.com" },
-                    // { srNo: 3, name: "Syed Asad Hashmi", designation: "Assist. Prof.& head in EEE", position: "Member", mobileNumber: "8605786100", email: "sasadhashmi@gmail.com" },
-                    // { srNo: 4, name: "Sayyad Shafik R", designation: "Assist. Prof.& head in MECH", position: "Member", mobileNumber: "7798684777", email: "sayyashafiq@gmail.com" },
-                    // { srNo: 5, name: "Dr.syeda Rukhsana Osman Ali", designation: "Assist. Prof.& head in FE", position: "Member", mobileNumber: "9371062777", email: "15rukhsana@gmail.com" },
-                    // { srNo: 6, name: "Dr. Abdullah M K", designation: "Assist. Prof.& head in E&TC", position: "Member", mobileNumber: "9518903766", email: "abdulectc@gmail.com" },
-                    // { srNo: 7, name: "P D Pople", designation: "Assist. Prof.& head in Civil", position: "Member", mobileNumber: "8208618714", email: "pdpople@gmail.com" }
+                    { srNo: 1, name: "Dr L M Waghmare", designation: "Principal", position: "Chair person", mobileNumber: "9822663185" },
+                    { srNo: 2, name: "B A Khansole", designation: "Assist. Prof.& head in CSE", position: "Member", mobileNumber: "9260459865", email: "bakhansole@gmail.com" },
+                    { srNo: 3, name: "Syed Asad Hashmi", designation: "Assist. Prof.& head in EEE", position: "Member", mobileNumber: "8605786100", email: "sasadhashmi@gmail.com" },
+                    { srNo: 4, name: "Sayyad Shafik R", designation: "Assist. Prof.& head in MECH", position: "Member", mobileNumber: "7798684777", email: "sayyashafiq@gmail.com" },
+                    { srNo: 5, name: "Dr.syeda Rukhsana Osman Ali", designation: "Assist. Prof.& head in FE", position: "Member", mobileNumber: "9371062777", email: "15rukhsana@gmail.com" },
+                    { srNo: 6, name: "Dr. Abdullah M K", designation: "Assist. Prof.& head in E&TC", position: "Member", mobileNumber: "9518903766", email: "abdulectc@gmail.com" },
+                    { srNo: 7, name: "P D Pople", designation: "Assist. Prof.& head in Civil", position: "Member", mobileNumber: "8208618714", email: "pdpople@gmail.com" }
                 ],
                 objectives: [
                     "To monitor the student's regularity & discipline.",
@@ -215,14 +215,14 @@ export const CELLS_COMMITTEES_DATA: CollegeCommittees[] = [
                 title: "Industry Liaison Committee",
                 description: "This committee will serve as a bridge between academic institutions and the industrial sector.",
                 members: [
-                    // { srNo: 1, name: "Prakash Pople", designation: "TPO", position: "Committee Head" },
-                    // { srNo: 2, name: "Mr. Hashmi S.A.", designation: "HOD EE", position: "Member" },
-                    // { srNo: 3, name: "Mr. Millar Khandare", designation: "CEO 3Idea Company", position: "Member" },
-                    // { srNo: 4, name: "Mr. Khansole B.A.", designation: "CSE & T&P Coordinator", position: "Member" },
-                    // { srNo: 5, name: "Mr. Syed Shafiq", designation: "Mech T&P Coordinator", position: "Member" },
-                    // { srNo: 6, name: "Mr. Lakhan Rathod", designation: "Civil T&P Coordinator", position: "Member" },
-                    // { srNo: 7, name: "Dr. Abdullah kalim", designation: "EE T&P Coordinator", position: "Member" },
-                    // { srNo: 8, name: "Mr. P.J. Kinikar", designation: "A.O.", position: "Member" }
+                    { srNo: 1, name: "Prakash Pople", designation: "TPO", position: "Committee Head" },
+                    { srNo: 2, name: "Mr. Hashmi S.A.", designation: "HOD EE", position: "Member" },
+                    { srNo: 3, name: "Mr. Millar Khandare", designation: "CEO 3Idea Company", position: "Member" },
+                    { srNo: 4, name: "Mr. Khansole B.A.", designation: "CSE & T&P Coordinator", position: "Member" },
+                    { srNo: 5, name: "Mr. Syed Shafiq", designation: "Mech T&P Coordinator", position: "Member" },
+                    { srNo: 6, name: "Mr. Lakhan Rathod", designation: "Civil T&P Coordinator", position: "Member" },
+                    { srNo: 7, name: "Dr. Abdullah kalim", designation: "EE T&P Coordinator", position: "Member" },
+                    { srNo: 8, name: "Mr. P.J. Kinikar", designation: "A.O.", position: "Member" }
                 ]
             },
             {
@@ -230,18 +230,18 @@ export const CELLS_COMMITTEES_DATA: CollegeCommittees[] = [
                 title: "Library Committee",
                 description: "The library committee in a college advises on library matters, helps with policy-making, and acts as a communication channel between the library and its users, including faculty, staff, and students.",
                 members: [
-                    // { srNo: 1, name: "Dr L M Waghmare", designation: "Principal", position: "chairman" },
-                    // { srNo: 2, name: "Mr Dilip Tate", designation: "Librarian", position: "SECRETARY" },
-                    // { srNo: 3, name: "Dr. Syeda Rukhsana", designation: "Assistant Professor", position: "Member" },
-                    // { srNo: 4, name: "Dr. Abdulla A.", designation: "Assistant Professor", position: "Member" },
-                    // { srNo: 5, name: "Prof. B A Khansole", designation: "Assistant Professor", position: "Member" },
-                    // { srNo: 6, name: "Prof. L V Rathod", designation: "Assistant Professor", position: "Member" },
-                    // { srNo: 7, name: "Prof. S. Shinde", designation: "Assistant Professor", position: "Member" },
-                    // { srNo: 8, name: "Prof. Sayyad Shfiq", designation: "Assistant Professor", position: "Member" },
-                    // { srNo: 9, name: "Prof. Asad Hashmi", designation: "Assistant Professor", position: "Member" },
-                    // { srNo: 10, name: "Mr. Pravin Kinikar", designation: "External Expert", position: "EXTERNAL EXPERT" },
-                    // { srNo: 11, name: "Vishal V.Rathod", designation: "Student (2023-24 Batch)", position: "Student Member" },
-                    // { srNo: 12, name: "Deshmukh Pranavi Panditrao", designation: "Student (2024-25 Batch)", position: "Student Member" }
+                    { srNo: 1, name: "Dr L M Waghmare", designation: "Principal", position: "chairman" },
+                    { srNo: 2, name: "Mr Dilip Tate", designation: "Librarian", position: "SECRETARY" },
+                    { srNo: 3, name: "Dr. Syeda Rukhsana", designation: "Assistant Professor", position: "Member" },
+                    { srNo: 4, name: "Dr. Abdulla A.", designation: "Assistant Professor", position: "Member" },
+                    { srNo: 5, name: "Prof. B A Khansole", designation: "Assistant Professor", position: "Member" },
+                    { srNo: 6, name: "Prof. L V Rathod", designation: "Assistant Professor", position: "Member" },
+                    { srNo: 7, name: "Prof. S. Shinde", designation: "Assistant Professor", position: "Member" },
+                    { srNo: 8, name: "Prof. Sayyad Shfiq", designation: "Assistant Professor", position: "Member" },
+                    { srNo: 9, name: "Prof. Asad Hashmi", designation: "Assistant Professor", position: "Member" },
+                    { srNo: 10, name: "Mr. Pravin Kinikar", designation: "External Expert", position: "EXTERNAL EXPERT" },
+                    { srNo: 11, name: "Vishal V.Rathod", designation: "Student (2023-24 Batch)", position: "Student Member" },
+                    { srNo: 12, name: "Deshmukh Pranavi Panditrao", designation: "Student (2024-25 Batch)", position: "Student Member" }
                 ],
                 roles: [
                     "Facilitating Communicating with college community & obtaining feedback in library collection, scorners, infrastructure etc.",
@@ -259,13 +259,13 @@ export const CELLS_COMMITTEES_DATA: CollegeCommittees[] = [
                 title: "Remedial Coaching Cell",
                 description: "A Remedial coaching cell is an initiative within educational institutions aimed at supporting students who need additional assistance to meet academic standards. The cell will focus on enhancing students' understanding of subjects, improving their skills, and boosting overall academic performance.",
                 members: [
-                    // { srNo: 1, name: "Dr.L M Waghmare", designation: "Principal", position: "Chairperson" },
-                    // { srNo: 2, name: "Dr. Syeda Rukhsana", designation: "HOD FE", position: "Member" },
-                    // { srNo: 3, name: "Mr Hashmi S.A.", designation: "HOD EE Engg", position: "Member" },
-                    // { srNo: 4, name: "Sayyad Shafiq", designation: "HOD Mech Engg", position: "Member" },
-                    // { srNo: 5, name: "Dr. Abdulla Kalim", designation: "HOD ETC", position: "Member" },
-                    // { srNo: 6, name: "Mr.Lakhan Rathor", designation: "Assist. Prof. Civil", position: "Member" },
-                    // { srNo: 7, name: "Mr.B.A. Khansole", designation: "HOD CSE", position: "Member" }
+                    { srNo: 1, name: "Dr.L M Waghmare", designation: "Principal", position: "Chairperson" },
+                    { srNo: 2, name: "Dr. Syeda Rukhsana", designation: "HOD FE", position: "Member" },
+                    { srNo: 3, name: "Mr Hashmi S.A.", designation: "HOD EE Engg", position: "Member" },
+                    { srNo: 4, name: "Sayyad Shafiq", designation: "HOD Mech Engg", position: "Member" },
+                    { srNo: 5, name: "Dr. Abdulla Kalim", designation: "HOD ETC", position: "Member" },
+                    { srNo: 6, name: "Mr.Lakhan Rathor", designation: "Assist. Prof. Civil", position: "Member" },
+                    { srNo: 7, name: "Mr.B.A. Khansole", designation: "HOD CSE", position: "Member" }
                 ]
             }
         ],
@@ -279,22 +279,22 @@ export const CELLS_COMMITTEES_DATA: CollegeCommittees[] = [
                 title: "Anti Ragging Committee",
                 description: "With reference to Maharashtra Prohibition of Ragging Act 1999, UGC Regulation on Curbing Menace of Ragging in Higher Educational Institutions 2009 and AICTE notification no. F.No.37-3/Legal/AICTE/2009 dated 1st July 2009, Anti Ragging Committee has been constituted in the institute to prohibit, prevent and eliminate the scourge of ragging.",
                 members: [
-                    // { srNo: 1, name: "Dr L. M Waghmare", designation: "Principal MPGI", position: "CHAIRMAN", mobileNumber: "9822663185" },
-                    // { srNo: 2, name: "Prof. Prakash Pople", designation: "T.P. O, MPGI", position: "Member" },
-                    // { srNo: 3, name: "Dr Syeda Rukhsana", designation: "Assistant Professor", position: "Member Secretary", mobileNumber: "9371062777" },
-                    // { srNo: 4, name: "Mr. Syed Asad Hashmi", designation: "Assistant Professor", position: "Member", mobileNumber: "8605786100" },
-                    // { srNo: 5, name: "Syed Shafeek", designation: "Assistant Professor", position: "Member" },
-                    // { srNo: 6, name: "Lakhan Rathod", designation: "Assistant Professor", position: "Member", mobileNumber: "7387685871" },
-                    // { srNo: 7, name: "Dr Abdullah M. K", designation: "Assistant Professor", position: "Member", mobileNumber: "9518903766" },
-                    // { srNo: 8, name: "Mrs. Manisha Telange Tahade", designation: "Assistant Professor", position: "Member", mobileNumber: "8390699111" },
-                    // { srNo: 9, name: "Mrs. S B. More", designation: "Wardon (girls' hostel)", position: "Member", mobileNumber: "9021173485" },
-                    // { srNo: 10, name: "Marwale Mahesh Marotrao", designation: "Student, Batch 2024-25", position: "Student representative" },
-                    // { srNo: 11, name: "Rahudkar Pranali", designation: "Student, Batch 2024-25", position: "Girls' representative" },
-                    // { srNo: 12, name: "Shaikh Hasib Masihuddin", designation: "Student, Batch 2024-25", position: "Student representative" },
-                    // { srNo: 13, name: "Shubham Ganesh Myakal", designation: "Student, Batch 2023-24", position: "Student representative" },
-                    // { srNo: 14, name: "Samrat Kajbe", designation: "Student, Batch 2023-24", position: "Student representative" },
-                    // { srNo: 15, name: "Darshan Somala Rathod", designation: "Parent", position: "Parent representative" },
-                    // { srNo: 16, name: "Tanveer Ahmed", designation: "Parent", position: "Parent representative" }
+                    { srNo: 1, name: "Dr L. M Waghmare", designation: "Principal MPGI", position: "CHAIRMAN", mobileNumber: "9822663185" },
+                    { srNo: 2, name: "Prof. Prakash Pople", designation: "T.P. O, MPGI", position: "Member" },
+                    { srNo: 3, name: "Dr Syeda Rukhsana", designation: "Assistant Professor", position: "Member Secretary", mobileNumber: "9371062777" },
+                    { srNo: 4, name: "Mr. Syed Asad Hashmi", designation: "Assistant Professor", position: "Member", mobileNumber: "8605786100" },
+                    { srNo: 5, name: "Syed Shafeek", designation: "Assistant Professor", position: "Member" },
+                    { srNo: 6, name: "Lakhan Rathod", designation: "Assistant Professor", position: "Member", mobileNumber: "7387685871" },
+                    { srNo: 7, name: "Dr Abdullah M. K", designation: "Assistant Professor", position: "Member", mobileNumber: "9518903766" },
+                    { srNo: 8, name: "Mrs. Manisha Telange Tahade", designation: "Assistant Professor", position: "Member", mobileNumber: "8390699111" },
+                    { srNo: 9, name: "Mrs. S B. More", designation: "Wardon (girls' hostel)", position: "Member", mobileNumber: "9021173485" },
+                    { srNo: 10, name: "Marwale Mahesh Marotrao", designation: "Student, Batch 2024-25", position: "Student representative" },
+                    { srNo: 11, name: "Rahudkar Pranali", designation: "Student, Batch 2024-25", position: "Girls' representative" },
+                    { srNo: 12, name: "Shaikh Hasib Masihuddin", designation: "Student, Batch 2024-25", position: "Student representative" },
+                    { srNo: 13, name: "Shubham Ganesh Myakal", designation: "Student, Batch 2023-24", position: "Student representative" },
+                    { srNo: 14, name: "Samrat Kajbe", designation: "Student, Batch 2023-24", position: "Student representative" },
+                    { srNo: 15, name: "Darshan Somala Rathod", designation: "Parent", position: "Parent representative" },
+                    { srNo: 16, name: "Tanveer Ahmed", designation: "Parent", position: "Parent representative" }
                 ],
                 contactPerson: {
                     name: "Dr Syeda Rukhsana",
@@ -307,12 +307,12 @@ export const CELLS_COMMITTEES_DATA: CollegeCommittees[] = [
                 title: "Anti-Ragging Squad",
                 description: "With reference to Maharashtra Prohibition of Ragging Act 1999, UGC Regulation on Curbing Menace of Ragging in Higher Educational Institution 2009 and AICTE notification dated 1st July 2009, an anti-ragging squad has been constituted.",
                 members: [
-                    // { srNo: 1, name: "Dr L. M Waghmare", designation: "Principal MPGI", position: "chair", mobileNumber: "9822663185" },
-                    // { srNo: 2, name: "Dr Syeda Rukhsana", designation: "Assistant Professor", position: "Member", mobileNumber: "9371062777" },
-                    // { srNo: 3, name: "Mr. Syed Asad Hashmi", designation: "Assistant Professor", position: "Member", mobileNumber: "8605786100" },
-                    // { srNo: 4, name: "Prof. Lakhan Rathod", designation: "Assistant Professor", position: "Member", mobileNumber: "7387685871" },
-                    // { srNo: 5, name: "Pratap Pawar", designation: "Member", position: "Member", mobileNumber: "7972971022" },
-                    // { srNo: 6, name: "Chaya Jadhav", designation: "Member", position: "Member", mobileNumber: "9822666203" }
+                    { srNo: 1, name: "Dr L. M Waghmare", designation: "Principal MPGI", position: "chair", mobileNumber: "9822663185" },
+                    { srNo: 2, name: "Dr Syeda Rukhsana", designation: "Assistant Professor", position: "Member", mobileNumber: "9371062777" },
+                    { srNo: 3, name: "Mr. Syed Asad Hashmi", designation: "Assistant Professor", position: "Member", mobileNumber: "8605786100" },
+                    { srNo: 4, name: "Prof. Lakhan Rathod", designation: "Assistant Professor", position: "Member", mobileNumber: "7387685871" },
+                    { srNo: 5, name: "Pratap Pawar", designation: "Member", position: "Member", mobileNumber: "7972971022" },
+                    { srNo: 6, name: "Chaya Jadhav", designation: "Member", position: "Member", mobileNumber: "9822666203" }
                 ]
             },
             {
@@ -320,13 +320,13 @@ export const CELLS_COMMITTEES_DATA: CollegeCommittees[] = [
                 title: "Women Empowerment Committee",
                 description: "The Internal committee has been reconstituted to deal with the Women (Girl student/faculty/staff) empowerment and the complaints of Sexual/Mental harassment in the MPGI School of Engineering Nanded.",
                 members: [
-                    // { srNo: 1, name: "Dr. L. M. Waghmare", designation: "Principal of MPGI SOEN", position: "Chair", mobileNumber: "9822663185", address: "MPGI, School of Engineering Nanded." },
-                    // { srNo: 2, name: "Dr. Syeda Rukhsana", designation: "HOD of FY", position: "Member/Secretary", mobileNumber: "9371062777", address: "MPGI, First year department School of Engineering Nanded." },
-                    // { srNo: 3, name: "Ms. Manisha Telange -Tahade", designation: "Assistant Professor", position: "Member/Secretary", mobileNumber: "8390699111", address: "MPGI, School of Electrical Engineering Nanded." },
-                    // { srNo: 4, name: "Ms. Jyoti Sarode", designation: "Assistant Professor", position: "Member", mobileNumber: "9011033624", address: "MPGI, CSE department School of Engineering Nanded." },
-                    // { srNo: 5, name: "Mrs. More S. B.", designation: "Hostel Warden", position: "Non-teaching Member", mobileNumber: "9021173485", address: "MPGI, Girls Hostel Nanded." },
-                    // { srNo: 6, name: "Ms. Apeksha Moterao", designation: "B.tech EE", position: "Student Member", mobileNumber: "7798090930", address: "MPGI, Final year Electrical,School of Engineering Nanded." },
-                    // { srNo: 7, name: "Adv. Muradi S. Y.", designation: "Advocate", position: "Legal Advisor", address: "Nanded" }
+                    { srNo: 1, name: "Dr. L. M. Waghmare", designation: "Principal of MPGI SOEN", position: "Chair", mobileNumber: "9822663185", address: "MPGI, School of Engineering Nanded." },
+                    { srNo: 2, name: "Dr. Syeda Rukhsana", designation: "HOD of FY", position: "Member/Secretary", mobileNumber: "9371062777", address: "MPGI, First year department School of Engineering Nanded." },
+                    { srNo: 3, name: "Ms. Manisha Telange -Tahade", designation: "Assistant Professor", position: "Member/Secretary", mobileNumber: "8390699111", address: "MPGI, School of Electrical Engineering Nanded." },
+                    { srNo: 4, name: "Ms. Jyoti Sarode", designation: "Assistant Professor", position: "Member", mobileNumber: "9011033624", address: "MPGI, CSE department School of Engineering Nanded." },
+                    { srNo: 5, name: "Mrs. More S. B.", designation: "Hostel Warden", position: "Non-teaching Member", mobileNumber: "9021173485", address: "MPGI, Girls Hostel Nanded." },
+                    { srNo: 6, name: "Ms. Apeksha Moterao", designation: "B.tech EE", position: "Student Member", mobileNumber: "7798090930", address: "MPGI, Final year Electrical,School of Engineering Nanded." },
+                    { srNo: 7, name: "Adv. Muradi S. Y.", designation: "Advocate", position: "Legal Advisor", address: "Nanded" }
                 ],
                 contactPerson: {
                     name: "Ms. Manisha Telange -Tahade",
@@ -339,17 +339,17 @@ export const CELLS_COMMITTEES_DATA: CollegeCommittees[] = [
                 title: "Governing Body",
                 description: "The governing body of the institution responsible for overall administration and policy making.",
                 members: [
-                    // { srNo: 1, name: "Dr. M.B.Kokare", designation: "Director, SGGSIE&T, Nanded", position: "Chairman" },
-                    // { srNo: 2, name: "Mr. V. Venkat Chari", designation: "Nominee of Trust", position: "Member" },
-                    // { srNo: 3, name: "Mr. Arvind Patil", designation: "Nominee of Trust", position: "Member" },
-                    // { srNo: 4, name: "Mr.Kamaji Pawar", designation: "Nominee of Trust", position: "Member" },
-                    // { srNo: 5, name: "Dr. Umesh Nagdeve", designation: "Director Technical Education Regional office Aurangabad, (M.S)", position: "Member" },
-                    // { srNo: 6, name: "Dr.Kiwlekar.U.", designation: "Registrar DBATU", position: "Member" },
-                    // { srNo: 7, name: "Dr. L.M.Waghmare", designation: "Principal MPGISOEN", position: "Member Secretary" },
-                    // { srNo: 8, name: "Dr. Qazi F.Z.", designation: "Dean IQAC, Nominee by trust", position: "Member" },
-                    // { srNo: 9, name: "Asst. Professor Mr. SADANAND SHINDE", designation: "Nominee of trust from Institute", position: "Member" },
-                    // { srNo: 10, name: "Mr. Harshad Shah", designation: "Industrialist from the region nominated by trust", position: "Member" },
-                    // { srNo: 11, name: "Dr. Gopal Rao Kadam", designation: "Educationist. Ex. Principal LBS college, Dharmabad", position: "Member" }
+                    { srNo: 1, name: "Dr. M.B.Kokare", designation: "Director, SGGSIE&T, Nanded", position: "Chairman" },
+                    { srNo: 2, name: "Mr. V. Venkat Chari", designation: "Nominee of Trust", position: "Member" },
+                    { srNo: 3, name: "Mr. Arvind Patil", designation: "Nominee of Trust", position: "Member" },
+                    { srNo: 4, name: "Mr.Kamaji Pawar", designation: "Nominee of Trust", position: "Member" },
+                    { srNo: 5, name: "Dr. Umesh Nagdeve", designation: "Director Technical Education Regional office Aurangabad, (M.S)", position: "Member" },
+                    { srNo: 6, name: "Dr.Kiwlekar.U.", designation: "Registrar DBATU", position: "Member" },
+                    { srNo: 7, name: "Dr. L.M.Waghmare", designation: "Principal MPGISOEN", position: "Member Secretary" },
+                    { srNo: 8, name: "Dr. Qazi F.Z.", designation: "Dean IQAC, Nominee by trust", position: "Member" },
+                    { srNo: 9, name: "Asst. Professor Mr. SADANAND SHINDE", designation: "Nominee of trust from Institute", position: "Member" },
+                    { srNo: 10, name: "Mr. Harshad Shah", designation: "Industrialist from the region nominated by trust", position: "Member" },
+                    { srNo: 11, name: "Dr. Gopal Rao Kadam", designation: "Educationist. Ex. Principal LBS college, Dharmabad", position: "Member" }
                 ]
             },
             {
@@ -357,12 +357,12 @@ export const CELLS_COMMITTEES_DATA: CollegeCommittees[] = [
                 title: "Faculty Grievance Redressal Cell",
                 description: "The AICTE Regulation F No 1-1-103/AICTE/GRC/REGULATION/2021 DATED MARCH 22,2021. AICTE regulates the formation if Grievance Redressal committee within institutions to handle such concern.",
                 members: [
-                    // { srNo: 1, name: "Dr.L M Waghmare", designation: "Principal", position: "Chairperson" },
-                    // { srNo: 2, name: "Dr. Syeda Rukhsana", designation: "HOD FE", position: "Member Secretary" },
-                    // { srNo: 3, name: "Mr Hashmi S.A.", designation: "HOD EE Engg", position: "Member" },
-                    // { srNo: 4, name: "Sayyad Shafiq", designation: "HOD Mech Engg", position: "Member" },
-                    // { srNo: 5, name: "Mr. P.J. Kinikar", designation: "Administrative Officer", position: "Member" },
-                    // { srNo: 6, name: "Adv. Muradi S.Y.", designation: "Advocate", position: "Member" }
+                    { srNo: 1, name: "Dr.L M Waghmare", designation: "Principal", position: "Chairperson" },
+                    { srNo: 2, name: "Dr. Syeda Rukhsana", designation: "HOD FE", position: "Member Secretary" },
+                    { srNo: 3, name: "Mr Hashmi S.A.", designation: "HOD EE Engg", position: "Member" },
+                    { srNo: 4, name: "Sayyad Shafiq", designation: "HOD Mech Engg", position: "Member" },
+                    { srNo: 5, name: "Mr. P.J. Kinikar", designation: "Administrative Officer", position: "Member" },
+                    { srNo: 6, name: "Adv. Muradi S.Y.", designation: "Advocate", position: "Member" }
                 ]
             },
             {
@@ -370,13 +370,13 @@ export const CELLS_COMMITTEES_DATA: CollegeCommittees[] = [
                 title: "Student Counselling Cell",
                 description: "AICTE (All India Council for Technical Education) mandates that AICTE-approved institutions establish a Student Counsellor Committee, which aims to provide counselling and support to students in their academic, personal, and career development.",
                 members: [
-                    // { srNo: 1, name: "Dr L M Waghmare", designation: "Principal", position: "Chair person", mobileNumber: "9822663185" },
-                    // { srNo: 2, name: "B A Khansole", designation: "Assist. Prof.& head in CSE", position: "Member", mobileNumber: "9260459865", email: "bakhansole@gmail.com" },
-                    // { srNo: 3, name: "Syed Asad Hashmi", designation: "Assist. Prof.& head in EEE", position: "Member", mobileNumber: "8605786100", email: "sasadhashmi@gmail.com" },
-                    // { srNo: 4, name: "Sayyad Shafik R", designation: "Assist. Prof.& head in MECH", position: "Member", mobileNumber: "7798684777", email: "sayyashafiq@gmail.com" },
-                    // { srNo: 5, name: "Dr.syeda Rukhsana Osman Ali", designation: "Assist. Prof.& head in FE", position: "Member", mobileNumber: "9371062777", email: "15rukhsana@gmail.com" },
-                    // { srNo: 6, name: "Dr. Abdullah M K", designation: "Assist. Prof.& head in E&TC", position: "Member", mobileNumber: "9518903766", email: "abdulectc@gmail.com" },
-                    // { srNo: 7, name: "P D Pople", designation: "Assist. Prof.& head in Civil", position: "Member", mobileNumber: "8208618714", email: "pdpople@gmail.com" }
+                    { srNo: 1, name: "Dr L M Waghmare", designation: "Principal", position: "Chair person", mobileNumber: "9822663185" },
+                    { srNo: 2, name: "B A Khansole", designation: "Assist. Prof.& head in CSE", position: "Member", mobileNumber: "9260459865", email: "bakhansole@gmail.com" },
+                    { srNo: 3, name: "Syed Asad Hashmi", designation: "Assist. Prof.& head in EEE", position: "Member", mobileNumber: "8605786100", email: "sasadhashmi@gmail.com" },
+                    { srNo: 4, name: "Sayyad Shafik R", designation: "Assist. Prof.& head in MECH", position: "Member", mobileNumber: "7798684777", email: "sayyashafiq@gmail.com" },
+                    { srNo: 5, name: "Dr.syeda Rukhsana Osman Ali", designation: "Assist. Prof.& head in FE", position: "Member", mobileNumber: "9371062777", email: "15rukhsana@gmail.com" },
+                    { srNo: 6, name: "Dr. Abdullah M K", designation: "Assist. Prof.& head in E&TC", position: "Member", mobileNumber: "9518903766", email: "abdulectc@gmail.com" },
+                    { srNo: 7, name: "P D Pople", designation: "Assist. Prof.& head in Civil", position: "Member", mobileNumber: "8208618714", email: "pdpople@gmail.com" }
                 ],
                 objectives: [
                     "To monitor the student's regularity & discipline.",
@@ -399,14 +399,14 @@ export const CELLS_COMMITTEES_DATA: CollegeCommittees[] = [
                 title: "Industry Liaison Committee",
                 description: "This committee will serve as a bridge between academic institutions and the industrial sector.",
                 members: [
-                    // { srNo: 1, name: "Prakash Pople", designation: "TPO", position: "Committee Head" },
-                    // { srNo: 2, name: "Mr. Hashmi S.A.", designation: "HOD EE", position: "Member" },
-                    // { srNo: 3, name: "Mr. Millar Khandare", designation: "CEO 3Idea Company", position: "Member" },
-                    // { srNo: 4, name: "Mr. Khansole B.A.", designation: "CSE & T&P Coordinator", position: "Member" },
-                    // { srNo: 5, name: "Mr. Syed Shafiq", designation: "Mech T&P Coordinator", position: "Member" },
-                    // { srNo: 6, name: "Mr. Lakhan Rathod", designation: "Civil T&P Coordinator", position: "Member" },
-                    // { srNo: 7, name: "Dr. Abdullah kalim", designation: "EE T&P Coordinator", position: "Member" },
-                    // { srNo: 8, name: "Mr. P.J. Kinikar", designation: "A.O.", position: "Member" }
+                    { srNo: 1, name: "Prakash Pople", designation: "TPO", position: "Committee Head" },
+                    { srNo: 2, name: "Mr. Hashmi S.A.", designation: "HOD EE", position: "Member" },
+                    { srNo: 3, name: "Mr. Millar Khandare", designation: "CEO 3Idea Company", position: "Member" },
+                    { srNo: 4, name: "Mr. Khansole B.A.", designation: "CSE & T&P Coordinator", position: "Member" },
+                    { srNo: 5, name: "Mr. Syed Shafiq", designation: "Mech T&P Coordinator", position: "Member" },
+                    { srNo: 6, name: "Mr. Lakhan Rathod", designation: "Civil T&P Coordinator", position: "Member" },
+                    { srNo: 7, name: "Dr. Abdullah kalim", designation: "EE T&P Coordinator", position: "Member" },
+                    { srNo: 8, name: "Mr. P.J. Kinikar", designation: "A.O.", position: "Member" }
                 ]
             },
             {
@@ -414,18 +414,18 @@ export const CELLS_COMMITTEES_DATA: CollegeCommittees[] = [
                 title: "Library Committee",
                 description: "The library committee in a college advises on library matters, helps with policy-making, and acts as a communication channel between the library and its users, including faculty, staff, and students.",
                 members: [
-                    // { srNo: 1, name: "Dr L M Waghmare", designation: "Principal", position: "chairman" },
-                    // { srNo: 2, name: "Mr Dilip Tate", designation: "Librarian", position: "SECRETARY" },
-                    // { srNo: 3, name: "Dr. Syeda Rukhsana", designation: "Assistant Professor", position: "Member" },
-                    // { srNo: 4, name: "Dr. Abdulla A.", designation: "Assistant Professor", position: "Member" },
-                    // { srNo: 5, name: "Prof. B A Khansole", designation: "Assistant Professor", position: "Member" },
-                    // { srNo: 6, name: "Prof. L V Rathod", designation: "Assistant Professor", position: "Member" },
-                    // { srNo: 7, name: "Prof. S. Shinde", designation: "Assistant Professor", position: "Member" },
-                    // { srNo: 8, name: "Prof. Sayyad Shfiq", designation: "Assistant Professor", position: "Member" },
-                    // { srNo: 9, name: "Prof. Asad Hashmi", designation: "Assistant Professor", position: "Member" },
-                    // { srNo: 10, name: "Mr. Pravin Kinikar", designation: "External Expert", position: "EXTERNAL EXPERT" },
-                    // { srNo: 11, name: "Vishal V.Rathod", designation: "Student (2023-24 Batch)", position: "Student Member" },
-                    // { srNo: 12, name: "Deshmukh Pranavi Panditrao", designation: "Student (2024-25 Batch)", position: "Student Member" }
+                    { srNo: 1, name: "Dr L M Waghmare", designation: "Principal", position: "chairman" },
+                    { srNo: 2, name: "Mr Dilip Tate", designation: "Librarian", position: "SECRETARY" },
+                    { srNo: 3, name: "Dr. Syeda Rukhsana", designation: "Assistant Professor", position: "Member" },
+                    { srNo: 4, name: "Dr. Abdulla A.", designation: "Assistant Professor", position: "Member" },
+                    { srNo: 5, name: "Prof. B A Khansole", designation: "Assistant Professor", position: "Member" },
+                    { srNo: 6, name: "Prof. L V Rathod", designation: "Assistant Professor", position: "Member" },
+                    { srNo: 7, name: "Prof. S. Shinde", designation: "Assistant Professor", position: "Member" },
+                    { srNo: 8, name: "Prof. Sayyad Shfiq", designation: "Assistant Professor", position: "Member" },
+                    { srNo: 9, name: "Prof. Asad Hashmi", designation: "Assistant Professor", position: "Member" },
+                    { srNo: 10, name: "Mr. Pravin Kinikar", designation: "External Expert", position: "EXTERNAL EXPERT" },
+                    { srNo: 11, name: "Vishal V.Rathod", designation: "Student (2023-24 Batch)", position: "Student Member" },
+                    { srNo: 12, name: "Deshmukh Pranavi Panditrao", designation: "Student (2024-25 Batch)", position: "Student Member" }
                 ],
                 roles: [
                     "Facilitating Communicating with college community & obtaining feedback in library collection, scorners, infrastructure etc.",
@@ -443,13 +443,13 @@ export const CELLS_COMMITTEES_DATA: CollegeCommittees[] = [
                 title: "Remedial Coaching Cell",
                 description: "A Remedial coaching cell is an initiative within educational institutions aimed at supporting students who need additional assistance to meet academic standards. The cell will focus on enhancing students' understanding of subjects, improving their skills, and boosting overall academic performance.",
                 members: [
-                    // { srNo: 1, name: "Dr.L M Waghmare", designation: "Principal", position: "Chairperson" },
-                    // { srNo: 2, name: "Dr. Syeda Rukhsana", designation: "HOD FE", position: "Member" },
-                    // { srNo: 3, name: "Mr Hashmi S.A.", designation: "HOD EE Engg", position: "Member" },
-                    // { srNo: 4, name: "Sayyad Shafiq", designation: "HOD Mech Engg", position: "Member" },
-                    // { srNo: 5, name: "Dr. Abdulla Kalim", designation: "HOD ETC", position: "Member" },
-                    // { srNo: 6, name: "Mr.Lakhan Rathor", designation: "Assist. Prof. Civil", position: "Member" },
-                    // { srNo: 7, name: "Mr.B.A. Khansole", designation: "HOD CSE", position: "Member" }
+                    { srNo: 1, name: "Dr.L M Waghmare", designation: "Principal", position: "Chairperson" },
+                    { srNo: 2, name: "Dr. Syeda Rukhsana", designation: "HOD FE", position: "Member" },
+                    { srNo: 3, name: "Mr Hashmi S.A.", designation: "HOD EE Engg", position: "Member" },
+                    { srNo: 4, name: "Sayyad Shafiq", designation: "HOD Mech Engg", position: "Member" },
+                    { srNo: 5, name: "Dr. Abdulla Kalim", designation: "HOD ETC", position: "Member" },
+                    { srNo: 6, name: "Mr.Lakhan Rathor", designation: "Assist. Prof. Civil", position: "Member" },
+                    { srNo: 7, name: "Mr.B.A. Khansole", designation: "HOD CSE", position: "Member" }
                 ]
             }
         ],

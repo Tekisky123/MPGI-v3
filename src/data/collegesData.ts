@@ -10,6 +10,7 @@ import polyCivilHod from "../assets/hodImages/Ms. Goud P.O Hod.png";
 import mechanicalHodPoly from "../assets/principalImages/Prof. Shahaji Deshmukh Vishwabharati polytechnic.jpg";
 import mrDeshmukhSJElectricalHod from "../assets/hodImages/Mr. DeshmukhpolyElectricalHod.png";
 import rukhsanaHodBasicSciencesAndHumanities from "../assets/hodImages/Dr. Syeda RukhsanaBasicScience.png";
+import sandeepHambardeHod from "../assets/hodImages/Dr. Sandeep S.Poly BasicScienceHOD.jpg";
 
 export interface Department {
   id: string;
@@ -246,45 +247,45 @@ stewardship.`,
         labs: [
           {
             srNo: 1,
-            labName: "Strength of Materials",
-            area: "66 m2",
-            incharge: "Mr. D.L. Rathod",
+            labName: "Strength of Materials Lab",
+            area: "",
+            incharge: "Ms. Pooja Goud",
           },
           {
             srNo: 2,
-            labName: "Surveying",
-            area: "66 m2",
-            incharge: "Mrs. Asna Fatima Mohammed Kaleemuddin",
+            labName: "Geo-tech Lab",
+            area: "",
+            incharge: "Ms. Sukeshani Patil",
           },
           {
             srNo: 3,
-            labName: "Hydraulics",
-            area: "80 m2",
-            incharge: "Mr. L.V. Rathod",
+            labName: "Environmental Engineering Lab",
+            area: "",
+            incharge: "Ms. Sukeshani Patil",
           },
           {
             srNo: 4,
-            labName: "Concrete Technology",
-            area: "66 m2",
-            incharge: "Mr. D.L. Rathod",
+            labName: "Engineering Mechanics Lab",
+            area: "",
+            incharge: "Mr. Ram Rathod",
           },
           {
             srNo: 5,
-            labName: "Transportation Engg.",
-            area: "66 m2",
-            incharge: "Mr. D.L. Rathod",
+            labName: "Hydraulics Lab",
+            area: "",
+            incharge: "Ms. Pooja Goud",
           },
           {
             srNo: 6,
-            labName: "Geotechnical Engg.",
-            area: "66 m2",
-            incharge: "Mr. D.L. Rathod",
+            labName: "Concrete Technology Lab",
+            area: "",
+            incharge: "Ms. Rupali Tuppekar",
           },
           {
             srNo: 7,
-            labName: "Environmental Engg",
-            area: "66 m2",
-            incharge: "Mrs. Asna Fatima Mohammed Kaleemuddin",
+            labName: "Surveying Lab",
+            area: "",
+            incharge: "Ms. Rupali Tuppekar",
           },
         ],
         hod: {
@@ -1480,7 +1481,12 @@ I warmly welcome you all and wish you a bright, fulfilling, and successful caree
         description:
           "Foundation department focusing on engineering fundamentals, mathematics, physics, chemistry, and communication skills.",
         image: "https://www.lpu.in/academics/images/department/physics.jpg",
-        about: ``,
+        about: `The Department of Basic Sciences and Humanities (BSH) serves as the foundational pillar of the institution, laying the academic groundwork for first-year engineering students. Our department integrates core subjects like Physics, Chemistry, Mathematics, Environmental Studies, and Communication Skills to build a strong base in scientific understanding, analytical ability, and human values.
+
+We are committed to holistic student development through an interdisciplinary approach that combines theoretical knowledge with practical application. Our team of experienced and dedicated faculty members ensures an engaging learning environment with innovative pedagogy, digital classrooms, modern labs, and continuous mentoring. 
+
+At BSH, we aim to instill curiosity, ethical reasoning, critical thinking, and lifelong learning habits that not only prepare students for advanced engineering disciplines but also equip them to contribute meaningfully to society.`,
+
         courses: [
           "Engineering Mathematics I & II",
           "Engineering Physics & Lab",
@@ -1496,39 +1502,26 @@ I warmly welcome you all and wish you a bright, fulfilling, and successful caree
         ],
         facultyCount: 15,
         gallery: ["/images/bsh-1.jpg", "/images/bsh-2.jpg"],
-        labs: [
-          {
-            srNo: 1,
-            labName: "Physics Lab",
-            area: "900 sq.ft",
-            incharge: "Dr. Prakash Yadav",
-          },
-          {
-            srNo: 2,
-            labName: "Chemistry Lab",
-            area: "850 sq.ft",
-            incharge: "Ms. Shalini Thakur",
-          },
-          {
-            srNo: 3,
-            labName: "Language Lab",
-            area: "750 sq.ft",
-            incharge: "Mr. Vikram Nair",
-          },
-        ],
+        labs: [],
         hod: {
-          name: "HOD",
+          name: "Dr Sandeep S Hambarde",
           designation: "Head of Department - Basic Sciences and Humanities",
-          message: ``,
-          profileImage:
-            "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png",
+          message: `It gives me immense pleasure to welcome you to the Department of Science and Humanities, a foundation pillar of our esteemed institution. Our department plays a crucial role in shaping the academic journey of students by providing a strong grounding in fundamental sciences and essential human values.
+
+We offer a blend of disciplines—Physics, Chemistry, Mathematics, Communication Skills, and Environmental Studies—that support and complement the core engineering and professional programs. Our highly qualified and dedicated faculty strive to instill scientific temper, analytical thinking, and ethical responsibility among students, preparing them for both academic and life challenges.
+
+Our teaching-learning process is enriched with innovative pedagogy, interactive sessions, and co-curricular activities designed to develop holistic and socially responsible individuals. We also place great emphasis on interdisciplinary collaboration, research exposure, and continuous improvement.
+
+We believe in nurturing curiosity, encouraging inquiry, and building a strong academic foundation that contributes meaningfully to society. I invite you to explore the opportunities our department offers and join us in this journey of knowledge and growth.`,
+          profileImage: sandeepHambardeHod,
         },
         vision:
-          "To provide a strong academic foundation and foster critical thinking, scientific inquiry, and effective communication in engineering students for lifelong learning and professional excellence.",
-        mission: `1. To strengthen the fundamental knowledge of science and mathematics among first-year engineering students.
-2. To enhance communication, interpersonal, and analytical skills through skill-based training.
-3. To promote scientific curiosity, ethical reasoning, and sustainable thinking among students.
-4. To nurture a multidisciplinary environment that supports innovation, creativity, and problem-solving.`,
+          "To establish a strong academic foundation that cultivates critical thinking, scientific inquiry, and effective communication among engineering students, fostering lifelong learning and responsible global citizenship.",
+
+        mission: `1. To build a solid foundation in science and mathematics essential for engineering education.  
+2. To develop effective communication and interpersonal skills through dedicated language and soft skills training.  
+3. To inspire scientific curiosity, ethical reasoning, and sustainable thinking.  
+4. To foster a multidisciplinary learning environment that encourages innovation, creativity, and collaborative problem-solving.`,
       },
     ],
   },
@@ -2093,6 +2086,50 @@ furthering their career prospects and giving impetus to their creative potential
  Develop technical and communicative skills to make the students industry ready.
 To inculcate ethical values and promote social responsibility through an innovative learning process in basic sciences and humanities.
 To provide students with soft skills and behavioural training programs in order to develop their overall personality and social consciousness.`,
+      },
+      {
+        id: "aids",
+        name: "Artificial Intelligence and Data Science",
+        description: "",
+        image: "https://www.lpu.in/academics/images/department/physics.jpg",
+        about: ``,
+        courses: [],
+        facilities: [],
+        facultyCount: 15,
+        gallery: [],
+        labs: [],
+
+        hod: {
+          name: "HOD",
+          designation:
+            "Head of Department - Artificial Intelligence and Data Science",
+          message: ``,
+          profileImage: "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png",
+        },
+        vision: ``,
+        mission: ``,
+      },
+      {
+        id: "aiml",
+        name: "Artificial Intelligence and Machine Learning",
+        description: "",
+        image: "https://www.lpu.in/academics/images/department/physics.jpg",
+        about: ``,
+        courses: [],
+        facilities: [],
+        facultyCount: 15,
+        gallery: [],
+        labs: [],
+
+        hod: {
+          name: "HOD",
+          designation:
+            "Head of Department - Artificial Intelligence and Machine Learning",
+          message: ``,
+          profileImage: "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png",
+        },
+        vision: ``,
+        mission: ``,
       },
     ],
   },

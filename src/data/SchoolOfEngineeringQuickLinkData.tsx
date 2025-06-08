@@ -36,7 +36,7 @@ export const navItems = [
   { label: "Vision & Mission", id: "vision-mission" },
   { label: "Principal", id: "principal" },
   { label: "Placements", id: "placements" },
-  { label: "Achievements", id: "achievements" },
+  // { label: "Achievements", id: "achievements" },
   { label: "NIRF", id: "nirf" },
   { label: "Mandatory Disclosure", id: "mandatory-disclosure" },
   { label: "IQAC", id: "iqac" },
@@ -90,29 +90,38 @@ export const homeData = {
   title: "Welcome to School of Engineering",
   content: `
 
-
 ## About Us
-The School of Engineering at Matoshri Pratishthan Group of Institutions (MPGI), Nanded is a premier engineering institute established in 2009. Located on the Nanded-Latur Highway, our sprawling 25-acre campus provides an ideal environment for technical education and research.
+The School of Engineering at Matoshri Pratishthan Group of Institutions (MPGI), Nanded is a premier engineering institute established in 2009 to provide an ideal environment for technical education and research. It is a vibrant and innovative centre for education aimed at developing a cadre of socially responsive managers, technocrats, entrepreneurs, and professionals.
+
+Located on the Nanded-Latur Highway, our sprawling 25-acre clean and green campus includes independent buildings for each institute and state-of-the-art infrastructure. We emphasize both academic excellence and holistic development.
 
 ### Key Highlights:
-- Approved by: AICTE, New Delhi & Affiliated to SRTMUN, Nanded
+- Recognized by AICTE & DTE
+- Affiliated to Dr. Babasaheb Ambedkar Technological University, Lonere
 - NAAC Accreditation: B+ Grade
-- ISO Certification: 9001-2015 Certified
-- Total Faculty: 120+ with 25+ PhD holders
+- ISO Certification: ISO 9001:2008 & ISO 9001:2015
+- Total Faculty: 120+ (including 25+ PhD holders)
 - Student Strength: 1500+ across all programs
-- Placement Record: 85% average placement over last 5 years
+- Placement Record: 85% average over last 5 years
+- MoUs with reputed industries and institutions
+- Internal Quality Assurance Cell (IQAC)
 
-## Infrastructure
-Our state-of-the-art infrastructure includes:
+### Facilities & Features:
 - Academic Blocks: 4 buildings with 60+ classrooms and seminar halls
-- Laboratories: 50+ well-equipped labs across departments
-- Central Library
-- Hostels: Separate facilities for boys and girls
+- Laboratories: 50+ well-equipped labs with latest equipment
+- Digital Classrooms & Virtual Labs in coordination with IIT Mumbai
+- NPTEL Nodal Centre
+- Central Library: 36,000+ books and access to e-journals
+- Advanced Language Lab to enhance communication skills
+- AC Auditorium with 700+ seating capacity
 - Sports Complex: Cricket ground, basketball court, indoor games
-- Wi-Fi Campus: 1 Gbps internet connectivity throughout
-
-
-
+- Personality Development & Career Guidance Cell
+- Training and Placement Cell
+- Events: Industrial Visits, Expert Lectures, Parents Meet, Alumni Meet
+- Young, dynamic and experienced faculty and staff
+- First Aid, Transportation, and Canteen Facilities
+- Separate Hostel Facilities for boys and girls
+- Wi-Fi Enabled Campus with 1 Gbps Broadband
 
 `,
   highlights: [
@@ -120,7 +129,7 @@ Our state-of-the-art infrastructure includes:
     "85% Placement Record | 100+ Recruiters",
     "50+ Well-equipped Labs | 50,000+ Library Resources",
     "25 Acre Campus | 1 Gbps Wi-Fi",
-    "NAAC B+ Accredited | ISO 9001-2015 Certified",
+    "NAAC B+ Accredited | ISO 9001-2008 & 2015 Certified",
   ],
   quickLinks: [
     {
@@ -503,8 +512,22 @@ College Id: 6841
 export const visionMissionData = {
   title: "Vision & Mission",
   content: `
-  
 
-  
+## Vision
+“To educate youth for the contribution to sustainable Economic and Technological development of the Nation based upon ethical values with holistic approach.”
+
+## Mission
+“To create and establish a world class educational institutions which imparts quality education to cater the needs of national and global demands in the field of Engineering, Management and IT education with value foundations for the welfare of humanity.”
+
+## Objectives
+- To provide world class quality education in engineering and management discipline  
+- To develop synergetic partnership within the institute  
+- To promote e-learning and e-governance  
+- To foster enterprising spirit among the students  
+- To foster strong academic interactions and exchanges for the benefits of students and faculty  
+- To nurture innovative and creative abilities of students and faculty  
+- To develop faculty competence to meet the challenges of rapidly changing technological environment  
+- To adapt in-curriculum innovation commensurate to technological changes  
+
 `,
 };

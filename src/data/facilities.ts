@@ -1,5 +1,9 @@
 import bus1 from "../assets/facilities/bus1.jpg";
 import bus2 from "../assets/facilities/bus2.jpg";
+import hostel1 from "../assets/facilities/hostel1.jpg";
+import hostel2 from "../assets/facilities/hostel2.jpg";
+import hostel3 from "../assets/facilities/hostel3.jpg";
+import hostel4 from "../assets/facilities/hostel4.jpg";
 
 export interface Facility {
   name: string;
@@ -54,6 +58,8 @@ export const facilitiesData: CollegeFacilityGroup[] = [
           "24 Hour's Library",
           "Spacious Play Ground",
         ],
+        images: [hostel1, hostel2, hostel3, hostel4],
+
         tableData: [
           { label: "Intake", value: "Boys Hostel = 75, Girls Hostel = 120" },
           { label: "Warden Boys Hostel", value: "Mr. D.M. Degloorkar" },
@@ -145,6 +151,8 @@ export const facilitiesData: CollegeFacilityGroup[] = [
           "24 Hour's Library",
           "Spacious Play Ground",
         ],
+        images: [hostel1, hostel2, hostel3, hostel4],
+
         tableData: [
           { label: "Intake", value: "Boys Hostel = 75, Girls Hostel = 120" },
           { label: "Warden Boys Hostel", value: "Mr. D.M. Degloorkar" },
@@ -354,6 +362,7 @@ export const facilitiesData: CollegeFacilityGroup[] = [
           { label: "Warden Girls Hostel", value: "Miss. S.B. More" },
           { label: "Contact Girls Hostel", value: "+91 9021173485" },
         ],
+        images: [hostel1, hostel2, hostel3, hostel4],
         path: "/facilities/girls-boys-hostel",
       },
       {

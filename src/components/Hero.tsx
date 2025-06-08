@@ -2,6 +2,7 @@ import Slider, { Settings, CustomArrowProps } from "react-slick";
 import img1 from "../assets/images/mainSlider1.jpg";
 import img2 from "../assets/images/mainSlider2.jpg";
 import img3 from "../assets/images/heroImage.png";
+import img4 from "../assets/images/mainSlider4.jpg";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -63,7 +64,7 @@ const PrevArrow = ({ onClick }: CustomArrowProps) => (
 );
 
 const Hero = () => {
-  const slides: Slide[] = [{ img: img1 }, { img: img3 }, { img: img2 }];
+  const slides: Slide[] = [{ img: img1 }, { img: img3 }, { img: img2 }, { img: img4 }];
 
   const sliderSettings: Settings = {
     dots: true,

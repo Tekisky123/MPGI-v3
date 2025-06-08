@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import Slider, { Settings, CustomArrowProps } from "react-slick";
-import managementHero1 from "../../assets/images/managementhero1.png";
-import managementHero2 from "../../assets/images/managementhero2.png";
-import managementHero3 from "../../assets/images/managementhero3.png";
+import managementHero1 from "../../assets/management/slider1.jpg";
+import managementHero2 from "../../assets/management/slider2.jpg";
+// import managementHero3 from "../../assets/images/managementhero3.png";
 import SchoolOfManagementQuickLinks from "./SchoolOfManagementQuickLinks";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -68,7 +68,6 @@ const SchoolOfManagementHome = () => {
   const slides: Slide[] = [
     { img: managementHero1 },
     { img: managementHero2 },
-    { img: managementHero3 },
   ];
 
   const sliderSettings: Settings = {

@@ -12,6 +12,7 @@ import {
   Youtube,
   ArrowRight,
 } from "lucide-react";
+import tekiskyLogo from "../assets/images/tekiskyLogo.jpg"
 
 const Footer = () => {
   const navigate = useNavigate();
@@ -24,8 +25,9 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="text-xl font-bold">MPGI Nanded</h3>
             <p className="text-gray-300">
-              Matoshri Pratishthan Group of Institutions is a premier educational
-              institution committed to excellence in engineering and management education.
+              Matoshri Pratishthan Group of Institutions is a premier
+              educational institution committed to excellence in engineering and
+              management education.
             </p>
             <div className="flex items-center space-x-3">
               <Clock className="w-5 h-5 text-mpgin-blue" />
@@ -70,9 +72,7 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="text-xl font-bold">Quick Links</h3>
             <ul className="space-y-2">
-              {[
-                { name: "Admin login", path: "/login" },
-              ].map((link) => (
+              {[{ name: "Admin login", path: "/login" }].map((link) => (
                 <li key={link.path}>
                   <Link
                     to={link.path}
@@ -128,11 +128,29 @@ const Footer = () => {
         </div>
 
         {/* Footer Bottom */}
+        {/* Footer Bottom */}
         <div className="mt-12 pt-8 border-t border-gray-800">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+          <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">
-              © {new Date().getFullYear()} Matoshri Pratishthan Group of Institutions. All Rights Reserved.
+              © {new Date().getFullYear()} Matoshri Pratishthan Group of
+              Institutions. All Rights Reserved.
             </p>
+
+            <a
+              href="https://tekisky.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex flex-col items-center space-y-1 hover:opacity-90 transition-opacity mt-4 md:mt-0"
+            >
+              <img
+                src={tekiskyLogo}
+                alt="Tekisky Pvt Ltd"
+                className="w-32 h-auto object-contain rounded-lg shadow-md"
+              />
+              <span className="text-sm text-gray-400 hover:text-white text-center">
+                Maintained & Developed by Tekisky Pvt. Ltd
+              </span>
+            </a>
           </div>
         </div>
       </div>

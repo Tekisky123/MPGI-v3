@@ -72,9 +72,8 @@ const CONTACT_DATA = {
 const QUICK_LINKS = [
   { label: "Home", path: "/home" },
   //   { label: "Departments", path: "/departments" },
-  { label: "Admission", path: "/admission" },
+  { label: "Admission", path: "/admission/courses" },
   { label: "Campus", path: "/campus" },
-  { label: "Cells & Committees", path: "/cells-committees" },
 ];
 
 const ContactPage = () => {

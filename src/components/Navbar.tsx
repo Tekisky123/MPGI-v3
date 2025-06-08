@@ -40,11 +40,13 @@ const DEPARTMENT_MAPPINGS: Record<string, Array<{ name: string; path: string }>>
   ],
   "school-of-management": [{ name: "MBA Program", path: "/departments/mba/profile" }],
   "school-of-engineering": [
-    { name: "Computer Science & Engineering", path: "/departments/cse/profile" },
-    { name: "Mechanical Engineering", path: "/departments/mech/profile" },
-    { name: "Electrical Engineering", path: "/departments/eee/profile" },
     { name: "Civil Engineering", path: "/departments/civil/profile" },
+    { name: "Computer Science Engineering", path: "/departments/cse/profile" },
+    { name: "Electrical Engineering", path: "/departments/eee/profile" },
+    { name: "Mechanical and Automation Engineering", path: "/departments/mech/profile" },
     { name: "Electronics and Telecommunication Engineering", path: "/departments/ece/profile" },
+    { name: "Artificial Intelligence and Data Science", path: "/departments/aids/profile" },
+    { name: "Artificial Intelligence and Machine Learning", path: "/departments/aiml/profile" },
     { name: "Basic Sciences and Humanities (FE)", path: "/departments/bsh/profile" },
   ],
 };

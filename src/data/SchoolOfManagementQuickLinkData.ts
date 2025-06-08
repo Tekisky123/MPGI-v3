@@ -24,7 +24,7 @@ export const navItems = [
   { label: "Vision & Mission", id: "vision-mission" },
   { label: "Dean", id: "dean" },
   { label: "Placements", id: "placements" },
-  { label: "Achievements", id: "achievements" },
+  // { label: "Achievements", id: "achievements" },
   { label: "NIRF", id: "nirf" },
   { label: "Mandatory Disclosure", id: "mandatory-disclosure" },
   { label: "IQAC", id: "iqac" },
