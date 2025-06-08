@@ -94,29 +94,29 @@ export const homeData = {
 The School of Engineering at Matoshri Pratishthan Group of Institutions (MPGI), Nanded is a premier engineering institute established in 2009 to provides an ideal environment for technical education and research. The institute is a vibrant and innovative centre for education to develop of cadre of socially responsive managers, technocrats, entrepreneurs and professionals.
 
 ### Key Highlights: 
-- Recognized by AICTE DTE
-- Affiliated to Dr. Babasaheb Ambedkar Technological University Lonere
+- Recognized by AICTE, DTE
+- Affiliated to Dr. Babasaheb Ambedkar Technological University, Lonere
 - The campus is well maintained clean and green campus over a land of @25 acrs
 - ISO 9001:2008 certified
 - Independent building for each institute
 - State of the art laboratories with latest equipment’s
 - Digital classrooms with virtual laboratories
 - NPTEL Nodal Centre
-- Virtual laboratory in coordination with IIT Mumbai
+- Virtual laboratory in coordination with IIT, Mumbai
 - MoUs with different industries and institutes
 - Advanced language lab to nourish soft skills
 - Training and Placement Cell
-- Industrial Visits Parents Meet Alumni meet
-- Faculty and staff: Young dynamic qualified and experienced
+- Industrial Visits, Parents Meet, Alumni meet
+- Faculty and staff: Young, dynamic, qualified and experienced
 - Expert lecture series and seminars on recent technological developments
 - Internal Quality Assurance Cell (IQAC)
 - Central library with 36000 references and text books with e-journals
 - Personality development and career guidance cell
 - Well-equipped AC Auditorium of 700 capacity
-- Broadband internet service and Wi-Fi enabled campus
+- Broadband internet service and Wify enabled campus
 - Separate hostel facility for boys and girls
-- First aid facility Canteen facility Transportation facility
-- Playground for outdoor games and also facility for indoor games
+- First aid facility, Canteen facility, Transportation facility
+- Playground for outdoor games, and also facility for indoor games
 
 `,
   highlights: [

@@ -99,11 +99,21 @@ const renderImage = (imageSrc: string, altText: string) => (
 );
 
 // List renderer for bullet points starting with '-'
+// List renderer for bullet points starting with '-'
 const renderList = (listContent: string) => {
-  const items = listContent
-    .slice(1)
-    .split(", ")
-    .map((item) => item.trim());
+  // Check if the content is meant to be a list by looking for lines starting with '-'
+  const isList = listContent.startsWith('-');
+  if (!isList) {
+    return <p>{listContent}</p>;
+  }
+
+  // Split the content into lines
+  const lines = listContent.split('\n');
+  const items = lines.filter(line => line.trim().startsWith('-')).map(item => {
+    // Remove the leading '- ' from each item
+    return item.substring(2);
+  });
+
   return (
     <ul className="list-disc pl-6 space-y-1 text-gray-700 font-semibold my-4">
       {items.map((item, i) => (
@@ -112,6 +122,7 @@ const renderList = (listContent: string) => {
     </ul>
   );
 };
+
 
 const renderContent = (
   content: string,
