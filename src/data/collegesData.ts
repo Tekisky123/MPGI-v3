@@ -1334,70 +1334,68 @@ I warmly welcome you all and wish you a bright, fulfilling, and successful caree
         vision: `“Computer Engineering Department striving for excellence in providing scientific and technical education, to develop intellectual, innovative and quality computer engineers and prepare them to face challenges of modern society.”`,
         mission: `“To contribute Institute in providing high quality, affordable and accessible computer science education programmers. To benchmark with the best global standards of quality education in computer science. To engage & motivate students through stimulating & collaborative experiences for computer related solutions. To enhance the commitment of faculty, staff, and students to the centrality of diversity, social justice, and democratic citizenship.”`,
       },
-    {
-  id: "it",
-  name: "Information Technology",
-  description:
-    "Future-focused program covering embedded systems, web technologies, and cloud computing.",
-  image: "https://grdedu.in/wp-content/uploads/2023/05/cse.png",
-  courses: [
-    "Diploma in Information Technology",
-    "Web Development",
-    "Embedded Systems",
-  ],
-  about: `The Department of Information Technology vision to develop technically skilled professionals equipped to meet the evolving demands of the IT industry. The department is committed to offering quality diploma programs aimed at enhancing the employability and practical skills of students, especially from the rural areas of Nanded, Maharashtra.
-
-Information Technology engineers play a vital role in nation-building by developing innovative digital solutions, enhancing cybersecurity, automating processes, and strengthening IT infrastructure across key sectors such as healthcare, education, defence, and governance.`,
-  facilities: [
-    "Cisco Networking Academy Lab",
-    "Mobile App Development Center",
-    "Cloud Computing Infrastructure",
-    "Annual Hackathon Competition",
-  ],
-  facultyCount: 9,
-  gallery: ["/images/computer-1.jpg", "/images/computer-2.jpg"],
-  labs: [
-    {
-      srNo: 1,
-      labName: "Programming Lab",
-      area: "",
-      incharge: "Mr. Surnar A.B",
-    },
-    {
-      srNo: 2,
-      labName: "Database Lab",
-      area: "",
-      incharge: "Mr. Unchadkar V.A",
-    },
-    {
-      srNo: 3,
-      labName: "Hardware & Networking Lab",
-      area: "",
-      incharge: "Mrs. Pawar A.K",
-    },
-    {
-      srNo: 4,
-      labName: "Operating System & Linux Lab",
-      area: "",
-      incharge: "Mrs. Dawkore R.A",
-    },
-    {
-      srNo: 5,
-      labName: "Web Application Lab",
-      area: "",
-      incharge: "Ms. Kapale A.B",
-    },
-    {
-      srNo: 6,
-      labName: "Project Lab",
-      area: "",
-      incharge: "Project Lab",
-    },
-  ],
-  hod: {
-    name: "Mrs. More M.K.",
-    designation: "Head of Department - Information Technology",
-    message: `It is a privilege to introduce the Department of Information Technology at Matoshri Pratishthan’s Vishwabharti Polytechnic Institute, Nanded.
+      {
+        id: "it",
+        name: "Information Technology",
+        description:
+          "Future-focused program covering embedded systems, web technologies, and cloud computing.",
+        image: "https://grdedu.in/wp-content/uploads/2023/05/cse.png",
+        courses: [
+          "Diploma in Information Technology",
+          "Web Development",
+          "Embedded Systems",
+        ],
+        about: `The Department of Information Technology was established in 2009 with an initial intake of 60 students. Its primary objective was to launch a diploma program in Computer Engineering to develop skilled and professional manpower for the IT industry. Additionally, the college aimed to provide educational opportunities to talented youth from the rural areas of Nanded, Maharashtra. In 2023, the department expanded its intake by 30 seats and also introduced a new Information Technology (IT) department. Computer engineers play a vital role in nation-building by developing innovative technologies, strengthening cybersecurity, automating industries, enhancing digital infrastructure, and contributing to sectors such as healthcare, education, defence, and governance.`,
+        facilities: [
+          "Cisco Networking Academy Lab",
+          "Mobile App Development Center",
+          "Cloud Computing Infrastructure",
+          "Annual Hackathon Competition",
+        ],
+        facultyCount: 9,
+        gallery: ["/images/computer-1.jpg", "/images/computer-2.jpg"],
+        labs: [
+          {
+            srNo: 1,
+            labName: "Programming Lab",
+            area: "",
+            incharge: "Mr. Surnar A.B",
+          },
+          {
+            srNo: 2,
+            labName: "Database Lab",
+            area: "",
+            incharge: "Mr. Unchadkar V.A",
+          },
+          {
+            srNo: 3,
+            labName: "Hardware & Networking Lab",
+            area: "",
+            incharge: "Mrs. Pawar A.K",
+          },
+          {
+            srNo: 4,
+            labName: "Operating System & Linux Lab",
+            area: "",
+            incharge: "Mrs. Dawkore R.A",
+          },
+          {
+            srNo: 5,
+            labName: "Web Application Lab",
+            area: "",
+            incharge: "Ms. Kapale A.B",
+          },
+          {
+            srNo: 6,
+            labName: "Project Lab",
+            area: "",
+            incharge: "Project Lab",
+          },
+        ],
+        hod: {
+          name: "Mrs. More M.K.",
+          designation: "Head of Department - Information Technology",
+          message: `It is a privilege to introduce the Department of Information Technology at Matoshri Pratishthan’s Vishwabharti Polytechnic Institute, Nanded.
 
 Our department is dedicated to delivering quality technical education that prepares diploma students to confidently step into the software industry and other technical sectors. We aim to provide industry-sponsored internships and project opportunities to enhance students’ professional readiness and career prospects.
 
@@ -1408,15 +1406,14 @@ Our department is here to support and guide you in acquiring not only knowledge 
 Lastly, remember that professional success is not just about skills, but also about integrity and strong moral values.
 
 I warmly welcome you all and wish you a bright, fulfilling, and successful career ahead.`,
-    profileImage: polyComputerHod, 
-  },
-  vision: `“The Information Technology Department strives for excellence in providing scientific and technical education to develop intellectual, innovative, and quality IT professionals prepared to face the challenges of the modern digital world.”`,
-  mission: `“To provide high-quality, affordable, and accessible IT education programs.
-- To align with global standards in information technology education.
-- To engage and inspire students through collaborative, hands-on learning in IT solutions.
-- To cultivate a culture of diversity, innovation, and social responsibility.”`,
-},
-
+          profileImage: polyComputerHod,
+        },
+        vision: `“Information Technology Department striving for excellence in providing scientific and technical education, to develop intellectual, innovative and quality IT professionals and prepare them to face challenges of the digital world.”`,
+        mission: `“To contribute to the institute by providing high quality, affordable, and accessible IT education programs. 
+- To benchmark with the best global standards of quality education in information technology. 
+- To engage and motivate students through stimulating and collaborative learning experiences. 
+- To enhance the commitment of faculty, staff, and students to diversity, social responsibility, and ethical citizenship.”`,
+      },
       {
         id: "ece",
         name: "Electronics and Telecommunication",
@@ -2114,7 +2111,8 @@ To provide students with soft skills and behavioural training programs in order 
           designation:
             "Head of Department - Artificial Intelligence and Data Science",
           message: ``,
-          profileImage: "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png",
+          profileImage:
+            "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png",
         },
         vision: ``,
         mission: ``,
@@ -2136,7 +2134,8 @@ To provide students with soft skills and behavioural training programs in order 
           designation:
             "Head of Department - Artificial Intelligence and Machine Learning",
           message: ``,
-          profileImage: "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png",
+          profileImage:
+            "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png",
         },
         vision: ``,
         mission: ``,
