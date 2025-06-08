@@ -91,45 +91,41 @@ export const homeData = {
   content: `
 
 ## About Us
-The School of Engineering at Matoshri Pratishthan Group of Institutions (MPGI), Nanded is a premier engineering institute established in 2009 to provide an ideal environment for technical education and research. It is a vibrant and innovative centre for education aimed at developing a cadre of socially responsive managers, technocrats, entrepreneurs, and professionals.
+The School of Engineering at Matoshri Pratishthan Group of Institutions (MPGI), Nanded is a premier engineering institute established in 2009 to provides an ideal environment for technical education and research. The institute is a vibrant and innovative centre for education to develop of cadre of socially responsive managers, technocrats, entrepreneurs and professionals.
 
-Located on the Nanded-Latur Highway, our sprawling 25-acre clean and green campus includes independent buildings for each institute and state-of-the-art infrastructure. We emphasize both academic excellence and holistic development.
-
-### Key Highlights:
-- Recognized by AICTE & DTE
+### Key Highlights: 
+- Recognized by AICTE, DTE
 - Affiliated to Dr. Babasaheb Ambedkar Technological University, Lonere
-- NAAC Accreditation: B+ Grade
-- ISO Certification: ISO 9001:2008 & ISO 9001:2015
-- Total Faculty: 120+ (including 25+ PhD holders)
-- Student Strength: 1500+ across all programs
-- Placement Record: 85% average over last 5 years
-- MoUs with reputed industries and institutions
-- Internal Quality Assurance Cell (IQAC)
-
-### Facilities & Features:
-- Academic Blocks: 4 buildings with 60+ classrooms and seminar halls
-- Laboratories: 50+ well-equipped labs with latest equipment
-- Digital Classrooms & Virtual Labs in coordination with IIT Mumbai
+- The campus is well maintained clean and green campus over a land of @25 acrs
+- ISO 9001:2008 certified
+- Independent building for each institute
+- State of the art laboratories with latest equipment’s
+- Digital classrooms with virtual laboratories
 - NPTEL Nodal Centre
-- Central Library: 36,000+ books and access to e-journals
-- Advanced Language Lab to enhance communication skills
-- AC Auditorium with 700+ seating capacity
-- Sports Complex: Cricket ground, basketball court, indoor games
-- Personality Development & Career Guidance Cell
+- Virtual laboratory in coordination with IIT, Mumbai
+- MoUs with different industries and institutes
+- Advanced language lab to nourish soft skills
 - Training and Placement Cell
-- Events: Industrial Visits, Expert Lectures, Parents Meet, Alumni Meet
-- Young, dynamic and experienced faculty and staff
-- First Aid, Transportation, and Canteen Facilities
-- Separate Hostel Facilities for boys and girls
-- Wi-Fi Enabled Campus with 1 Gbps Broadband
+- Industrial Visits, Parents Meet, Alumni meet
+- Faculty and staff: Young, dynamic, qualified and experienced
+- Expert lecture series and seminars on recent technological developments
+- Internal Quality Assurance Cell (IQAC)
+- Central library with 36000 references and text books with e-journals
+- Personality development and career guidance cell
+- Well-equipped AC Auditorium of 700 capacity
+- Broadband internet service and Wify enabled campus
+- Separate hostel facility for boys and girls
+- First aid facility, Canteen facility, Transportation facility
+- Playground for outdoor games, and also facility for indoor games
 
 `,
   highlights: [
-    "1500+ Students | 120+ Faculty | 25+ PhDs",
-    "85% Placement Record | 100+ Recruiters",
-    "50+ Well-equipped Labs | 50,000+ Library Resources",
-    "25 Acre Campus | 1 Gbps Wi-Fi",
-    "NAAC B+ Accredited | ISO 9001-2008 & 2015 Certified",
+    "25 Acres Clean & Green Campus",
+    "ISO 9001:2008 Certified",
+    "NPTEL Nodal Centre & Virtual Labs",
+    "700 Capacity AC Auditorium",
+    "Advanced Language & Training Cell",
+    "Separate Boys & Girls Hostels",
   ],
   quickLinks: [
     {
@@ -163,11 +159,12 @@ Located on the Nanded-Latur Highway, our sprawling 25-acre clean and green campu
       label: "Patents Filed",
     },
     {
-      value: "85%",
+      value: "85%+",
       label: "Placement Rate",
     },
   ],
 };
+
 
 export const departments: Department[] = [
   {
