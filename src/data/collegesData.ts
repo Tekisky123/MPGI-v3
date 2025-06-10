@@ -1509,7 +1509,15 @@ At BSH, we aim to instill curiosity, ethical reasoning, critical thinking, and l
         ],
         facultyCount: 15,
         gallery: ["/images/bsh-1.jpg", "/images/bsh-2.jpg"],
-        labs: [],
+        labs: [
+          {
+            srNo: 1,
+            labName: "Physics Lab",
+            area: "",
+            incharge: "Miss. Dipika Maroti Dhage",
+          },
+         
+        ],
         hod: {
           name: "Dr Sandeep S Hambarde",
           designation: "Head of Department - Basic Sciences and Humanities",
