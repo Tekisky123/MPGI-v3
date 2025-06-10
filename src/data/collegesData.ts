@@ -1516,7 +1516,6 @@ At BSH, we aim to instill curiosity, ethical reasoning, critical thinking, and l
             area: "",
             incharge: "Miss. Dipika Maroti Dhage",
           },
-         
         ],
         hod: {
           name: "Dr Sandeep S Hambarde",
@@ -1985,8 +1984,9 @@ The Department, established to impart analytical and application skills in vario
         description:
           "Program specializing in communication systems, embedded systems, and IoT.",
         image:
-          "https://georgetelegraphblog.wordpress.com/wp-content/uploads/2021/01/electronics-and-communication.jpg?w=584 ",
-        about: `MPGI Integrated Campus is one of the premier technical institutions of the Region. The department of Electronics and Tele Communication, MPGI Integrated Campus, was established in the year 2023 with an intake of 30 students. It is among the finest in the college having qualified faculty and well equipped laboratories. The department has always strived to inculcate the very best in the students so that they can face the challenges offered by the industry. The department offers B.Tech degree course in Electronics and Tele Communication Engineering. The preeminence of the department can be understood by the ever increasing demands of its fresh graduate. Close interaction with the industry has led to the evolution of a teaching system, which produces diligent and erudite engineers. The young engineers have excelled both in higher education and in industry.`,
+          "https://georgetelegraphblog.wordpress.com/wp-content/uploads/2021/01/electronics-and-communication.jpg?w=584",
+        about:
+          "MPGI Integrated Campus is one of the premier technical institutions of the Region. The department of Electronics and Tele Communication, MPGI Integrated Campus, was established in the year 2023 with an intake of 30 students. It is among the finest in the college having qualified faculty and well equipped laboratories. The department has always strived to inculcate the very best in the students so that they can face the challenges offered by the industry. The department offers B.Tech degree course in Electronics and Tele Communication Engineering. The preeminence of the department can be understood by the ever increasing demands of its fresh graduate. Close interaction with the industry has led to the evolution of a teaching system, which produces diligent and erudite engineers. The young engineers have excelled both in higher education and in industry.",
         courses: [
           "Diploma in Electronics and Telecommunication",
           "Wireless Communication",
@@ -2004,32 +2004,279 @@ The Department, established to impart analytical and application skills in vario
           {
             srNo: 1,
             labName: "Basic Electronics Laboratory",
-            area: "",
-            incharge: " Mr. Shaikh Ajij",
+            area: "Basic Electronics Lab",
+            incharge: "Mr. Shaikh Ajij",
+            majorEquipmentDetails: [
+              { name: "Semiconductor Diode kit" },
+              { name: "RC Phase shift Oscillator" },
+              { name: "Op-amp study Kit" },
+              { name: "Rectifier & Filters" },
+              { name: "SCR Characteristics" },
+              { name: "UJT Characteristics" },
+              { name: "Hartley Oscillator" },
+              { name: "Collpits Oscillator" },
+              { name: "JFET Amplifier" },
+              { name: "Flip-flop Trainer Kit" },
+              { name: "BCD to Excess Converter" },
+              { name: "Integrator & Differentiator" },
+              { name: "Digital Multimeter" },
+              {
+                name: "SE 701 Display board of different fixed resistors and color coding",
+              },
+              { name: "SE 703 Display board of fixed and variable capacitors" },
+              { name: "SE 704 Display Board of diodes" },
+              { name: "SE 705 Display board of transistor" },
+              { name: "SE 706 Display board of SCR, DIAC, TRIAC, UJT" },
+              { name: "SE 709 Display board of display" },
+              { name: "SE 710 display board of Switches" },
+              { name: "SE 711 Display board of Band Switches" },
+              { name: "SE 712 display board of relays" },
+              { name: "SE 713 display board of transformers and coils" },
+              { name: "SE 720 Discrete component trainer board" },
+              { name: "SE 721 Soldering and Desoldering Practice Trainer" },
+              { name: "SE 708 display board of Connectors" },
+            ],
           },
           {
             srNo: 2,
             labName: "Digital Electronics Laboratory",
-            area: "",
+            area: "Digital Circuit Lab",
             incharge: "Dr. Abdullah M.K.",
+            majorEquipmentDetails: [
+              { name: "Study of Logic Gates" },
+              { name: "SD 904 LABEL MPSEN/DC-LAB/SD904-01/15/2010" },
+              { name: "SD 904 LABEL MPSEN/DC-LAB/SD904-02/15/2011" },
+              { name: "SD 904 LABEL MPSEN/DC-LAB/SD904-03/15/2012" },
+              { name: "SD 904 LABEL MPSEN/DC-LAB/SD904-04/15/2013" },
+              { name: "SD 904 LABEL MPSEN/DC-LAB/SD904-05/15/2014" },
+              { name: "SD 904 LABEL MPSEN/DC-LAB/SD904-06/15/2015" },
+              { name: "SD 904 LABEL MPSEN/DC-LAB/SD904-07/15/2017" },
+              { name: "SD 904 LABEL MPSEN/DC-LAB/SD904-08/15/2018" },
+              { name: "SD 904 LABEL MPSEN/DC-LAB/SD904-09/15/2019" },
+              { name: "SD 904 LABEL MPSEN/DC-LAB/SD904-10/15/2020" },
+              { name: "SD 904 LABEL MPSEN/DC-LAB/SD904-11/15/2021" },
+              { name: "SD 904 LABEL MPSEN/DC-LAB/SD904-12/15/2022" },
+              { name: "SD 904 LABEL MPSEN/DC-LAB/SD904-13/5/2023" },
+              { name: "SD 904 LABEL MPSEN/DC-LAB/SD904-14/15/2024" },
+              { name: "SD 904 LABEL MPSEN/DC-LAB/SD904-15/15/2025" },
+              { name: "SE 716 display board of Analog IC’s" },
+              { name: "SE 717 Display board of Digital TTL ICs" },
+              { name: "SE 718 Display board of Digital CMOS ICs" },
+              {
+                name: "SE 719 display board of Different ICs (Analog and Digital)",
+              },
+              { name: "IC Tester" },
+            ],
           },
           {
             srNo: 3,
-            labName: "Power Electronics Laborator",
-            area: "",
+            labName: "Microprocessor and Interfacing Laboratory",
+            area: "Microprocessor Lab",
             incharge: "Mr. Shirse A.M.",
+            majorEquipmentDetails: [
+              {
+                name: "Microprocessor 8085 Trainer LABEL- MPSEN/E&TC/µp-lab/µp85-01/05/2010",
+              },
+              {
+                name: "Microprocessor 8085 Trainer LABEL- MPSEN/E&TC/µp-lab/µp85-02/05/2010",
+              },
+              {
+                name: "Microprocessor 8085 Trainer LABEL- MPSEN/E&TC/µp-lab/µp85-03/05/2010",
+              },
+              {
+                name: "Microprocessor 8085 Trainer LABEL- MPSEN/E&TC/µp-lab/µp85-04/05/2010",
+              },
+              {
+                name: "Microprocessor 8085 Trainer LABEL- MPSEN/E&TC/µp-lab/µp85-05/05/2010",
+              },
+              {
+                name: "Add on Cards AD-DA II LABEL-MPSEN/E&TC/µp/ADC-01/10/2010-11",
+              },
+              {
+                name: "Add on Cards XPO ST/DC LABEL-MPSEN/E&TC/µp/ADC-02/10/2010-11",
+              },
+              {
+                name: "Add on Cards AD-DA II LABEL-MPSEN/E&TC/µp/ADC-03/10/2010-11",
+              },
+              {
+                name: "Add on Cards AD-DA II LABEL-MPSEN/E&TC/µp/ADC-04/10/2010-11",
+              },
+              {
+                name: "Add on Cards AD-DA II LABEL-MPSEN/E&TC/µp/ADC-05/10/2010-11",
+              },
+              {
+                name: "Add on Cards SCAN TECH LABEL-MPSEN/E&TC/µp/ADC-06/10/2010-11",
+              },
+              {
+                name: "Add on Cards XPO STDC LABEL-MPSEN/E&TC/µp/ADC-07/10/2010-11",
+              },
+              {
+                name: "Add on Cards TLLC + ELV LABEL-MPSEN/E&TC/µp/ADC-08/10/2010-11",
+              },
+              {
+                name: "Add on Cards SCANTECH LABEL-MPSEN/E&TC/µp/ADC-09/10/2010-11",
+              },
+              {
+                name: "Add on Cards TLLC +ELV LABEL-MPSEN/E&TC/µp/ADC-10/10/2010-11",
+              },
+              {
+                name: "Microprocessor 8086 Trainer LABEL- MPSEN/E&TC/µp-lab/µp86-01/05/2010",
+              },
+              {
+                name: "Microprocessor 8086 Trainer LABEL- MPSEN/E&TC/µp-lab/µp86-02/05/2010",
+              },
+              {
+                name: "Microprocessor 8086 Trainer LABEL- MPSEN/E&TC/µp-lab/µp86-03/05/2010",
+              },
+              {
+                name: "Microprocessor 8086 Trainer LABEL- MPSEN/E&TC/µp-lab/µp86-04/05/2010",
+              },
+              {
+                name: "Microprocessor 8086 Trainer LABEL- MPSEN/E&TC/µp-lab/µp86-05/05/2010",
+              },
+            ],
           },
           {
             srNo: 4,
-            labName: "Analog & Digital Communication Laboratory",
-            area: "",
-            incharge: "Mr. Shirse A.M",
+            labName: "Electronics Devices and Circuit Laboratory",
+            area: "Electronic Devices and Circuit Lab",
+            incharge: "Mr. Shaikh Ajij",
+            majorEquipmentDetails: [
+              { name: "Single stage CE Amplifier (SD 101)" },
+              { name: "Bistable Multivibrator using Transistor (SE118)" },
+              {
+                name: "BJT (Transistorized) Series voltage regulator (SVR) (SB-105)",
+              },
+              { name: "IC 565 as Phased lock. (SD - 501)" },
+              { name: "IC 555 as Astable Multivibrator (SF- 501)" },
+              { name: "RC Low, High & Band Pass Filter. (SE-134)" },
+              { name: "Monostable Multivibrator using Transistor (SE- 117)" },
+              { name: "Two stage RC Coupled Amplifier (SD - 116)" },
+              { name: "IC 723 as Positive low voltage Regulator (SB – 107)" },
+              {
+                name: "IC 741 as Square & Triangular wave Generator (SC – 517)",
+              },
+              { name: "Astable Multivibrator using Transistor (SE – 116)" },
+              { name: "IC 555 as Monostable Multivibrator (SF – 503)" },
+              { name: "Diode With & without biased clipper types (SE-127)" },
+              { name: "BJT biasing trainer all types (SC-107)" },
+              { name: "Phase shift Oscillator (SE -108)" },
+              { name: "Collpits Oscillator (SE103)" },
+              {
+                name: "Voltage Series and Current Series Negative feedback Amplifier (SD-126)",
+              },
+              {
+                name: "Voltage Shunt & current Shunt Negative Feedback Amplifier (SD-127)",
+              },
+              { name: "Class A Amplifier (SD-104)" },
+              { name: "RC Integrator Circuit (SE-132)" },
+            ],
           },
           {
             srNo: 5,
-            labName: "Electronics Devices and Circuit Laboratory",
-            area: "",
-            incharge: "Mr. Shaikh Ajij",
+            labName: "Embedded System Laboratory",
+            area: "Embedded System Lab",
+            incharge: "Mr. Shirse A.M",
+            majorEquipmentDetails: [
+              {
+                name: "ARM LPC 2148 Trainer kit with onboard LCD, ADC and other peripherals",
+              },
+              { name: "ARM7 LPC 2148 Trainer Kit with accessories" },
+              { name: "8051 Trainer kit with accessories" },
+            ],
+          },
+          {
+            srNo: 6,
+            labName: "Digital Communication Laboratory",
+            area: "Digital Communication Lab",
+            incharge: "",
+            majorEquipmentDetails: [
+              { name: "PAM Modulation/Demodulation Trainer" },
+              { name: "PWM Modulation/Demodulation Trainer" },
+              { name: "PPM Modulation/Demodulation Trainer" },
+              { name: "PCM Modulation/Demodulation Trainer" },
+              { name: "DELTA Modulation/Demodulation Trainer" },
+              { name: "ASK Modulation/Demodulation" },
+              { name: "FSK Modulation/Demodulation Trainer" },
+              { name: "PSK Modulation/Demodulation Trainer" },
+            ],
+          },
+          {
+            srNo: 7,
+            labName: "Control System Laboratory",
+            area: "Control System Lab",
+            incharge: "",
+            majorEquipmentDetails: [
+              { name: "D.C. Position Servomechanism Demonstration" },
+              { name: "Synchro Transmitter Receiver Pair" },
+            ],
+          },
+          {
+            srNo: 8,
+            labName: "Power Electronics Laboratory",
+            area: "Power Electronics Lab",
+            incharge: "",
+            majorEquipmentDetails: [
+              { name: "Study of SCR characteristics" },
+              { name: "Triggering circuits R, RC & UJT Triggering circuits" },
+              { name: "Study of Commutation Methods" },
+              { name: "Single Phase Fully Controlled Converter" },
+              { name: "Single phase series Inverter" },
+              { name: "Single phase Parallel Inverter" },
+              { name: "Study of Cyclo Converter" },
+            ],
+          },
+          {
+            srNo: 9,
+            labName: "Network and Measurement Laboratory",
+            area: "Network and Measurement Lab",
+            incharge: "",
+            majorEquipmentDetails: [
+              { name: "Reciprocity Theorem" },
+              { name: "Verification of Thevenins & Norton's Theorem" },
+              { name: "Tellegeous Theorem" },
+              {
+                name: "Verification of Superposition & Maximum Transfer Theorem",
+              },
+              { name: "Millman's Theorem" },
+              {
+                name: "RC Low Pass, High Pass, Band Stop Filter/RC Low Pass, High Pass Filter",
+              },
+              { name: "Cascaded Two Port Network" },
+              { name: "LDR kit" },
+              { name: "Two Port Network Kit" },
+              { name: "Lissajous Apparatus" },
+              { name: "Study of R.T.D" },
+              { name: "Design D.C Voltmeter" },
+              { name: "Weign Bridge" },
+              { name: "Schring's Bridge Trainer" },
+              { name: "Anderson's Bridge" },
+              { name: "Wheatstone Bridge" },
+              { name: "Maxwell's Bridge" },
+              { name: "Bridge 'T' type Attenuator" },
+            ],
+          },
+          {
+            srNo: 10,
+            labName: "Optical Communication Laboratory",
+            area: "Optical Communication Lab",
+            incharge: "",
+            majorEquipmentDetails: [
+              { name: "ST 2501 Fiber optics Trainer" },
+              { name: "XL-OF2 Fiber optics Transmission Trainer" },
+              { name: "XL-OF3 Measurement of losses in Fiber optics" },
+            ],
+          },
+          {
+            srNo: 11,
+            labName: "Microwave Communication Laboratory",
+            area: "Microwave Communication Lab",
+            incharge: "",
+            majorEquipmentDetails: [
+              {
+                name: "NV 9000 series Microwave Test Bench combo Model with Klystron & Gunn Power Supply",
+              },
+            ],
           },
         ],
         hod: {
