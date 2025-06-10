@@ -36,6 +36,7 @@ import AlumniPage from "./pages/AlumniPage";
 import StudentActivities from "./pages/StudentActivities";
 import AlumniAssociationForm from "./pages/AlumniAssociationForm";
 import SuggestionBoxPage from "./pages/SuggestionBoxPage";
+import InProgressPage from "./pages/InProgressPage";
 
 export default function App() {
   const location = useLocation();
@@ -111,8 +112,12 @@ export default function App() {
           element={<AlumniAssociationForm />}
         />
         <Route
-          path="/:collegeId/:type"
+          path="/:collegeId/suggestion/:type"
           element={<SuggestionBoxPage />}
+        />
+        <Route
+          path="*"
+          element={<InProgressPage />}
         />
       </Routes>
       <DepartmentRoutes />

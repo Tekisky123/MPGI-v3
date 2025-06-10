@@ -158,11 +158,11 @@ export const NAV_ITEMS = [
   {
     name: "Suggestion Box",
     subItems: [
-      { name: "Alumni Suggestions", path: "/alumni-suggestions" },
-      { name: "Parent Suggestions", path: "/parent-suggestions" },
-      { name: "Student Suggestions", path: "/student-suggestions" },
-      { name: "Staff Suggestions", path: "/staff-suggestions" },
-      { name: "Press Suggestions", path: "/press-suggestions" },
+      { name: "Alumni Suggestions", path: "/suggestion/alumni-suggestions" },
+      { name: "Parent Suggestions", path: "/suggestion/parent-suggestions" },
+      { name: "Student Suggestions", path: "/suggestion/student-suggestions" },
+      { name: "Staff Suggestions", path: "/suggestion/staff-suggestions" },
+      { name: "Press Suggestions", path: "/suggestion/press-suggestions" },
     ],
   },
   { name: "Contact", path: "/contact" },
