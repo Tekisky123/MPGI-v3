@@ -37,8 +37,8 @@ export const navItems = [
   { label: "Principal", id: "principal" },
   { label: "Placements", id: "placements" },
   // { label: "Achievements", id: "achievements" },
-  { label: "NIRF", id: "nirf" },
-  { label: "Mandatory Disclosure", id: "mandatory-disclosure" },
+  // { label: "NIRF", id: "nirf" },
+  // { label: "Mandatory Disclosure", id: "mandatory-disclosure" },
   { label: "IQAC", id: "iqac" },
   { label: "Innovation & Incubation Centre", id: "innovationIncubation" },
   { label: "SWAYAM-NPTEL", id: "swayam-nptel" },
@@ -63,15 +63,14 @@ export const profiles: ProfileData[] = [
 ### —Prof. Laxman M Waghmare
     `,
     highlights: [
-      "37+ years of experience in teaching, research, and administration",
-      "Ph.D. from IIT Roorkee; B.E. & M.E. from SGGS Nanded",
-      "120+ research publications, 17 Ph.D. students guided, 1 book, 4 book chapters",
-      "Held key positions: Director (R&D), Dean, HOD, BoM Member",
-      "Recipient of K S Krishnan Award (IETE) and other accolades",
-      "Completed funded research projects (AICTE, NRB)",
-      "International academic collaborations with USA, Singapore, Malaysia, China, Dubai",
-      "Active member in AICTE, NBA, BOS, TEQIP, and MHT-CET",
-      "Organized & participated in several conferences, CEPs, and alumni events",
+      "37+ years of experience in teaching, research, and administration.",
+      "Ph.D. from IIT Roorkee; B.E. & M.E. from SGGS Nanded.",
+      "120+ research publications, 17 Ph.D. students guided, 1 book, 4 book chapters.",
+      "Held key positions: Director (SGGS&T, Nanded), Dean (Science and Technology) SRTMUN, Nanded and Director(R&D), Central University of Rajasthan, Bandarsindari, Ajmer, Rajasthan.",
+      "Recipient of K S Krishnan Award (IETE) and other accolades.",
+      "Completed funded research projects (AICTE, NRB).",
+      "Actively involved in International academic collaborations with universities from USA, Singapore, Malaysia, China, Dubai.",
+      "Active member in various committees of AICTE, NBA, BOS, TEQIP, and MHT-CET.",
     ],
     pdfLinks: [
       {
@@ -458,7 +457,7 @@ College Id: 6841
 ## NPTEL ACKNOWLEDGEMENT LETTER
 ![NPTEL Acknowledgment Letter](${nptelAcknowledgmentLetter})
 
-## NPTEL TOTAL REGISTRATIONS 2024-25
+## NPTEL TOTAL REGISTRATIONS 2025-26
 `,
   tableData: [
     {

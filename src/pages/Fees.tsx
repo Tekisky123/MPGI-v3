@@ -25,7 +25,7 @@ const Fees = () => {
               Program-wise Fee Structure
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Academic Year 2024-25
+              Academic Year 2025-26
             </p>
           </motion.div>
 

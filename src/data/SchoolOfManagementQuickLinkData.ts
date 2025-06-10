@@ -25,8 +25,8 @@ export const navItems = [
   { label: "Dean", id: "dean" },
   { label: "Placements", id: "placements" },
   // { label: "Achievements", id: "achievements" },
-  { label: "NIRF", id: "nirf" },
-  { label: "Mandatory Disclosure", id: "mandatory-disclosure" },
+  // { label: "NIRF", id: "nirf" },
+  // { label: "Mandatory Disclosure", id: "mandatory-disclosure" },
   { label: "IQAC", id: "iqac" },
 ];
 

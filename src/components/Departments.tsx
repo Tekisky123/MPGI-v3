@@ -1,10 +1,5 @@
 import { motion } from "framer-motion";
-import {
-  ChevronRight,
-  Building2,
-  GraduationCap,
-  School,
-} from "lucide-react";
+import { ChevronRight, Building2, GraduationCap, School } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 interface Department {
@@ -19,21 +14,19 @@ const Departments = () => {
   const navigate = useNavigate();
 
   const departments: Department[] = [
-
-
     {
       title: "School Of Engineering",
       code: "DTE CODE- 2116",
       content:
-        "Matoshri Pratishthan School of Engineering offers full time four years Bachelor's Degree in Engineering approved by the All India Council for Technical Education (AICTE), New Delhi and sanctioned by Govt. of Maharashtra (DTE) and affiliated to DR BABA SAHEB AMBEDKAR TECHNOLOGICA UNIVERSITY LONERE (BATU).",
+        "The School of Engineering at Matoshri Pratishthan Group of Institutions (MPGI), Nanded is a premier engineering institute established in 2009 to provides an ideal environment for technical education and research. The institute is a vibrant and innovative centre for education to develop of cadre of socially responsive managers, technocrats, entrepreneurs and professionals.",
       icon: <GraduationCap className="w-6 h-6 text-mpgin-darkBlue" />,
       route: "/school-of-engineering/home",
     },
     {
       title: "School Of Management",
       code: "DTE CODE- 2116",
-      content:
-        "The School of Management of Matoshri Pratishthan Group of Institutions offers two years postgraduate program in Business Administration with specialization in Marketing Management Finance, Human Resource Management, I.T. and Banking. The School is affiliated to Swami Ramanand Teerth Marathwada University Nanded and approved by AICTE, Govt. of Maharashtra.",
+      content: `The Department of school of management was started in 2009 with two year’s Full time Program of Post graduation in Business Administration. The MBA program was introduced with a vision to create prospective managers with leadership skills, lateral thinking and critical evolution abilities that go to make successful entrepreneurs and corporate Heads of tomorrow.
+The goal of department is to prepare executes destined for a successful management career. Since its inception, the department has endeavored to give its students an education encompassing all management disciplines, in order to prepare them for any change in professional life.`,
       icon: <Building2 className="w-6 h-6 text-mpgin-darkBlue" />,
       route: "/school-of-management/home",
     },
@@ -41,8 +34,11 @@ const Departments = () => {
     {
       title: "Vishwabharti Polytechnic Institute",
       code: "DTE CODE- 2194",
-      content:
-        "Matoshri Pratisthan Vishwabharti Polytechnic Institute was founded on the basic principle of serving the society, to provide affordable and quality education to the students and paves way for a wider variety of career options. The Institute aims to grow as one of the largest educational complexes in Nanded and around Marathwada Region.",
+      content: `The Vishwabharati Polytechnic Institute (MPVPI) at Matoshri Pratishthan Group of Institutions (MPGI), Nanded, is a premier polytechnic institute established in 2009 to provide an ideal environment for technical education and to give "technical wings to the brain."
+
+MPVPI is a vibrant and innovative centre for education focused on developing a cadre of socially responsive managers, technocrats, entrepreneurs, and professionals. The institute is approved by the All India Council for Technical Education (AICTE), New Delhi, and affiliated to the Maharashtra State Board of Technical Education (MSBTE), Mumbai.
+
+MPVPI takes pride in its thriving alumni community of over 1000 MPVPIians who are making significant contributions worldwide through industry and academia.`,
       icon: <School className="w-6 h-6 text-mpgin-darkBlue" />,
       route: "/vishwabharati-polytechnic-institute/home",
     },

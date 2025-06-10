@@ -58,6 +58,7 @@ const DepartmentLabs = () => {
   }
 
   const hasEquipmentDetails = department.labs.some(lab => lab.majorEquipmentDetails && lab.majorEquipmentDetails.length > 0);
+  const hasAreaData = department.labs.some(lab => lab.area);
 
   return (
     <div className="p-4">
@@ -69,7 +70,7 @@ const DepartmentLabs = () => {
               <tr>
                 <th className="py-3 px-4 text-left border-b">Sr. No.</th>
                 <th className="py-3 px-4 text-left border-b">Laboratory Name</th>
-                <th className="py-3 px-4 text-left border-b">Area</th>
+                {hasAreaData && <th className="py-3 px-4 text-left border-b">Area</th>}
                 <th className="py-3 px-4 text-left border-b">Laboratory Incharge</th>
                 {hasEquipmentDetails && <th className="py-3 px-4 text-left border-b">Actions</th>}
               </tr>
@@ -79,14 +80,14 @@ const DepartmentLabs = () => {
                 <tr key={lab.srNo} className="hover:bg-gray-50 transition">
                   <td className="py-3 px-4 border-b">{lab.srNo}</td>
                   <td className="py-3 px-4 border-b font-medium">{lab.labName}</td>
-                  <td className="py-3 px-4 border-b">{lab.area}</td>
+                  {hasAreaData && <td className="py-3 px-4 border-b">{lab.area}</td>}
                   <td className="py-3 px-4 border-b">{lab.incharge}</td>
                   {hasEquipmentDetails && (
                     <td className="py-3 px-4 border-b">
                       {lab.majorEquipmentDetails && lab.majorEquipmentDetails.length > 0 && (
                         <button
                           onClick={() => openPopup(lab)}
-                          className="bg-mpgin-blue  text-mpgin-darkBlue font-bold p-1 text-sm w-full sm:w-auto"
+                          className="bg-mpgin-blue text-mpgin-darkBlue font-bold p-1 text-sm w-full sm:w-auto"
                           aria-label={`View details of ${lab.labName}`}
                         >
                           View Details

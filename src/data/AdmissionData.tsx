@@ -2,14 +2,25 @@ import { JSX } from "react";
 import undertakingStudent from "../assets/pdf/UNDERTAKING FOR STUDENT.pdf";
 import undertakingParents from "../assets/pdf/UNDERTAKING FOR PARENTS.pdf";
 import antiRaggingAffidavit from "../assets/pdf/affidavit format anti ragging.pdf";
+import { useParams } from "react-router-dom";
+import { motion } from "framer-motion";
+import laxmikantDigambarraoKulkarni from "../assets/adminStaff/Mr. Laxmikant Digambarrao Kulkarni.png";
+import aniketRameshPatil from "../assets/adminStaff/Mr Aniket Ramesh Patil.png";
+import manishkumarMadhukarraoVaidya from "../assets/adminStaff/Mr Manishkumar Madhukarrao Vaidya.png";
+import amitAhemadShaikh from "../assets/adminStaff/Mr Amit Ahemad Shaikh.png";
+import dayanandVitthalKairamkonda from "../assets/adminStaff/Mr Dayanand Vitthal Kairamkonda.png";
+import polyFeesImg from "../assets/poly/polyFeesImg.jpg"
+
+
+
 
 // Tab Navigation Items
 export const admissionNavItems = [
   { name: "Courses", path: "/courses" },
   { name: "Fee Structure", path: "/fee-structure" },
-  { name: "Student Information", path: "/student-information" },
+  { name: "Administration", path: "/administration" },
   { name: "Undertaking", path: "/undertaking" },
-  { name: "Information Brochure 2024-25", path: "/information-brochure" },
+  { name: "Information Brochure 2025-26", path: "/information-brochure" },
   {
     name: "SBI Collect",
     path: "https://www.onlinesbi.sbi/sbicollect/",
@@ -135,6 +146,22 @@ const SCHOOL_OF_ENGINEERING_BTECH_TABLE = (
         <td className="border px-4 py-2">60</td>
         <td className="border px-4 py-2">211629510</td>
       </tr>
+      <tr>
+        <td className="border px-4 py-2">5</td>
+        <td className="border px-4 py-2">
+          Artificial Intelligence and Data Science
+        </td>
+        <td className="border px-4 py-2">60</td>
+        <td className="border px-4 py-2"></td>
+      </tr>
+      <tr>
+        <td className="border px-4 py-2">5</td>
+        <td className="border px-4 py-2">
+          Artificial Intelligence and Machine Learning
+        </td>
+        <td className="border px-4 py-2">60</td>
+        <td className="border px-4 py-2"></td>
+      </tr>
     </tbody>
   </table>
 );
@@ -173,7 +200,7 @@ const SCHOOL_OF_ENGINEERING_FEES = (
   <div className="space-y-8">
     {/* <div className="bg-white p-4 rounded-lg shadow border border-gray-200">
       <h3 className="text-xl font-bold text-mpgin-darkBlue mb-4">
-        B.TECH (U.G.) 2024-25
+        B.TECH (U.G.) 2025-26
       </h3>
       <div className="overflow-x-auto">
         <table className="min-w-full border-collapse text-sm text-center">
@@ -252,7 +279,7 @@ const SCHOOL_OF_ENGINEERING_FEES = (
 
     <div className="bg-white p-4 rounded-lg shadow border border-gray-200">
       <h3 className="text-xl font-bold text-mpgin-darkBlue mb-4">
-        Direct Second Year 2024-25
+        Direct Second Year 2025-26
       </h3>
       <div className="overflow-x-auto">
         <table className="min-w-full border-collapse text-sm text-center">
@@ -317,11 +344,11 @@ const SCHOOL_OF_ENGINEERING_FEES = (
 
 const POLYTECHNIC_FEES = (
   <div className="space-y-8">
-    {/* <div className="bg-white p-4 rounded-lg shadow border border-gray-200">
-      <h3 className="text-xl font-bold text-mpgin-darkBlue mb-4">
-        Diploma Courses 2024-25
-      </h3>
-      <div className="overflow-x-auto">
+    <div className="">
+      {/* <h3 className="text-xl font-bold text-mpgin-darkBlue mb-4">
+        Diploma Courses 2025-26
+      </h3> */}
+      {/* <div className="overflow-x-auto">
         <table className="min-w-full border-collapse text-sm text-center">
           <thead className="bg-gray-100">
             <tr>
@@ -387,12 +414,19 @@ const POLYTECHNIC_FEES = (
             </tr>
           </tbody>
         </table>
+      </div> */}
+      <div className="mt-4">
+        <img
+          src={polyFeesImg}
+          alt="Fee Structure"
+          className="w-full h-auto"
+        />
       </div>
     </div>
 
-    <div className="bg-white p-4 rounded-lg shadow border border-gray-200">
+    {/* <div className="bg-white p-4 rounded-lg shadow border border-gray-200">
       <h3 className="text-xl font-bold text-mpgin-darkBlue mb-4">
-        Direct Second Year 2024-25
+        Direct Second Year 2025-26
       </h3>
       <div className="overflow-x-auto">
         <table className="min-w-full border-collapse text-sm text-center">
@@ -461,15 +495,23 @@ const POLYTECHNIC_FEES = (
           </tbody>
         </table>
       </div>
+      <div className="mt-4">
+        <img
+          src="path_to_your_image.jpg"
+          alt="Fee Structure"
+          className="w-full h-auto rounded-lg shadow-md"
+        />
+      </div>
     </div> */}
   </div>
 );
+
 
 const MANAGEMENT_FEES = (
   <div className="space-y-8">
     {/* <div className="bg-white p-4 rounded-lg shadow border border-gray-200">
       <h3 className="text-xl font-bold text-mpgin-darkBlue mb-4">
-        M.TECH (P.G.) 2024-25
+        M.TECH (P.G.) 2025-26
       </h3>
       <div className="overflow-x-auto">
         <table className="min-w-full border-collapse text-sm text-center">
@@ -509,7 +551,7 @@ const MANAGEMENT_FEES = (
 
     <div className="bg-white p-4 rounded-lg shadow border border-gray-200">
       <h3 className="text-xl font-bold text-mpgin-darkBlue mb-4">
-        Management Programs 2024-25
+        Management Programs 2025-26
       </h3>
       <div className="overflow-x-auto">
         <table className="min-w-full border-collapse text-sm text-center">
@@ -574,7 +616,7 @@ export const schoolOfEngineeringAdmission: CollegeAdmissionData = {
       <li>Leaving Certificate (TC)</li>
       <li>Caste Certificate (for category students)</li>
       <li>Caste validity Certificate (for category students)</li>
-      <li>Non Creamy Layer Certificate (for category students)</li>
+      <li>Non Creamy Layer Certificate (as required)</li>
       <li>Gap Certificate (if any)</li>
       <li>Migration Certificate (if any)</li>
       <li>Certificate of Physically Handicapped (if any)</li>
@@ -624,4 +666,126 @@ export const collegeAdmissionDataMap: Record<string, CollegeAdmissionData> = {
   "school-of-engineering": schoolOfEngineeringAdmission,
   "school-of-management": schoolOfManagementAdmission,
   "vishwabharati-polytechnic-institute": vishwabharatiPolytechnicAdmission,
+};
+
+
+const polytechnicAdministrationData = [
+  {
+    name: "Mr. Laxmikant Digambarrao Kulkarni",
+    designation: "Office Superintendent",
+    qualification: "MBA (HR)",
+    dateOfJoining: "24th August 2009",
+    experience: "18 Years",
+    contactNo: "9881321000",
+    section: "General Administration",
+    imageUrl: laxmikantDigambarraoKulkarni, // Placeholder image URL
+  },
+  {
+    name: "Mr. Aniket Ramesh Patil",
+    designation: "Clerk",
+    qualification: "B.Sc. (CS)",
+    dateOfJoining: "13th August 2012",
+    experience: "13 Years",
+    contactNo: "9405807178",
+    section: "MSBTE & DTE Work",
+    imageUrl: aniketRameshPatil,
+  },
+  {
+    name: "Mr. Manishkumar Madhukarrao Vaidya",
+    designation: "Clerk",
+    qualification: "BA",
+    dateOfJoining: "18th June 2014",
+    experience: "11 Years",
+    contactNo: "7058007911",
+    section: "Scholarship & Student Section",
+    imageUrl: manishkumarMadhukarraoVaidya,
+  },
+  {
+    name: "Mr. Amit Ahemad Shaikh",
+    designation: "Clerk",
+    qualification: "MA",
+    dateOfJoining: "12th April 2012",
+    experience: "13 Years",
+    contactNo: "7057635806",
+    section: "Documentation",
+    imageUrl: amitAhemadShaikh,
+  },
+  {
+    name: "Mr. Dayanand Vitthal Kairamkonda",
+    designation: "Accountant",
+    qualification: "MBA (Finance)",
+    dateOfJoining: "01st October 2023",
+    experience: "02 Years",
+    contactNo: "9325516612",
+    section: "Account",
+    imageUrl: dayanandVitthalKairamkonda,
+  },
+];
+
+export const AdministrationTab = () => {
+  const { collegeId } = useParams<{ collegeId: string }>();
+
+  // Only display administration data for Polytechnic Institute
+  if (collegeId !== "vishwabharati-polytechnic-institute") {
+    return (
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="bg-white shadow-lg rounded-xl overflow-hidden border border-gray-200 p-6 sm:p-8 lg:p-10 w-full"
+      >
+        <h2 className="text-2xl font-bold text-mpgin-darkBlue mb-5 border-b pb-2 border-gray-300">
+          Administration
+        </h2>
+        <p>Administration data is not available for this college.</p>
+      </motion.div>
+    );
+  }
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      className="bg-white shadow-lg rounded-xl overflow-hidden border border-gray-200 p-6 sm:p-8 lg:p-10 w-full"
+    >
+      <h2 className="text-2xl font-bold text-mpgin-darkBlue mb-5 border-b pb-2 border-gray-300">
+        Administration
+      </h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+        {polytechnicAdministrationData.map((person, index) => (
+          <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200 hover:shadow-lg transition-shadow duration-300">
+            <div className="w-full h-48 overflow-hidden">
+              <img
+                className="w-full h-full object-contain"
+                src={person.imageUrl}
+                alt={person.name}
+              />
+            </div>
+            <div className="p-4">
+              <h3 className="text-lg font-semibold text-mpgin-darkBlue mb-1">{person.name}</h3>
+              <p className="text-gray-700 text-sm mb-2">
+                <strong>Designation:</strong> {person.designation}
+              </p>
+              <p className="text-gray-700 text-sm mb-2">
+                <strong>Qualification:</strong> {person.qualification}
+              </p>
+              <p className="text-gray-700 text-sm mb-2">
+                <strong>Date of Joining:</strong> {person.dateOfJoining}
+              </p>
+              <p className="text-gray-700 text-sm mb-2">
+                <strong>Experience:</strong> {person.experience}
+              </p>
+              <p className="text-gray-700 text-sm mb-2">
+                <strong>Contact No.:</strong> {person.contactNo}
+              </p>
+              <p className="text-gray-700 text-sm">
+                <strong>Section:</strong> {person.section}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </motion.div>
+  );
 };

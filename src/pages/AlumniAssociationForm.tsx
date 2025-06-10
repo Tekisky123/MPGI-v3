@@ -137,7 +137,7 @@ const AlumniAssociationForm = () => {
       );
 
       toast.success("Alumni data submitted successfully!", {
-        description: "Thank you for registering with the alumni association.",
+        description: "Thank you for registering with the Alumni Registration.",
       });
 
       // Reset form
@@ -182,7 +182,7 @@ const AlumniAssociationForm = () => {
       >
         <div className="text-center mb-8">
           <h1 className="text-3xl font-bold text-mpgin-darkBlue mb-2">
-            Alumni Association Registration
+            Alumni Registration
           </h1>
           <p className="text-gray-600">
             Join our alumni network and stay connected with your alma mater

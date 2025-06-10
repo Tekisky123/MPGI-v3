@@ -183,7 +183,7 @@ We offer a comprehensive Diploma in Mechanical Engineering, designed to equip st
           {
             srNo: 13,
             labName: "Manufacturing Engineering Lab",
-            area: "-", // Area not specified in list
+            area: "", // Area not specified in list
             incharge: "-", // Incharge not mentioned
             majorEquipment:
               "Lathe Machine, Milling Machine, Drilling Machine, Shaping Machine, sand casting, flame/plasma cutting, and basic sheet metal operations like shearing, blanking, and drawing",
@@ -1572,43 +1572,43 @@ The excellence of the department is reflected in the consistent demand for its g
             srNo: 1,
             labName: `Database System & Software       
  Engineering Laboratory:`,
-            area: "-",
+            area: "",
             incharge: "Mr. K. A. Mistry ",
           },
           {
             srNo: 2,
             labName: `Project Phase internship & Project in Industry`,
-            area: "-",
+            area: "",
             incharge: "Mr. K.D. Ibitkar",
           },
           {
             srNo: 3,
             labName: `Natural Language   Processing  &  Data Engineering lab`,
-            area: "-",
+            area: "",
             incharge: "Miss. Maliha Sayyad.",
           },
           {
             srNo: 4,
             labName: `Programing & Machine Learning Lab`,
-            area: "-",
+            area: "",
             incharge: "Mr. K.A. Mistry",
           },
           {
             srNo: 5,
             labName: `Deep Learning & Machine Learning Lab`,
-            area: "-",
+            area: "",
             incharge: "Mrs. Jyoti Sarode",
           },
           {
             srNo: 6,
             labName: `Data Structures & Object-Oriented Lab`,
-            area: "-",
+            area: "",
             incharge: "Miss. Maliha Sayyad",
           },
           {
             srNo: 7,
             labName: `Operating System & Python Programing Lab`,
-            area: "-",
+            area: "",
             incharge: "Mrs. Jyoti Sarode",
           },
         ],
@@ -1761,7 +1761,7 @@ With a focus on academic excellence, hands-on experience, and professional growt
           {
             srNo: 13,
             labName: "Manufacturing Engineering Lab",
-            area: "-", // Area not specified in list
+            area: "", // Area not specified in list
             incharge: "-", // Incharge not mentioned
             majorEquipment:
               "Lathe Machine, Milling Machine, Drilling Machine, Shaping Machine, sand casting, flame/plasma cutting, and basic sheet metal operations like shearing, blanking, and drawing",
@@ -2064,13 +2064,13 @@ The Department, established to impart analytical and application skills in vario
             srNo: 1,
             labName: "Physics Lab",
             area: "",
-            incharge: "",
+            incharge: "Mrs Madhura Chavan",
           },
           {
             srNo: 2,
             labName: "Chemistry Lab",
             area: "",
-            incharge: "",
+            incharge: "Mrs Madhura Chavan",
           },
         ],
 
@@ -2097,48 +2097,182 @@ To provide students with soft skills and behavioural training programs in order 
       {
         id: "aids",
         name: "Artificial Intelligence and Data Science",
-        description: "",
-        image: "https://www.lpu.in/academics/images/department/physics.jpg",
-        about: ``,
-        courses: [],
-        facilities: [],
-        facultyCount: 15,
-        gallery: [],
-        labs: [],
+        description:
+          "B.Tech program with specializations in AI, Cybersecurity, Data Science, and IoT.",
+        image: "https://aitsrajampet.ac.in/images/artificial-intelligence.jpg",
+        courses: [
+          "B.Tech in CSE - AI & ML",
+          "Cybersecurity",
+          "IoT",
+          "Data Science",
+        ],
+        facilities: [
+          "Cisco Networking Academy Lab",
+          "Hackathon & Coding Competitions",
+          "Industry-aligned Certification Courses",
+          "100+ Computing Workstations",
+        ],
+        about: `MPGI Integrated Campus is recognized as one of the premier technical institutions in the region. The Department of Artificial Intelligence and Data Science was established in the year 2009 with an initial intake of 30 students. Since its inception, the department has emerged as one of the most distinguished in the institution, supported by a team of well-qualified faculty members and equipped with modern, state-of-the-art laboratories.
 
+The department is committed to nurturing students with strong academic foundations and practical skills to prepare them for the dynamic challenges of the IT industry. By fostering a culture of innovation, critical thinking, and problem-solving, the department ensures that students are industry-ready upon graduation.
+
+The excellence of the department is reflected in the consistent demand for its graduates in both industry and academia. Strong ties with the industry have shaped a forward-looking teaching methodology that blends theoretical knowledge with hands-on experience. As a result, our graduates have gone on to excel in higher education and secure successful careers in leading organizations.`,
+
+        facultyCount: 18,
+        gallery: ["/images/cse-1.jpg", "/images/cse-2.jpg"],
+        labs: [
+          {
+            srNo: 1,
+            labName: `Database System & Software       
+ Engineering Laboratory:`,
+            area: "",
+            incharge: "Mr. K. A. Mistry ",
+          },
+          {
+            srNo: 2,
+            labName: `Project Phase internship & Project in Industry`,
+            area: "",
+            incharge: "Mr. K.D. Ibitkar",
+          },
+          {
+            srNo: 3,
+            labName: `Natural Language   Processing  &  Data Engineering lab`,
+            area: "",
+            incharge: "Miss. Maliha Sayyad.",
+          },
+          {
+            srNo: 4,
+            labName: `Programing & Machine Learning Lab`,
+            area: "",
+            incharge: "Mr. K.A. Mistry",
+          },
+          {
+            srNo: 5,
+            labName: `Deep Learning & Machine Learning Lab`,
+            area: "",
+            incharge: "Mrs. Jyoti Sarode",
+          },
+          {
+            srNo: 6,
+            labName: `Data Structures & Object-Oriented Lab`,
+            area: "",
+            incharge: "Miss. Maliha Sayyad",
+          },
+          {
+            srNo: 7,
+            labName: `Operating System & Python Programing Lab`,
+            area: "",
+            incharge: "Mrs. Jyoti Sarode",
+          },
+        ],
         hod: {
-          name: "HOD",
-          designation:
-            "Head of Department - Artificial Intelligence and Data Science",
-          message: ``,
-          profileImage:
-            "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png",
+          name: "Mr B.A Khansole",
+          designation: "Associate Professor & H.O.D",
+          message: `Dear Students and Respected Visitors,
+
+A warm and heartfelt welcome to all of you.
+
+As we are all aware, the world of technology is evolving rapidly with new innovations and advancements emerging every day. In response to this dynamic landscape, the Department of Computer Science and Engineering at MPGI Integrated Campus is committed to providing students with up-to-date knowledge and technical skills. This is achieved through our highly qualified faculty, who bring rich industry experience, and through our well-developed, technologically advanced laboratories.
+
+The department has witnessed significant growth, particularly due to the rapid developments in the field of Artificial Intelligence and Data Science. We continuously strive to adapt our teaching methods and curriculum to align with current industry standards and future technological trends.
+
+I am confident that our current batch of students will uphold the department’s reputation by demonstrating a high level of professional competence and making meaningful contributions in their respective careers.
+
+Wishing all our students great success in their academic and professional journeys.`,
+          profileImage: cseHod,
         },
-        vision: ``,
-        mission: ``,
+        vision: `The Department of Artificial Intelligence and Data Science at MPGI Integrated Campus envisions becoming a leading center of excellence in computing education, research, and innovation. The department is committed to nurturing technically proficient, ethically grounded, and socially responsible professionals who can thrive in a rapidly evolving technological world. By fostering a spirit of innovation, continuous learning, and global awareness, the department aims to empower students to make meaningful contributions to industry, academia, and society at large. `,
+        mission: `The mission of the Department of Artificial Intelligence and Data Science is to deliver high-quality education that blends theoretical knowledge with practical skills in computer science and related technologies. The department seeks to develop students’ analytical thinking, problem-solving capabilities, and creativity through a curriculum that is responsive to the latest industry trends and technological advancements. Through collaborations with industry and research organizations, the department ensures experiential learning opportunities such as internships, projects, and workshops. It also places strong emphasis on ethical practices, effective communication, leadership, and teamwork, preparing students to excel in diverse professional environments. Continuous improvement in faculty development, infrastructure, and academic delivery remains a core focus in the department’s pursuit of excellence.`,
       },
       {
         id: "aiml",
         name: "Artificial Intelligence and Machine Learning",
-        description: "",
-        image: "https://www.lpu.in/academics/images/department/physics.jpg",
-        about: ``,
-        courses: [],
-        facilities: [],
-        facultyCount: 15,
-        gallery: [],
-        labs: [],
+        description:
+          "B.Tech program with specializations in AI, Cybersecurity, Data Science, and IoT.",
+        image: "https://aitsrajampet.ac.in/images/artificial-intelligence.jpg",
+        courses: [
+          "B.Tech in CSE - AI & ML",
+          "Cybersecurity",
+          "IoT",
+          "Data Science",
+        ],
+        facilities: [
+          "Cisco Networking Academy Lab",
+          "Hackathon & Coding Competitions",
+          "Industry-aligned Certification Courses",
+          "100+ Computing Workstations",
+        ],
+        about: `MPGI Integrated Campus is recognized as one of the premier technical institutions in the region. The Department of Artificial Intelligence and Machine Learning was established in the year 2009 with an initial intake of 30 students. Since its inception, the department has emerged as one of the most distinguished in the institution, supported by a team of well-qualified faculty members and equipped with modern, state-of-the-art laboratories.
 
+The department is committed to nurturing students with strong academic foundations and practical skills to prepare them for the dynamic challenges of the IT industry. By fostering a culture of innovation, critical thinking, and problem-solving, the department ensures that students are industry-ready upon graduation.
+
+The excellence of the department is reflected in the consistent demand for its graduates in both industry and academia. Strong ties with the industry have shaped a forward-looking teaching methodology that blends theoretical knowledge with hands-on experience. As a result, our graduates have gone on to excel in higher education and secure successful careers in leading organizations.`,
+
+        facultyCount: 18,
+        gallery: ["/images/cse-1.jpg", "/images/cse-2.jpg"],
+        labs: [
+          {
+            srNo: 1,
+            labName: `Database System & Software       
+ Engineering Laboratory:`,
+            area: "",
+            incharge: "Mr. K. A. Mistry ",
+          },
+          {
+            srNo: 2,
+            labName: `Project Phase internship & Project in Industry`,
+            area: "",
+            incharge: "Mr. K.D. Ibitkar",
+          },
+          {
+            srNo: 3,
+            labName: `Natural Language   Processing  &  Data Engineering lab`,
+            area: "",
+            incharge: "Miss. Maliha Sayyad.",
+          },
+          {
+            srNo: 4,
+            labName: `Programing & Machine Learning Lab`,
+            area: "",
+            incharge: "Mr. K.A. Mistry",
+          },
+          {
+            srNo: 5,
+            labName: `Deep Learning & Machine Learning Lab`,
+            area: "",
+            incharge: "Mrs. Jyoti Sarode",
+          },
+          {
+            srNo: 6,
+            labName: `Data Structures & Object-Oriented Lab`,
+            area: "",
+            incharge: "Miss. Maliha Sayyad",
+          },
+          {
+            srNo: 7,
+            labName: `Operating System & Python Programing Lab`,
+            area: "",
+            incharge: "Mrs. Jyoti Sarode",
+          },
+        ],
         hod: {
-          name: "HOD",
-          designation:
-            "Head of Department - Artificial Intelligence and Machine Learning",
-          message: ``,
-          profileImage:
-            "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png",
+          name: "Mr B.A Khansole",
+          designation: "Associate Professor & H.O.D",
+          message: `Dear Students and Respected Visitors,
+
+A warm and heartfelt welcome to all of you.
+
+As we are all aware, the world of technology is evolving rapidly with new innovations and advancements emerging every day. In response to this dynamic landscape, the Department of Computer Science and Engineering at MPGI Integrated Campus is committed to providing students with up-to-date knowledge and technical skills. This is achieved through our highly qualified faculty, who bring rich industry experience, and through our well-developed, technologically advanced laboratories.
+
+The department has witnessed significant growth, particularly due to the rapid developments in the field of Artificial Intelligence and Machine Learning. We continuously strive to adapt our teaching methods and curriculum to align with current industry standards and future technological trends.
+
+I am confident that our current batch of students will uphold the department’s reputation by demonstrating a high level of professional competence and making meaningful contributions in their respective careers.
+
+Wishing all our students great success in their academic and professional journeys.`,
+          profileImage: cseHod,
         },
-        vision: ``,
-        mission: ``,
+        vision: `The Department of Artificial Intelligence and Machine Learning at MPGI Integrated Campus envisions becoming a leading center of excellence in computing education, research, and innovation. The department is committed to nurturing technically proficient, ethically grounded, and socially responsible professionals who can thrive in a rapidly evolving technological world. By fostering a spirit of innovation, continuous learning, and global awareness, the department aims to empower students to make meaningful contributions to industry, academia, and society at large. `,
+        mission: `The mission of the Department of Artificial Intelligence and Machine Learning is to deliver high-quality education that blends theoretical knowledge with practical skills in computer science and related technologies. The department seeks to develop students’ analytical thinking, problem-solving capabilities, and creativity through a curriculum that is responsive to the latest industry trends and technological advancements. Through collaborations with industry and research organizations, the department ensures experiential learning opportunities such as internships, projects, and workshops. It also places strong emphasis on ethical practices, effective communication, leadership, and teamwork, preparing students to excel in diverse professional environments. Continuous improvement in faculty development, infrastructure, and academic delivery remains a core focus in the department’s pursuit of excellence.`,
       },
     ],
   },

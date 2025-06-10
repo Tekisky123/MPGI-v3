@@ -69,12 +69,7 @@ export const facilitiesData: CollegeFacilityGroup[] = [
         ],
         path: "/facilities/girls-boys-hostel",
       },
-      {
-        name: "Infrastructure",
-        description:
-          "Modern infrastructure supporting technical education and student life.",
-        path: "/facilities/infrastructure",
-      },
+
       {
         name: "Library",
         description:
@@ -82,9 +77,16 @@ export const facilitiesData: CollegeFacilityGroup[] = [
         path: "/facilities/library",
       },
       {
-        name: "Sports",
-        description: "Facilities for indoor and outdoor sports activities.",
-        path: "/facilities/sports",
+        name: "Indoor Sports",
+        description:
+          "Full-sized playgrounds, gymnasium, and indoor games room.",
+        path: "/facilities/indoor-sports",
+      },
+      {
+        name: "Outdoor Sports",
+        description:
+          "Full-sized playgrounds, gymnasium, and indoor games room.",
+        path: "/facilities/outdoor-sports",
       },
       {
         name: "Bus Facilities",
@@ -120,12 +122,7 @@ export const facilitiesData: CollegeFacilityGroup[] = [
           "A spacious cafeteria offering a variety of meals and refreshments.",
         path: "/facilities/cafeteria",
       },
-      {
-        name: "Laboratories",
-        description:
-          "Advanced laboratories for practical learning and research.",
-        path: "/facilities/laboratories",
-      },
+     
     ],
   },
   {
@@ -162,11 +159,7 @@ export const facilitiesData: CollegeFacilityGroup[] = [
         ],
         path: "/facilities/girls-boys-hostel",
       },
-      {
-        name: "Infrastructure",
-        description: "State-of-the-art labs, workshops, and research centers.",
-        path: "/facilities/infrastructure",
-      },
+
       {
         name: "Library",
         description:
@@ -279,17 +272,18 @@ export const facilitiesData: CollegeFacilityGroup[] = [
         path: "/facilities/virtual-labs",
       },
       {
-        name: "Sports",
+        name: "Indoor Sports",
         description:
           "Full-sized playgrounds, gymnasium, and indoor games room.",
-        path: "/facilities/sports",
+        path: "/facilities/indoor-sports",
       },
       {
-        name: "Remote Center",
+        name: "Outdoor Sports",
         description:
-          "Access to remote learning and virtual collaboration platforms.",
-        path: "/facilities/remote-center",
+          "Full-sized playgrounds, gymnasium, and indoor games room.",
+        path: "/facilities/outdoor-sports",
       },
+
       {
         name: "Bus Facilities",
         description: "Regular transport services connecting major locations.",
@@ -324,12 +318,7 @@ export const facilitiesData: CollegeFacilityGroup[] = [
           "A spacious cafeteria offering a variety of meals and refreshments.",
         path: "/facilities/cafeteria",
       },
-      {
-        name: "Laboratories",
-        description:
-          "Advanced laboratories for practical learning and research.",
-        path: "/facilities/laboratories",
-      },
+    
     ],
   },
   {
@@ -365,12 +354,7 @@ export const facilitiesData: CollegeFacilityGroup[] = [
         images: [hostel1, hostel2, hostel3, hostel4],
         path: "/facilities/girls-boys-hostel",
       },
-      {
-        name: "Infrastructure",
-        description:
-          "Well-designed buildings with seminar halls, discussion rooms, and lounges.",
-        path: "/facilities/infrastructure",
-      },
+
       {
         name: "Library",
         description:
@@ -378,9 +362,16 @@ export const facilitiesData: CollegeFacilityGroup[] = [
         path: "/facilities/library",
       },
       {
-        name: "Sports",
-        description: "Recreational areas for physical and mental wellness.",
-        path: "/facilities/sports",
+        name: "Indoor Sports",
+        description:
+          "Full-sized playgrounds, gymnasium, and indoor games room.",
+        path: "/facilities/indoor-sports",
+      },
+      {
+        name: "Outdoor Sports",
+        description:
+          "Full-sized playgrounds, gymnasium, and indoor games room.",
+        path: "/facilities/outdoor-sports",
       },
       {
         name: "Bus Facilities",
@@ -416,12 +407,7 @@ export const facilitiesData: CollegeFacilityGroup[] = [
           "A spacious cafeteria offering a variety of meals and refreshments.",
         path: "/facilities/cafeteria",
       },
-      {
-        name: "Laboratories",
-        description:
-          "Advanced laboratories for practical learning and research.",
-        path: "/facilities/laboratories",
-      },
+     
     ],
   },
 ];

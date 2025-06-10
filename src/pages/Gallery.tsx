@@ -89,7 +89,7 @@ export default function CollegeGallery() {
             <div className="max-w-7xl mx-auto px-6 lg:px-8">
               <h1 className="text-3xl md:text-4xl font-bold mb-4">
                 Campus Gallery
-                <span className="block text-mpgin-blue mt-2">At MPGIN</span>
+                <span className="block text-mpgin-blue mt-2">MPGI</span>
               </h1>
               <p className="text-lg md:text-xl max-w-3xl">
                 Capturing moments of excellence and innovation

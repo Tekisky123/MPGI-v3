@@ -20,25 +20,33 @@ import lab2 from "../../assets/engineering/lab2.jpg";
 import lab3 from "../../assets/engineering/lab3.jpg";
 import lab4 from "../../assets/engineering/lab4.jpg";
 
-const renderTable = (data) => {
+const renderTable = (data: any[], headers: string[]) => {
   return (
-    <div className="overflow-x-auto mb-4">
+    <div className="overflow-x-auto mb-6">
       <table className="min-w-full divide-y divide-gray-200 border border-gray-300">
-        <thead>
+        <thead className="bg-gray-50">
           <tr>
-            <th className="px-4 py-2 border border-gray-300 bg-gray-100 font-bold">
-              Particulars of the post
-            </th>
-            <th className="px-4 py-2 border border-gray-300 bg-gray-100 font-bold">
-              Name of the Member
-            </th>
+            {headers.map((header, index) => (
+              <th
+                key={index}
+                className="px-4 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider border border-gray-300"
+              >
+                {header}
+              </th>
+            ))}
           </tr>
         </thead>
-        <tbody>
+        <tbody className="bg-white divide-y divide-gray-200">
           {data.map((row, index) => (
-            <tr key={index}>
-              <td className="px-4 py-2 border border-gray-300">{row.post}</td>
-              <td className="px-4 py-2 border border-gray-300">{row.member}</td>
+            <tr key={index} className={index % 2 === 0 ? "bg-white" : "bg-gray-50"}>
+              {Object.values(row).map((cell: any, cellIndex) => (
+                <td
+                  key={cellIndex}
+                  className="px-4 py-3 whitespace-normal text-sm text-gray-700 border border-gray-300"
+                >
+                  {cell}
+                </td>
+              ))}
             </tr>
           ))}
         </tbody>
@@ -47,113 +55,79 @@ const renderTable = (data) => {
   );
 };
 
-const renderNptelTable = (data) => {
-  return (
-    <div className="overflow-x-auto mb-4">
-      <table className="min-w-full divide-y divide-gray-200 border border-gray-300">
-        <thead>
-          <tr>
-            <th className="px-4 py-2 border border-gray-300 bg-gray-100 font-bold">
-              Sr No
-            </th>
-            <th className="px-4 py-2 border border-gray-300 bg-gray-100 font-bold">
-              Department Name
-            </th>
-            <th className="px-4 py-2 border border-gray-300 bg-gray-100 font-bold">
-              No Of Registrations
-            </th>
-            <th className="px-4 py-2 border border-gray-300 bg-gray-100 font-bold">
-              Total Registrations
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          {data.map((row, index) => (
-            <tr key={index}>
-              <td className="px-4 py-2 border border-gray-300">{row.srNo}</td>
-              <td className="px-4 py-2 border border-gray-300">
-                {row.departmentName}
-              </td>
-              <td className="px-4 py-2 border border-gray-300">
-                {row.noOfRegistrations}
-              </td>
-              <td className="px-4 py-2 border border-gray-300">
-                {row.totalRegistrations}
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
-  );
+const renderNptelTable = (data: any[]) => {
+  const headers = ["Sr No", "Department Name", "No Of Registrations", "Total Registrations"];
+  return renderTable(data, headers);
+};
+
+const renderInnovationTable = (data: any[]) => {
+  const headers = ["Sr No", "Name", "Designation", "Role"];
+  return renderTable(data, headers);
+};
+
+const renderIqacTable = (data: any[]) => {
+  const headers = ["Particulars of the post", "Name of the Member"];
+  return renderTable(data, headers);
 };
 
 const renderImage = (imageSrc: string, altText: string) => (
-  <div className="my-4 flex justify-center">
+  <div className="my-6 flex justify-center">
     <img
       src={imageSrc}
       alt={altText}
-      className="max-w-full h-auto rounded shadow"
+      className="max-w-full h-auto rounded-lg shadow-md border border-gray-200"
     />
   </div>
 );
 
-// List renderer for bullet points starting with '-'
-// List renderer for bullet points starting with '-'
 const renderList = (listContent: string) => {
-  // Check if the content is meant to be a list by looking for lines starting with '-'
   const isList = listContent.startsWith('-');
   if (!isList) {
-    return <p>{listContent}</p>;
+    return <p className="text-gray-700 leading-relaxed my-3">{listContent}</p>;
   }
 
-  // Split the content into lines
   const lines = listContent.split('\n');
   const items = lines.filter(line => line.trim().startsWith('-')).map(item => {
-    // Remove the leading '- ' from each item
     return item.substring(2);
   });
 
   return (
-    <ul className="list-disc pl-6 space-y-1 text-gray-700 font-semibold my-4">
+    <ul className="list-disc pl-6 space-y-2 text-gray-700 my-4">
       {items.map((item, i) => (
-        <li key={i}>{item}</li>
+        <li key={i} className="leading-relaxed">{item}</li>
       ))}
     </ul>
   );
 };
 
-
 const renderContent = (
   content: string,
   highlights?: string[],
-  pdfLinks?: { name: string; url: string }[]
+  tableData?: any[],
+  tableHeaders?: string[]
 ) => {
   const paragraphs = content.split("\n");
 
   return (
-    <>
+    <div className="space-y-4">
       {paragraphs.map((paragraph, index) => {
         if (!paragraph.trim()) return null;
 
-        // Handle image syntax
         if (paragraph.startsWith("![")) {
           const imageAlt = paragraph.match(/!\[(.*?)\]/)?.[1] || "";
           const imageSrc = paragraph.match(/\((.*?)\)/)?.[1] || "";
           return renderImage(imageSrc, imageAlt);
         }
 
-        // Handle lists
         if (paragraph.startsWith("-")) {
           return renderList(paragraph);
         }
 
-        // Handle headings
         if (paragraph.startsWith("## ")) {
           return (
             <h3
               key={index}
-              className="text-xl font-bold text-mpgin-darkBlue mt-6 mb-2"
+              className="text-xl font-bold text-mpgin-darkBlue mt-6 mb-3"
             >
               {paragraph.slice(3)}
             </h3>
@@ -161,12 +135,12 @@ const renderContent = (
         }
         if (paragraph.startsWith("### ")) {
           return (
-            <h3
+            <h4
               key={index}
-              className="text-sm italic font-medium text-mpgin-darkBlue mt-6 mb-2"
+              className="text-lg font-semibold text-mpgin-darkBlue mt-5 mb-2"
             >
-              {paragraph.slice(3)}
-            </h3>
+              {paragraph.slice(4)}
+            </h4>
           );
         }
         if (paragraph.startsWith("# ")) {
@@ -180,113 +154,44 @@ const renderContent = (
           );
         }
 
-        // Handle bold
-        if (
-          (paragraph.startsWith("") && paragraph.endsWith("")) ||
-          (paragraph.startsWith("") && paragraph.endsWith(""))
-        ) {
-          return (
-            <p key={index} className=" text-gray-800 my-2">
-              {paragraph}
-            </p>
-          );
-        }
-
-        // Regular paragraph
         return (
-          <p key={index} className="text-gray-700 leading-relaxed my-2">
+          <p key={index} className="text-gray-700 leading-relaxed">
             {paragraph}
           </p>
         );
       })}
 
-      {/* Render Highlights */}
+      {tableData && tableHeaders && renderTable(tableData, tableHeaders)}
+      {tableData && !tableHeaders && renderIqacTable(tableData)}
+
       {highlights && highlights.length > 0 && (
-        <div className="my-4">
-          <h3 className="text-xl font-bold text-mpgin-darkBlue mb-2">
+        <div className="my-6 bg-blue-50 p-4 rounded-lg border border-blue-100">
+          <h3 className="text-xl font-bold text-mpgin-darkBlue mb-3">
             Highlights
           </h3>
-          <ul className="list-disc pl-6 space-y-1 text-gray-700 font-semibold">
+          <ul className="list-disc pl-6 space-y-2">
             {highlights.map((highlight, index) => (
-              <li key={index}>{highlight}</li>
+              <li key={index} className="text-gray-700">{highlight}</li>
             ))}
           </ul>
         </div>
       )}
-
-      {/* Render PDF Links */}
-      {pdfLinks && pdfLinks.length > 0 && (
-        <div className="my-4">
-          
-          <ul className="list-disc pl-6 space-y-1 text-gray-700 font-semibold">
-            {pdfLinks.map((link, index) => (
-              <li key={index}>
-                <a
-                  href={link.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-600 hover:underline"
-                >
-                  {link.name}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
-    </>
+    </div>
   );
 };
 
 const ImageGrid = ({ images }: { images: string[] }) => {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-6">
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 my-8">
       {images.slice(0, 4).map((src, idx) => (
-        <div key={idx} className="rounded overflow-hidden shadow">
+        <div key={idx} className="rounded-lg overflow-hidden shadow-md border border-gray-200">
           <img
             src={src}
             alt={`Gallery ${idx + 1}`}
-            className="w-full h-auto object-cover"
+            className="w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
           />
         </div>
       ))}
-    </div>
-  );
-};
-
-const renderInnovationTable = (data) => {
-  return (
-    <div className="overflow-x-auto mb-4">
-      <table className="min-w-full divide-y divide-gray-200 border border-gray-300">
-        <thead>
-          <tr>
-            <th className="px-4 py-2 border border-gray-300 bg-gray-100 font-bold">
-              Sr No
-            </th>
-            <th className="px-4 py-2 border border-gray-300 bg-gray-100 font-bold">
-              Name
-            </th>
-            <th className="px-4 py-2 border border-gray-300 bg-gray-100 font-bold">
-              Designation
-            </th>
-            <th className="px-4 py-2 border border-gray-300 bg-gray-100 font-bold">
-              Role
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          {data.map((row, index) => (
-            <tr key={index}>
-              <td className="px-4 py-2 border border-gray-300">{row.srNo}</td>
-              <td className="px-4 py-2 border border-gray-300">{row.name}</td>
-              <td className="px-4 py-2 border border-gray-300">
-                {row.designation}
-              </td>
-              <td className="px-4 py-2 border border-gray-300">{row.role}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
     </div>
   );
 };

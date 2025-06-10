@@ -66,7 +66,7 @@ const NotificationCard = ({ items }: { items: Notification[] }) => {
     return (
       <div className="bg-white border border-gray-200 rounded-lg shadow-md overflow-hidden">
         <div className="p-4 bg-mpgin-darkBlue text-white font-bold text-lg">
-          News & Events
+         News/Events/Notices
         </div>
         <div className="h-48 flex items-center justify-center bg-gray-50">
           <p className="text-gray-500">No news available at the moment</p>
@@ -78,7 +78,7 @@ const NotificationCard = ({ items }: { items: Notification[] }) => {
   return (
     <div className="bg-white border border-gray-200 rounded-lg shadow-md overflow-hidden">
       <div className="p-4 bg-mpgin-darkBlue text-white font-bold text-lg">
-        News & Events
+        News/Events/Notices
       </div>
       <div className="relative h-[60vh] overflow-hidden">
         <motion.div

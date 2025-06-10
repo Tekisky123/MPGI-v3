@@ -25,14 +25,11 @@ export const navItems = [
   { label: "Vision & Mission", id: "vision-mission" },
   { label: "Principal", id: "principal" },
   { label: "Placements", id: "placements" },
-  // { label: "Achievements", id: "achievements" },
-  { label: "NIRF", id: "nirf" },
-  { label: "Mandatory Disclosure", id: "mandatory-disclosure" },
   { label: "IQAC", id: "iqac" },
   { label: "SWAYAM-NPTEL", id: "swayam-nptel" },
 ];
 
-export const profiles: ProfileData[] = [
+export const profiles = [
   {
     id: "principal",
     name: "Prof. Shahaji Deshmukh",
@@ -40,7 +37,6 @@ export const profiles: ProfileData[] = [
     image: polyPrincipal,
     education: "PhD. (Pursuing) - Mechanical Engineering",
     content: `
-
 It gives me immense pleasure to extend a warm welcome to all students, parents, and visitors exploring our vibrant institution. At *Vishwabharti Polytechnic Institute*, we are committed to shaping the future of young minds through technical education that blends knowledge, skill, and character.
 
 Our polytechnic college stands as a beacon of excellence, offering industry-relevant diploma programs designed to meet the evolving needs of the modern world. With a team of dedicated faculty, state-of-the-art infrastructure, and a student-centered approach, we nurture innovation, creativity, and critical thinking among our learners.
@@ -70,56 +66,87 @@ We believe in holistic development — not just academic excellence but also per
 
 export const placementData = {
   title: "Placement Highlights",
-  content: `
-
-
-`,
+  committeeMembers: [
+    {
+      srNo: 1,
+      name: "Mr. Shahaji P. Deshmukh",
+      designation: "Principal",
+      committee: "Chairman",
+      mobileNumber: "9561906555",
+    },
+    {
+      srNo: 2,
+      name: "Ms. Manisha K. More",
+      designation: "HoD, Computer Engineering",
+      committee: "Member",
+      mobileNumber: "9764999089",
+    },
+    {
+      srNo: 3,
+      name: "Ms. Ashwini B. Mule",
+      designation: "I/C HoD, E & TC Engineering",
+      committee: "Member",
+      mobileNumber: "7709459329",
+    },
+    {
+      srNo: 4,
+      name: "Mr. Sanjay J. Deshmukh",
+      designation: "I/C HoD, Electrical Engineering",
+      committee: "Member",
+      mobileNumber: "9518363873",
+    },
+    {
+      srNo: 5,
+      name: "Ms. Pooja O. Goud",
+      designation: "I/C HoD Civil Engineering",
+      committee: "Member",
+      mobileNumber: "8830595382",
+    },
+    {
+      srNo: 6,
+      name: "Dr. Sandip S. Hambarde",
+      designation: "HoD First Year",
+      committee: "Member",
+      mobileNumber: "9860735536",
+    },
+    {
+      srNo: 7,
+      name: "Mr. Prakash D. Pophale",
+      designation: "T & P Officer",
+      committee: "Member Secretary",
+      mobileNumber: "9422870908",
+    },
+  ],
 };
 
 export const achievementData = {
   title: "Institutional Achievements",
-  content: `
-
-
-`,
+  content: ``,
 };
 
 export const nirfData = {
   title: "NIRF Ranking",
-  content: `
-
-
-`,
+  content: ``,
 };
 
 export const mandatoryDisclosureData = {
   title: "Mandatory Disclosure",
-  content: `
-
-
-`,
+  content: ``,
 };
 
 export const iqacData = {
   title: "Internal Quality Assurance Cell (IQAC)",
-  content: `
-
-
-`,
+  content: ``,
 };
 
 export const swayamNptelData = {
   title: "SWAYAM-NPTEL Initiatives",
-  content: `
-
-
-`,
+  content: ``,
 };
 
 export const visionMissionData = {
   title: "Vision & Mission",
   content: `
-
 At Vishwabharti Polytechnic Institute, our mission and vision serve as the foundation for academic excellence and societal contribution.
 
 ## Vision:
@@ -127,14 +154,12 @@ At Vishwabharti Polytechnic Institute, our mission and vision serve as the found
 
 ## Mission:
 “To become a top-class role model institute imparting excellent need-based technical education with continuous strive for center of excellence in all programmes under conducive environment beneficial for the society of nation.”
-
 `,
 };
 
 export const homeData = {
   title: "Welcome to Vishwabharati Polytechnic Institute",
   content: `
-
 ## About Us
 The Vishwabharati Polytechnic Institute (MPVPI) at Matoshri Pratishthan Group of Institutions (MPGI), Nanded, is a premier polytechnic institute established in 2009 to provide an ideal environment for technical education and to give "technical wings to the brain."
 
@@ -166,7 +191,6 @@ MPVPI takes pride in its thriving alumni community of over 1000 MPVPIians who ar
 - Separate Hostel Facilities for Boys and Girls
 - First Aid, Canteen, and Transportation Facilities
 - Playground for Outdoor Sports and Indoor Game Facilities
-
 `,
   highlights: [
     "AICTE & DTE Recognized | MSBTE Affiliated",

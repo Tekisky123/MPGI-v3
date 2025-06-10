@@ -16,33 +16,34 @@ const ProfilePage = ({ id }: { id: string }) => {
   }
 
   // Function to render content with paragraphs or lists
-  const renderContent = (text: string) => {
-    return text.split('\n\n').map((para, index) => {
-      const isUnorderedList = para.startsWith('- ') || para.startsWith('* ');
-      const isOrderedList = /^\d+\.\s/.test(para);
+ const renderContent = (text: string) => {
+  return text.split('\n\n').map((para, index) => {
+    const isUnorderedList = para.startsWith('- ') || para.startsWith('* ');
+    const isOrderedList = /^\d+\.\s/.test(para);
 
-      if (isUnorderedList || isOrderedList) {
-        const ListTag = isUnorderedList ? 'ul' : 'ol';
-        const listStyle = isUnorderedList ? 'list-disc' : 'list-decimal';
-
-        return (
-          <ListTag key={index} className={`${listStyle} pl-6 mb-4 space-y-2`}>
-            {para.split('\n').map((item, i) => (
-              <li key={i} className="text-gray-700 leading-relaxed">
-                {item.replace(/^[-*]\s|^\d+[.)]\s/, '')}
-              </li>
-            ))}
-          </ListTag>
-        );
-      }
+    if (isUnorderedList || isOrderedList) {
+      const ListTag = isUnorderedList ? 'ul' : 'ol';
+      const listStyle = isUnorderedList ? 'list-disc' : 'list-decimal';
 
       return (
-        <p key={index} className="mb-4 text-gray-800 leading-relaxed">
-          {para}
-        </p>
+        <ListTag key={index} className={`${listStyle} pl-6 mb-4 space-y-2`}>
+          {para.split('\n').map((item, i) => (
+            <li key={i} className="text-gray-700 leading-relaxed">
+              {item.replace(/^[-*]\s|^\d+[.)]\s/, '')}
+            </li>
+          ))}
+        </ListTag>
       );
-    });
-  };
+    }
+
+    return (
+      <p key={index} className="mb-4 text-gray-800 leading-relaxed">
+        {para}
+      </p>
+    );
+  });
+};
+
 
   return (
     <motion.div

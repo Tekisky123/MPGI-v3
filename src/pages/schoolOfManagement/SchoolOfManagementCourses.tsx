@@ -156,7 +156,7 @@ const SchoolOfManagementCourses = () => {
               Start Your Management Journey
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Admissions open for 2024-25 academic year
+              Admissions open for 2025-26 academic year
             </p>
             <button className="bg-mpgin-blue text-white px-6 py-3 rounded-lg font-medium hover:bg-mpgin-darkBlue transition-colors">
               Apply Now

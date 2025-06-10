@@ -1,5 +1,5 @@
 import { useState, useCallback } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { toast } from 'sonner';
 import api from '../data/Api';
 import Input from '../components/ui/Input';
@@ -7,7 +7,6 @@ import { Loader } from 'lucide-react';
 
 const SuggestionBoxPage = () => {
   const { type } = useParams();
-  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -62,8 +61,8 @@ const SuggestionBoxPage = () => {
 
   const handleCloseConfirmation = useCallback(() => {
     setShowConfirmation(false);
-    navigate('/');
-  }, [navigate]);
+   
+  }, []);
 
   const getTitle = useCallback(() => {
     switch (type) {

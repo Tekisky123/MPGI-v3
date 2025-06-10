@@ -15,10 +15,9 @@ import {
 } from "../../data/VishwabhartiPolytechnicQuickLinkData";
 import NotificationComponent from "../../components/NotificationComponent";
 
-const renderContent = (content: string) => {
+const renderContent = (content) => {
   return content.split("\n").map((paragraph, index) => {
     if (paragraph.startsWith("- ")) {
-      // Handle list items by checking for lines that start with "- "
       return (
         <ul key={index} className="list-disc pl-6 space-y-1 text-gray-700 font-semibold">
           <li>{paragraph.slice(2)}</li>
@@ -58,19 +57,18 @@ const renderContent = (content: string) => {
   });
 };
 
-
 const VishwabhartiPolytechnicQuickLinks = () => {
   const [activeId, setActiveId] = useState("home");
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  const sidebarRef = useRef<HTMLDivElement>(null);
-  const menuButtonRef = useRef<HTMLButtonElement>(null);
+  const sidebarRef = useRef(null);
+  const menuButtonRef = useRef(null);
 
   useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
+    const handleClickOutside = (event) => {
       if (
         sidebarRef.current &&
-        !sidebarRef.current.contains(event.target as Node) &&
-        !menuButtonRef.current?.contains(event.target as Node)
+        !sidebarRef.current.contains(event.target) &&
+        !menuButtonRef.current?.contains(event.target)
       ) {
         setIsSidebarOpen(false);
       }
@@ -81,7 +79,7 @@ const VishwabhartiPolytechnicQuickLinks = () => {
   }, []);
 
   useEffect(() => {
-    const handleEsc = (e: KeyboardEvent) => {
+    const handleEsc = (e) => {
       if (e.key === "Escape") setIsSidebarOpen(false);
     };
 
@@ -136,7 +134,7 @@ const VishwabhartiPolytechnicQuickLinks = () => {
                   <h2 className="text-2xl font-bold text-mpgin-darkBlue">
                     {principal?.name}
                   </h2>
-                  <p className="mt-2 text-lg  text-mpgin-blue">
+                  <p className="mt-2 text-lg text-mpgin-blue">
                     {principal?.title}
                   </p>
                 </div>
@@ -165,12 +163,38 @@ const VishwabhartiPolytechnicQuickLinks = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.3 }}
-              className="prose max-w-none text-gray-700  whitespace-pre-line"
+              className="prose max-w-none text-gray-700 whitespace-pre-line"
             >
-              {renderContent(placementData.content)}
+             
+              <h3 className="text-lg font-bold text-mpgin-darkBlue mt-4 mb-2">
+                Training & Placement Cell
+              </h3>
+              <table className="min-w-full bg-white border border-gray-300">
+                <thead>
+                  <tr>
+                    <th className="py-2 px-4 border-b">Sr.No.</th>
+                    <th className="py-2 px-4 border-b">Name</th>
+                    <th className="py-2 px-4 border-b">Designation</th>
+                    <th className="py-2 px-4 border-b">Committee</th>
+                    <th className="py-2 px-4 border-b">Mobile Number</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {placementData.committeeMembers.map((member, index) => (
+                    <tr key={index}>
+                      <td className="py-2 px-4 border-b">{member.srNo}</td>
+                      <td className="py-2 px-4 border-b">{member.name}</td>
+                      <td className="py-2 px-4 border-b">{member.designation}</td>
+                      <td className="py-2 px-4 border-b">{member.committee}</td>
+                      <td className="py-2 px-4 border-b">{member.mobileNumber}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
             </motion.div>
           </motion.div>
         );
+
       case "home":
         return (
           <motion.div
@@ -191,7 +215,7 @@ const VishwabhartiPolytechnicQuickLinks = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.3 }}
-              className="prose max-w-none text-gray-700  whitespace-pre-line"
+              className="prose max-w-none text-gray-700 whitespace-pre-line"
             >
               {renderContent(homeData.content)}
             </motion.div>
@@ -218,7 +242,7 @@ const VishwabhartiPolytechnicQuickLinks = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.3 }}
-              className="prose max-w-none  text-gray-700 whitespace-pre-line"
+              className="prose max-w-none text-gray-700 whitespace-pre-line"
             >
               {renderContent(achievementData.content)}
             </motion.div>
@@ -245,7 +269,7 @@ const VishwabhartiPolytechnicQuickLinks = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.3 }}
-              className="prose max-w-none  text-gray-700 whitespace-pre-line"
+              className="prose max-w-none text-gray-700 whitespace-pre-line"
             >
               {renderContent(nirfData.content)}
             </motion.div>
@@ -272,7 +296,7 @@ const VishwabhartiPolytechnicQuickLinks = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.3 }}
-              className="prose max-w-none  text-gray-700 whitespace-pre-line"
+              className="prose max-w-none text-gray-700 whitespace-pre-line"
             >
               {renderContent(mandatoryDisclosureData.content)}
             </motion.div>
@@ -299,7 +323,7 @@ const VishwabhartiPolytechnicQuickLinks = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.3 }}
-              className="prose max-w-none  text-gray-700 whitespace-pre-line"
+              className="prose max-w-none text-gray-700 whitespace-pre-line"
             >
               {renderContent(iqacData.content)}
             </motion.div>
@@ -326,7 +350,7 @@ const VishwabhartiPolytechnicQuickLinks = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.3 }}
-              className="prose max-w-none  text-gray-700 whitespace-pre-line"
+              className="prose max-w-none text-gray-700 whitespace-pre-line"
             >
               {renderContent(swayamNptelData.content)}
             </motion.div>
@@ -353,7 +377,7 @@ const VishwabhartiPolytechnicQuickLinks = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.3 }}
-              className="prose max-w-none  text-gray-700 whitespace-pre-line"
+              className="prose max-w-none text-gray-700 whitespace-pre-line"
             >
               {renderContent(visionMissionData.content)}
             </motion.div>
