@@ -115,10 +115,7 @@ export default function App() {
           path="/:collegeId/suggestion/:type"
           element={<SuggestionBoxPage />}
         />
-        <Route
-          path="*"
-          element={<InProgressPage />}
-        />
+        
       </Routes>
       <DepartmentRoutes />
       <Footer />
