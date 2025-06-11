@@ -27,6 +27,14 @@ export const collegeConfigs: Record<string, CollegeConfig> = {
         slug: "bsh",
         displayName: "Basic Sciences and Humanities",
       },
+      {
+        slug: "aids",
+        displayName: "Artificial Intelligence and Data Science",
+      },
+      {
+        slug: "aiml",
+        displayName: "Artificial Intelligence and Machine Learning",
+      },
     ],
   },
   management: {
@@ -49,7 +57,7 @@ export const collegeConfigs: Record<string, CollegeConfig> = {
       { slug: "mechanical", displayName: "Mechanical Engineering" },
       { slug: "it", displayName: "Information Technology" },
       { slug: "ece", displayName: "Electronics and Telecommunication" },
-       {
+      {
         slug: "bsh",
         displayName: "Basic Sciences and Humanities",
       },
