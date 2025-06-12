@@ -90,23 +90,9 @@ export const facilitiesData: CollegeFacilityGroup[] = [
       },
       {
         name: "Bus Facilities",
-        description: "Regular transport services connecting major locations.",
-        points: [
-          "Daily routes to nearby cities and towns.",
-          "Air-conditioned buses for student comfort.",
-          "GPS-enabled buses for real-time tracking.",
-          "Strict safety protocols and driver training.",
-          "Timely schedules with multiple departures daily.",
-        ],
-        tableData: [
-          {
-            label: "Routes",
-            value: "Nanded - Latur, Nanded - Parbhani, Nanded - Beed",
-          },
-          { label: "Frequency", value: "4 trips per day" },
-          { label: "Contact Person", value: "Mr. Ramesh Patel" },
-          { label: "Contact Number", value: "+91 9876543210" },
-        ],
+        description: "",
+      
+       
         images: [bus1, bus2],
         path: "/facilities/bus-facilities",
       },
@@ -286,23 +272,7 @@ export const facilitiesData: CollegeFacilityGroup[] = [
 
       {
         name: "Bus Facilities",
-        description: "Regular transport services connecting major locations.",
-        points: [
-          "Daily routes to nearby cities and towns.",
-          "Air-conditioned buses for student comfort.",
-          "GPS-enabled buses for real-time tracking.",
-          "Strict safety protocols and driver training.",
-          "Timely schedules with multiple departures daily.",
-        ],
-        tableData: [
-          {
-            label: "Routes",
-            value: "Nanded - Latur, Nanded - Parbhani, Nanded - Beed",
-          },
-          { label: "Frequency", value: "4 trips per day" },
-          { label: "Contact Person", value: "Mr. Ramesh Patel" },
-          { label: "Contact Number", value: "+91 9876543210" },
-        ],
+      
         images: [bus1, bus2],
         path: "/facilities/bus-facilities",
       },
@@ -375,23 +345,7 @@ export const facilitiesData: CollegeFacilityGroup[] = [
       },
       {
         name: "Bus Facilities",
-        description: "Regular transport services connecting major locations.",
-        points: [
-          "Daily routes to nearby cities and towns.",
-          "Air-conditioned buses for student comfort.",
-          "GPS-enabled buses for real-time tracking.",
-          "Strict safety protocols and driver training.",
-          "Timely schedules with multiple departures daily.",
-        ],
-        tableData: [
-          {
-            label: "Routes",
-            value: "Nanded - Latur, Nanded - Parbhani, Nanded - Beed",
-          },
-          { label: "Frequency", value: "4 trips per day" },
-          { label: "Contact Person", value: "Mr. Ramesh Patel" },
-          { label: "Contact Number", value: "+91 9876543210" },
-        ],
+      
         images: [bus1, bus2],
         path: "/facilities/bus-facilities",
       },
