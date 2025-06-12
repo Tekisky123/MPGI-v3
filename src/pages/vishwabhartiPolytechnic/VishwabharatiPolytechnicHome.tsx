@@ -5,6 +5,7 @@ import polytechnicHero2 from "../../assets/poly/heroDesktop2.jpg";
 import polytechnicHero3 from "../../assets/poly/hero3.png";
 import polytechnicHero4 from "../../assets/poly/hero4.png";
 import polytechnicHero5 from "../../assets/poly/hero5.jpg";
+import polytechnicHero6 from "../../assets/poly/hero7.png";
 import VishwabhartiPolytechnicQuickLinks from "./VishwabhartiPolytechnicQuickLinks";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -89,12 +90,14 @@ const VishwabharatiPolytechnicHome = () => {
     { img: polytechnicHero1 },
     { img: polytechnicHero2 },
     { img: polytechnicHero3 },
+    { img: polytechnicHero6 },
   ];
 
   const mobileSlides: Slide[] = [
     { img: polytechnicHero3 },
     { img: polytechnicHero4 },
     { img: polytechnicHero5 },
+    { img: polytechnicHero6 },
   ];
 
   const slides: Slide[] = isMobile ? mobileSlides : desktopSlides;
