@@ -1,11 +1,14 @@
 import { motion } from "framer-motion";
 import Slider, { Settings, CustomArrowProps } from "react-slick";
-import polytechnicHero1 from "../../assets/poly/hero1.jpg";
-import polytechnicHero2 from "../../assets/poly/hero2.jpg";
+import polytechnicHero1 from "../../assets/poly/heroDesktop1.png";
+import polytechnicHero2 from "../../assets/poly/heroDesktop2.jpg";
 import polytechnicHero3 from "../../assets/poly/hero3.png";
+import polytechnicHero4 from "../../assets/poly/hero4.png";
+import polytechnicHero5 from "../../assets/poly/hero5.jpg";
 import VishwabhartiPolytechnicQuickLinks from "./VishwabhartiPolytechnicQuickLinks";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { useState, useEffect } from "react";
 
 interface Slide {
   img: string;
@@ -65,11 +68,36 @@ const PrevArrow = ({ onClick }: CustomArrowProps) => (
 );
 
 const VishwabharatiPolytechnicHome = () => {
-  const slides: Slide[] = [
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768); // Adjust the breakpoint as needed
+    };
+
+    // Initial check
+    handleResize();
+
+    // Add event listener
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup event listener on component unmount
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const desktopSlides: Slide[] = [
     { img: polytechnicHero1 },
     { img: polytechnicHero2 },
     { img: polytechnicHero3 },
   ];
+
+  const mobileSlides: Slide[] = [
+    { img: polytechnicHero3 },
+    { img: polytechnicHero4 },
+    { img: polytechnicHero5 },
+  ];
+
+  const slides: Slide[] = isMobile ? mobileSlides : desktopSlides;
 
   const sliderSettings: Settings = {
     dots: true,
@@ -111,17 +139,17 @@ const VishwabharatiPolytechnicHome = () => {
   return (
     <div className="w-full overflow-hidden bg-white">
       <div className="w-full">
-        <div className="h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-[80vh] relative">
+        <div className="h-[32vh] sm:h-[60vh] md:h-[40vh] lg:h-[100vh] relative">
           <Slider {...sliderSettings}>
             {slides.map((slide, index) => (
               <div
                 key={index}
-                className="relative h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-[80vh]"
+                className="relative h-[32vh] sm:h-[60vh] md:h-[40vh] lg:h-[100vh]"
               >
                 <img
                   src={slide.img}
                   alt={`Slide ${index + 1}`}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-fill"
                   loading={index === 0 ? "eager" : "lazy"}
                 />
                 <div className="absolute inset-0 bg-black/60" />
