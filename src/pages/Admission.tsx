@@ -2,7 +2,7 @@ import { JSX, useEffect, useRef, useState } from "react";
 import undertakingStudent from "../assets/pdf/UNDERTAKING FOR STUDENT.pdf";
 import undertakingParents from "../assets/pdf/UNDERTAKING FOR PARENTS.pdf";
 import antiRaggingAffidavit from "../assets/pdf/affidavit format anti ragging.pdf";
-import { useParams, useNavigate, Routes, Route } from "react-router-dom";
+import { useParams, useNavigate, Routes, Route, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 import laxmikantDigambarraoKulkarni from "../assets/adminStaff/Mr. Laxmikant Digambarrao Kulkarni.png";
 import aniketRameshPatil from "../assets/adminStaff/Mr Aniket Ramesh Patil.png";
@@ -592,13 +592,12 @@ const InformationBrochureTab = () => {
           title={selectedPdf.heading}
           style={{ border: 'none' }}
           contextMenu="none"
-         
           allowFullScreen
           loading="lazy"
           onError={(e) => {
             e.currentTarget.src = "https://docs.google.com/gview?url=" + selectedPdf.filePath + "&embedded=true";
-          }
-        }>
+          }}
+        >
           <p>Your browser does not support iframes. You can <a href={selectedPdf.filePath}>download the PDF</a> instead.</p>
         </iframe>
       </div>
@@ -606,12 +605,19 @@ const InformationBrochureTab = () => {
   );
 };
 
-
 const AdmissionPage = () => {
   const { collegeId } = useParams<{ collegeId: string }>();
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const sidebarRef = useRef<HTMLDivElement>(null);
   const menuButtonRef = useRef<HTMLButtonElement>(null);
+  const navigate = useNavigate();
+  const location = useLocation();
+  const activePath = location.pathname.split("/").pop() || "";
+
+  const handleNavigation = (path: string) => {
+    navigate(`/${collegeId}/admission${path}`);
+    setIsSidebarOpen(false);
+  };
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -636,9 +642,6 @@ const AdmissionPage = () => {
     return () => document.removeEventListener("keydown", handleEsc);
   }, []);
 
-  const navigate = useNavigate();
-  const activePath = window.location.pathname.split("/").pop() || "";
-
   return (
     <section className="py-8 px-4 sm:px-6 lg:px-8 bg-white min-h-screen">
       <div className="md:hidden flex justify-between items-center mb-6">
@@ -654,7 +657,7 @@ const AdmissionPage = () => {
 
       <div className="w-full mx-auto flex flex-col lg:flex-row gap-6">
         <aside
-          className={`lg:w-1/4 xl:w-1/5 bg-gray-50 p-4 rounded-lg shadow-md transition-all duration-300 fixed lg:static z-20 h-full overflow-y-auto ${isSidebarOpen ? "block inset-0" : "hidden lg:block"
+          className={`lg:w-1/4 xl:w-1/5 bg-gray-50 p-4 rounded-lg shadow-md transition-all duration-300 fixed lg:static z-50 h-full overflow-y-auto ${isSidebarOpen ? "block inset-0" : "hidden lg:block"
             }`}
           ref={sidebarRef}
         >
@@ -683,7 +686,7 @@ const AdmissionPage = () => {
                 <motion.button
                   key={item.name}
                   whileHover={{ x: 5 }}
-                  onClick={() => navigate(`/${collegeId}/admission${item.path}`)}
+                  onClick={() => handleNavigation(item.path)}
                   className={`block w-full border border-gray-200 text-left py-3 px-4 transition-all duration-200 font-bold text-lg md:text-base ${activePath === item.path.split("/").pop()
                     ? "bg-mpgin-darkBlue text-mpgin-blue underline"
                     : "bg-mpgin-blue hover:bg-mpgin-darkBlue hover:text-white text-mpgin-darkBlue"
