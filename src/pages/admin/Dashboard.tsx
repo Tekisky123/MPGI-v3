@@ -8,6 +8,7 @@ import { LogOut } from "lucide-react";
 import NotificationsTable from "./NotificationsTable";
 import AlumniTable from "./AlumniTable";
 import AdminSuggestionPage from "./AdminSuggestionPage";
+import PopupNotificationTable from "./PopupNotificationTable";
 
 const Dashboard = () => {
   const [activeTab, setActiveTab] = useState<CollegeType | "admins">(
@@ -21,6 +22,7 @@ const Dashboard = () => {
     { id: "management", label: collegeConfigs.management.displayName },
     { id: "polytechnic", label: collegeConfigs.polytechnic.displayName },
     { id: "notifications", label: "Notifications" },
+    { id: "popup-notifications", label: "Popup Notifications" },
     { id: "alumnis", label: "Manage Alumni" },
     { id: "admins", label: "Manage Admins" },
     { id: "suggestions", label: "Manage Suggestions" },
@@ -96,6 +98,8 @@ const Dashboard = () => {
           <AdminSuggestionPage />
         ) : activeTab === "notifications" ? (
           <NotificationsTable />
+        ) : activeTab === "popup-notifications" ? (
+          <PopupNotificationTable />
         ) : (
           <SchoolComponent collegeType={activeTab} />
         )}

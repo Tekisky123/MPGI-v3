@@ -37,8 +37,8 @@ const DepartmentPage = () => {
           transition={{ duration: 0.6 }}
         >
           <div className="bg-mpgin-darkBlue text-white py-16 md:py-24">
-            <div className="max-w-7xl mx-auto px-6 lg:px-8">
-              <h1 className="text-3xl md:text-4xl font-bold mb-4">
+            <div className="max-w-7xl mx-auto px-4 lg:px-6">
+              <h1 className="text-3xl  font-bold mb-4">
                 {department.name}
                 <span className="block text-mpgin-blue mt-2">At MPGIN</span>
               </h1>
