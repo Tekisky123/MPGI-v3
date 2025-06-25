@@ -86,30 +86,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Social Media & Newsletter */}
-          <div className="space-y-4">
-            <h3 className="text-xl font-bold">Connect With Us</h3>
-            <div className="flex space-x-4">
-              {[
-                { Icon: Facebook, href: "#", color: "hover:bg-blue-600" },
-                { Icon: Twitter, href: "#", color: "hover:bg-blue-400" },
-                { Icon: Instagram, href: "#", color: "hover:bg-pink-600" },
-                { Icon: LinkedIn, href: "#", color: "hover:bg-blue-700" },
-                { Icon: Youtube, href: "#", color: "hover:bg-red-600" },
-              ].map(({ Icon, href, color }, index) => (
-                <a
-                  key={index}
-                  href={href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`bg-gray-800 p-2 rounded-full hover:text-white ${color} transition-colors`}
-                  aria-label={`Follow us on ${Icon.name}`}
-                >
-                  <Icon className="w-5 h-5" />
-                </a>
-              ))}
-            </div>
-          </div>
+         
         </div>
 
         {/* Google Map Section - Full Width */}
