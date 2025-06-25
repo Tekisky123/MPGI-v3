@@ -155,25 +155,7 @@ const VishwabharatiPolytechnicHome = () => {
                   className="w-full h-full object-fill"
                   loading={index === 0 ? "eager" : "lazy"}
                 />
-                <div className="absolute inset-0 bg-black/60" />
-                {/* Overlay Text Content */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                    <motion.div
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.8 }}
-                      className="space-y-4"
-                    >
-                      <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-white">
-                        Welcome to Vishwabharti Polytechnic Institute
-                      </h1>
-                      <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-mpgin-blue font-bold leading-tight">
-                        Empowering Future Innovators
-                      </p>
-                    </motion.div>
-                  </div>
-                </div>
+               
               </div>
             ))}
           </Slider>

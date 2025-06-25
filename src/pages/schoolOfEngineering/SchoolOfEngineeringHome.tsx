@@ -129,25 +129,7 @@ const SchoolOfEngineeringHome = () => {
                   className="w-full h-full object-cover"
                   loading={index === 0 ? "eager" : "lazy"}
                 />
-                <div className="absolute inset-0 bg-black/60" />
-                {/* Overlay Text Content */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                    <motion.div
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.8 }}
-                      className="space-y-4"
-                    >
-                      <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-white">
-                        Welcome to School of Engineering
-                      </h1>
-                      <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight text-mpgin-blue">
-                        Innovating for the Future
-                      </h2>
-                    </motion.div>
-                  </div>
-                </div>
+               
               </div>
             ))}
           </Slider>
