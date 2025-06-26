@@ -371,10 +371,100 @@ const polytechnicAdministrationData = [
   },
 ];
 
+const schoolOfEngineeringAdministrationData = [
+  {
+    name: "Mr. Pravin J. Kinikar",
+    designation: "Administrative Officer",
+    contactNo: "9921900088",
+    email: "pjkinikar@gmail.com",
+  },
+  {
+    name: "Mr. Balaji S. Kshirsagar",
+    designation: "Office Superintendent",
+    contactNo: "9766924007",
+    email: "osmpgi@gmail.com",
+  },
+  {
+    name: "Mr. Balkrushna P. Gaikwad",
+    designation: "Account Officer",
+    contactNo: "7507777522",
+    email: "balkrishnag78@gmail.com",
+  },
+];
+
+const schoolOfEngineeringStudentSectionData = [
+  {
+    name: "Mr. Srinivas Chavan",
+    designation: "Admission Incharge",
+    contactNo: "8999070358",
+    email: "shriniwash.chavan@gmail.com",
+  },
+  {
+    name: "Mr. Madhav T Jadhav",
+    designation: "Original Document & T.C. Section",
+    contactNo: "9823150778",
+  },
+  {
+    name: "Mr. Srinivas Chavan",
+    designation: "Scholarship Section",
+    contactNo: "8999070358",
+    email: "shriniwash.chavan@gmail.com",
+  },
+  {
+    name: "Mr. Shaikh Jameer",
+    designation: "EBC/Minority Section",
+    contactNo: "8975106348",
+    email: "mpgiebc@gmail.com",
+  },
+  {
+    name: "Mr. Prakash Waghmare",
+    designation: "Mark Memo/Degree Certificate",
+    contactNo: "9890973358",
+    email: "Prakashwaghmare1974@gmail.com",
+  },
+  {
+    name: "Ms. C. S. Jadhav",
+    designation: "Establishment Section",
+    contactNo: "7745078528",
+    email: "chayajadhav1911@gmail.com",
+  },
+];
+
+const schoolOfManagementAdministrationData = [
+  {
+    name: "Mr. Management Admin 1",
+    designation: "Administrative Officer",
+    contactNo: "9921900088",
+    email: "managementadmin1@gmail.com",
+  },
+  {
+    name: "Mr. Management Admin 2",
+    designation: "Office Superintendent",
+    contactNo: "9766924007",
+    email: "managementadmin2@gmail.com",
+  },
+  // Add more management administration data as needed
+];
+
 export const AdministrationTab = () => {
   const { collegeId } = useParams<{ collegeId: string }>();
 
-  if (collegeId !== "vishwabharati-polytechnic-institute") {
+  const getAdministrationData = () => {
+    switch (collegeId) {
+      case "vishwabharati-polytechnic-institute":
+        return { mainData: polytechnicAdministrationData, studentSectionData: [] };
+      case "school-of-engineering":
+        return { mainData: schoolOfEngineeringAdministrationData, studentSectionData: schoolOfEngineeringStudentSectionData };
+      case "school-of-management":
+        return { mainData: schoolOfManagementAdministrationData, studentSectionData: [] };
+      default:
+        return { mainData: [], studentSectionData: [] };
+    }
+  };
+
+  const { mainData, studentSectionData } = getAdministrationData();
+
+  if (mainData.length === 0) {
     return (
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -400,40 +490,96 @@ export const AdministrationTab = () => {
       <h2 className="text-2xl font-bold text-mpgin-darkBlue mb-5 border-b pb-2 border-gray-300">
         Administration
       </h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
-        {polytechnicAdministrationData.map((person, index) => (
-          <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200 hover:shadow-lg transition-shadow duration-300">
-            <div className="w-full h-48 overflow-hidden">
-              <img
-                className="w-full h-full object-contain"
-                src={person.imageUrl}
-                alt={person.name}
-              />
+      {collegeId === "vishwabharati-polytechnic-institute" ? (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+          {mainData.map((person, index) => (
+            <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200 hover:shadow-lg transition-shadow duration-300">
+              <div className="w-full h-48 overflow-hidden">
+                <img
+                  className="w-full h-full object-contain"
+                  src={person.imageUrl}
+                  alt={person.name}
+                />
+              </div>
+              <div className="p-4">
+                <h3 className="text-lg font-semibold text-mpgin-darkBlue mb-1">{person.name}</h3>
+                <p className="text-gray-700 text-sm mb-2">
+                  <strong>Designation:</strong> {person.designation}
+                </p>
+                <p className="text-gray-700 text-sm mb-2">
+                  <strong>Qualification:</strong> {person.qualification}
+                </p>
+                <p className="text-gray-700 text-sm mb-2">
+                  <strong>Date of Joining:</strong> {person.dateOfJoining}
+                </p>
+                <p className="text-gray-700 text-sm mb-2">
+                  <strong>Experience:</strong> {person.experience}
+                </p>
+                <p className="text-gray-700 text-sm mb-2">
+                  <strong>Contact No.:</strong> {person.contactNo}
+                </p>
+                <p className="text-gray-700 text-sm">
+                  <strong>Section:</strong> {person.section}
+                </p>
+              </div>
             </div>
-            <div className="p-4">
-              <h3 className="text-lg font-semibold text-mpgin-darkBlue mb-1">{person.name}</h3>
-              <p className="text-gray-700 text-sm mb-2">
-                <strong>Designation:</strong> {person.designation}
-              </p>
-              <p className="text-gray-700 text-sm mb-2">
-                <strong>Qualification:</strong> {person.qualification}
-              </p>
-              <p className="text-gray-700 text-sm mb-2">
-                <strong>Date of Joining:</strong> {person.dateOfJoining}
-              </p>
-              <p className="text-gray-700 text-sm mb-2">
-                <strong>Experience:</strong> {person.experience}
-              </p>
-              <p className="text-gray-700 text-sm mb-2">
-                <strong>Contact No.:</strong> {person.contactNo}
-              </p>
-              <p className="text-gray-700 text-sm">
-                <strong>Section:</strong> {person.section}
-              </p>
-            </div>
+          ))}
+        </div>
+      ) : (
+        <>
+          <h3 className="text-xl font-bold text-mpgin-darkBlue mt-6 mb-2">Administrative Staff</h3>
+          <div className="overflow-x-auto mt-6">
+            <table className="min-w-full border-collapse text-sm ">
+              <thead className="bg-gray-100">
+                <tr>
+                  <th className="border px-4 py-2">Name</th>
+                  <th className="border px-4 py-2">Designation</th>
+                  <th className="border px-4 py-2">Contact No.</th>
+                  <th className="border px-4 py-2">Email</th>
+                </tr>
+              </thead>
+              <tbody>
+                {mainData.map((person, index) => (
+                  <tr key={index}>
+                    <td className="border px-4 py-2">{person.name}</td>
+                    <td className="border px-4 py-2">{person.designation}</td>
+                    <td className="border px-4 py-2">{person.contactNo}</td>
+                    <td className="border px-4 py-2">{person.email || "N/A"}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
-        ))}
-      </div>
+
+          {studentSectionData.length > 0 && (
+            <>
+              <h3 className="text-xl font-bold text-mpgin-darkBlue mt-6 mb-2">Student Section</h3>
+              <div className="overflow-x-auto mt-6">
+                <table className="min-w-full border-collapse text-sm ">
+                  <thead className="bg-gray-100">
+                    <tr>
+                      <th className="border px-4 py-2">Name</th>
+                      <th className="border px-4 py-2">Designation</th>
+                      <th className="border px-4 py-2">Contact No.</th>
+                      <th className="border px-4 py-2">Email</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {studentSectionData.map((person, index) => (
+                      <tr key={index}>
+                        <td className="border px-4 py-2">{person.name}</td>
+                        <td className="border px-4 py-2">{person.designation}</td>
+                        <td className="border px-4 py-2">{person.contactNo}</td>
+                        <td className="border px-4 py-2">{person.email || "N/A"}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </>
+          )}
+        </>
+      )}
     </motion.div>
   );
 };
@@ -657,7 +803,7 @@ const AdmissionPage = () => {
 
       <div className="w-full mx-auto flex flex-col lg:flex-row gap-6">
         <aside
-          className={`lg:w-1/4 xl:w-1/5 bg-gray-50 p-4 rounded-lg shadow-md transition-all duration-300 fixed lg:static z-50 h-full overflow-y-auto ${isSidebarOpen ? "block inset-0" : "hidden lg:block"
+          className={`lg:w-1/4 xl:w-1/5 bg-gray-50 p-4 rounded-lg shadow-md transition-all duration-300 fixed lg:static z-20 h-full overflow-y-auto ${isSidebarOpen ? "block inset-0" : "hidden lg:block"
             }`}
           ref={sidebarRef}
         >
