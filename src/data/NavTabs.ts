@@ -61,6 +61,10 @@ export const NAV_ITEMS = [
         name: "SC/ST Cell",
         path: "/cells-committees?section=sc-st-cell",
       },
+      {
+        name: "Training & Placement Cell",
+        path: "/cells-committees?section=training-placement-cell",
+      },
     ],
   },
   {

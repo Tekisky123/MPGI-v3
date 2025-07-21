@@ -141,7 +141,7 @@ const SCHOOL_OF_ENGINEERING_BTECH_TABLE = (
       </tr>
       <tr>
         <td className="border px-4 py-2">2</td>
-        <td className="border px-4 py-2">Computer Science & Eng.</td>
+        <td className="border px-4 py-2">Computer Science & Engineering</td>
         <td className="border px-4 py-2">60</td>
         <td className="border px-4 py-2">211624210</td>
       </tr>
@@ -153,33 +153,33 @@ const SCHOOL_OF_ENGINEERING_BTECH_TABLE = (
       </tr>
       <tr>
         <td className="border px-4 py-2">4</td>
-        <td className="border px-4 py-2">Mechanical Engineering</td>
-        <td className="border px-4 py-2">60</td>
-        <td className="border px-4 py-2">211661210</td>
+        <td className="border px-4 py-2">Mechanical & Automation Eng.</td>
+        <td className="border px-4 py-2">30</td>
+        <td className="border px-4 py-2">211661510</td>
       </tr>
       <tr>
         <td className="border px-4 py-2">5</td>
         <td className="border px-4 py-2">
-          Electronics and Telecommunication Engineering
+          Electronics and Telecommunication Eng.
         </td>
-        <td className="border px-4 py-2">60</td>
-        <td className="border px-4 py-2">211629510</td>
+        <td className="border px-4 py-2">30</td>
+        <td className="border px-4 py-2">211637210</td>
       </tr>
       <tr>
-        <td className="border px-4 py-2">5</td>
-        <td className="border px-4 py-2">
-          Artificial Intelligence and Data Science
-        </td>
-        <td className="border px-4 py-2">60</td>
-        <td className="border px-4 py-2"></td>
-      </tr>
-      <tr>
-        <td className="border px-4 py-2">5</td>
+        <td className="border px-4 py-2">6</td>
         <td className="border px-4 py-2">
           Artificial Intelligence and Machine Learning
         </td>
-        <td className="border px-4 py-2">60</td>
-        <td className="border px-4 py-2"></td>
+        <td className="border px-4 py-2">30</td>
+        <td className="border px-4 py-2">211691110</td>
+      </tr>
+      <tr>
+        <td className="border px-4 py-2">7</td>
+        <td className="border px-4 py-2">
+          Artificial Intelligence and Data Science
+        </td>
+        <td className="border px-4 py-2">30</td>
+        <td className="border px-4 py-2">211626310</td>
       </tr>
     </tbody>
   </table>
@@ -644,10 +644,11 @@ const FeeStructureTab = () => {
       className="bg-white shadow-lg rounded-xl overflow-hidden border border-gray-200 p-6 sm:p-8 lg:p-10 w-full"
     >
       <h2 className="text-2xl font-bold text-mpgin-darkBlue mb-5 border-b pb-2 border-gray-300">
-        Fee Structure 2025-26
+      Fee Structure 2025-26
       </h2>
-      <div className="space-y-6">
-        {currentCollegeData.feeStructure}
+      <div className="space-y-6 underline text-blue-600">
+        {/* {currentCollegeData.feeStructure} */}
+        <a target="_blank" href="/src/assets/pdf/fees_structure.pdf">Click here to download Fee Structure 2025-26</a>
       </div>
     </motion.div>
   );

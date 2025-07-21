@@ -108,7 +108,89 @@ export const facilitiesData: CollegeFacilityGroup[] = [
       {
         name: "Library",
         description:
-          "Fully equipped library with books, journals, and digital resources.",
+          "A well-stocked polytechnic library with categorized book sections, digital access, and reading rooms for students and staff.",
+        libraryData: {
+          totalTitles: [
+            {
+              label: "Library Development",
+              titles: "2,454",
+              books: "17,133",
+            },
+            {
+              label: "Book Bank",
+              titles: "-",
+              books: "2,613",
+            },
+            {
+              label: "Total",
+              titles: "2,454",
+              books: "19,746",
+            },
+          ],
+          journals: {
+            printed: "30 National / 7 International",
+            eJournals: "Yes (DELNET Subscription)",
+            nationalInternational: "National & International Journals",
+            departmentWise: [], // Not provided specifically in doc
+          },
+          newspapers: [
+            "Daily newspapers in Hindi",
+            "Daily newspapers in Marathi",
+            "Daily newspapers in English",
+          ],
+          additionalBooks: [], // Not explicitly mentioned in doc
+          currentYearBudget: "Not mentioned",
+          readingRoomCapacity: "Boys: 30, Girls: 30, Staff: 10 (Total: 60+)",
+          facilities: [
+            "Open Access Systems for all Borrowers (Staff/Students)",
+            "Surveillance Camera for security",
+            "Multi-storage Library Building area",
+            "Separate sections: Internet Lab, Language Lab, Reading Room, Periodical Section, Reference Section, Book Bank Section",
+            "Reading Room Facility (60 students seating capacity)",
+            "Staff Reading Room available",
+            "Wi-Fi Connectivity",
+            "Drinking Water (RO)",
+            "DELNET – E Library Software (www.delnet.in)",
+            "Koha – Library Automation Software",
+            "Barcode Printing",
+            "Excel Data Import",
+            "OPAC (Online Public Access Catalogue)",
+            "Issue/Return Reports",
+            "Library Visitor Entry",
+            "Accession Register Entry",
+            "Invoicing & Book Entry",
+          ],
+          staffDetails: [
+            {
+              name: "Mr. Tate Dilip D.",
+              designation: "Librarian",
+              qualification: "", // Not provided
+              experience: "", // Not provided
+              duties: [], // Not provided
+            },
+            {
+              name: "Mr. Pawade Manik",
+              designation: "Asst. Librarian",
+              qualification: "",
+              experience: "",
+              duties: [],
+            },
+            {
+              name: "Mr. Pathan Anis",
+              designation: "Library Assistant",
+              qualification: "",
+              experience: "",
+              duties: [],
+            },
+            {
+              name: "Mr. Shaikh Ayub",
+              designation: "Peon",
+              qualification: "",
+              experience: "",
+              duties: [],
+            },
+          ],
+        },
         path: "/facilities/library",
       },
       {

@@ -65,11 +65,6 @@ const renderInnovationTable = (data: any[]) => {
   return renderTable(data, headers);
 };
 
-const renderIqacTable = (data: any[]) => {
-  const headers = ["Particulars of the post", "Name of the Member"];
-  return renderTable(data, headers);
-};
-
 const renderImage = (imageSrc: string, altText: string) => (
   <div className="my-6 flex justify-center">
     <img
@@ -107,22 +102,18 @@ const renderContent = (
   tableHeaders?: string[]
 ) => {
   const paragraphs = content.split("\n");
-
   return (
     <div className="space-y-4">
       {paragraphs.map((paragraph, index) => {
         if (!paragraph.trim()) return null;
-
         if (paragraph.startsWith("![")) {
           const imageAlt = paragraph.match(/!\[(.*?)\]/)?.[1] || "";
           const imageSrc = paragraph.match(/\((.*?)\)/)?.[1] || "";
           return renderImage(imageSrc, imageAlt);
         }
-
         if (paragraph.startsWith("-")) {
           return renderList(paragraph);
         }
-
         if (paragraph.startsWith("## ")) {
           return (
             <h3
@@ -153,17 +144,14 @@ const renderContent = (
             </h2>
           );
         }
-
         return (
           <p key={index} className="text-gray-700 leading-relaxed">
             {paragraph}
           </p>
         );
       })}
-
       {tableData && tableHeaders && renderTable(tableData, tableHeaders)}
       {tableData && !tableHeaders && renderIqacTable(tableData)}
-
       {highlights && highlights.length > 0 && (
         <div className="my-6 bg-blue-50 p-4 rounded-lg border border-blue-100">
           <h3 className="text-xl font-bold text-mpgin-darkBlue mb-3">
@@ -176,6 +164,47 @@ const renderContent = (
           </ul>
         </div>
       )}
+    </div>
+  );
+};
+
+const renderIqacTable = (data: any[]) => {
+  const headers = ["Particulars of the post", "Name of the Member"];
+  return (
+    <div className="overflow-x-auto mb-6">
+      <table className="min-w-full divide-y divide-gray-200 border border-gray-300">
+        <thead className="bg-gray-50">
+          {/* <tr>
+            {headers.map((header, index) => (
+              <th
+                key={index}
+                className="px-4 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider border border-gray-300"
+              >
+                {header}
+              </th>
+            ))}
+          </tr> */}
+        </thead>
+        <tbody className="bg-white divide-y divide-gray-200">
+          {data.map((row, index) => (
+            <tr key={index} className={index % 2 === 0 ? "bg-white" : "bg-gray-50"}>
+              {Object.values(row).map((cell: any, cellIndex) => (
+                <td
+                  key={cellIndex}
+                  className="px-4 py-3 whitespace-normal text-sm text-gray-700 border border-gray-300"
+                >
+                  {cell.startsWith('/src/assets/pdf/') ? (
+                    <a href={cell} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">
+                      Click Here</a>
+                  ) : (
+                    cell
+                  )}
+                </td>
+              ))}
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 };
@@ -288,7 +317,7 @@ const SchoolOfEngineeringQuickLinks = () => {
           </motion.div>
         );
 
-         case "home":
+      case "home":
         return (
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -574,9 +603,8 @@ const SchoolOfEngineeringQuickLinks = () => {
       </div>
       <div className="w-full mx-auto flex flex-col lg:flex-row gap-6">
         <aside
-          className={`lg:w-1/4 xl:w-1/5 bg-gray-50 p-4 rounded-lg shadow-md transition-all duration-300 fixed lg:static z-50 lg:z-auto h-full overflow-y-auto ${
-            isSidebarOpen ? "block inset-0" : "hidden lg:block"
-          }`}
+          className={`lg:w-1/4 xl:w-1/5 bg-gray-50 p-4 rounded-lg shadow-md transition-all duration-300 fixed lg:static z-50 lg:z-auto h-full overflow-y-auto ${isSidebarOpen ? "block inset-0" : "hidden lg:block"
+            }`}
           ref={sidebarRef}
         >
           <button
@@ -594,11 +622,10 @@ const SchoolOfEngineeringQuickLinks = () => {
                   setActiveId(item.id);
                   setIsSidebarOpen(false);
                 }}
-                className={`block w-full border border-gray-200 text-left py-3 px-4 transition-all duration-200 font-bold text-lg md:text-base ${
-                  activeId === item.id
-                    ? "bg-mpgin-darkBlue text-mpgin-blue underline"
-                    : "bg-mpgin-blue hover:bg-mpgin-darkBlue hover:text-white text-mpgin-darkBlue"
-                }`}
+                className={`block w-full border border-gray-200 text-left py-3 px-4 transition-all duration-200 font-bold text-lg md:text-base ${activeId === item.id
+                  ? "bg-mpgin-darkBlue text-mpgin-blue underline"
+                  : "bg-mpgin-blue hover:bg-mpgin-darkBlue hover:text-white text-mpgin-darkBlue"
+                  }`}
               >
                 {item.label}
               </motion.button>

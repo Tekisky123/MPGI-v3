@@ -16,13 +16,15 @@ export const COMMITTEE_MAPPINGS: Record<CollegeId, Array<CommitteeMapping>> = {
         { id: "student-counselling-cell-engineering", title: "Student Counselling Cell" },
         { id: "industry-liaison-committee-engineering", title: "Industry Liaison Committee" },
         { id: "library-committee-engineering", title: "Library Committee" },
-        { id: "remedial-coaching-cell-engineering", title: "Remedial Coaching Cell" }
+        { id: "remedial-coaching-cell-engineering", title: "Remedial Coaching Cell" },
+        { id: "training-placement-cell", title: "Training & Placement Cell" }
     ],
     "school-of-management": [
         { id: "anti-ragging-committee-management", title: "Anti Ragging Committee" },
         { id: "sc-st-committee-management", title: "SC/ST Committee" },
         { id: "internal-complaint-committee-management", title: "Internal Complaint Committee(ICC)" },
         { id: "discipline-committee-management", title: "Discipline Committee" },
+        { id: "training-placement-cell", title: "Training & Placement Cell" }
         
     ],
     "vishwabharati-polytechnic-institute": [
@@ -30,6 +32,8 @@ export const COMMITTEE_MAPPINGS: Record<CollegeId, Array<CommitteeMapping>> = {
         { id: "anti-sexual-harassment-cell", title: "Anti Sexual Harassment Cell" },
         { id: "womens-guidance-cell", title: "Women's Guidance Cell" },
         { id: "sc-st-cell", title: "SC/ST Cell" },
-        { id: "internal-quality-assurance-cell", title: "Internal Quality Assurance Committee" }
+        { id: "internal-quality-assurance-cell", title: "Internal Quality Assurance Committee" },
+        { id: "training-placement-cell", title: "Training & Placement Cell" }
+       
     ]
 };
