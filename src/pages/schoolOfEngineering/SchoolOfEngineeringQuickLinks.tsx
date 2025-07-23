@@ -151,7 +151,24 @@ const renderContent = (
         );
       })}
       {tableData && tableHeaders && renderTable(tableData, tableHeaders)}
-      {tableData && !tableHeaders && renderIqacTable(tableData)}
+      {tableData && !tableHeaders && (
+  <div className="space-y-2">
+    {tableData.map((item, index) => (
+      <div key={index}>
+        <span className="font-medium text-gray-800">{item.name}:</span>{" "}
+        <a
+          href={item.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-600 hover:underline"
+        >
+          Click Here
+        </a>
+      </div>
+    ))}
+  </div>
+)}
+
       {highlights && highlights.length > 0 && (
         <div className="my-6 bg-blue-50 p-4 rounded-lg border border-blue-100">
           <h3 className="text-xl font-bold text-mpgin-darkBlue mb-3">
@@ -193,7 +210,7 @@ const renderIqacTable = (data: any[]) => {
                   key={cellIndex}
                   className="px-4 py-3 whitespace-normal text-sm text-gray-700 border border-gray-300"
                 >
-                  {cell.startsWith('/src/assets/pdf/') ? (
+                  {cell.startsWith('https://mpgi.ac.in/') ? (
                     <a href={cell} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">
                       Click Here</a>
                   ) : (

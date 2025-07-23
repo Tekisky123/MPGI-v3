@@ -1,8 +1,8 @@
 import nptelAcknowledgmentLetter from "../assets/images/nptelAcknowledgmentLetter.png";
 import Placement from "../pages/schoolOfEngineering/SchoolOfEngineeringPlacement";
 import PrincipelLaxmanEngineer from "../assets/principalImages/PrincipelLaxmanEngineer.jpg";
-import principleBriefResume from "../assets/pdf/Dr. L M Waghmare - brief Resume.pdf";
-import principleBioData from "../assets/pdf/Biodata - L M Waghmare  May 2025.pdf";
+import principleBriefResume from "../assets/pdf/resume.pdf";
+import principleBioData from "../assets/pdf/bioData.pdf";
 
 export interface ProfileData {
   id: string;
