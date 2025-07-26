@@ -45,8 +45,8 @@ const DEPARTMENT_MAPPINGS: Record<string, Array<{ name: string; path: string }>>
     { name: "Electrical Engineering", path: "/departments/eee/profile" },
     { name: "Mechanical and Automation Engineering", path: "/departments/mech/profile" },
     { name: "Electronics and Telecommunication Engineering", path: "/departments/ece/profile" },
-    { name: "Artificial Intelligence and Data Science", path: "/departments/aids/profile" },
-    { name: "Artificial Intelligence and Machine Learning", path: "/departments/aiml/profile" },
+    { name: "Artificial Intelligence (AI) and Data Science", path: "/departments/aids/profile" },
+    { name: `Computer Science and Engineering (AIML)`, path: "/departments/aiml/profile" },
     { name: "Basic Sciences and Humanities (FE)", path: "/departments/bsh/profile" },
   ],
 };

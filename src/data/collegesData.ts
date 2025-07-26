@@ -2351,7 +2351,7 @@ To provide students with soft skills and behavioural training programs in order 
       },
       {
         id: "aids",
-        name: "Artificial Intelligence and Data Science",
+        name: "Artificial Intelligence (AI) and Data Science",
         description:
           "B.Tech program with specializations in AI, Cybersecurity, Data Science, and IoT.",
         image: "https://aitsrajampet.ac.in/images/artificial-intelligence.jpg",
@@ -2441,7 +2441,7 @@ Wishing all our students great success in their academic and professional journe
       },
       {
         id: "aiml",
-        name: "Artificial Intelligence and Machine Learning",
+        name: "Computer Science and Engineering (AIML)",
         description:
           "B.Tech program with specializations in AI, Cybersecurity, Data Science, and IoT.",
         image: "https://aitsrajampet.ac.in/images/artificial-intelligence.jpg",

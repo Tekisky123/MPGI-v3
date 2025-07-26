@@ -17,6 +17,8 @@ import { Menu, X } from "lucide-react";
 import polyBrouchure1 from "../assets/pdf/polyBroucher1.pdf";
 import polyBrouchure2 from "../assets/pdf/polyBroucher2.pdf";
 import polyBrouchure3 from "../assets/pdf/polyBroucher3.pdf";
+import feesStructure from "../assets/pdf/fees_structure.pdf";
+import informationBrochure from "../assets/pdf/information_brochure.pdf";
 
 // Tab Navigation Items
 export const admissionNavItems = [
@@ -31,8 +33,8 @@ export const admissionNavItems = [
     external: true,
   },
   {
-    name: "VidyaLaxmi Portal",
-    path: "https://www.vidyalakshmi.co.in/",
+    name: "Admission process 2025-26",
+    path: "https://fe2025.mahacet.org/StaticPages/HomePage",
     external: true,
   },
 ];
@@ -55,9 +57,8 @@ export const UNDERSTANDING_DOCUMENTS = [
 // Information Brochure PDFs with headings
 export const INFORMATION_BROCHURE_PDFS = {
   "school-of-engineering": [
-    { heading: "Engineering Brochure 1", filePath: "path_to_engineering_brochure_1.pdf" },
-    { heading: "Engineering Brochure 2", filePath: "path_to_engineering_brochure_2.pdf" },
-    { heading: "Engineering Brochure 3", filePath: "path_to_engineering_brochure_3.pdf" },
+    { heading: "Engineering Brochure 1", filePath: "path_to_engineering_brochure_1.pdf" }
+    
   ],
   "school-of-management": [
     { heading: "Management Brochure 1", filePath: "path_to_management_brochure_1.pdf" },
@@ -168,7 +169,8 @@ const SCHOOL_OF_ENGINEERING_BTECH_TABLE = (
       <tr>
         <td className="border px-4 py-2">6</td>
         <td className="border px-4 py-2">
-          Artificial Intelligence and Machine Learning
+          Computer Science & Engineering<br/>
+          (Artificial Intelligence and Machine Learning)
         </td>
         <td className="border px-4 py-2">30</td>
         <td className="border px-4 py-2">211691110</td>
@@ -176,7 +178,7 @@ const SCHOOL_OF_ENGINEERING_BTECH_TABLE = (
       <tr>
         <td className="border px-4 py-2">7</td>
         <td className="border px-4 py-2">
-          Artificial Intelligence and Data Science
+          Artificial Intelligence (AI) and Data Science
         </td>
         <td className="border px-4 py-2">30</td>
         <td className="border px-4 py-2">211626310</td>
@@ -648,7 +650,7 @@ const FeeStructureTab = () => {
       </h2>
       <div className="space-y-6 underline text-blue-600">
         {/* {currentCollegeData.feeStructure} */}
-        <a target="_blank" href="/src/assets/pdf/fees_structure.pdf">Click here to download Fee Structure 2025-26</a>
+        <a target="_blank" href={feesStructure}>Click here to download Fee Structure 2025-26</a>
       </div>
     </motion.div>
   );
@@ -706,7 +708,12 @@ const InformationBrochureTab = () => {
         Information Brochures Academic Year 2025-26
       </h2>
 
-      <div className="flex flex-wrap justify-center mb-4 gap-2">
+      <div className="space-y-6 underline text-blue-600">
+        {/* {currentCollegeData.feeStructure} */}
+        <a target="_blank" href={informationBrochure}>Click here to download Information Brochure Academic Year 2025-26</a>
+      </div>
+
+      {/* <div className="flex flex-wrap justify-center mb-4 gap-2">
         {brochures.map((brochure, index) => (
           <button
             key={index}
@@ -720,9 +727,9 @@ const InformationBrochureTab = () => {
             {brochure.heading}
           </button>
         ))}
-      </div>
+      </div> */}
 
-      <div className="flex justify-center mb-4">
+      {/* <div className="flex justify-center mb-4">
         <a
           href={selectedPdf.filePath}
           download
@@ -730,9 +737,9 @@ const InformationBrochureTab = () => {
         >
           Download {selectedPdf.heading}
         </a>
-      </div>
+      </div> */}
 
-      <div className="border border-gray-200 rounded-lg overflow-hidden flex justify-center min-h-[500px] bg-gray-50">
+      {/* <div className="border border-gray-200 rounded-lg overflow-hidden flex justify-center min-h-[500px] bg-gray-50">
         <iframe
           src={selectedPdf.filePath}
           className="w-full h-auto"
@@ -747,7 +754,7 @@ const InformationBrochureTab = () => {
         >
           <p>Your browser does not support iframes. You can <a href={selectedPdf.filePath}>download the PDF</a> instead.</p>
         </iframe>
-      </div>
+      </div> */}
     </motion.div>
   );
 };

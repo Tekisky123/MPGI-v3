@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import Slider, { Settings, CustomArrowProps } from "react-slick";
 import SchoolOfEngineeringQuickLinks from "./SchoolOfEngineeringQuickLinks";
+import feesStructure from '../../assets/pdf/fees_structure.pdf';
 
 // Import images for the slider
 import img1 from "../../assets/engineering/hero1.jpg";
@@ -10,6 +11,7 @@ import img4 from "../../assets/engineering/hero4.jpg";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import ScrollingText from "../../components/ScrollingText";
 
 interface Slide {
   img: string;
@@ -135,6 +137,13 @@ const SchoolOfEngineeringHome = () => {
           </Slider>
         </div>
       </div>
+      <ScrollingText
+        text="📢 Fee Structure for 2025–26 as approved by FRA, Click here to download."
+        link={feesStructure}
+        speed={15}
+        backgroundColor="#e0f2fe"
+        textColor="#0369a1"
+      />
       <SchoolOfEngineeringQuickLinks />
     </div>
   );

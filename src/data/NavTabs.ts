@@ -76,7 +76,7 @@ export const NAV_ITEMS = [
       { name: "Undertaking", path: "/admission/undertaking" },
       {
         name: "Information Brochure 2025-26",
-        path: "/admission/InformationBrochureAcademicYear2020-21",
+        path: "/admission/information-brochure",
       },
       {
         name: "SBI Collect",
@@ -84,8 +84,8 @@ export const NAV_ITEMS = [
         external: true,
       },
       {
-        name: "VidyaLaxmi Portal",
-        path: "https://www.vidyalakshmi.co.in/",
+        name: "Admission process 2025-26",
+        path: "https://fe2025.mahacet.org/StaticPages/HomePage",
         external: true,
       },
     ],

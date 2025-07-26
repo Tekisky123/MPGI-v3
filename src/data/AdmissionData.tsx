@@ -27,8 +27,8 @@ export const admissionNavItems = [
     external: true,
   },
   {
-    name: "VidyaLaxmi Portal",
-    path: "https://www.vidyalakshmi.co.in/",
+    name: "Admission process 2025-26",
+    path: "https://fe2025.mahacet.org/StaticPages/HomePage",
     external: true,
   },
 ];
@@ -149,7 +149,7 @@ const SCHOOL_OF_ENGINEERING_BTECH_TABLE = (
       <tr>
         <td className="border px-4 py-2">5</td>
         <td className="border px-4 py-2">
-          Artificial Intelligence and Data Science
+          Artificial Intelligence (AI) and Data Science
         </td>
         <td className="border px-4 py-2">60</td>
         <td className="border px-4 py-2"></td>

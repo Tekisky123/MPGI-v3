@@ -29,11 +29,11 @@ export const collegeConfigs: Record<string, CollegeConfig> = {
       },
       {
         slug: "aids",
-        displayName: "Artificial Intelligence and Data Science",
+        displayName: "Artificial Intelligence (AI) and Data Science",
       },
       {
         slug: "aiml",
-        displayName: "Artificial Intelligence and Machine Learning",
+        displayName: "Computer Science and Engineering (AIML)",
       },
     ],
   },
