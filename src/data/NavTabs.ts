@@ -72,6 +72,7 @@ export const NAV_ITEMS = [
     subItems: [
       { name: "Courses", path: "/admission/courses" },
       { name: "Fee Structure", path: "/admission/fee-structure" },
+      { name: "Student", path: "/admission/student" },
       { name: "Administration", path: "/admission/administration" },
       { name: "Undertaking", path: "/admission/undertaking" },
       {

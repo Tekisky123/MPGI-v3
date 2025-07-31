@@ -18,12 +18,14 @@ import polyBrouchure1 from "../assets/pdf/polyBroucher1.pdf";
 import polyBrouchure2 from "../assets/pdf/polyBroucher2.pdf";
 import polyBrouchure3 from "../assets/pdf/polyBroucher3.pdf";
 import feesStructure from "../assets/pdf/fees_structure.pdf";
+import studentScheme from "../assets/images/student-scheme.jpeg";
 import informationBrochure from "../assets/pdf/information_brochure.pdf";
 
 // Tab Navigation Items
 export const admissionNavItems = [
   { name: "Courses", path: "/courses" },
   { name: "Fee Structure", path: "/fee-structure" },
+  { name: "Student", path: "/student" },
   { name: "Administration", path: "/administration" },
   { name: "Undertaking", path: "/undertaking" },
   { name: "Information Brochure 2025-26", path: "/information-brochure" },
@@ -656,6 +658,30 @@ const FeeStructureTab = () => {
   );
 };
 
+const StudentTab = () => {
+  // const { collegeId } = useParams<{ collegeId: string }>();
+  // const currentCollegeData =
+    // collegeAdmissionDataMap[collegeId || ""] ||
+    // collegeAdmissionDataMap["school-of-engineering"];
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      className="bg-white shadow-lg rounded-xl overflow-hidden border border-gray-200 p-6 sm:p-8 lg:p-10 w-full"
+    >
+      <h2 className="text-2xl font-bold text-mpgin-darkBlue mb-5 border-b pb-2 border-gray-300">
+      Student Schemes
+      </h2>
+      <div className="space-y-6 underline text-blue-600">
+        {/* {currentCollegeData.feeStructure} */}
+        <a target="_blank" href={studentScheme}>Click here to download student schemes</a>
+      </div>
+    </motion.div>
+  );
+};
+
 const UndertakingTab = () => {
   return (
     <motion.div
@@ -857,6 +883,9 @@ const AdmissionPage = () => {
           <Routes>
             <Route path="courses" element={<UnderGraduateTab />} />
             <Route path="fee-structure" element={<FeeStructureTab />} />
+            {collegeId === "school-of-engineering" && (
+              <Route path="student" element={<StudentTab />} />
+            )}
             <Route path="undertaking" element={<UndertakingTab />} />
             <Route path="information-brochure" element={<InformationBrochureTab />} />
             <Route path="administration" element={<AdministrationTab />} />

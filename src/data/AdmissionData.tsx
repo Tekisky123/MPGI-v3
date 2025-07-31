@@ -18,6 +18,7 @@ import polyFeesImg from "../assets/poly/polyFeesImg.jpg"
 export const admissionNavItems = [
   { name: "Courses", path: "/courses" },
   { name: "Fee Structure", path: "/fee-structure" },
+  { name: "Student", path: "/student" },
   { name: "Administration", path: "/administration" },
   { name: "Undertaking", path: "/undertaking" },
   { name: "Information Brochure 2025-26", path: "/information-brochure" },
