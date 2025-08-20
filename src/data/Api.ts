@@ -1,11 +1,11 @@
 import axios from 'axios';
-export const baseUrl = "http://localhost:5000"
-// export const baseUrl = "https://mpgin-backend-v2.vercel.app"
+// export const baseUrl = "http://localhost:5000"
+export const baseUrl = "https://mpgin-backend-v2.vercel.app"
 
 
 const api = axios.create({
-  // baseURL: "https://mpgin-backend-v2.vercel.app",
-  baseURL : "http://localhost:5000",
+  baseURL: "https://mpgin-backend-v2.vercel.app",
+  // baseURL : "http://localhost:5000",
 });
 
 // Add a request interceptor to dynamically attach the Authorization header
