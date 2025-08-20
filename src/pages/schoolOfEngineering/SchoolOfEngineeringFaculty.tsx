@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import { X, Loader2, AlertCircle, User, GraduationCap, Briefcase, CalendarDays } from "lucide-react";
 import { FacultyMember } from "../../data/SchoolOfEngineeringQuickLinkData";
 import api from "../../data/Api";
+import facultyDataSort from "../../data/facultyDataSort";
 
 const FacultyCard = ({
     member,
@@ -68,7 +69,7 @@ const SchoolOfEngineeringFaculty = () => {
             try {
                 setLoading(true);
                 const response = await api.get<FacultyMember[]>(`/faculty/college/${collegeId}`);
-                setFaculty(response.data);
+                setFaculty(facultyDataSort(response.data))
             } catch (err) {
                 setError(err instanceof Error ? err.message : "Failed to load faculty");
             } finally {
@@ -121,7 +122,7 @@ const SchoolOfEngineeringFaculty = () => {
 
     return (
         <div className="space-y-8">
-           
+
 
             {faculty.length === 0 ? (
                 <motion.div

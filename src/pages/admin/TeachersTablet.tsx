@@ -6,6 +6,7 @@ import Button from "../../components/ui/Button";
 import Modal from "../../components/ui/Modal";
 import Input from "../../components/ui/Input";
 import { CollegeType, collegeConfigs } from "../../data/colleges";
+import facultyDataSort from "../../data/facultyDataSort";
 
 interface Faculty {
   _id: string;
@@ -17,6 +18,7 @@ interface Faculty {
   dateOfJoining: string;
   photo: string;
   college: string;
+  sequence: number;
 }
 
 interface Props {
@@ -36,16 +38,15 @@ const TeachersTable = ({ collegeType }: Props) => {
     experience: "",
     designation: "",
     dateOfJoining: "",
+    sequence: 0,
     photo: null as File | null,
   });
   const [preview, setPreview] = useState("");
   const [errors, setErrors] = useState<Partial<typeof formData>>({});
-
-  // Pagination state
+  const [selectedDepartment, setSelectedDepartment] = useState<string>("");
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 10;
 
-  // Fetch faculty data
   useEffect(() => {
     if (!college) {
       toast.error("Invalid college type");
@@ -54,16 +55,19 @@ const TeachersTable = ({ collegeType }: Props) => {
     fetchFaculty();
   }, [collegeType]);
 
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [selectedDepartment]);
+
   const fetchFaculty = async () => {
     try {
-      const { data } = await api.get(`/faculty/college/${college.slug}`);
-      setFaculty(data);
+      const { data } = await api.get<Faculty[]>(`/faculty/college/${college.slug}`);
+      setFaculty(facultyDataSort(data));
     } catch (error: any) {
       toast.error(error.response?.data?.message || "Failed to fetch faculty");
     }
   };
 
-  // Handle file input change
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (file) {
@@ -72,7 +76,6 @@ const TeachersTable = ({ collegeType }: Props) => {
     }
   };
 
-  // Open modal for editing
   const handleOpenEdit = (item: Faculty) => {
     setEditItem(item);
     setFormData({
@@ -82,13 +85,13 @@ const TeachersTable = ({ collegeType }: Props) => {
       experience: item.experience,
       designation: item.designation,
       dateOfJoining: item.dateOfJoining,
+      sequence: item.sequence,
       photo: null,
     });
     setPreview(item.photo);
     setIsModalOpen(true);
   };
 
-  // Close modal
   const handleCloseModal = () => {
     setIsModalOpen(false);
     setEditItem(null);
@@ -99,31 +102,26 @@ const TeachersTable = ({ collegeType }: Props) => {
       experience: "",
       designation: "",
       dateOfJoining: "",
+      sequence: 0,
       photo: null,
     });
     setPreview("");
     setErrors({});
   };
 
-  // Validate form data
   const validateForm = () => {
     const newErrors: Partial<typeof formData> = {};
     if (!formData.name.trim()) newErrors.name = "Name is required";
-    if (!formData.department.trim())
-      newErrors.department = "Department is required";
-    if (!formData.qualification.trim())
-      newErrors.qualification = "Qualification is required";
-    if (!formData.designation.trim())
-      newErrors.designation = "Designation is required";
-
+    if (!formData.department.trim()) newErrors.department = "Department is required";
+    if (!formData.qualification.trim()) newErrors.qualification = "Qualification is required";
+    if (!formData.designation.trim()) newErrors.designation = "Designation is required";
+    if (!formData.sequence || formData.sequence <= 0) newErrors.sequence = "Sequence is required";
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
 
-  // Handle form submission
   const handleSubmit = async () => {
     if (!validateForm()) return;
-
     try {
       setLoading(true);
       const form = new FormData();
@@ -134,12 +132,10 @@ const TeachersTable = ({ collegeType }: Props) => {
       form.append("experience", formData.experience);
       form.append("designation", formData.designation);
       form.append("dateOfJoining", formData.dateOfJoining);
+      form.append("sequence", formData.sequence.toString());
       if (formData.photo) form.append("photo", formData.photo);
-
       const endpoint = editItem ? `/faculty/${editItem._id}` : "/faculty/add";
-
       const method = editItem ? api.put : api.post;
-
       await method(endpoint, form);
       await fetchFaculty();
       toast.success(`Faculty ${editItem ? "updated" : "added"} successfully`);
@@ -147,18 +143,15 @@ const TeachersTable = ({ collegeType }: Props) => {
     } catch (error: any) {
       toast.error(
         error.response?.data?.message ||
-          `Error ${editItem ? "updating" : "adding"} faculty`
+        `Error ${editItem ? "updating" : "adding"} faculty`
       );
     } finally {
       setLoading(false);
     }
   };
 
-  // Handle delete action
   const handleDelete = async (id: string) => {
-    if (!confirm("Are you sure you want to delete this faculty member?"))
-      return;
-
+    if (!confirm("Are you sure you want to delete this faculty member?")) return;
     try {
       await api.delete(`/faculty/${id}`);
       await fetchFaculty();
@@ -168,26 +161,28 @@ const TeachersTable = ({ collegeType }: Props) => {
     }
   };
 
-  // Get department display name
   const getDepartmentName = (slug: string) => {
-    return (
-      college?.departments.find((d) => d.slug === slug)?.displayName || slug
-    );
+    return college?.departments.find((d) => d.slug === slug)?.displayName || slug;
   };
 
-  // Calculate pagination
-  const totalPages = Math.ceil(faculty.length / itemsPerPage);
-  const paginatedFaculty = faculty.slice(
+  // Filter faculty by selected department
+  const filteredFaculty = selectedDepartment
+    ? faculty.filter((teacher) => teacher.department === selectedDepartment)
+    : faculty;
+
+  // Calculate pagination for filtered faculty
+  const totalPages = Math.ceil(filteredFaculty.length / itemsPerPage);
+  const paginatedFaculty = filteredFaculty.slice(
     (currentPage - 1) * itemsPerPage,
     currentPage * itemsPerPage
   );
 
-  // Handle page change
   const goToPage = (page: number) => {
-    setCurrentPage(page);
+    if (page >= 1 && page <= totalPages) {
+      setCurrentPage(page);
+    }
   };
 
-  // Render the component
   if (!college) {
     return (
       <div className="min-h-screen flex items-center justify-center text-red-600 text-xl font-semibold">
@@ -202,14 +197,55 @@ const TeachersTable = ({ collegeType }: Props) => {
         <h2 className="text-2xl md:text-3xl font-bold text-gray-900 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
           Faculty - {college.displayName}
         </h2>
-        <Button
-          onClick={() => setIsModalOpen(true)}
-          className="flex items-center gap-2"
-        >
+        <Button onClick={() => setIsModalOpen(true)} className="flex items-center gap-2">
           <Plus size={18} /> Add Faculty
         </Button>
       </div>
 
+      {/* Department Filter Dropdown */}
+      {college.departments && college.departments.length > 0 && (
+        <div className="mb-6 bg-gradient-to-r from-blue-50 to-indigo-50 p-4 rounded-lg shadow-sm border border-blue-200">
+          <label
+            htmlFor="department-filter"
+            className="block text-sm font-medium text-gray-800 mb-2"
+          >
+            🔍 Filter by Department
+          </label>
+          <div className="relative">
+            <select
+              id="department-filter"
+              value={selectedDepartment}
+              onChange={(e) => setSelectedDepartment(e.target.value)}
+              className="w-full pl-4 pr-10 py-3 text-base border-2 border-blue-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 appearance-none bg-white text-gray-700 hover:border-blue-400"
+            >
+              <option value="" className="text-gray-500 bg-blue-50">
+                -- All Departments --
+              </option>
+              {college.departments.map((dept) => (
+                <option
+                  key={dept.slug}
+                  value={dept.slug}
+                  className="text-gray-700 hover:bg-blue-50"
+                >
+                  {dept.displayName}
+                </option>
+              ))}
+            </select>
+            <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-blue-600">
+              <svg
+                className="fill-current h-5 w-5"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+              >
+                <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      )}
+
+
+      {/* Faculty Table */}
       <table className="min-w-full text-sm border-collapse rounded-lg overflow-hidden">
         <thead className="bg-gray-100 text-gray-600 uppercase text-xs">
           <tr>
@@ -220,73 +256,82 @@ const TeachersTable = ({ collegeType }: Props) => {
             <th className="p-3 text-left">Designation</th>
             <th className="p-3 text-left">Date of Joining</th>
             <th className="p-3 text-left">Department</th>
+            <th className="p-3 text-left">Sequence</th>
             <th className="p-3 text-left">Actions</th>
           </tr>
         </thead>
         <tbody>
-          {paginatedFaculty.map((teacher) => (
-            <tr
-              key={teacher._id}
-              className="border-b hover:bg-gray-50 transition-all"
-            >
-              <td className="p-3">
-                <img
-                  src={teacher.photo}
-                  alt={teacher.name}
-                  className="w-12 h-12 rounded-full object-cover"
-                />
-              </td>
-              <td className="p-3 font-medium text-gray-800">{teacher.name}</td>
-              <td className="p-3">{teacher.qualification}</td>
-              <td className="p-3">{teacher.experience}</td>
-              <td className="p-3">{teacher.designation}</td>
-              <td className="p-3">
-                {new Date(teacher.dateOfJoining).toLocaleDateString()}
-              </td>
-              <td className="p-3 capitalize">
-                {getDepartmentName(teacher.department)}
-              </td>
-              <td className="p-3 space-x-2">
-                <button
-                  className="text-blue-600 hover:text-blue-800"
-                  onClick={() => handleOpenEdit(teacher)}
-                >
-                  <Pencil size={18} />
-                </button>
-                <button
-                  className="text-red-600 hover:text-red-800"
-                  onClick={() => handleDelete(teacher._id)}
-                >
-                  <Trash2 size={18} />
-                </button>
+          {paginatedFaculty.length > 0 ? (
+            paginatedFaculty.map((teacher) => (
+              <tr key={teacher._id} className="border-b hover:bg-gray-50 transition-all">
+                <td className="p-3">
+                  <img
+                    src={teacher.photo}
+                    alt={teacher.name}
+                    className="w-12 h-12 rounded-full object-cover"
+                  />
+                </td>
+                <td className="p-3 font-medium text-gray-800">{teacher.name}</td>
+                <td className="p-3">{teacher.qualification}</td>
+                <td className="p-3">{teacher.experience}</td>
+                <td className="p-3">{teacher.designation}</td>
+                <td className="p-3">
+                  {new Date(teacher.dateOfJoining).toLocaleDateString()}
+                </td>
+                <td className="p-3 capitalize">
+                  {getDepartmentName(teacher.department)}
+                </td>
+                <td className="p-3">{teacher.sequence}</td>
+                <td className="p-3 space-x-2">
+                  <button
+                    className="text-blue-600 hover:text-blue-800"
+                    onClick={() => handleOpenEdit(teacher)}
+                  >
+                    <Pencil size={18} />
+                  </button>
+                  <button
+                    className="text-red-600 hover:text-red-800"
+                    onClick={() => handleDelete(teacher._id)}
+                  >
+                    <Trash2 size={18} />
+                  </button>
+                </td>
+              </tr>
+            ))
+          ) : (
+            <tr>
+              <td colSpan={9} className="p-3 text-center text-gray-500">
+                No faculty members found for the selected department.
               </td>
             </tr>
-          ))}
+          )}
         </tbody>
       </table>
 
       {/* Pagination Controls */}
-      <div className="flex justify-center items-center mt-6 gap-4">
-        <Button
-          variant="secondary"
-          onClick={() => goToPage(currentPage - 1)}
-          disabled={currentPage === 1}
-          icon={<ChevronLeft className="w-5 h-5" />}
-        >
-          Previous
-        </Button>
-        <span className="text-gray-700">
-          Page {currentPage} of {totalPages}
-        </span>
-        <Button
-          variant="secondary"
-          onClick={() => goToPage(currentPage + 1)}
-          disabled={currentPage === totalPages}
-          icon={<ChevronRight className="w-5 h-5" />}
-        >
-          Next
-        </Button>
-      </div>
+      {totalPages > 1 && (
+        <div className="flex justify-center items-center mt-6 gap-4">
+          <Button
+            variant="secondary"
+            onClick={() => goToPage(currentPage - 1)}
+            disabled={currentPage === 1}
+            icon={<ChevronLeft className="w-5 h-5" />}
+          >
+            Previous
+          </Button>
+          <span className="text-gray-700">
+            Page {currentPage} of {totalPages}
+          </span>
+          <Button
+            variant="secondary"
+            onClick={() => goToPage(currentPage + 1)}
+            disabled={currentPage === totalPages}
+            icon={<ChevronRight className="w-5 h-5" />}
+          >
+            Next
+          </Button>
+        </div>
+      )}
 
       {/* Modal for Adding/Editing Faculty */}
       <Modal
@@ -294,6 +339,7 @@ const TeachersTable = ({ collegeType }: Props) => {
         onClose={handleCloseModal}
         title={`${editItem ? "Edit" : "Add"} Faculty`}
       >
+        {/* Modal content remains the same */}
         <div className="space-y-4">
           <Input
             label="Full Name"
@@ -355,6 +401,27 @@ const TeachersTable = ({ collegeType }: Props) => {
             }
             error={errors.dateOfJoining}
           />
+          <Input
+            label="Sequence (for ordering)"
+            type="number"
+            value={formData.sequence}
+            onChange={(e) =>
+              setFormData((prev) => ({ ...prev, sequence: Number(e.target.value) }))
+            }
+            error={errors.sequence}
+          />
+          <p className="text-xs text-gray-500 mt-1">
+            <strong>Note:</strong> This sequence number determines the order in which faculty members appear on the website.
+            <strong> Lower numbers appear first.</strong>
+            <br />
+            For example:
+            <ul className="list-disc pl-4 mt-1">
+              <li><strong>1</strong> will appear before <strong>2</strong></li>
+              <li><strong>0</strong> will appear <strong>after all positive numbers</strong> (e.g., after 1, 2, 3, etc.)</li>
+            </ul>
+            To ensure a faculty member appears at the top, use a low positive number like <strong>1</strong>.
+          </p>
+
           <div className="space-y-2">
             <label className="block text-sm font-medium text-gray-700">
               {editItem ? "New Photo (optional)" : "Photo"}
@@ -383,7 +450,6 @@ const TeachersTable = ({ collegeType }: Props) => {
               )}
             </div>
           </div>
-
           <div className="flex justify-end gap-3 mt-6">
             <Button variant="secondary" onClick={handleCloseModal}>
               Cancel

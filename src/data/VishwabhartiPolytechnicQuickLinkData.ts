@@ -18,6 +18,7 @@ export interface FacultyMember {
   dateOfJoining: string;
   photo: string | null;
   department: string;
+  sequence:number;
 }
 
 export const navItems = [

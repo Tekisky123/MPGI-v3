@@ -99,7 +99,8 @@ const renderContent = (
   content: string,
   highlights?: string[],
   tableData?: any[],
-  tableHeaders?: string[]
+  tableHeaders?: string[],
+  pdfLinks?: { name: string; url: string }[]
 ) => {
   const paragraphs = content.split("\n");
   return (
@@ -152,23 +153,43 @@ const renderContent = (
       })}
       {tableData && tableHeaders && renderTable(tableData, tableHeaders)}
       {tableData && !tableHeaders && (
-  <div className="space-y-2">
-    {tableData.map((item, index) => (
-      <div key={index}>
-        <span className="font-medium text-gray-800">{item.name}:</span>{" "}
-        <a
-          href={item.url}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-blue-600 hover:underline"
-        >
-          Click Here
-        </a>
-      </div>
-    ))}
-  </div>
-)}
-
+        <div className="space-y-2">
+          {tableData.map((item, index) => (
+            <div key={index}>
+              <span className="font-medium text-gray-800">{item.name}:</span>{" "}
+              <a
+                href={item.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:underline"
+              >
+                Click Here
+              </a>
+            </div>
+          ))}
+        </div>
+      )}
+      {pdfLinks && pdfLinks.length > 0 && (
+        <div className="my-6 bg-blue-50 p-4 rounded-lg border border-blue-100">
+          <h3 className="text-xl font-bold text-mpgin-darkBlue mb-3">
+            Downloads
+          </h3>
+          <ul className="list-disc pl-6 space-y-2">
+            {pdfLinks.map((link, index) => (
+              <li key={index} className="text-gray-700">
+                <a
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-600 hover:underline"
+                >
+                  {link.name}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
       {highlights && highlights.length > 0 && (
         <div className="my-6 bg-blue-50 p-4 rounded-lg border border-blue-100">
           <h3 className="text-xl font-bold text-mpgin-darkBlue mb-3">
@@ -185,13 +206,15 @@ const renderContent = (
   );
 };
 
-const renderIqacTable = (data: any[]) => {
+
+const renderIqacTable = (data) => {
   const headers = ["Particulars of the post", "Name of the Member"];
+
   return (
     <div className="overflow-x-auto mb-6">
       <table className="min-w-full divide-y divide-gray-200 border border-gray-300">
         <thead className="bg-gray-50">
-          {/* <tr>
+          <tr>
             {headers.map((header, index) => (
               <th
                 key={index}
@@ -200,24 +223,17 @@ const renderIqacTable = (data: any[]) => {
                 {header}
               </th>
             ))}
-          </tr> */}
+          </tr>
         </thead>
         <tbody className="bg-white divide-y divide-gray-200">
           {data.map((row, index) => (
             <tr key={index} className={index % 2 === 0 ? "bg-white" : "bg-gray-50"}>
-              {Object.values(row).map((cell: any, cellIndex) => (
-                <td
-                  key={cellIndex}
-                  className="px-4 py-3 whitespace-normal text-sm text-gray-700 border border-gray-300"
-                >
-                  {cell.startsWith('https://mpgi.ac.in/') ? (
-                    <a href={cell} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">
-                      Click Here</a>
-                  ) : (
-                    cell
-                  )}
-                </td>
-              ))}
+              <td className="px-4 py-3 whitespace-normal text-sm text-gray-700 border border-gray-300">
+                {row.post}
+              </td>
+              <td className="px-4 py-3 whitespace-normal text-sm text-gray-700 border border-gray-300">
+                {row.member}
+              </td>
             </tr>
           ))}
         </tbody>
@@ -225,6 +241,7 @@ const renderIqacTable = (data: any[]) => {
     </div>
   );
 };
+
 
 const ImageGrid = ({ images }: { images: string[] }) => {
   return (
@@ -276,63 +293,65 @@ const SchoolOfEngineeringQuickLinks = () => {
 
   const renderMainContent = () => {
     switch (activeId) {
-      case "principal":
-        const principal = profiles.find((p) => p.id === "principal");
-        return (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="bg-white shadow-lg rounded-xl overflow-hidden border border-gray-200 w-full"
+    case "principal":
+  const principal = profiles.find((p) => p.id === "principal");
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      className="bg-white shadow-lg rounded-xl overflow-hidden border border-gray-200 w-full"
+    >
+      <div className="flex flex-col lg:flex-row">
+        <div className="lg:w-2/3 p-6 sm:p-8 lg:p-10 order-2 lg:order-1">
+          <motion.h3
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.2 }}
+            className="text-2xl font-bold text-mpgin-darkBlue mb-5 border-b pb-2 border-gray-300"
           >
-            <div className="flex flex-col lg:flex-row">
-              <div className="lg:w-2/3 p-6 sm:p-8 lg:p-10 order-2 lg:order-1">
-                <motion.h3
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 0.2 }}
-                  className="text-2xl font-bold text-mpgin-darkBlue mb-5 border-b pb-2 border-gray-300"
-                >
-                  {principal?.name}'s Profile
-                </motion.h3>
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 0.3 }}
-                  className="space-y-4 text-gray-700 leading-relaxed"
-                >
-                  {principal?.content &&
-                    renderContent(
-                      principal.content,
-                      principal.highlights,
-                      principal.pdfLinks
-                    )}
-                </motion.div>
-              </div>
-              <div className="lg:w-1/3 p-6 sm:p-8 lg:p-10 border-l border-gray-200 flex flex-col items-center bg-gray-50 order-1 lg:order-2">
-                <motion.div
-                  whileHover={{ scale: 1.02 }}
-                  className="relative rounded-lg overflow-hidden shadow-md mb-6 border-4 border-white ring-2 ring-mpgin-blue"
-                >
-                  <img
-                    src={principal?.image}
-                    alt={principal?.name}
-                    className="w-full h-auto max-w-xs object-cover"
-                    loading="lazy"
-                  />
-                </motion.div>
-                <div className="text-center">
-                  <h2 className="text-2xl font-bold text-mpgin-darkBlue">
-                    {principal?.name}
-                  </h2>
-                  <p className="mt-2 text-lg font-semibold text-mpgin-blue">
-                    {principal?.title}
-                  </p>
-                </div>
-              </div>
-            </div>
+            {principal?.name}'s Profile
+          </motion.h3>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.3 }}
+            className="space-y-4 text-gray-700 leading-relaxed"
+          >
+            {principal?.content &&
+              renderContent(
+                principal.content,
+                principal.highlights,
+                undefined,
+                undefined,
+                principal.pdfLinks
+              )}
           </motion.div>
-        );
+        </div>
+        <div className="lg:w-1/3 p-6 sm:p-8 lg:p-10 border-l border-gray-200 flex flex-col items-center bg-gray-50 order-1 lg:order-2">
+          <motion.div
+            whileHover={{ scale: 1.02 }}
+            className="relative rounded-lg overflow-hidden shadow-md mb-6 border-4 border-white ring-2 ring-mpgin-blue"
+          >
+            <img
+              src={principal?.image}
+              alt={principal?.name}
+              className="w-full h-auto max-w-xs object-cover"
+              loading="lazy"
+            />
+          </motion.div>
+          <div className="text-center">
+            <h2 className="text-2xl font-bold text-mpgin-darkBlue">
+              {principal?.name}
+            </h2>
+            <p className="mt-2 text-lg font-semibold text-mpgin-blue">
+              {principal?.title}
+            </p>
+          </div>
+        </div>
+      </div>
+    </motion.div>
+  );
 
       case "home":
         return (

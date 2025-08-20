@@ -145,7 +145,7 @@ const QuickLinksPanel = () => {
                     </tr>
                     <tr>
                       <td className="border border-gray-300 p-2">3.</td>
-                      <td className="border border-gray-300 p-2">Shri. Venkatchari Bramahachari Verglum</td>
+                      <td className="border border-gray-300 p-2">Shri. Venkatchari Bramahachari Vreglum</td>
                       <td className="border border-gray-300 p-2">Secretary</td>
                     </tr>
                     <tr>
@@ -156,7 +156,7 @@ const QuickLinksPanel = () => {
                     <tr>
                       <td className="border border-gray-300 p-2">5.</td>
                       <td className="border border-gray-300 p-2">Shri. Arvind Shankarrao Patil</td>
-                      <td className="border border-gray-300 p-2">Member</td>
+                      <td className="border border-gray-300 p-2">Managing Director</td>
                     </tr>
                     <tr>
                       <td className="border border-gray-300 p-2">6.</td>
@@ -195,7 +195,7 @@ const QuickLinksPanel = () => {
                     </tr>
                     <tr>
                       <td className="border border-gray-300 p-2">13.</td>
-                      <td className="border border-gray-300 p-2">Shri. Omprasad Venkatchari Vrenglam</td>
+                      <td className="border border-gray-300 p-2">Shri. Omprasad Venkatchari Vreglum</td>
                       <td className="border border-gray-300 p-2">Member</td>
                     </tr>
                   </tbody>

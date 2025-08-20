@@ -11,6 +11,7 @@ import {
   AlertCircle,
   Loader2,
 } from "lucide-react";
+import facultyDataSort from "../data/facultyDataSort";
 
 interface FacultyMember {
   _id: string;
@@ -22,6 +23,7 @@ interface FacultyMember {
   photo: string;
   department: string;
   college: string;
+  sequence: number;
 }
 
 const DepartmentFaculty = () => {
@@ -43,28 +45,28 @@ const DepartmentFaculty = () => {
         if (!response.data) throw new Error("No faculty data available");
 
         // Sort faculty members based on priority designations
-        const sortedFaculty = response.data.sort((a, b) => {
-          const priorityDesignations = [
-            "principal",
-            "dean",
-            "hod",
-            "head of department",
-          ];
-          const aPriority = priorityDesignations.findIndex((designation) =>
-            a.designation.toLowerCase().includes(designation)
-          );
-          const bPriority = priorityDesignations.findIndex((designation) =>
-            b.designation.toLowerCase().includes(designation)
-          );
+        // const sortedFaculty = response.data.sort((a, b) => {
+        //   const priorityDesignations = [
+        //     "principal",
+        //     "dean",
+        //     "hod",
+        //     "head of department",
+        //   ];
+        //   const aPriority = priorityDesignations.findIndex((designation) =>
+        //     a.designation.toLowerCase().includes(designation)
+        //   );
+        //   const bPriority = priorityDesignations.findIndex((designation) =>
+        //     b.designation.toLowerCase().includes(designation)
+        //   );
 
-          if (aPriority !== -1 && bPriority === -1) return -1;
-          if (aPriority === -1 && bPriority !== -1) return 1;
-          if (aPriority !== -1 && bPriority !== -1)
-            return aPriority - bPriority;
-          return 0;
-        });
-
-        setFaculty(sortedFaculty);
+        //   if (aPriority !== -1 && bPriority === -1) return -1;
+        //   if (aPriority === -1 && bPriority !== -1) return 1;
+        //   if (aPriority !== -1 && bPriority !== -1)
+        //     return aPriority - bPriority;
+        //   return 0;
+        // });
+        
+        setFaculty(facultyDataSort(response.data));
       } catch (err) {
         setError(
           err instanceof Error ? err.message : "Failed to load faculty data"
@@ -175,10 +177,10 @@ const FacultyCard = ({ member }: { member: FacultyMember }) => (
             <p>
               {member.dateOfJoining
                 ? new Date(member.dateOfJoining).toLocaleDateString("en-US", {
-                    year: "numeric",
-                    month: "long",
-                    day: "numeric",
-                  })
+                  year: "numeric",
+                  month: "long",
+                  day: "numeric",
+                })
                 : "-"}
             </p>
           </div>

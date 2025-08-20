@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import { X, Loader2, AlertCircle, User, GraduationCap, Briefcase, CalendarDays } from "lucide-react";
 import api from "../data/Api";
 import { collegeConfigs } from "../data/colleges";
+import facultyDataSort from "../data/facultyDataSort";
 
 interface FacultyMember {
     _id: string;
@@ -14,6 +15,7 @@ interface FacultyMember {
     dateOfJoining: string;
     photo: string | null;
     department: string;
+    sequence:number;
 }
 
 const getDepartmentName = (collegeId: string | undefined, departmentSlug: string): string => {
@@ -40,7 +42,7 @@ export default function Faculty() {
             try {
                 setLoading(true);
                 const response = await api.get<FacultyMember[]>(`/faculty/college/${collegeId}`);
-                setFaculty(response.data);
+                setFaculty(facultyDataSort(response.data))
             } catch (err) {
                 setError(err instanceof Error ? err.message : "Failed to load faculty");
             } finally {

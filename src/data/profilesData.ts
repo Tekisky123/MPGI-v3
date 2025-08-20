@@ -122,7 +122,7 @@ It is my profound hope that the young student of today would wake up to the hard
   },
   {
     id: "secretary",
-    name: "Shri. Venkatchari Bramahachari Verglum",
+    name: "Shri. Venkatchari Bramahachari Vreglum",
     title: "Secretary",
     image: secretaryImg,
     content: `From, Secretary's Desk
