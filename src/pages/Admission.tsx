@@ -19,6 +19,7 @@ import polyBrouchure2 from "../assets/pdf/polyBroucher2.pdf";
 import polyBrouchure3 from "../assets/pdf/polyBroucher3.pdf";
 import feesStructure from "../assets/pdf/fees_structure.pdf";
 import studentScheme from "../assets/images/student-scheme.jpeg";
+import studentAdmissionForm from "../assets/pdf/institute_level_form.pdf";
 import informationBrochure from "../assets/pdf/information_brochure.pdf";
 
 // Tab Navigation Items
@@ -665,11 +666,12 @@ const StudentTab = () => {
     // collegeAdmissionDataMap["school-of-engineering"];
 
   return (
+    <>
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="bg-white shadow-lg rounded-xl overflow-hidden border border-gray-200 p-6 sm:p-8 lg:p-10 w-full"
+      className="bg-white shadow-lg rounded-xl overflow-hidden border border-gray-200 p-6 sm:p-8 lg:p-10 w-full mb-2"
     >
       <h2 className="text-2xl font-bold text-mpgin-darkBlue mb-5 border-b pb-2 border-gray-300">
       Student Schemes
@@ -679,6 +681,21 @@ const StudentTab = () => {
         <a target="_blank" href={studentScheme}>Click here to download student schemes</a>
       </div>
     </motion.div>
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      className="bg-white shadow-lg rounded-xl overflow-hidden border border-gray-200 p-6 sm:p-8 lg:p-10 w-full"
+    >
+      <h2 className="text-2xl font-bold text-mpgin-darkBlue mb-5 border-b pb-2 border-gray-300">
+      Student Admission Form
+      </h2>
+      <div className="space-y-6 underline text-blue-600">
+        {/* {currentCollegeData.feeStructure} */}
+        <a target="_blank" href={studentAdmissionForm}>Institute level  admission registration form for first year and direct second year engineering A.Y. 2025-26</a>
+      </div>
+    </motion.div>
+    </>
   );
 };
 
