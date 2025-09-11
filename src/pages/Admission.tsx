@@ -20,6 +20,7 @@ import polyBrouchure3 from "../assets/pdf/polyBroucher3.pdf";
 import feesStructure from "../assets/pdf/fees_structure.pdf";
 import studentScheme from "../assets/images/student-scheme.jpeg";
 import studentAdmissionForm from "../assets/pdf/institute_level_form.pdf";
+import studentCapDseListForWebsite from "../assets/pdf/acap_dse_list_for_website.pdf";
 import informationBrochure from "../assets/pdf/information_brochure.pdf";
 
 // Tab Navigation Items
@@ -685,7 +686,7 @@ const StudentTab = () => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="bg-white shadow-lg rounded-xl overflow-hidden border border-gray-200 p-6 sm:p-8 lg:p-10 w-full"
+      className="bg-white shadow-lg rounded-xl overflow-hidden border border-gray-200 p-6 sm:p-8 lg:p-10 w-full mb-2"
     >
       <h2 className="text-2xl font-bold text-mpgin-darkBlue mb-5 border-b pb-2 border-gray-300">
       Student Admission Form
@@ -693,6 +694,20 @@ const StudentTab = () => {
       <div className="space-y-6 underline text-blue-600">
         {/* {currentCollegeData.feeStructure} */}
         <a target="_blank" href={studentAdmissionForm}>Institute level  admission registration form for first year and direct second year engineering A.Y. 2025-26</a>
+      </div>
+    </motion.div>
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      className="bg-white shadow-lg rounded-xl overflow-hidden border border-gray-200 p-6 sm:p-8 lg:p-10 w-full"
+    >
+      <h2 className="text-2xl font-bold text-mpgin-darkBlue mb-5 border-b pb-2 border-gray-300">
+      CAP Merit List For The Academic Year 2025-26
+      </h2>
+      <div className="space-y-6 underline text-blue-600">
+        {/* {currentCollegeData.feeStructure} */}
+        <a target="_blank" href={studentCapDseListForWebsite}>Direct second year against cap merit list for the academic year 2025-26</a>
       </div>
     </motion.div>
     </>
