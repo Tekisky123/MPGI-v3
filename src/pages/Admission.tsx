@@ -21,7 +21,11 @@ import feesStructure from "../assets/pdf/fees_structure.pdf";
 import studentScheme from "../assets/images/student-scheme.jpeg";
 import studentAdmissionForm from "../assets/pdf/institute_level_form.pdf";
 import studentCapDseListForWebsite from "../assets/pdf/acap_dse_list_for_website.pdf";
+import studentInstituteLevelFinalMeritList from "../assets/pdf/First year Instutute level final merit list034.pdf";
+import studentAcapFinalMeritList from "../assets/pdf/First year Against Cap final merit list031.pdf";
 import informationBrochure from "../assets/pdf/information_brochure.pdf";
+import ImageUpload from "../components/ui/ImageUpload";
+import StudentAdmissionForm from "./StudentAdmissionForm";
 
 // Tab Navigation Items
 export const admissionNavItems = [
@@ -62,7 +66,7 @@ export const UNDERSTANDING_DOCUMENTS = [
 export const INFORMATION_BROCHURE_PDFS = {
   "school-of-engineering": [
     { heading: "Engineering Brochure 1", filePath: "path_to_engineering_brochure_1.pdf" }
-    
+
   ],
   "school-of-management": [
     { heading: "Management Brochure 1", filePath: "path_to_management_brochure_1.pdf" },
@@ -173,7 +177,7 @@ const SCHOOL_OF_ENGINEERING_BTECH_TABLE = (
       <tr>
         <td className="border px-4 py-2">6</td>
         <td className="border px-4 py-2">
-          Computer Science & Engineering<br/>
+          Computer Science & Engineering<br />
           (Artificial Intelligence and Machine Learning)
         </td>
         <td className="border px-4 py-2">30</td>
@@ -650,7 +654,7 @@ const FeeStructureTab = () => {
       className="bg-white shadow-lg rounded-xl overflow-hidden border border-gray-200 p-6 sm:p-8 lg:p-10 w-full"
     >
       <h2 className="text-2xl font-bold text-mpgin-darkBlue mb-5 border-b pb-2 border-gray-300">
-      Fee Structure 2025-26
+        Fee Structure 2025-26
       </h2>
       <div className="space-y-6 underline text-blue-600">
         {/* {currentCollegeData.feeStructure} */}
@@ -663,53 +667,79 @@ const FeeStructureTab = () => {
 const StudentTab = () => {
   // const { collegeId } = useParams<{ collegeId: string }>();
   // const currentCollegeData =
-    // collegeAdmissionDataMap[collegeId || ""] ||
-    // collegeAdmissionDataMap["school-of-engineering"];
+  // collegeAdmissionDataMap[collegeId || ""] ||
+  // collegeAdmissionDataMap["school-of-engineering"];
 
   return (
     <>
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
-      className="bg-white shadow-lg rounded-xl overflow-hidden border border-gray-200 p-6 sm:p-8 lg:p-10 w-full mb-2"
-    >
-      <h2 className="text-2xl font-bold text-mpgin-darkBlue mb-5 border-b pb-2 border-gray-300">
-      Student Schemes
-      </h2>
-      <div className="space-y-6 underline text-blue-600">
-        {/* {currentCollegeData.feeStructure} */}
-        <a target="_blank" href={studentScheme}>Click here to download student schemes</a>
-      </div>
-    </motion.div>
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
-      className="bg-white shadow-lg rounded-xl overflow-hidden border border-gray-200 p-6 sm:p-8 lg:p-10 w-full mb-2"
-    >
-      <h2 className="text-2xl font-bold text-mpgin-darkBlue mb-5 border-b pb-2 border-gray-300">
-      Student Admission Form
-      </h2>
-      <div className="space-y-6 underline text-blue-600">
-        {/* {currentCollegeData.feeStructure} */}
-        <a target="_blank" href={studentAdmissionForm}>Institute level  admission registration form for first year and direct second year engineering A.Y. 2025-26</a>
-      </div>
-    </motion.div>
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
-      className="bg-white shadow-lg rounded-xl overflow-hidden border border-gray-200 p-6 sm:p-8 lg:p-10 w-full"
-    >
-      <h2 className="text-2xl font-bold text-mpgin-darkBlue mb-5 border-b pb-2 border-gray-300">
-      CAP Merit List For The Academic Year 2025-26
-      </h2>
-      <div className="space-y-6 underline text-blue-600">
-        {/* {currentCollegeData.feeStructure} */}
-        <a target="_blank" href={studentCapDseListForWebsite}>Direct second year against cap merit list for the academic year 2025-26</a>
-      </div>
-    </motion.div>
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="bg-white shadow-lg rounded-xl overflow-hidden border border-gray-200 p-6 sm:p-8 lg:p-10 w-full mb-2"
+      >
+        <h2 className="text-2xl font-bold text-mpgin-darkBlue mb-5 border-b pb-2 border-gray-300">
+          Student Schemes
+        </h2>
+        <div className="space-y-6 underline text-blue-600">
+          {/* {currentCollegeData.feeStructure} */}
+          <a target="_blank" href={studentScheme}>Click here to download student schemes</a>
+        </div>
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="bg-white shadow-lg rounded-xl overflow-hidden border border-gray-200 p-6 sm:p-8 lg:p-10 w-full mb-2"
+      >
+        <h2 className="text-2xl font-bold text-mpgin-darkBlue mb-5 border-b pb-2 border-gray-300">
+          Student Admission Form
+        </h2>
+        <div className="space-y-6 underline text-blue-600">
+          <a target="_blank" href={studentAdmissionForm}>Institute level  admission registration form for first year and direct second year engineering A.Y. 2025-26</a>
+        </div>
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="bg-white shadow-lg rounded-xl overflow-hidden border border-gray-200 p-6 sm:p-8 lg:p-10 w-full mb-2"
+      >
+        <h2 className="text-2xl font-bold text-mpgin-darkBlue mb-5 border-b pb-2 border-gray-300">
+          CAP Merit List For The Academic Year 2025-26
+        </h2>
+        <div className="space-y-6 underline text-blue-600">
+          <a target="_blank" href={studentCapDseListForWebsite}>Direct second year against cap merit list for the academic year 2025-26</a>
+        </div>
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="bg-white shadow-lg rounded-xl overflow-hidden border border-gray-200 p-6 sm:p-8 lg:p-10 w-full mb-2"
+      >
+        <h2 className="text-2xl font-bold text-mpgin-darkBlue mb-5 border-b pb-2 border-gray-300">
+          First Year Institute Level Final Merit List For AY 2025-26
+        </h2>
+        <div className="space-y-6 underline text-blue-600">
+          <a target="_blank" href={studentInstituteLevelFinalMeritList}>First year institute level final merit list for ay 2025-26</a>
+        </div>
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="bg-white shadow-lg rounded-xl overflow-hidden border border-gray-200 p-6 sm:p-8 lg:p-10 w-full mb-2"
+      >
+        <h2 className="text-2xl font-bold text-mpgin-darkBlue mb-5 border-b pb-2 border-gray-300">
+          First Year Against Cap Final Merit List 2025-26
+        </h2>
+        <div className="space-y-6 underline text-blue-600">
+          <a target="_blank" href={studentAcapFinalMeritList}>First year acap final merit list 2025-26</a>
+        </div>
+      </motion.div>
+
+      {/* <StudentAdmissionForm /> */}
     </>
   );
 };

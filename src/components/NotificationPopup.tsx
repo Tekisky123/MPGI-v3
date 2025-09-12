@@ -70,7 +70,8 @@ const NotificationPopup = () => {
           <div className="fixed inset-0 bg-black bg-opacity-50" />
           <div
             ref={popupRef}
-            className="bg-white rounded-lg shadow-lg p-3 relative max-w-5xl w-full mx-2"
+            className="bg-white rounded-lg shadow-lg p-3 relative max-w-5xl w-auto max-h-[90vh] flex justify-center items-center"
+            // className="bg-white rounded-lg shadow-lg p-3 relative max-w-5xl w-full mx-2"
           >
             <button
               onClick={() => setIsVisible(false)}
@@ -81,7 +82,8 @@ const NotificationPopup = () => {
             <img
               src={notificationData[0].imageUrl}
               alt="Notification"
-              className="w-full h-auto rounded"
+              className="max-w-full max-h-[90vh] h-auto w-auto rounded"
+              // className="w-full h-auto rounded"
             />
           </div>
         </motion.div>
