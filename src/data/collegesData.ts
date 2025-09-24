@@ -1967,7 +1967,7 @@ Join us in shaping a dynamic and rewarding career in engineering.`,
           },
         ],
         hod: {
-          name: "P. D. Pople",
+          name: "Prakash D. Pople",
           designation: "Head of Department - Civil Engineering",
           message: `I take the privilege to welcome you all to the Department of Civil Engineering at the School of Engineering, Matoshri Pratishthan Group of Institutions (Integrated Campus), Nanded. The under graduate course in Civil Engineering was started in 2009 with the intake of 60 students. 
 The Department, established to impart analytical and application skills in various fields of Civil Engineering, has been transforming youngsters into professionals. The students of Civil Engineering are exposed to various fields such as Structural Engineering, Construction Technology and Management, Water Resources Engineering, Environmental Engineering, Geotechnical Engineering, Transportation Engineering, and many more which enable the students to take up a professional career or higher education of their choice. The Department of Civil Engineering is one of the best, in the vicinity, bestowed with highly qualified staff members and excellent infrastructure. The campus is fully networked with high-speed internet connectivity which gives our students and faculty an edge over their counterparts of other institutions.`,
@@ -2567,7 +2567,7 @@ The goal of department is to prepare executes destined for a successful manageme
         gallery: ["/images/mba-1.jpg", "/images/mba-2.jpg"],
         labs: [],
         hod: {
-          name: "Sadanand R. Shinde",
+          name: "Prakash D. Pople",
           designation: "DEAN - School of Management",
           message: `The new economic policy—globalization, privatization, and liberalization—has widened the horizon of business. The information technology revolution has transformed this planet into a global village. Hi-tech systems and the supersonic speed of communication have introduced new cross-cultural interactions in the global business scenario. This has also increased the demand for a strong ethical value foundation in a harmonic form.
 
