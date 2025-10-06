@@ -17,7 +17,9 @@ import { Menu, X } from "lucide-react";
 import polyBrouchure1 from "../assets/pdf/polyBroucher1.pdf";
 import polyBrouchure2 from "../assets/pdf/polyBroucher2.pdf";
 import polyBrouchure3 from "../assets/pdf/polyBroucher3.pdf";
-import feesStructure from "../assets/pdf/fees_structure.pdf";
+// import feesStructure from "../assets/pdf/fees_structure.pdf";
+import appprovedFeesStructure from '../assets/pdf/appproved_fees_2025-26.pdf';
+import revisedFeesStructure from '../assets/pdf/revised_fees_2024-25.pdf';
 import studentScheme from "../assets/images/student-scheme.jpeg";
 import studentAdmissionForm from "../assets/pdf/institute_level_form.pdf";
 import studentCapDseListForWebsite from "../assets/pdf/acap_dse_list_for_website.pdf";
@@ -647,6 +649,7 @@ const FeeStructureTab = () => {
     collegeAdmissionDataMap["school-of-engineering"];
 
   return (
+    <>
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
@@ -658,9 +661,24 @@ const FeeStructureTab = () => {
       </h2>
       <div className="space-y-6 underline text-blue-600">
         {/* {currentCollegeData.feeStructure} */}
-        <a target="_blank" href={feesStructure}>Click here to download Fee Structure 2025-26</a>
+        <a target="_blank" href={appprovedFeesStructure}>Click here to download Fee Structure 2025-26</a>
       </div>
     </motion.div>
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      className="bg-white shadow-lg rounded-xl overflow-hidden border border-gray-200 p-6 sm:p-8 lg:p-10 w-full mt-6"
+    >
+      <h2 className="text-2xl font-bold text-mpgin-darkBlue mb-5 border-b pb-2 border-gray-300">
+        Fee Structure 2024-25
+      </h2>
+      <div className="space-y-6 underline text-blue-600">
+        {/* {currentCollegeData.feeStructure} */}
+        <a target="_blank" href={revisedFeesStructure}>Click here to download Fee Structure 2024-25</a>
+      </div>
+    </motion.div>
+    </>
   );
 };
 

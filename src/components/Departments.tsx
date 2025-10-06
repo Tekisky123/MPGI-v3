@@ -2,7 +2,9 @@ import { motion } from "framer-motion";
 import { ChevronRight, Building2, GraduationCap, School } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import ScrollingText from "./ScrollingText";
-import feesStructure from '../assets/pdf/fees_structure.pdf';
+// import feesStructure from '../assets/pdf/fees_structure.pdf';
+import appprovedFeesStructure from '../assets/pdf/appproved_fees_2025-26.pdf';
+import revisedFeesStructure from '../assets/pdf/revised_fees_2024-25.pdf';
 
 interface Department {
   title: string;
@@ -62,12 +64,22 @@ MPVPI takes pride in its thriving alumni community of over 1000 MPVPIians who ar
 
   return (
     <section className="bg-gray-50 py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
-      <ScrollingText
-        text="📢 Fee Structure for 2025–26 as approved by FRA, Click here to download."
-        link={feesStructure}
-        speed={15}
+      <ScrollingText 
         backgroundColor="#e0f2fe"
-        textColor="#0369a1"
+        speed={20}
+        items={[
+          {
+            text:"📢 Fee Structure for 2025–26 as approved by FRA, Click here to download.",
+            link:appprovedFeesStructure,
+            textColor:"#0369a1"
+          },
+          {
+            text:"📢 Revised Fee Structure for 2024–25, Click here to download.",
+            link:revisedFeesStructure,
+            textColor:"#0369a1"
+          }
+        ]}
+        
       />
       <div className="max-w-7xl mx-auto mt-10">
         {/* Header Section */}
