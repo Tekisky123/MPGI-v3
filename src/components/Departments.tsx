@@ -3,8 +3,10 @@ import { ChevronRight, Building2, GraduationCap, School } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import ScrollingText from "./ScrollingText";
 // import feesStructure from '../assets/pdf/fees_structure.pdf';
-import appprovedFeesStructure from '../assets/pdf/appproved_fees_2025-26.pdf';
+// import appprovedFeesStructure from '../assets/pdf/appproved_fees_2025-26.pdf';
+import FRAFeesStructureSOE from '../assets/pdf/MPGI school of Engineering FRA Fees Structure 2025-26.pdf';
 import revisedFeesStructure from '../assets/pdf/revised_fees_2024-25.pdf';
+import FRAFeesStructureSOM from '../assets/pdf/MPGI school of Management FRA Fees Structure A.Y.2025-26.pdf';
 
 interface Department {
   title: string;
@@ -66,16 +68,21 @@ MPVPI takes pride in its thriving alumni community of over 1000 MPVPIians who ar
     <section className="bg-gray-50 py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
       <ScrollingText 
         backgroundColor="#e0f2fe"
-        speed={20}
+        speed={25}
         items={[
           {
-            text:"📢 Fee Structure for 2025–26 as approved by FRA, Click here to download.",
-            link:appprovedFeesStructure,
+            text:"📢 Fee Structure for 2025–26 as approved by FRA School of Engineering, Click here to download.",
+            link:FRAFeesStructureSOE,
             textColor:"#0369a1"
           },
           {
-            text:"📢 Revised Fee Structure for 2024–25, Click here to download.",
+            text:"📢 Revised Fee Structure for 2024–25 School of Engineering, Click here to download.",
             link:revisedFeesStructure,
+            textColor:"#0369a1"
+          },
+          {
+            text:"📢 FRA Fees-Structure for the academic year 2025-26 School of Management, Click here to download.",
+            link:FRAFeesStructureSOM,
             textColor:"#0369a1"
           }
         ]}
