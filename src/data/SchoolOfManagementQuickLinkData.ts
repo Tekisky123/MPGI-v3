@@ -1,5 +1,5 @@
-// import managementPrincipal from "../assets/principalImages/DeanSadanand R. Shinde School of Management.png";
-import civilHodEngineering from "../assets/hodImages/P. D. Pople Civil Engineering.png";
+import managementPrincipal from "../assets/principalImages/DeanSadanand R. Shinde School of Management.png";
+//import civilHodEngineering from "../assets/hodImages/P. D. Pople Civil Engineering.png";
 
 export interface ProfileData {
   id: string;
@@ -35,14 +35,14 @@ export const navItems = [
 export const profiles: ProfileData[] = [
   {
     id: "dean",
-    name: "Prakash D. Pople",
+    name: "Sadanand R. Shinde",
     title: "Dean",
-    image: civilHodEngineering,
+    image: managementPrincipal,
     content: `
 
 The new economic policy—globalization, privatization, and liberalization—has widened the horizon of business. The information technology revolution has transformed this planet into a global village. Hi-tech systems and the supersonic speed of communication have introduced new cross-cultural interactions in the global business scenario. This has also increased the demand for a strong ethical value foundation in a harmonic form. It is the responsibility of the School of Management to develop holistic leadership with a global vision and a mission of excellence. The School of Management at Matoshri Pratishthan’s Group of Institutes is fully committed to this task.
 
-*— Prakash D. Pople*
+*— Sadanand R. Shinde*
 `,
   },
 ];

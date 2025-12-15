@@ -2567,7 +2567,7 @@ The goal of department is to prepare executes destined for a successful manageme
         gallery: ["/images/mba-1.jpg", "/images/mba-2.jpg"],
         labs: [],
         hod: {
-          name: "Prakash D. Pople",
+          name: "Sadanand R. Shinde",
           designation: "DEAN - School of Management",
           message: `The new economic policy—globalization, privatization, and liberalization—has widened the horizon of business. The information technology revolution has transformed this planet into a global village. Hi-tech systems and the supersonic speed of communication have introduced new cross-cultural interactions in the global business scenario. This has also increased the demand for a strong ethical value foundation in a harmonic form.
 
