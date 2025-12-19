@@ -1537,6 +1537,29 @@ We believe in nurturing curiosity, encouraging inquiry, and building a strong ac
 3. To inspire scientific curiosity, ethical reasoning, and sustainable thinking.  
 4. To foster a multidisciplinary learning environment that encourages innovation, creativity, and collaborative problem-solving.`,
       },
+      {
+        id: "training-and-placement",
+        name: "Training & Placement",
+        description: "Training & Placement cell for student career development and industry relations.",
+        image: "/images/tp-card.jpg",
+        courses: [],
+        about: `The Training and Placement Cell at Matoshri Pratisthan Group of Institutions (MPGI), Nanded serves as a dynamic bridge between students and the professional world. The cell is committed to enhancing employability through career guidance, technical skill-building, personality development programs, and strong industry linkages.`,
+        facilities: ["Placement Cell Office", "Interview Rooms"],
+        facultyCount: 2,
+        gallery: [],
+        labs: [],
+        hod: {
+          name: "Prakash D. Pople",
+          designation: "Training & Placement Officer",
+          message: "At Matoshri Pratisthan, our mission is to mold technically sound and industry-ready professionals. The Placement Cell strives to create an environment where students gain not only academic knowledge but also practical insights through internships, training sessions, and interactive interactions with industry experts. We are committed to providing every student with opportunities that align with their career goals and ambitions. With the cooperation of faculty, students, and recruiters, we aim to achieve new heights in placement success each year.",
+          profileImage: civilHodEngineering,
+        },
+        vision: `To empower every student to become industry-ready and achieve a successful professional career.`,
+        mission: `To enhance student employability through structured training, aptitude development, communication skills, and technical expertise.
+                  To build strong and lasting industry-institute partnerships for internships, workshops, projects, and campus recruitment.
+                  To guide students in exploring career paths aligned with their strengths and aspirations.
+                  To provide equal opportunities and a supportive ecosystem for every student’s career growth.`,
+      },
     ],
   },
   {
@@ -2529,6 +2552,29 @@ Wishing all our students great success in their academic and professional journe
         vision: `The Department of Artificial Intelligence and Machine Learning at MPGI Integrated Campus envisions becoming a leading center of excellence in computing education, research, and innovation. The department is committed to nurturing technically proficient, ethically grounded, and socially responsible professionals who can thrive in a rapidly evolving technological world. By fostering a spirit of innovation, continuous learning, and global awareness, the department aims to empower students to make meaningful contributions to industry, academia, and society at large. `,
         mission: `The mission of the Department of Artificial Intelligence and Machine Learning is to deliver high-quality education that blends theoretical knowledge with practical skills in computer science and related technologies. The department seeks to develop students’ analytical thinking, problem-solving capabilities, and creativity through a curriculum that is responsive to the latest industry trends and technological advancements. Through collaborations with industry and research organizations, the department ensures experiential learning opportunities such as internships, projects, and workshops. It also places strong emphasis on ethical practices, effective communication, leadership, and teamwork, preparing students to excel in diverse professional environments. Continuous improvement in faculty development, infrastructure, and academic delivery remains a core focus in the department’s pursuit of excellence.`,
       },
+      {
+        id: "training-and-placement",
+        name: "Training & Placement",
+        description: "Training & Placement cell coordinating internships, recruitment drives, and student employability programs.",
+        image: "/images/tp-card.jpg",
+        courses: [],
+        about: "At Matoshri Pratisthan, our mission is to mold technically sound and industry-ready professionals. The Placement Cell strives to create an environment where students gain not only academic knowledge but also practical insights through internships, training sessions, and interactive interactions with industry experts. We are committed to providing every student with opportunities that align with their career goals and ambitions. With the cooperation of faculty, students, and recruiters, we aim to achieve new heights in placement success each year.",
+        facilities: ["Placement Cell Office", "Interview Rooms"],
+        facultyCount: 3,
+        gallery: [],
+        labs: [],
+        hod: {
+          name: "Prakash D. Pople",
+          designation: "Training & Placement Officer",
+          message: `At Matoshri Pratisthan, our mission is to mold technically sound and industry-ready professionals. The Placement Cell strives to create an environment where students gain not only academic knowledge but also practical insights through internships, training sessions, and interactive interactions with industry experts. We are committed to providing every student with opportunities that align with their career goals and ambitions. With the cooperation of faculty, students, and recruiters, we aim to achieve new heights in placement success each year.`,
+          profileImage: civilHodEngineering,
+        },
+        vision: `To empower every student to become industry-ready and achieve a successful professional career.`,
+        mission: `To enhance student employability through structured training, aptitude development, communication skills, and technical expertise.
+To build strong and lasting industry-institute partnerships for internships, workshops, projects, and campus recruitment.
+To guide students in exploring career paths aligned with their strengths and aspirations.
+To provide equal opportunities and a supportive ecosystem for every student’s career growth.`,
+      },
     ],
   },
 
@@ -2578,6 +2624,29 @@ It is the responsibility of the School of Management to develop holistic leaders
           "Shaping future leaders with knowledge, innovation, and ethical business practices to create a lasting impact on society.",
         mission:
           "Educating students for career success, we make every decision to support the career and personal development of our learners. Our curriculum, teaching, and services demonstrate that we value the diverse profiles of our learners.",
+      },
+      {
+        id: "training-and-placement",
+        name: "Training & Placement",
+        description: "Training & Placement cell supporting industry relations, internships, and placements for management students.",
+        image: "/images/tp-card.jpg",
+        courses: [],
+        about: "The Training and Placement Cell at Matoshri Pratisthan Group of Institutions (MPGI), Nanded serves as a dynamic bridge between students and the professional world.\n\nThe cell is committed to enhancing employability through career guidance, technical skill-building, personality development programs, and strong industry linkages.\n\nTraining and Placement Officer – Professional Experience\n\nProf. Prakash D. Pople brings 40 years of dedicated academic and administrative experience from Government Polytechnic, Maharashtra, contributing significantly to student development and institutional growth.\n\nCareer Highlights\n\n12 Years Lecturer\nFocused on high-quality teaching, student mentoring, and academic excellence.\n\n28 Years Head of Department (HOD)\nLed departmental activities, faculty development, curriculum enhancement, and academic planning.\n\n12 Years Principal (Additional Charge)\nManaged overall institutional administration, staff coordination, institute development programs, and academic governance.\n\n6 Years Training and Placement Officer (TPO) (Additional Charge)\nExecuted placement strategies, conducted training programs, interacted with industry partners, and guided students toward employability.\n\nEmail: tpompgi1963@gmail.com\nContact: 9422870908 / 8208618714",
+        facilities: ["Placement Cell Office", "Interview Rooms"],
+        facultyCount: 2,
+        gallery: [],
+        labs: [],
+        hod: {
+          name: "Prakash D. Pople",
+          designation: "Training & Placement Officer",
+          message: `At Matoshri Pratisthan, our mission is to mold technically sound and industry-ready professionals. The Placement Cell strives to create an environment where students gain not only academic knowledge but also practical insights through internships, training sessions, and interactive interactions with industry experts. We are committed to providing every student with opportunities that align with their career goals and ambitions. With the cooperation of faculty, students, and recruiters, we aim to achieve new heights in placement success each year.`,
+          profileImage: civilHodEngineering,
+        },
+        vision: "To empower every student to become industry-ready and achieve a successful professional career.",
+        mission: `To enhance student employability through structured training, aptitude development, communication skills, and technical expertise.
+To build strong and lasting industry-institute partnerships for internships, workshops, projects, and campus recruitment.
+To guide students in exploring career paths aligned with their strengths and aspirations.
+To provide equal opportunities and a supportive ecosystem for every student’s career growth.`,
       },
     ],
   },

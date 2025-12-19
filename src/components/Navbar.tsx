@@ -37,8 +37,13 @@ const DEPARTMENT_MAPPINGS: Record<string, Array<{ name: string; path: string }>>
     { name: "Information Technology", path: "/departments/it/profile" },
     { name: "Electronics and Telecommunication", path: "/departments/ece/profile" },
     { name: "Basic Sciences and Humanities (FE)", path: "/departments/bsh/profile" },
+    { name: "Training & Placement", path: "/departments/training-and-placement/profile" },
   ],
   "school-of-management": [{ name: "MBA Program", path: "/departments/mba/profile" }],
+  "school-of-management": [
+    { name: "MBA Program", path: "/departments/mba/profile" },
+    { name: "Training & Placement", path: "/departments/training-and-placement/profile" },
+  ],
   "school-of-engineering": [
     { name: "Civil Engineering", path: "/departments/civil/profile" },
     { name: "Computer Science Engineering", path: "/departments/cse/profile" },
@@ -48,6 +53,7 @@ const DEPARTMENT_MAPPINGS: Record<string, Array<{ name: string; path: string }>>
     { name: "Artificial Intelligence (AI) and Data Science", path: "/departments/aids/profile" },
     { name: `Computer Science and Engineering (AIML)`, path: "/departments/aiml/profile" },
     { name: "Basic Sciences and Humanities (FE)", path: "/departments/bsh/profile" },
+    { name: "Training & Placement", path: "/departments/training-and-placement/profile" },
   ],
 };
 

@@ -33,7 +33,7 @@ export const NAV_ITEMS = [
         name: "Human Values & Ethics",
         path: "/courses-humanvalues-professionalethics/profile",
       },
-      { name: "Training and Placement", path: "/trainingandplacement/profile" },
+      { name: "Training & Placement", path: "/departments/training-and-placement/profile" },
       {
         name: "Innovation & Entrepreneurship",
         path: "/Innovation-Entrepreneurship-Development-Cell/profile",

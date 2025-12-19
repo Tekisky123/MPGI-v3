@@ -33,9 +33,11 @@ const engineeringDepartments = [
   "Civil Engineering",
   "Electronics and Telecommunication Engineering",
   "Basic Sciences and Humanities (FE)",
+  "Training & Placement",
 ];
 
 const managementDepartments = ["MBA"];
+managementDepartments.push("Training & Placement");
 
 const polytechnicDepartments = [
   "Mechanical Engineering",
@@ -45,6 +47,7 @@ const polytechnicDepartments = [
   "Information Technology",
   "Electronics and Telecommunication",
   "Basic Sciences and Humanities (FE)",
+  "Training & Placement",
 ];
 
 const AlumniAssociationForm = () => {

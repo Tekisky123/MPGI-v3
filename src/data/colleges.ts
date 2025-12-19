@@ -27,6 +27,7 @@ export const collegeConfigs: Record<string, CollegeConfig> = {
         slug: "bsh",
         displayName: "Basic Sciences and Humanities",
       },
+      { slug: "training-and-placement", displayName: "Training & Placement" },
       {
         slug: "aids",
         displayName: "Artificial Intelligence (AI) and Data Science",
@@ -45,6 +46,7 @@ export const collegeConfigs: Record<string, CollegeConfig> = {
       { slug: "bba", displayName: "BBA" },
       { slug: "finance-management", displayName: "Financial Management" },
       { slug: "marketing-management", displayName: "Marketing Management" },
+      { slug: "training-and-placement", displayName: "Training & Placement" },
     ],
   },
   polytechnic: {
@@ -61,6 +63,7 @@ export const collegeConfigs: Record<string, CollegeConfig> = {
         slug: "bsh",
         displayName: "Basic Sciences and Humanities",
       },
+      { slug: "training-and-placement", displayName: "Training & Placement" },
     ],
   },
   mpgin: {
