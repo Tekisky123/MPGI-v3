@@ -1,16 +1,14 @@
 import { useRef } from "react";
-import { Link, } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import logo from "../assets/images/logo-circle.png";
+import ScrollingTicker from "./ScrollingTicker";
 
 
 
 
 const Header = () => {
-
-
     const headerRef = useRef<HTMLElement>(null);
-
-
+    const location = useLocation();
 
     return (
         <>
@@ -18,6 +16,9 @@ const Header = () => {
                 ref={headerRef}
                 className={`sticky w-full top-0 z-50 shadow-lg transition-transform duration-300 ease-in-out `}
             >
+                {/* Scrolling Ticker - Only on Homepage */}
+                {location.pathname === "/" && <ScrollingTicker />}
+
                 {/* Top Section - Logo and Institution Name */}
                 <div className="bg-mpgin-darkBlue py-3 border-b ">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
