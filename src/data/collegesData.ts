@@ -4,7 +4,8 @@ import polyEceHod from "../assets/hodImages/Ms. Mule A.B. Head of Department - E
 import mechHod from "../assets/hodImages/Sayyad Shafik R Mechanical Engineering.png";
 import cseHod from "../assets/hodImages/Mr B.A Khansole Computer Science & Engineering.png";
 import managementDean from "../assets/principalImages/DeanSadanand R. Shinde School of Management.png";
-import civilHodEngineering from "../assets/hodImages/P. D. Pople Civil Engineering.png";
+// import civilHodEngineering from "../assets/hodImages/P. D. Pople Civil Engineering.png";
+import civilHodEngineering from "../assets/hodImages/Sanjay. S. Gaddamwar.jpeg";
 import polyComputerHod from "../assets/hodImages/Mrs MORE M.K.png";
 import polyCivilHod from "../assets/hodImages/Ms. Goud P.O Hod.jpg";
 import mechanicalHodPoly from "../assets/principalImages/Prof. Shahaji Deshmukh Vishwabharati polytechnic.jpg";
@@ -1549,7 +1550,7 @@ We believe in nurturing curiosity, encouraging inquiry, and building a strong ac
         gallery: [],
         labs: [],
         hod: {
-          name: "Prakash D. Pople",
+          name: "Mr. Sanjay Gaddamwar",
           designation: "Training & Placement Officer",
           message: "At Matoshri Pratisthan, our mission is to mold technically sound and industry-ready professionals. The Placement Cell strives to create an environment where students gain not only academic knowledge but also practical insights through internships, training sessions, and interactive interactions with industry experts. We are committed to providing every student with opportunities that align with their career goals and ambitions. With the cooperation of faculty, students, and recruiters, we aim to achieve new heights in placement success each year.",
           profileImage: civilHodEngineering,
@@ -1990,7 +1991,7 @@ Join us in shaping a dynamic and rewarding career in engineering.`,
           },
         ],
         hod: {
-          name: "Prakash D. Pople",
+          name: "Mr. Sanjay Gaddamwar",
           designation: "Head of Department - Civil Engineering",
           message: `I take the privilege to welcome you all to the Department of Civil Engineering at the School of Engineering, Matoshri Pratishthan Group of Institutions (Integrated Campus), Nanded. The under graduate course in Civil Engineering was started in 2009 with the intake of 60 students. 
 The Department, established to impart analytical and application skills in various fields of Civil Engineering, has been transforming youngsters into professionals. The students of Civil Engineering are exposed to various fields such as Structural Engineering, Construction Technology and Management, Water Resources Engineering, Environmental Engineering, Geotechnical Engineering, Transportation Engineering, and many more which enable the students to take up a professional career or higher education of their choice. The Department of Civil Engineering is one of the best, in the vicinity, bestowed with highly qualified staff members and excellent infrastructure. The campus is fully networked with high-speed internet connectivity which gives our students and faculty an edge over their counterparts of other institutions.`,
@@ -2564,7 +2565,7 @@ Wishing all our students great success in their academic and professional journe
         gallery: [],
         labs: [],
         hod: {
-          name: "Prakash D. Pople",
+          name: "Mr. Sanjay Gaddamwar",
           designation: "Training & Placement Officer",
           message: `At Matoshri Pratisthan, our mission is to mold technically sound and industry-ready professionals. The Placement Cell strives to create an environment where students gain not only academic knowledge but also practical insights through internships, training sessions, and interactive interactions with industry experts. We are committed to providing every student with opportunities that align with their career goals and ambitions. With the cooperation of faculty, students, and recruiters, we aim to achieve new heights in placement success each year.`,
           profileImage: civilHodEngineering,
@@ -2637,7 +2638,7 @@ It is the responsibility of the School of Management to develop holistic leaders
         gallery: [],
         labs: [],
         hod: {
-          name: "Prakash D. Pople",
+          name: "Mr. Sanjay Gaddamwar",
           designation: "Training & Placement Officer",
           message: `At Matoshri Pratisthan, our mission is to mold technically sound and industry-ready professionals. The Placement Cell strives to create an environment where students gain not only academic knowledge but also practical insights through internships, training sessions, and interactive interactions with industry experts. We are committed to providing every student with opportunities that align with their career goals and ambitions. With the cooperation of faculty, students, and recruiters, we aim to achieve new heights in placement success each year.`,
           profileImage: civilHodEngineering,
