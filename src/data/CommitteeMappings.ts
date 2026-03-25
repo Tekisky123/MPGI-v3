@@ -33,7 +33,7 @@ export const COMMITTEE_MAPPINGS: Record<CollegeId, Array<CommitteeMapping>> = {
         { id: "womens-guidance-cell", title: "Women's Guidance Cell" },
         { id: "sc-st-cell", title: "SC/ST Cell" },
         { id: "internal-quality-assurance-cell", title: "Internal Quality Assurance Committee" },
-        { id: "training-placement-cell", title: "Training & Placement Cell" }
-       
+        { id: "training-placement-cell", title: "Training & Placement Cell" },
+        { id: "governing-body", title: "Governing Body" }
     ]
 };
