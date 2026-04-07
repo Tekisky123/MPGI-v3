@@ -4,6 +4,7 @@ import SchoolOfEngineeringQuickLinks from "./SchoolOfEngineeringQuickLinks";
 // import feesStructure from '../../assets/pdf/fees_structure.pdf';
 import appprovedFeesStructure from '../../assets/pdf/appproved_fees_2025-26.pdf';
 import revisedFeesStructure from '../../assets/pdf/revised_fees_2024-25.pdf';
+import corrigendumReport from '../../assets/pdf/Corrigendum_Report_2025-2026_EOA.pdf';
 
 // Import images for the slider
 import img1 from "../../assets/engineering/hero1.jpg";
@@ -151,6 +152,11 @@ const SchoolOfEngineeringHome = () => {
           {
             text:"📢 Revised Fee Structure for 2024–25, Click here to download.",
             link:revisedFeesStructure,
+            textColor:"#0369a1"
+          },
+          {
+            text:"📢 Corrigendum Report 2025-2026 EOA, Click here to download.",
+            link:corrigendumReport,
             textColor:"#0369a1"
           }
         ]}
