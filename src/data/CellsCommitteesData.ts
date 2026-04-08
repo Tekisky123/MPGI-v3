@@ -23,6 +23,17 @@ export interface Committee {
   rules?: string[];
   roles?: string[];
   responsibilities?: string[];
+  grievanceProcessSteps?: string[];
+  grievanceEscalationMatrix?: Array<{
+    srNo: number;
+    activity: string;
+    firstReportingOfficer: string;
+    secondReportingOfficer: string;
+  }>;
+  grievanceLinks?: Array<{
+    label: string;
+    url: string;
+  }>;
 }
 
 export interface CollegeCommittees {
@@ -1695,9 +1706,98 @@ export const CELLS_COMMITTEES_DATA: CollegeCommittees[] = [
       },
       {
         id: "faculty-grievance-redressal-cell-engineering",
-        title: "Faculty Grievance Redressal Cell",
+        title: "Grievance Redressal Cell",
         description:
-          "The AICTE Regulation F No 1-1-103/AICTE/GRC/REGULATION/2021 DATED MARCH 22,2021. AICTE regulates the formation if Grievance Redressal committee within institutions to handle such concern.",
+          "",
+        grievanceProcessSteps: [
+          "All admission and scholarship related issues are settled now. You still can meet the concerned officer only outside your class times (if anything still is not resolved).",
+          "In case your problems/concerns are not resolved by these authorities, you can then meet the Principal for the resolution.",
+          "Permissions on the papers to be brought while meeting the Principal.",
+          "Students are advised to contact the reporting officers concerned outside the classroom/lab timings.",
+          "Students should be in their respective departmental buildings during office hours. No one will be permitted to use administrative block in office hours on working days.",
+          "Principal will be available in his office specifically for the purpose from 500PM to 700PM on all the working days.",
+          "Send an email atleast one day (24 Hour) in advance to principal@mpgi.ac.in. So that the same may be resolved at the earliest.",
+          "This mechanism will help us in resolving all your difficulties and facilitate your learning in a better way.",
+          "Please report to first and second reporting officers before raising the difficulty/query/grievance to Principal"
+        ],
+        grievanceEscalationMatrix: [
+          {
+            srNo: 1,
+            activity: "Departmental Facilities",
+            firstReportingOfficer: "HoD",
+            secondReportingOfficer: "HoD",
+          },
+          {
+            srNo: 2,
+            activity: "Academic",
+            firstReportingOfficer: "HoD",
+            secondReportingOfficer: "Academic Coordinator",
+          },
+          {
+            srNo: 3,
+            activity: "Examination",
+            firstReportingOfficer: "HoD",
+            secondReportingOfficer: "COE",
+          },
+          {
+            srNo: 4,
+            activity: "Students' activities (sports, clubs, SIC, NSS, discipline)",
+            firstReportingOfficer: "Faculty In-charge / Club or Faculty Coordinator",
+            secondReportingOfficer: "HoD",
+          },
+          {
+            srNo: 5,
+            activity: "Internet and Campus Wi-Fi",
+            firstReportingOfficer: "Networking In-charge",
+            secondReportingOfficer: "HoD CSE Department",
+          },
+          {
+            srNo: 6,
+            activity: "Library",
+            firstReportingOfficer: "Librarian",
+            secondReportingOfficer: "Principal",
+          },
+          {
+            srNo: 7,
+            activity: "Students/Accounts Section",
+            firstReportingOfficer: "Concerned Clerk",
+            secondReportingOfficer: "Administrative Officer",
+          },
+          {
+            srNo: 8,
+            activity: "Hostel (Boys and Girls), Mess and Room Maintenance",
+            firstReportingOfficer: "Mr. Tuppekar S. P.",
+            secondReportingOfficer: "Principal",
+          },
+          {
+            srNo: 9,
+            activity: "Electrical Maintenance",
+            firstReportingOfficer: "Electricians",
+            secondReportingOfficer: "HOD Electrical",
+          },
+          {
+            srNo: 10,
+            activity: "Campus Cleanliness, Tree Plantation, Security, Traffic/Parking Management and Maintenance",
+            firstReportingOfficer: "Site Engineer",
+            secondReportingOfficer: "HOD Civil",
+          },
+          {
+            srNo: 11,
+            activity: "Training and Placements Related",
+            firstReportingOfficer: "HOD",
+            secondReportingOfficer: "TPO",
+          },
+        ],
+        grievanceLinks: [
+          {
+            label: "For students",
+            url: "https://forms.gle/7kC7g7zEH18VXZCA8",
+          },
+          {
+            label: "For faculty and staff",
+            url: "https://forms.gle/RSKw57M7Ww3mme3L7",
+          },
+        ],
         members: [
           {
             srNo: 1,

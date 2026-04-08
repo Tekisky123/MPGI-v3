@@ -12,6 +12,8 @@ const CellsCommittees = () => {
 
   // Get specific committee if section is provided
   const committeeData = committeeId ? getCommitteeDetails(collegeId || "", committeeId) : null;
+  const hideMembersTableForSection =
+    committeeData?.id === "faculty-grievance-redressal-cell-engineering";
 
   // Handle errors
   if (!collegeData) {
@@ -83,65 +85,149 @@ const CellsCommittees = () => {
             <div className="p-6">
               <p className="text-gray-700 mb-6">{committeeData.description}</p>
 
-              {/* Member Table */}
-              <div className="overflow-x-auto border border-gray-300 rounded-lg">
-                <table className="min-w-full divide-y divide-gray-200">
-                  <thead className="bg-gray-100">
-                    <tr>
-                      <th className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wider text-gray-700">
-                        Sr. No.
-                      </th>
-                      <th className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wider text-gray-700">
-                        Name
-                      </th>
-                      <th className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wider text-gray-700">
-                        Designation
-                      </th>
-                      <th className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wider text-gray-700">
-                        Position
-                      </th>
-                      <th className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wider text-gray-700">
-                        Mobile Number
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody className="bg-white divide-y divide-gray-200">
-                    {committeeData.members.map((member, index) => (
-                      <tr key={member.srNo} className={index % 2 === 0 ? "bg-white" : "bg-gray-50"}>
-                        <td className="px-4 py-4 whitespace-nowrap text-sm text-gray-900">
-                          {member.srNo}
-                        </td>
-                        <td className="px-4 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                          {member.name}
-                        </td>
-                        <td className="px-4 py-4 whitespace-nowrap text-sm text-gray-700">
-                          {member.designation}
-                        </td>
-                        <td className="px-4 py-4 whitespace-nowrap text-sm">
-                          <span
-                            className={`px-3 py-1 text-xs font-medium rounded-full ${member.position.toLowerCase() === "chairperson"
-                              ? "bg-green-100 text-green-800"
-                              : "bg-blue-100 text-blue-800"
-                              }`}
-                          >
-                            {member.position}
-                          </span>
-                        </td>
-                        <td className="px-4 py-4 whitespace-nowrap text-md text-gray-700">
-                          {member.mobileNumber ? (
-                            <a href={`tel:${member.mobileNumber}`} className="text-blue-600 underline">
-                              +91 {member.mobileNumber}
-                            </a>
-                          ) : (
-                            "-"
-                          )}
-                        </td>
-
-                      </tr>
+              {committeeData.grievanceProcessSteps && committeeData.grievanceProcessSteps.length > 0 && (
+                <div className="mb-6">
+                  <h3 className="text-lg font-semibold text-mpgin-darkBlue mb-3">
+                    Grievance Redressal Process
+                  </h3>
+                   Follow the procedure of meeting the persons as per the following.
+                   <br></br>
+                  <ol type="i" className="list-[lower-roman] pl-5 space-y-2 text-gray-700">
+                    {committeeData.grievanceProcessSteps.map((step, index) => (
+                      <li key={`${committeeData.id}-step-${index}`}>{step}</li>
                     ))}
-                  </tbody>
-                </table>
-              </div>
+                  </ol>
+                </div>
+              )}
+
+              {committeeData.grievanceLinks && committeeData.grievanceLinks.length > 0 && (
+                <div className="mb-6">
+                  <h3 className="text-lg font-semibold text-mpgin-darkBlue mb-3">Online Grievances</h3>
+                  <div className="space-y-2">
+                    {committeeData.grievanceLinks.map((link) => (
+                      <p key={`${committeeData.id}-link-${link.label}`} className="text-gray-700">
+                        <span className="font-medium">{link.label}: </span>
+                        <a
+                          href={link.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-blue-600 underline break-all"
+                        >
+                          {link.url}
+                        </a>
+                      </p>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {committeeData.grievanceEscalationMatrix &&
+                committeeData.grievanceEscalationMatrix.length > 0 && (
+                  <div className="mb-6">
+                    <h3 className="text-lg font-semibold text-mpgin-darkBlue mb-3">
+                      Reporting Officers by Activity
+                    </h3>
+                    <div className="overflow-x-auto border border-gray-300 rounded-lg">
+                      <table className="min-w-full divide-y divide-gray-200">
+                        <thead className="bg-gray-100">
+                          <tr>
+                            <th className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wider text-gray-700">
+                              Sr. No.
+                            </th>
+                            <th className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wider text-gray-700">
+                              Activity
+                            </th>
+                            <th className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wider text-gray-700">
+                              First Reporting Officer
+                            </th>
+                            <th className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wider text-gray-700">
+                              Second Reporting Officer
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody className="bg-white divide-y divide-gray-200">
+                          {committeeData.grievanceEscalationMatrix.map((row, index) => (
+                            <tr
+                              key={`${committeeData.id}-escalation-${row.srNo}`}
+                              className={index % 2 === 0 ? "bg-white" : "bg-gray-50"}
+                            >
+                              <td className="px-4 py-4 whitespace-nowrap text-sm text-gray-900">
+                                {row.srNo}
+                              </td>
+                              <td className="px-4 py-4 text-sm text-gray-900">{row.activity}</td>
+                              <td className="px-4 py-4 text-sm text-gray-700">
+                                {row.firstReportingOfficer}
+                              </td>
+                              <td className="px-4 py-4 text-sm text-gray-700">
+                                {row.secondReportingOfficer}
+                              </td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                )}
+
+              {!hideMembersTableForSection && (
+                <div className="overflow-x-auto border border-gray-300 rounded-lg">
+                  <table className="min-w-full divide-y divide-gray-200">
+                    <thead className="bg-gray-100">
+                      <tr>
+                        <th className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wider text-gray-700">
+                          Sr. No.
+                        </th>
+                        <th className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wider text-gray-700">
+                          Name
+                        </th>
+                        <th className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wider text-gray-700">
+                          Designation
+                        </th>
+                        <th className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wider text-gray-700">
+                          Position
+                        </th>
+                        <th className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wider text-gray-700">
+                          Mobile Number
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody className="bg-white divide-y divide-gray-200">
+                      {committeeData.members.map((member, index) => (
+                        <tr key={member.srNo} className={index % 2 === 0 ? "bg-white" : "bg-gray-50"}>
+                          <td className="px-4 py-4 whitespace-nowrap text-sm text-gray-900">
+                            {member.srNo}
+                          </td>
+                          <td className="px-4 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                            {member.name}
+                          </td>
+                          <td className="px-4 py-4 whitespace-nowrap text-sm text-gray-700">
+                            {member.designation}
+                          </td>
+                          <td className="px-4 py-4 whitespace-nowrap text-sm">
+                            <span
+                              className={`px-3 py-1 text-xs font-medium rounded-full ${member.position.toLowerCase() === "chairperson"
+                                ? "bg-green-100 text-green-800"
+                                : "bg-blue-100 text-blue-800"
+                                }`}
+                            >
+                              {member.position}
+                            </span>
+                          </td>
+                          <td className="px-4 py-4 whitespace-nowrap text-md text-gray-700">
+                            {member.mobileNumber ? (
+                              <a href={`tel:${member.mobileNumber}`} className="text-blue-600 underline">
+                                +91 {member.mobileNumber}
+                              </a>
+                            ) : (
+                              "-"
+                            )}
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              )}
             </div>
           </div>
         </div>

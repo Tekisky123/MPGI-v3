@@ -12,7 +12,7 @@ export const COMMITTEE_MAPPINGS: Record<CollegeId, Array<CommitteeMapping>> = {
         { id: "anti-ragging-squad-engineering", title: "Anti Ragging Squad" },
         { id: "women-empowerment-committee-engineering", title: "Women Empowerment Committee" },
         { id: "governing-body-engineering", title: "Governing Body" },
-        { id: "faculty-grievance-redressal-cell-engineering", title: "Faculty Grievance Redressal Cell" },
+        { id: "faculty-grievance-redressal-cell-engineering", title: "Grievance Redressal Cell" },
         { id: "student-counselling-cell-engineering", title: "Student Counselling Cell" },
         { id: "industry-liaison-committee-engineering", title: "Industry Liaison Committee" },
         { id: "library-committee-engineering", title: "Library Committee" },
