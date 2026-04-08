@@ -3,6 +3,9 @@ import Placement from "../pages/schoolOfEngineering/SchoolOfEngineeringPlacement
 import PrincipelLaxmanEngineer from "../assets/principalImages/PrincipelLaxmanEngineer.jpg";
 import principleBriefResume from "../assets/pdf/resume.pdf";
 import principleBioData from "../assets/pdf/bioData.pdf";
+import MandatoryDisclosureContent from "../components/MandatoryDisclosureContent";
+import LoaContent from "../components/LoaContent";
+import naacDoc from "../assets/pdf/naac certificate.pdf";
 
 export interface ProfileData {
   id: string;
@@ -37,10 +40,9 @@ export const navItems = [
   { label: "Vision & Mission", id: "vision-mission" },
   { label: "Principal", id: "principal" },
   { label: "Placements", id: "placements" },
-  // { label: "Achievements", id: "achievements" },
-  // { label: "NIRF", id: "nirf" },
-  // { label: "Mandatory Disclosure", id: "mandatory-disclosure" },
-  { label: "IQAC", id: "iqac" },
+  { label: "Mandatory Discloser", id: "mandatory-disclosure" },
+  { label: "LOA/EOA", id: "loa" },
+  { label: "IQAC/NAAC", id: "iqac" },
   { label: "Innovation & Incubation Centre", id: "innovationIncubation" },
   { label: "SWAYAM-NPTEL", id: "swayam-nptel" },
 ];
@@ -265,10 +267,12 @@ export const nirfData = {
 
 export const mandatoryDisclosureData = {
   title: "Mandatory Disclosure",
-  content: `
+  content: <MandatoryDisclosureContent />,
+};
 
-  
-  `,
+export const loaData = {
+  title: "Letter of Approval",
+  content: <LoaContent />,
 };
 const iqacCommitteeData = [
   {
@@ -307,7 +311,7 @@ const iqacCommitteeData = [
 ];
 
 export const iqacData = {
-  title: "Internal Quality Assurance Cell (IQAC)",
+  title: "Internal Quality Assurance Cell (IQAC/NAAC)",
   content: `
 # SCHOOL OF ENGINEERING
 AN INTEGRATED CAMPUS
@@ -362,6 +366,13 @@ The institution has established an Internal Quality Assurance Cell (IQAC) on 25.
 ## Revised IQAC Committee
 `,
   tableData: iqacCommitteeData,
+  pdfLinks: [
+    {
+      name: "NAAC Certificate",
+      url: naacDoc,
+    },
+  ],
+  pdfPreview: naacDoc,
 };
 
 export const innovationIncubation = {

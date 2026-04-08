@@ -46,6 +46,10 @@ export const NAV_ITEMS = [
     name: "Cells & Committees",
     subItems: [
       {
+        name: "Online grievances redressal Mechanism",
+        path: "/cells-committees?section=faculty-grievance-redressal-cell-engineering",
+      },
+      {
         name: "Anti Ragging Committee",
         path: "/cells-committees?section=anti-ragging-committee",
       },

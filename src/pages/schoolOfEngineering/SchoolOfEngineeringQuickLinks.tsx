@@ -9,6 +9,7 @@ import {
   profiles,
   nirfData,
   mandatoryDisclosureData,
+  loaData,
   iqacData,
   visionMissionData,
   swayamNptelData,
@@ -478,9 +479,31 @@ const SchoolOfEngineeringQuickLinks = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.3 }}
-              className="prose max-w-none font-semibold text-gray-700 whitespace-pre-line"
+              className="prose max-w-none w-full"
             >
-              {renderContent(mandatoryDisclosureData.content)}
+              {typeof mandatoryDisclosureData.content === 'string' 
+                ? renderContent(mandatoryDisclosureData.content) 
+                : mandatoryDisclosureData.content}
+            </motion.div>
+          </motion.div>
+        );
+      case "loa":
+        return (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="bg-white shadow-lg rounded-xl overflow-hidden border border-gray-200 p-6 sm:p-8 lg:p-10 w-full"
+          >
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.3 }}
+              className="prose max-w-none w-full"
+            >
+              {typeof loaData.content === 'string' 
+                ? renderContent(loaData.content) 
+                : loaData.content}
             </motion.div>
           </motion.div>
         );
@@ -506,7 +529,18 @@ const SchoolOfEngineeringQuickLinks = () => {
               transition={{ delay: 0.3 }}
               className="prose max-w-none font-semibold text-gray-700 whitespace-pre-line"
             >
-              {renderContent(iqacData.content, [], iqacData.tableData)}
+              {renderContent(iqacData.content, [], undefined, undefined, (iqacData as any).pdfLinks)}
+              {renderIqacTable(iqacData.tableData)}
+              
+              {(iqacData as any).pdfPreview && (
+                <div className="mt-8 border border-gray-300 rounded-lg overflow-hidden shadow-sm h-[600px]">
+                  <iframe 
+                    src={(iqacData as any).pdfPreview} 
+                    className="w-full h-full" 
+                    title="NAAC Certificate Preview"
+                  />
+                </div>
+              )}
             </motion.div>
           </motion.div>
         );

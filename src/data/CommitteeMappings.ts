@@ -14,7 +14,9 @@ export const COMMITTEE_MAPPINGS: Record<CollegeId, Array<CommitteeMapping>> = {
         { id: "governing-body-engineering", title: "Governing Body" },
         { id: "faculty-grievance-redressal-cell-engineering", title: "Grievance Redressal Cell" },
         { id: "student-counselling-cell-engineering", title: "Student Counselling Cell" },
-        { id: "industry-liaison-committee-engineering", title: "Industry Liaison Committee" },
+        { id: "sc-st-committee-engineering", title: "SC/ST Committee" },
+        { id: "internal-complaint-committee-engineering", title: "Internal Complaint Committee (ICC)" },
+        { id: "institution-industry-cell-engineering", title: "Institution Industry Cell" },
         { id: "library-committee-engineering", title: "Library Committee" },
         { id: "remedial-coaching-cell-engineering", title: "Remedial Coaching Cell" },
         { id: "training-placement-cell", title: "Training & Placement Cell" }
