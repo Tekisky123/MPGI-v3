@@ -40,7 +40,7 @@ export const navItems = [
   { label: "Vision & Mission", id: "vision-mission" },
   { label: "Principal", id: "principal" },
   { label: "Placements", id: "placements" },
-  { label: "Mandatory Discloser", id: "mandatory-disclosure" },
+  { label: "Mandatory Disclosure", id: "mandatory-disclosure" },
   { label: "LOA/EOA", id: "loa" },
   { label: "IQAC/NAAC", id: "iqac" },
   { label: "Innovation & Incubation Centre", id: "innovationIncubation" },
