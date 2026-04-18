@@ -176,7 +176,6 @@ const VishwabhartiPolytechnicQuickLinks = () => {
                     <th className="py-2 px-4 border-b">Name</th>
                     <th className="py-2 px-4 border-b">Designation</th>
                     <th className="py-2 px-4 border-b">Committee</th>
-                    <th className="py-2 px-4 border-b">Mobile Number</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -186,7 +185,6 @@ const VishwabhartiPolytechnicQuickLinks = () => {
                       <td className="py-2 px-4 border-b">{member.name}</td>
                       <td className="py-2 px-4 border-b">{member.designation}</td>
                       <td className="py-2 px-4 border-b">{member.committee}</td>
-                      <td className="py-2 px-4 border-b">{member.mobileNumber}</td>
                     </tr>
                   ))}
                 </tbody>

@@ -161,55 +161,85 @@ const MandatoryDisclosureContent = () => {
       </Accordion>
 
       <Accordion title="3. Grievance Mechanisms & Key Committees">
-        <h4 className="font-bold text-gray-800 mt-4 mb-2">Anti Ragging Committee</h4>
+        <h4 className="font-bold text-gray-800 mt-8 mb-2">Student Grievance Redressal Committee (SGRC)</h4>
         <SimpleTable 
-          headers={["Sr. No.", "Name of Faculty", "Designation", "Department"]}
+          headers={["Sr. No.", "Type of Member", "Name of Member", "Committee Designation"]}
           data={[
-            ["1", "Dr. L.M. Waghmare", "Committee Head", "Principal"],
-            ["2", "Mr Hashmi S.A.", "Member", "Electrical HOD"],
-            ["3", "Mr.Khansole.B.A.", "Member", "CSE HOD"],
-            ["4", "Mr.Lakhan Rathod", "Member", "Civil HOD"],
-            ["5", "Dr. Syeda Rukhsana", "Member", "First Year"],
-            ["6", "Mr. P.J. Kinikar", "Member", "A.O."],
-            ["7", "Adv. Muradi S.V", "Member", "Advocate"]
+            ["1", "Principal", "Dr. L. M. Waghmare", "Chairman"],
+            ["2", "Faculty Member", "B. A. Khansole (Associate Professor, CSE)", "Member"],
+            ["3", "Faculty Member", "Dr. Syeda Rukhsana Osman Ali (Associate Professor, Head, FY Engineering)", "Member"],
+            ["4", "Faculty Member", "Mr. Choudante Smitkumar (Assistant Professor, EE)", "Member"],
+            ["5", "Student Representative", "Mr. Ashish Bhole (Special Invitee)", "Member"]
           ]}
         />
 
-        <h4 className="font-bold text-gray-800 mt-8 mb-2">Grievance Redressal Committee</h4>
+        <h4 className="font-bold text-gray-800 mt-8 mb-2">Anti Ragging Committee</h4>
         <SimpleTable 
-          headers={["Sr. No.", "Name of Faculty", "Designation", "Position"]}
+          headers={["Sr. No.", "Name of Member", "Designation", "Position in Committee"]}
           data={[
-            ["1", "Dr. L.M. Waghmare", "Principal", "Chairperson"],
-            ["2", "Mr Hashmi S.A.", "HOD EE Engg", "Member"],
-            ["3", "Dr. Syeda Rukhsana", "First Year", "Member"],
-            ["4", "Mr. P.J. Kinikar", "Administrative Officer", "Member"],
-            ["5", "Adv. Muradi S.Y.", "Advocate", "Member"]
+            ["1", "Dr. L. M. Waghmare", "Principal", "Chairman"],
+            ["2", "Hon. Tehsildar, Tehsil, Nanded", "Civil and Police Administration", "Member"],
+            ["3", "Hon. PI, Gramin Police Station, Nanded", "Civil and Police Administration", "Member"],
+            ["4", "Mr. Shyam Jadhav", "Reporter, Daily Sakal", "Member"],
+            ["5", "Mr. Vinod Kute", "NGO (Environment & Wild life Protection Organization)", "Member"],
+            ["6", "Mr. S. A. Hashmi", "Representative of Faculty Members", "Member"],
+            ["7", "Mr. B. A. Khansole", "Representative of Faculty Members", "Member"],
+            ["8", "Mrs. Maya Gopinath Patil", "Representative of Parents", "Member"],
+            ["9", "Mr. Niranjan Tawde", "Representative of Parents", "Member"],
+            ["10", "Mr. Omkar Kadam", "Representative of Students", "Member"],
+            ["11", "Ms. Anuradha Hasnabade", "Representative of Students", "Member"],
+            ["12", "Mr. Shubham Maykal", "Representative of Students", "Member"],
+            ["13", "Ms. Dilraj Kaur Motorwale", "Representative of Students", "Member"],
+            ["14", "Mr. P. G. Waghmare", "Representative of non-teaching staff", "Member"],
+            ["15", "Mr. Shrinivas Chavan", "Representative of non-teaching staff", "Member"],
+            ["16", "Dr. Ravindra Desai", "Dean (Student Activities)", "Member Secretary"]
           ]}
         />
+
+
 
         <h4 className="font-bold text-gray-800 mt-8 mb-2">Internal Complaint Committee (ICC)</h4>
         <SimpleTable 
-          headers={["Sr. No.", "Name of Members", "Designation"]}
+          headers={["Sr. No.", "Type of Member", "Name of Member", "Committee Designation"]}
           data={[
-            ["1", "Dr. L M Waghmare", "Committee Head Chairman"],
-            ["2", "Dr. Syeda Rukhsana", "Member"],
-            ["3", "Mrs. Manisha Telange", "Member"],
-            ["4", "Mrs. Madhura Chavan", "Member"],
-            ["5", "Mr. Hashmi S.A.", "Member"],
-            ["6", "Mr Sayyad Shafiq", "Member"],
-            ["7", "Mr P.J. Kinikar", "Member"]
+            ["1", "Faculty", "Dr. Syeda Rukhsana (Associate Professor, FY)", "Presiding Officer"],
+            ["2", "Faculty", "Mrs. Manisha Telange (Assistant Professor, EE)", "Member"],
+            ["3", "Faculty", "Mr. Hashmi S.A. (Associate Professor, EE)", "Member"],
+            ["4", "Faculty", "Mrs. Madhura Chavan (Assistant Professor, FY)", "Member"],
+            ["5", "Non-Teaching Staff", "Mr. P. J. Kinikar", "Member"],
+            ["6", "Non-Teaching Staff", "Mr. B. P. Gaikwad", "Member"],
+            ["7", "Student Representative", "Ms. Sayali Patil", "Member"],
+            ["8", "Student Representative", "Shubham Rekulwad", "Member"],
+            ["9", "Student Representative", "Shubham Maykal", "Member"]
           ]}
         />
 
         <h4 className="font-bold text-gray-800 mt-8 mb-2">SC/ST Committee</h4>
         <SimpleTable 
-          headers={["Sr. No.", "Name", "Designation"]}
+          headers={["Sr. No.", "Name", "Designation", "Committee Designation"]}
           data={[
-            ["1", "Dr. L.M. Waghmare", "Chairman"],
-            ["2", "Mr. B.A. Khansole", "Member"],
-            ["3", "Mr S.A. Hashmi", "Member"],
-            ["4", "Mr Sayyad Shafiq", "Member"],
-            ["5", "Dr. Sayyad Rukhsana", "Member"]
+            ["1", "Mr. Syed Asad Hashmi", "Associate Professor, Electrical Engineering", "Chairman"],
+            ["2", "Dr. Abdullah M.K.", "Associate Professor, Electronics and Telecommunication Engineering", "Member"],
+            ["3", "Dr. Syeda Rukhsana Osman Ali", "Associate Professor, Head, First Year Engineering", "Member"],
+            ["4", "Mr. Sushil Pandagale", "Assistant Professor, Electronics and Telecommunication Engineering", "Member"],
+            ["5", "Mr. Smitkumar Choudante", "Assistant Professor, Electrical Engineering", "Member"]
+          ]}
+        />
+
+        <h4 className="font-bold text-gray-800 mt-8 mb-2">Institution-Industry Cell</h4>
+        <SimpleTable 
+          headers={["Sr. No.", "Name of Member", "Designation", "Committee Designation"]}
+          data={[
+            ["1", "Dr. L. M. Waghmare", "Principal", "Chairman"],
+            ["2", "B. A. Khansole", "Associate Professor, Computer Science Engineering", "Member"],
+            ["3", "Syed Asad Hashmi", "Associate Professor, Electrical Engineering", "Member"],
+            ["4", "Sayyad Shafik R", "Associate Professor, Mechanical Engineering", "Member"],
+            ["5", "Dr. Syeda Rukhsana Osman Ali", "Associate Professor, Head, First Year Engineering", "Member"],
+            ["6", "Dr. Abdullah M. K.", "Associate Professor, Electronics and Telecommunication Engineering", "Member"],
+            ["7", "Mr. Rathod L. V.", "Associate Professor, Civil Engineering", "Member"],
+            ["8", "Azhar Ahmed", "Associate Professor, Electrical Engineering", "Member"],
+            ["9", "Dr. Ravindra M. Desai", "Professor, Civil Engineering", "Member"],
+            ["10", "Sanjay Sayanna Gaddamwar", "T&P officer", "Member Secretary"]
           ]}
         />
       </Accordion>

@@ -121,6 +121,29 @@ const CellsCommittees = () => {
                 </div>
               )}
 
+              {committeeData.aicteFeedbackLinks && committeeData.aicteFeedbackLinks.length > 0 && (
+                <div className="mb-6">
+                  <h3 className="text-lg font-semibold text-mpgin-darkBlue mb-3">
+                    Feedback facility for students and Faculty on AICTE portal
+                  </h3>
+                  <div className="space-y-2">
+                    {committeeData.aicteFeedbackLinks.map((link) => (
+                      <p key={`${committeeData.id}-aicte-${link.label}`} className="text-gray-700">
+                        <span className="font-medium">{link.label}: </span>
+                        <a
+                          href={link.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-blue-600 underline break-all"
+                        >
+                          {link.url}
+                        </a>
+                      </p>
+                    ))}
+                  </div>
+                </div>
+              )}
+
               {committeeData.grievanceEscalationMatrix &&
                 committeeData.grievanceEscalationMatrix.length > 0 && (
                   <div className="mb-6">
@@ -186,9 +209,6 @@ const CellsCommittees = () => {
                         <th className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wider text-gray-700">
                           Position
                         </th>
-                        <th className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wider text-gray-700">
-                          Mobile Number
-                        </th>
                       </tr>
                     </thead>
                     <tbody className="bg-white divide-y divide-gray-200">
@@ -203,7 +223,7 @@ const CellsCommittees = () => {
                           <td className="px-4 py-4 whitespace-nowrap text-sm text-gray-700">
                             {member.designation}
                           </td>
-                          <td className="px-4 py-4 whitespace-nowrap text-sm">
+                           <td className="px-4 py-4 whitespace-nowrap text-sm">
                             <span
                               className={`px-3 py-1 text-xs font-medium rounded-full ${member.position.toLowerCase() === "chairperson"
                                 ? "bg-green-100 text-green-800"
@@ -212,15 +232,6 @@ const CellsCommittees = () => {
                             >
                               {member.position}
                             </span>
-                          </td>
-                          <td className="px-4 py-4 whitespace-nowrap text-md text-gray-700">
-                            {member.mobileNumber ? (
-                              <a href={`tel:${member.mobileNumber}`} className="text-blue-600 underline">
-                                +91 {member.mobileNumber}
-                              </a>
-                            ) : (
-                              "-"
-                            )}
                           </td>
                         </tr>
                       ))}
