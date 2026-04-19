@@ -9,14 +9,16 @@ export interface CommitteeMapping {
 export const COMMITTEE_MAPPINGS: Record<CollegeId, Array<CommitteeMapping>> = {
     "school-of-engineering": [
         { id: "anti-ragging-committee-engineering", title: "Anti Ragging Committee" },
-        { id: "anti-ragging-squad-engineering", title: "Anti Ragging Squad" },
-        { id: "women-empowerment-committee-engineering", title: "Women Empowerment Committee" },
-        { id: "governing-body-engineering", title: "Governing Body" },
-        { id: "faculty-grievance-redressal-cell-engineering", title: "Grievance Redressal Cell" },
-        { id: "student-counselling-cell-engineering", title: "Student Counselling Cell" },
-        { id: "sc-st-committee-engineering", title: "SC/ST Committee" },
         { id: "internal-complaint-committee-engineering", title: "Internal Complaint Committee (ICC)" },
         { id: "institution-industry-cell-engineering", title: "Institution Industry Cell" },
+        { id: "sc-st-committee-engineering", title: "SC/ST Committee" },
+        { id: "student-grievance-redressal-committee", title: "Student Grievance Redressal Committee" },
+        { id: "faculty-grievance-redressal-cell-engineering", title: "Grievance Redressal Mechanism" },
+        { id: "faculty-grievance-redressal-committee", title: "Faculty Grievance Redressal Committee" },
+        { id: "student-counselling-cell-engineering", title: "Student Counselling Cell" },
+        { id: "governing-body-engineering", title: "Governing Body" },
+        { id: "anti-ragging-squad-engineering", title: "Anti Ragging Squad" },
+        { id: "women-empowerment-committee-engineering", title: "Women Empowerment Committee" },
         { id: "library-committee-engineering", title: "Library Committee" },
         { id: "remedial-coaching-cell-engineering", title: "Remedial Coaching Cell" },
         { id: "training-placement-cell", title: "Training & Placement Cell" }

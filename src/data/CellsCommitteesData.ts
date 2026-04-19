@@ -1742,7 +1742,7 @@ export const CELLS_COMMITTEES_DATA: CollegeCommittees[] = [
       },
       {
         id: "faculty-grievance-redressal-cell-engineering",
-        title: "Grievance Redressal Cell",
+        title: "Grievance Redressal Mechanism",
         description:
           "",
         grievanceProcessSteps: [
@@ -1948,6 +1948,120 @@ export const CELLS_COMMITTEES_DATA: CollegeCommittees[] = [
             mobileNumber: "8208618714",
             email: "pdpople@gmail.com",
           },
+        ],
+        objectives: [
+          "To monitor the student's regularity & discipline.",
+          "To enable the parents to know about the performance & regularity of their wards.",
+          "Improvement of teacher-student relationship.",
+          "Giving an opportunity for students to learn to improve their emotional, behavioural, personal, interpersonal characteristics, to develop confidence, make better choices, and increase educational efficacy.",
+          "Helping students to explore and express feelings and ways of thinking about their present situation and work toward making a healthier and happier future.",
+        ],
+        rules: [
+          "Formation of Mentorship in each department.",
+          "To get feedback from the student committee members/teachers of each subject and mentors of each class.",
+          "Procuring the list of students who have scored less than 8 marks in their internal tests from each department per subject by the individual teachers handling the respective subjects, so as to guide them properly through counselling.",
+          "Providing counselling for the final year students who are in dilemma to enable them to choose job or higher studies.",
+          "Providing special medical assistance to the students who are going through depression.",
+          "Conducting a monthly meeting with the parents of the students having shortage of attendance and internal marks below 08.",
+        ],
+      },
+      {
+        id: "student-grievance-redressal-committee",
+        title: "Student Grievance Redressal Committee",
+        description:
+          "Student Grievance Redressal Committee is constituted as per AICTE (Redressal of grievance of students) Regulations, 2019 vide F. No. 1-101/PGRC/AICTE/Regulations/2019 dated 07.11.2019.",
+        members: [
+          {
+            srNo: 1,
+            name: "Dr L M Waghmare",
+            designation: "Principal",
+            position: "Chairman",
+            mobileNumber: "9822663185",
+          },
+          {
+            srNo: 2,
+            name: "B A Khansole",
+            designation: "Assist. Prof.& head in CSE",
+            position: "Member",
+            mobileNumber: "9260459865",
+            email: "bakhansole@gmail.com",
+          },
+          {
+            srNo: 3,
+            name: "Dr.syeda Rukhsana Osman Ali",
+            designation: "Assist. Prof.& head in FE",
+            position: "Member",
+            mobileNumber: "9371062777",
+            email: "15rukhsana@gmail.com",
+          },
+          {
+            srNo: 4,
+            name: "Mr. Choudante Smitkumar",
+            designation: "Assist. Prof.Electrical Department",
+            position: "Member",
+            mobileNumber: "9518903766",
+            email: "abdulectc@gmail.com",
+          },
+          {
+            srNo: 5,
+            name: "Mr. Ashish Bhole",
+            designation: "Student Representative",
+            position: "Member"
+          }
+        ],
+        objectives: [
+          "To monitor the student's regularity & discipline.",
+          "To enable the parents to know about the performance & regularity of their wards.",
+          "Improvement of teacher-student relationship.",
+          "Giving an opportunity for students to learn to improve their emotional, behavioural, personal, interpersonal characteristics, to develop confidence, make better choices, and increase educational efficacy.",
+          "Helping students to explore and express feelings and ways of thinking about their present situation and work toward making a healthier and happier future.",
+        ],
+        rules: [
+          "Formation of Mentorship in each department.",
+          "To get feedback from the student committee members/teachers of each subject and mentors of each class.",
+          "Procuring the list of students who have scored less than 8 marks in their internal tests from each department per subject by the individual teachers handling the respective subjects, so as to guide them properly through counselling.",
+          "Providing counselling for the final year students who are in dilemma to enable them to choose job or higher studies.",
+          "Providing special medical assistance to the students who are going through depression.",
+          "Conducting a monthly meeting with the parents of the students having shortage of attendance and internal marks below 08.",
+        ],
+      },
+      {
+        id: "faculty-grievance-redressal-committee",
+        title: "Faculty Grievance Redressal Committee",
+        description:
+          "Faculty Grievance Redressal Committee is constituted as per AICTE (Redressal of grievance of students) Regulations, 2019 vide F. No. 1-101/PGRC/AICTE/Regulations/2019 dated 07.11.2019.",
+        members: [
+          {
+            srNo: 1,
+            name: "Dr L M Waghmare",
+            designation: "Principal",
+            position: "Chairman",
+            mobileNumber: "9822663185",
+          },
+          {
+            srNo: 2,
+            name: "B A Khansole",
+            designation: "Assist. Prof.& head in CSE",
+            position: "Member",
+            mobileNumber: "9260459865",
+            email: "bakhansole@gmail.com",
+          },
+          {
+            srNo: 3,
+            name: "Dr.syeda Rukhsana Osman Ali",
+            designation: "Assist. Prof.& head in FE",
+            position: "Member",
+            mobileNumber: "9371062777",
+            email: "15rukhsana@gmail.com",
+          },
+          {
+            srNo: 4,
+            name: "Mr. Choudante Smitkumar",
+            designation: "Assist. Prof.Electrical Department",
+            position: "Member",
+            mobileNumber: "9518903766",
+            email: "abdulectc@gmail.com",
+          }
         ],
         objectives: [
           "To monitor the student's regularity & discipline.",
